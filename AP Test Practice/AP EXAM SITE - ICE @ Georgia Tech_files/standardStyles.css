@@ -1,0 +1,93 @@
+body {
+	font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal;
+}
+normal {
+	font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal;
+}
+.Normal {
+	font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal;
+}
+input {
+	font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal;
+}
+.Label {
+	color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: bold;
+}
+.ILabel {
+	color: rgb(78, 81, 133); font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-style: italic; font-variant: normal; font-weight: bold;
+}
+.BlackLabel {
+	color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-style: normal; font-variant: normal; font-weight: bold;
+}
+.Prompt {
+	color: rgb(153, 102, 204); font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: normal;
+}
+.Title {
+	color: rgb(0, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 20px; font-style: normal; font-variant: normal; font-weight: bold;
+}
+.WhiteLabel {
+	color: rgb(255, 255, 255); font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: bold;
+}
+.UnderLinedLabel {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold; text-decoration: underline;
+}
+.BigLabel {
+	font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: bold;
+}
+.Info {
+	font-family: Arial, Helvetica, sans-serif; font-size: 12px;
+}
+.SmallestNormal {
+	font-family: Arial, Helvetica, sans-serif; font-size: 10px;
+}
+.Error {
+	color: rgb(255, 0, 0); font-family: Arial, Helvetica, sans-serif; font-size: 16px;
+}
+.Label2 {
+	color: rgb(78, 81, 133); font-family: Arial, Helvetica, sans-serif; font-size: 12px; font-style: italic; font-weight: bold;
+}
+.HintLabel {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12px; font-style: italic;
+}
+.HintText {
+	font-family: Arial, Helvetica, sans-serif; font-size: 12px;
+}
+.Breadcrumb {
+	color: rgb(0, 0, 153); font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+}
+.Help {
+	color: rgb(0, 153, 102); font-family: Verdana, Arial; font-size: 14px;
+}
+.Comment {
+	font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-left: 15px;
+}
+.Indent {
+	font-family: Arial, Helvetica, sans-serif; font-size: 12px; margin-left: 20px;
+}
+.today {
+	color: black; font-family: sans-serif; font-size: 10pt; font-weight: bold;
+}
+.days {
+	text-align: center; color: navy; font-family: sans-serif; font-size: 10pt; font-weight: bold;
+}
+.dates {
+	color: black; font-family: sans-serif; font-size: 10pt;
+}
+.greenHighlight {
+	background: rgb(136, 255, 136);
+}
+.redHighlight {
+	background: rgb(255, 136, 136);
+}
+.green {
+	color: rgb(68, 136, 68); text-decoration: underline;
+}
+.red {
+	color: rgb(255, 102, 102); text-decoration: underline;
+}
+.grey {
+	color: rgb(170, 170, 170); text-decoration: underline;
+}
+.keyBox {
+	border: 1px solid rgb(0, 0, 0); width: 16px; margin-top: 3px; margin-bottom: 3px; display: inline-block;
+}
