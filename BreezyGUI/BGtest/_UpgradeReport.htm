@@ -1,0 +1,175 @@
+﻿<html>
+  <head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="_UpgradeReport_Files\UpgradeReport.css"/>
+
+<script language="javascript">
+	function outliner () {
+		oMe = window.event.srcElement
+		//get child element
+		var child = document.all[event.srcElement.getAttribute("child",false)];
+		//if child element exists, expand or collapse it.
+		if (null != child)
+			child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+	}
+
+	function changepic() {
+		uMe = window.event.srcElement;
+		var check = uMe.src.toLowerCase();
+		if (check.lastIndexOf("upgradereport_plus.gif") != -1)
+		{
+			uMe.src = "_UpgradeReport_Files/UpgradeReport_Minus.gif"
+		}
+		else
+		{
+			uMe.src = "_UpgradeReport_Files/UpgradeReport_Plus.gif"
+		}
+	}
+</script>
+<title>Upgrade report for BGtest.vjp</title></head>
+  <body topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();">
+    <h1>Upgrade report for BGtest.vjp</h1>
+    <p>
+      <table class="note">
+        <tr>
+          <td>
+            <b>Time of upgrade: </b>
+          </td>
+          <td>11/12/2004 9:55:36 AM</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Upgraded project file: </b>
+          </td>
+          <td>BGtest.vjsproj</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Project type: </b>
+          </td>
+          <td>Console Application</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Startup object: </b>
+          </td>
+          <td>Class1</td>
+        </tr>
+      </table>
+    </p>
+    <h2></h2>
+    <h2>Project was upgraded with 2 issues </h2>
+    <h2>List of upgrade issues</h2>
+    <table cellpadding="2" cellspacing="0" width="98%" border="1" bordercolor="white" class="infotable">
+      <tr>
+        <td class="header">Category</td>
+        <td class="header">Issues</td>
+        <td class="header">Occurrences</td>
+      </tr>
+      <br />
+      <tr class="row">
+        <td class="content">
+          <IMG alt="expand/collapse section" height="11" width="9" onclick="changepic()" src="_UpgradeReport_Files/UpgradeReport_Plus.gif" child="issue0" />
+          <A href="ms-help://MS.VSCC.2003/commoner/redir/redirect.htm?keyword=&quot;vjucat5&quot;">Unresolved references encountered in upgrade</A>
+        </td>
+        <td class="content">1</td>
+        <td class="content">1</td>
+      </tr>
+      <tr class="collapsed" id="issue0" bgcolor="#ffffff">
+        <td colspan="3">
+          <table width="98%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+            <tr class="issuehdr">
+              <td width="3%">#</td>
+              <td width="57%">Issue</td>
+              <td width="16%">Impact</td>
+              <td width="12%">Occurrences</td>
+              <td width="12%">Files affected</td>
+            </tr>
+            <tr>
+              <td class="issuecontent">1</td>
+              <td class="issuecontent">
+                <IMG alt="expand/collapse section" height="11" width="9" onclick="changepic()" src="_UpgradeReport_Files/UpgradeReport_Plus.gif" child="file1" />
+                <A href="ms-help://MS.VSCC.2003/commoner/redir/redirect.htm?keyword=&quot;vju857&quot;">Unresolved class or interface references found in classpath</A>
+              </td>
+              <td class="issuecontent">Build error</td>
+              <td class="issuecontent">1</td>
+              <td class="issuecontent">1</td>
+              <tr class="collapsed" id="file1" bgcolor="#ffffff">
+                <td colspan="5">
+                  <table width="98%" border="1" bordercolor="#dcdcdc" rules="cols" class="filetable">
+                    <tr class="filehdr">
+                      <td width="60%">Class or interface</td>
+                      <td width="40%">Location in Classpath</td>
+                    </tr>
+                    <tr>
+                      <td class="filecontent">GBFrame</td>
+                      <td class="filecontent">.</td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr class="row">
+        <td class="content">
+          <IMG alt="expand/collapse section" height="11" width="9" onclick="changepic()" src="_UpgradeReport_Files/UpgradeReport_Plus.gif" child="issue1" />
+          <A href="ms-help://MS.VSCC.2003/commoner/redir/redirect.htm?keyword=&quot;vjucat0&quot;">Issues in upgrading project file to new format</A>
+        </td>
+        <td class="content">1</td>
+        <td class="content">1</td>
+      </tr>
+      <tr class="collapsed" id="issue1" bgcolor="#ffffff">
+        <td colspan="3">
+          <table width="98%" border="1" bordercolor="#dcdcdc" rules="cols" class="issuetable">
+            <tr class="issuehdr">
+              <td width="3%">#</td>
+              <td width="57%">Issue</td>
+              <td width="16%">Impact</td>
+              <td width="12%">Occurrences</td>
+              <td width="12%">Files affected</td>
+            </tr>
+            <tr>
+              <td class="issuecontent">1</td>
+              <td class="issuecontent">
+                <A href="ms-help://MS.VSCC.2003/commoner/redir/redirect.htm?keyword=&quot;vju5107&quot;">Analysis of project files was not completed due to errors</A>
+              </td>
+              <td class="issuecontent">Minor</td>
+              <td class="issuecontent">1</td>
+              <td class="issuecontent">1</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+    <p />
+    <p class="help">
+      <A href="ms-help://MS.VSCC.2003/commoner/redir/redirect.htm?keyword=&quot;vjsamTroubleshootingProjectsUpgradedFromVisualJ60&quot;">Click here for help with common upgrade issues</A>
+    </p>
+    <p>
+      <table class="note">
+        <tr>
+          <td>
+            <IMG alt="expand/collapse section" height="11" width="9" onclick="changepic()" src="_UpgradeReport_Files/UpgradeReport_Plus.gif" child="AddInfo0" />
+            <b>Additional upgrade information</b>
+          </td>
+        </tr>
+        <tr class="collapsed" id="AddInfo0">
+          <td>
+            <table class="note">
+              <tr>
+                <td valign="top">1. </td>
+                <td>Project property classpath is different in release and debug configurations. Release configuration value was used </td>
+              </tr>
+              <tr>
+                <td valign="top">2. </td>
+                <td>Startup object in the Visual J++ project type is different in debug and release configurations. Information from the release configuration was used in the upgrade.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </p>
+  </body>
+</html>
