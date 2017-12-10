@@ -1,0 +1,51 @@
+<title>Example9Applet</title>
+
+<a href=index.html#MediaTracker>Return to article</a>
+<br>
+<hr>
+
+<h1>Using MediaTracker to Avoid Incremental Display: Example9Applet</h1>
+
+<applet code=Example9Applet.class width=55 height=68>
+<param name=fps value=10>
+</applet>
+
+<hr>
+The code below shows the important methods that we had
+to update to use a MediaTracker instance to help load images.
+The animation isn't started until all
+the frames have been loaded.
+The code for the entire applet can be found in
+<a href="Example9Applet.java">Example9Applet.java</a>.
+<p>
+<pre>
+    MediaTracker tracker;
+    Image frames[];
+
+    <i>/**
+     * Initialize the applet and compute the delay between frames.
+     */</i>
+    public void init() {
+	String str = getParameter("fps");
+	int fps = (str != null) ? Integer.parseInt(str) : 10;
+	delay = (fps &gt; 0) ? (1000 / fps) : 100;
+
+	tracker = new MediaTracker(this);
+	frames = new Image[10];
+	for (int i = 1 ; i &lt;= 10 ; i++) {
+	    frames[i-1] = getImage(getCodeBase(), "duke/T" + i + ".gif");
+	    tracker.addImage(frames[i-1], 0);
+	}
+    }
+
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paintFrame(Graphics g) {
+	<i>// Only paint when all images have arrived</i>
+	if (tracker.statusID(0, true) == MediaTracker.COMPLETE) {
+	    g.drawImage(frames[frame % 10], 0, 0, null);
+	}
+    }
+</pre>
+

@@ -1,0 +1,55 @@
+<title>Example3Applet</title>
+
+<a href=index.html#painting>Return to article</a>
+<br>
+<hr>
+
+<h1>Painting Each Frame: Example3Applet</h1>
+
+One frame per second:
+<br>
+<applet code=Example3Applet.class width=200 height=50>
+<param name=fps value=1>
+</applet>
+
+<hr>
+
+Five frames per second: 
+<br>
+<applet code=Example3Applet.class width=200 height=50>
+<param name=fps value=5>
+</applet>
+
+<hr>
+
+Twenty frames per second: 
+<br>
+<applet code=Example3Applet.class width=200 height=50>
+<param name=fps value=20>
+</applet>
+
+<hr>
+
+This applet is a further extension of the
+<a href="/javaworld/jw-03-1996/animation/Example2Applet.html">previous example</a>.
+It adds the
+<code><b>paint()</b></code> method to draw the current
+frame number to the screen.
+The actual code for this applet is in
+<a href=Example3Applet.java>Example3Applet.java</a>.
+This is the new method:
+
+<p>
+
+<pre>
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paint(Graphics g) {
+	g.setColor(Color.black);
+	g.drawString("Frame " + frame, 0, 30);
+    }
+</pre>
+
+<hr>
+

@@ -1,0 +1,408 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0056)http://www.javaworld.com/jw-03-1996/animation/index.html -->
+<HTML><HEAD><TITLE>JavaWorld - March - Animation</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="Arthur van Hoff with Kathy Walrath" name=author>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR></HEAD>
+<BODY aLink=#ff0000 bgColor=#ffffff link=#0000ff text=#000000 vLink=#551a8b>
+<P>
+<CENTER><A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html"><IMG 
+alt="[JavaWorld Main Page]" border=0 src="index_files/jw.home.mar.gif"></A> <A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html#nuts"><IMG 
+alt="[Nuts &amp; Bolts]" border=0 src="index_files/jw.nuts2.gif"></A> <A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html#news"><IMG 
+alt="[News &amp; Views]" border=0 src="index_files/jw.news.gif"></A> <A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html#res"><IMG 
+alt="[Java Resources]" border=0 src="index_files/jw.jr.gif"></A> <!--#exec cgi="/javaworld/cgi-bin/jw-adbanrot.cgi"--><IMG height=7 
+src="index_files/greenline.gif" width=432> 
+<H1>Animation in Java Applets</H1></CENTER>
+<BLOCKQUOTE><STRONG>Summary</STRONG><BR>Many Java applets perform animation, 
+  whether it's the classic, cartoon-style animation of Duke waving, 
+  program-generated lines such as flowing sine waves, or simply moving static 
+  images across the screen. No comprehensive, direct-manipulation tools exist 
+  (yet) for creating Java animations. So it's up to the applet programmer to do 
+  all the hard work. </BLOCKQUOTE>
+<CENTER><IMG height=7 src="index_files/greenline.gif" width=432> </CENTER>
+<P><STRONG>By Arthur van Hoff with Kathy Walrath</STRONG> 
+<P><FONT size=+3>T</FONT>his article describes how to implement animation using 
+the Java applet API. It describes commonly used techniques and gives a simple 
+example to illustrate each technique. Here's what you'll read about: 
+<UL>
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#basicTechniques">Basic 
+  Animation Techniques</A> 
+  <UL>
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#thread">Using 
+    a Thread</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#frameRate">Keeping 
+    a Constant Frame Rate</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#painting">Painting 
+    Each Frame</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#graphics">Generating 
+    Graphics</A> </LI></UL>
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#flashing">Avoiding 
+  Excessive Flashing</A> 
+  <UL>
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#update">Overriding 
+    the update() Method</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#doubleBuffer">Double 
+    Buffering</A> </LI></UL>
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#images">Using 
+  Images</A> 
+  <UL>
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#movingImage">Moving 
+    an Image Across the Screen</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#imageSequence">Displaying 
+    a Sequence of Images</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#MediaTracker">Using 
+    MediaTracker to Avoid Incremental Display</A> </LI></UL>
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#sound">Adding 
+  Sound</A> 
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#imageLoading">Tips 
+  for Loading Images Faster</A> 
+  <UL>
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#imageStrip">Using 
+    an Image Strip</A> 
+    <LI><A 
+    href="http://www.javaworld.com/jw-03-1996/animation/index.html#flic">Inter-Frame 
+    Compression Using Flic</A> </LI></UL>
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#tools">Animation 
+  Tools</A> 
+  <LI><A 
+  href="http://www.javaworld.com/jw-03-1996/animation/index.html#thatsallfolks">Conclusion</A> 
+  </LI></UL><A name=basicTechniques>
+<H2>Basic Animation Techniques</H2></A>Many forms of animation are possible in 
+Java. What all of them have in common is that they create some kind of motion on 
+the screen by drawing successive frames at a relatively high speed (usually 
+about 10-20 times per second). 
+<P>We will start by creating a simple template applet for doing animations and 
+slowly elaborate it until we arrive at a fairly complete applet. 
+<P><A name=thread></A><STRONG><FONT size=+1>Using a Thread</FONT></STRONG><BR>To 
+update the screen multiple times per second, you need to create a new Java 
+thread that contains an animation loop. The animation loop is responsible for 
+keeping track of the current frame and for requesting periodic screen updates. 
+To implement a thread, you must either create a subclass of <A 
+href="http://java.sun.com/JDK-1.0/api/java.lang.Thread.html">Thread</A> or 
+adhere to the <A 
+href="http://java.sun.com/JDK-1.0/api/java.lang.Runnable.html">Runnable</A> 
+interface. 
+<P>A common mistake is to put the animation loop in the <CODE><B><A 
+href="http://java.sun.com/JDK-1.0/api/java.awt.Component.html#paint">paint() 
+</A></B></CODE>method of an applet. Doing so will have strange side effects 
+because it holds up the main AWT thread, which is in charge of all drawing and 
+event handling. 
+<P>As an example I have written a small template applet, called Example1Applet, 
+that illustrates the general outline of an animation applet. Example1Applet 
+shows how to create a thread and call the <CODE><B><A 
+href="http://java.sun.com/JDK-1.0/api/java.awt.Component.html#repaint">repaint()</A></B></CODE> 
+method at fixed intervals. The number of frames per second is specified by 
+passing in an applet parameter. Here is an example of what you would put in your 
+HTML document: <PRE>    &lt;applet code=Example1Applet.class width=200 height=200&gt;
+    &lt;param name=fps value=20&gt;
+    &lt;/applet&gt;
+</PRE><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example1Applet.html">Here is 
+Example1Applet.</A></B> 
+<P><STRONG>Note:</STRONG><BR>This applet doesn't actually draw anything on the 
+screen yet. Drawing to the screen is explained later. Note also that the applet 
+destroys its animation thread whenever the user leaves the page (which results 
+in the applet's <CODE><B>stop()</B></CODE> method being called). This ensures 
+that the applet won't waste CPU time while its page isn't visible. 
+<P><A name=frameRate></A><STRONG><FONT size=+1>Keeping a Constant Frame 
+Rate</FONT></STRONG><BR>In the example above, the applet simply sleeps for a 
+fixed amount of time between frames. This has the drawback that you sometimes 
+wait too long. To get 10 frames per second you should not wait 100 milliseconds 
+between frames, because you lose some time just running the thread. 
+<P>The following applet, Example2Applet, shows how to keep better time. It 
+simply computes the correct delay between frames by keeping track of the 
+starting time. It computes the estimated required delay between frames based on 
+the current time. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example2Applet.html">Here is 
+Example2Applet.</A></B> 
+<P><A name=painting></A><STRONG><FONT size=+1>Painting Each 
+Frame</FONT></STRONG><BR>What remains is to paint each frame. In the previous 
+examples, we call <CODE><B>repaint()</B></CODE> for each frame, which causes the 
+applet's <CODE><B><A 
+href="http://java.sun.com/JDK-1.0/api/java.awt.Component.html#paint">paint() 
+</A></B></CODE>method to be called. The Example3Applet has a 
+<CODE><B>paint()</B></CODE> method that draws the number of the current frame to 
+the screen. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example3Applet.html">Here is 
+Example3Applet in action, followed by a code listing.</A></B> 
+<P><STRONG>Note:</STRONG><BR>If you specify the frame rate to be very high (say 
+100 frames per second), the <CODE><B>run()</B></CODE> method will call 
+<CODE><B>repaint()</B></CODE> 100 times per second. However, this will not 
+always result in 100 calls to <CODE><B>paint()</B></CODE> per second because 
+when you issue repaint request too quickly they will be collapsed into a single 
+screen update. This is why we keep track of the current frame number in the 
+<CODE><B>run()</B></CODE> method rather then in the <CODE><B>paint()</B></CODE> 
+method. 
+<P><A name=graphics></A><STRONG><FONT size=+1>Generating 
+Graphics</FONT></STRONG><BR>Now let's animate something that is a little harder 
+to draw. The Example4Applet draws a combination of sine waves. For each x 
+coordinate, it draws a short vertical line. All these lines together form a 
+simple graph that changes for each frame. Unfortunately, you will find that this 
+approach causes a lot of flashing. We'll explain the cause of the flashing and 
+some remedies in the next section. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example4Applet.html">Here is 
+Example4Applet in action, followed by a code listing.</A></B> 
+<P><A name=flashing></A>
+<H2>Avoiding Excessive Flashing</H2>The flashing you see in Example4Applet has 
+two causes: painting each frame takes too long (due to the amount of computation 
+that is required during the repaint) and the entire background is cleared before 
+<CODE><B>paint()</B></CODE> is called. While the computation of the next frame 
+is going on, the user is seeing the background of the animation. 
+<P>This short time between the clearing of the background and the painting of 
+the sine wave is seen as a flash. On some platforms like the PC, the flashing is 
+more obvious then it is on X Windows. The reason is that the X Windows graphics 
+are buffered, which makes the flash a little shorter. 
+<P>You can reduce flashing greatly using two simple tricks: implementing the 
+<CODE><B>update()</B></CODE> method and using double buffering (sometimes known 
+as <EM>using a backbuffer</EM>). 
+<P><A name=update></A><STRONG><FONT size=+1>Overriding the update() 
+Method</FONT></STRONG><BR>When the AWT receives a repaint request for an applet, 
+it calls the applet's <CODE><B>update()</B></CODE> method. By default, the 
+<CODE><B>update()</B></CODE> method clears the applet's background and then 
+calls the <CODE><B>paint()</B></CODE> method. By overriding the 
+<CODE><B>update()</B></CODE> method to include the drawing code that used to be 
+in the <CODE><B>paint()</B></CODE> method, we avoid having the applet's entire 
+area cleared with every repaint. 
+<P>Now that the background is no longer cleared automatically, we need to do it 
+ourselves in the <CODE><B>update()</B></CODE> method. We can now erase each 
+vertical line of the graph individually before drawing the new line, eliminating 
+the flashing completely. This effect is shown in Example5Applet. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example5Applet.html">Here is 
+Example5Applet in action, followed by a code listing.</A></B> 
+<P><STRONG>Note:</STRONG><BR>Whenever you override the 
+<CODE><B>update()</B></CODE> method, you still need to implement 
+<CODE><B>paint()</B></CODE>. This is because the <CODE><B>paint()</B></CODE> 
+method is called directly by the AWT drawing system whenever "damage" occurs to 
+the applet's drawing area -- for example, when a window obscuring part of the 
+applet's drawing area is removed from the screen. Your 
+<CODE><B>paint()</B></CODE> implementation can simply call 
+<CODE><B>update()</B></CODE>. 
+<P><A name=doubleBuffer></A><STRONG><FONT size=+1>Double 
+Buffering</FONT></STRONG><BR>Another way of reducing the flashing between frames 
+is to use double buffering. This technique is used in many animation applets. 
+<P>The general principle is that you create an offscreen image, you draw a frame 
+into the image, and then you slap the entire image onto the screen with one call 
+to <CODE><B>drawImage()</B></CODE>. The advantage is that most of the drawing is 
+done offscreen. The final painting of the offscreen image onto the screen is 
+usually much more efficient than painting the frame directly to the screen. 
+<P>The sine wave applet with double buffering is shown in Example6Applet. You 
+will see that the animation is pretty smooth and you don't need any special 
+tricks when drawing the frame. The only disadvantage is that you have to 
+allocate an offscreen image that is as large as the drawing area. If the drawing 
+area is very large, this may demand quite a lot of memory. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example6Applet.html">Here is 
+Example6Applet in action, followed by a code listing.</A></B> 
+<P><STRONG>Note:</STRONG><BR>When you use double buffering, you need to override 
+the <CODE><B>update()</B></CODE> method, since you don't want the applet's 
+background to be cleared before you paint the frame. (You clear the background 
+yourself by drawing to the offscreen image.) 
+<P><A name=images></A>
+<H2>Using Images</H2>Now we'll rewrite the <CODE><B>paintFrame()</B></CODE> 
+method with a method that animates some images. This adds some minor 
+complications to the problem. Images are rather large and they are loaded 
+incrementally. It can take a long time for images to be fully drawn, especially 
+when you are loading them over a slow connection. This is the reason why the 
+<CODE><B>drawImage()</B></CODE> method takes a fourth argument, an ImageObserver 
+object. The image observer is an object that is notified when more of the image 
+data has arrived. To get the images we use the <CODE><B>getImage()</B></CODE> 
+method. 
+<P><A name=movingImage></A><STRONG><FONT size=+1>Moving an Image Across the 
+Screen</FONT></STRONG><BR>This first image-animating applet, Example7Applet, 
+uses the following two images: 
+<P>world.gif: <IMG height=156 src="world.gif" width=166> car.gif: <IMG height=52 
+src="car.gif" width=64> 
+<P>The world image is used as the background, and the car image is drawn on top 
+of it twice, creating an animation of two cars racing across the world. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example7Applet.html">Here is 
+Example7Applet in action, followed by a code listing.</A></B> 
+<P><A name=imageSequence></A><STRONG><FONT size=+1>Displaying a Sequence of 
+Images</FONT></STRONG><BR>Example8Applet shows how to create an animation using 
+separate images for each frame. Here are the 10 frames that are being used: 
+<P>
+<BLOCKQUOTE>T1.gif: <IMG height=68 src="index_files/T1.gif" width=55> T2.gif: 
+  <IMG height=68 src="index_files/T2.gif" width=55> T3.gif: <IMG height=68 
+  src="index_files/T3.gif" width=55> T4.gif: <IMG height=68 
+  src="index_files/T4.gif" width=55> T5.gif: <IMG height=68 
+  src="index_files/T5.gif" width=55> <BR>T6.gif: <IMG height=68 
+  src="index_files/T6.gif" width=55> T7.gif: <IMG height=68 
+  src="index_files/T7.gif" width=55> T8.gif: <IMG height=68 
+  src="index_files/T8.gif" width=55> T9.gif: <IMG height=68 
+  src="index_files/T9.gif" width=55> T10.gif: <IMG height=68 
+  src="index_files/T10.gif" width=55> </BLOCKQUOTE>
+<P>We are still using double buffering to eliminate flashing. The reason is that 
+each image that we are rendering is partially transparent, and we therefore need 
+to erase each frame before drawing the next. This would cause flashing without 
+double buffering. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example8Applet.html">Here is 
+Example8Applet in action, followed by a code listing.</A></B> 
+<P><STRONG>Note:</STRONG><BR>When displaying sequences of images, you have to be 
+careful to align the images correctly. The easiest way is to make sure that the 
+images are all the same size and can be drawn at the same position. If that 
+isn't the case, your applet will have to draw each frame at a different offset. 
+<P><A name=MediaTracker></A><STRONG><FONT size=+1>Using MediaTracker to Avoid 
+Incremental Display</FONT></STRONG><BR>When a Java program loads an image, it 
+can display the image before the image is completely loaded. The user sees the 
+image being rendered first incompletely, and then incrementally more and more 
+completely as the image is loaded. This incremental display gives the user 
+feedback (improving perceived performance) and lets the program easily perform 
+other tasks while the image is loading. 
+<P>Where animation is concerned, incremental image display can be useful for 
+background images, but it can be very distracting when used for the animated 
+images. It is therefore sometimes desirable to wait until the entire animation 
+is loaded before displaying it. 
+<P>You can use <A href="http://java.sun.com/people/flar/">Jim Graham's</A> <A 
+href="http://java.sun.com/JDK-1.0/api/java.awt.MediaTracker.html">MediaTracker</A> 
+class to track the downloading of images, delaying the animation display until 
+the entire set of images is fully downloaded. <A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example9Applet.java">Example9Applet</A> 
+shows how to use the MediaTracker class to download images for the waving Duke 
+animation. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example9Applet.html">Here is 
+Example9Applet in action, followed by a code listing.</A></B> 
+<P><A name=sound></A>
+<H2>Adding Sound</H2>It's easy to add sound to an animation. You can use the 
+<CODE><B>getAudioClip()</B></CODE> method to get an AudioClip object. Later, you 
+can play the clip either as a continuous loop or as a single sound. 
+Example10Applet shows how to play a continuous background sound as well as a 
+repetitive sound during the animation. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/Example10Applet.html">Here 
+is Example10Applet in action, followed by a code listing.</A></B> 
+<P><STRONG>Note:</STRONG><BR>When playing a continuous sound you must remember 
+to stop it when the user leaves the page (i.e., do it in your applet's 
+<CODE><B>stop()</B></CODE> method). 
+<P><STRONG>Another Note:</STRONG><BR>Continuous audio can be very annoying. It 
+is a good idea to provide the user with a way to turn off the audio without 
+leaving the page. You can provide a button, or simply turn off the audio when 
+the user clicks in the applet. 
+<P><A name=imageLoading></A>
+<H2>Tips for Loading Images Faster</H2>An animation that uses many images will 
+take a long time to download. This is mainly due to the fact that a new HTTP 
+connection is made for every image file, and making a connection can take 
+several seconds even when there is plenty of bandwidth. 
+<P>In this section, we'll tell you about two image formats your applet can use 
+to make downloading images faster. 
+<P><A name=imageStrip></A><STRONG><FONT size=+1>Using an Image 
+Strip</FONT></STRONG><BR>
+<P>You can improve downloading performance by using a single image containing 
+several frames of animation. You can render a single frame out of the image by 
+using the <CODE><B>clipRect()</B></CODE> operator. Below is an example of an 
+image strip that is used in the UnderConstruction applet. 
+<P>jack.gif: <IMG height=90 src="index_files/jack.gif" width=328> 
+<P>The applet creates a drilling effect by not erasing the previous frames. The 
+background is cleared only every so often. 
+<P><B><A 
+href="http://www.javaworld.com/jw-03-1996/animation/UnderConstruction.html">Here 
+is UnderConstruction in action, with a link to its source code.</A></B> 
+<P><A name=flic></A><STRONG><FONT size=+1>Inter-Frame Compression Using 
+Flic</FONT></STRONG><BR>If you really want to improve the downloading 
+performance of an animation consisting of multiple frames, then you have to use 
+some form of inter-frame compression. I have found two sites that support the 
+Flic compression format. 
+<UL>
+  <LI><A href="http://www.dnx.com/dnx/StreamingAnimation/">Streaming Animation 
+  from DimensionX</A> 
+  <LI><A href="http://www.primenet.com/~rwaldin/FlicIP.html">Ray Waldin's Flic 
+  Player</A> </LI></UL>
+<P><A name=tools></A>
+<H2>Animation Tools</H2>At this moment (January 1996), few tools are available 
+to help you create Java-powered animations. The best tool that I could find is 
+<A href="http://www.dnx.com/">DimensionX</A>'s <A 
+href="http://www.dnx.com/scott/jam/">The Easy Animator (TEA)</A> (previously 
+known as JAM). It lets you create animations interactively. We'd like to 
+encourage developers to write more tools for the creating of animations in Java. 
+
+<P>If you have a few ready-made images to display, you can use the <A 
+href="http://java.sun.com/applets/applets/Animator/">Animator applet.</A> 
+Animator has many parameters that let you specify continuous sounds, 
+frame-specific sounds, individual frame timing and positions, a startup image, 
+frame ordering, and so on. 
+<P>You should also check out the <A 
+href="http://www.gamelan.com/Gamelan.animation.html">Gamelan Animation</A> page 
+to find many applets that use animation. 
+<P><A name=thatsallfolks></A>
+<H2>Conclusion</H2>I hope this article will help applet developers write more 
+and better animation applets. I also hope that better tools will become 
+available soon. <IMG alt=[] src="index_files/dingbat.gif"> 
+<P>
+<HR>
+
+<P><STRONG>About the authors</STRONG><BR><A 
+href="http://java.sun.com/people/avh/"><IMG align=left height=50 
+src="index_files/avh.gif" width=49> Arthur van Hoff</A> was, until recently, a 
+Senior Staff Engineer at <A href="http://www.sun.com/">Sun Microsystems</A> and 
+has been involved in the development of the Java language since 1993. He is the 
+author of the first Java compiler written entirely in Java. He recently left Sun 
+to form a new company together with Sami Shaio, Kim Polese, and Jonathan Payne. 
+The new company will focus on building Java applications. Reach him at <A 
+href="http://www.javaworld.com/javaworld/cgi-bin/jw-mailto.cgi?avh@netcom.com+/javaworld/jw-03-1996/jw-03-animation.html+avh" 
+name=avh>arthur.vanhoff@javaworld.com</A> 
+<P>Kathy Walrath is a technical writer at <A href="http://www.sun.com/">Sun 
+Microsystems</A>. She has been part of the Java team since 1993. Currently, she 
+is working with Mary Campione on <EM><A href="http://java.sun.com/tutorial/">The 
+Java Tutorial: Object-Oriented Programming for the Internet</A></EM>, an 
+applet-enhanced tutorial for learning the Java language, applet programming, and 
+Java GUI programming. Besides being available online, <EM>The Java Tutorial</EM> 
+will also be published this summer as part of the Addison-Wesley Java Series. 
+Reach her at <A 
+href="http://www.javaworld.com/javaworld/cgi-bin/jw-mailto.cgi?kwalrath@eng.sun.com+/javaworld/jw-03-1996/jw-03-animation.html+walrath" 
+name=walrath>kathy.walrath@javaworld.com</A> 
+<P>
+<FORM action=/javaworld/cgi-bin/jw-mini-survey.cgi?jw-03-1996-animation.html 
+method=post><A name=mini-ditka><STRONG>What did you think of this 
+article?<BR></STRONG></A><INPUT name=quality type=radio value=3>-Excellent! 
+<INPUT name=quality type=radio value=2>-Okay <INPUT name=quality type=radio 
+value=1>-Poor <IMG align=top alt=----- src="index_files/b-new-clear.gif"> <INPUT 
+name=length type=radio value=3>-Too long <INPUT name=length type=radio 
+value=2>-Just right <INPUT name=length type=radio value=1>-Too short 
+<BR>Comments: <INPUT name=comments size=60> <INPUT type=submit value="Send data"> </FORM>
+<P>
+<CENTER><A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html"><IMG 
+alt="[JavaWorld Main Page]" border=0 src="index_files/jw.home.mar.gif"></A> <A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html#nuts"><IMG 
+alt="[Nuts &amp; Bolts]" border=0 src="index_files/jw.nuts2.gif"></A> <A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html#news"><IMG 
+alt="[News &amp; Views]" border=0 src="index_files/jw.news.gif"></A> <A 
+href="http://www.javaworld.com/javaworld/jw-03-1996/jw-03-main.toc.html#res"><IMG 
+alt="[Java Resources]" border=0 src="index_files/jw.jr.gif"></A> </CENTER>
+<P>
+<CENTER><IMG height=7 src="index_files/greenline.gif" width=432></CENTER>
+<P>
+<CENTER><A 
+href="http://www.javaworld.com/javaworld/common/jw-copyright96.html"><IMG 
+alt="[(c) Copyright 1996 Web Publishing Inc., an IDG Communications company]" 
+border=0 src="index_files/b-copyright96.gif"></A></CENTER>
+<P>If you have problems with this magazine, contact <A 
+href="http://www.javaworld.com/javaworld/cgi-bin/jw-mailto.cgi?webmaster@javaworld.com+/javaworld/jw-03-1996/jw-03-animation.html+webmaster" 
+name=webmaster>webmaster@javaworld.com</A> <BR>URL: 
+http://www.javaworld.com/javaworld/jw-03-1996/jw-03-animation.html <BR>Last 
+updated: 15 February 1996 </P></BODY></HTML>

@@ -1,0 +1,13 @@
+Microsoft Visual Studio Solution File, Format Version 1.00
+Project("{66355F20-A65B-11D0-BFB5-00A0C91EBFA0}") = "animation", "animation.vjp", "{A1635086-C8E7-4E43-8351-AF94F68CCBFB}"
+EndProject
+Global
+	GlobalSection(LocalDeployment) = postSolution
+		StartupProject = {A1635086-C8E7-4E43-8351-AF94F68CCBFB}
+	EndGlobalSection
+	GlobalSection(BuildOrder) = postSolution
+		0 = {A1635086-C8E7-4E43-8351-AF94F68CCBFB}
+	EndGlobalSection
+	GlobalSection(DeploymentRoot) = postSolution
+	EndGlobalSection
+EndGlobal

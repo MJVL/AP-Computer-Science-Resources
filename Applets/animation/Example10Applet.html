@@ -1,0 +1,82 @@
+<title>Example10Applet</title>
+
+<a href=index.html#sound>Return to article</a>
+<br>
+<hr>
+
+<h1>Adding Sound: Example10Applet</h1>
+
+<applet code=Example10Applet.class width=55 height=68>
+<param name=fps value=10>
+</applet>
+
+<hr>
+Here are the important methods for loading, starting, and
+stopping music in an animation. The animation will have
+a continuous background soundtrack, as well as a <i>bloop</i>
+sound that is repeated each time Duke waves.
+The code for the entire applet can be found in
+<a href="Example10Applet.java">Example10Applet.java</a>.
+<p>
+<pre>
+    AudioClip background;
+    AudioClip bubble;
+
+    <i>/**
+     * Initialize the applet and compute the delay between frames.
+     */</i>
+    public void init() {
+	String str = getParameter("fps");
+	int fps = (str != null) ? Integer.parseInt(str) : 10;
+	delay = (fps &gt; 0) ? (1000 / fps) : 100;
+
+	tracker = new MediaTracker(this);
+	frames = new Image[10];
+	for (int i = 1 ; i &lt;= 10 ; i++) {
+	    frames[i-1] = getImage(getCodeBase(), "duke/T" + i + ".gif");
+	    tracker.addImage(frames[i-1], 0);
+	}
+
+	background = getAudioClip(getCodeBase(), "audio/spacemusic.au");
+	bubble = getAudioClip(getCodeBase(), "audio/bubble1.au");
+    }
+
+    <i>/**
+     * This method is called when the applet becomes visible on
+     * the screen. Create a thread and start it.
+     */</i>
+    public void start() {
+	animator = new Thread(this);
+	animator.start();
+	<i>// Start the background music</i>
+	background.loop();
+    }
+
+    <i>/**
+     * This method is called when the applet is no longer
+     * visible. Set the animator variable to null so that the
+     * thread will exit before displaying the next frame.
+     */</i>
+    public void stop() {
+	animator = null;
+	offImage = null;
+	offGraphics = null;
+	<i>// Stop the background music</i>
+	background.stop();
+    }
+
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paintFrame(Graphics g) {
+	<i>// Only paint when all images have arrived</i>
+	if (tracker.statusID(0, true) == MediaTracker.COMPLETE) {
+	    g.drawImage(frames[frame % 10], 0, 0, null);
+	}
+	<i>// Play the bubble audio when Duke waves</i>
+	if ((frame % 10) == 3) {
+	    bubble.play();
+	}
+    }
+</pre>
+

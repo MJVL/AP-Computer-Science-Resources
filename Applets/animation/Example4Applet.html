@@ -1,0 +1,38 @@
+<title>Example4Applet</title>
+
+<a href=index.html#graphics>Return to article</a>
+<br>
+<hr>
+
+<h1>Generating Graphics: Example4Applet</h1>
+
+<applet code=Example4Applet.class width=500 height=50>
+<param name=fps value=10>
+</applet>
+
+<hr>
+
+You will probably see a lot of flashing in the applet above.
+We'll fix that in the next example.
+Below is the drawing code for this applet.
+The code for the entire applet can be found in
+<a href="Example4Applet.java">Example4Applet.java</a>.
+
+<p>
+
+<pre>
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paint(Graphics g) {
+	Dimension d = size();
+	int h = d.height / 2;
+	for (int x = 0 ; x &lt; d.width ; x++) {
+	    int y1 = (int)((1.0 + Math.sin((x - frame) * 0.05)) * h);
+	    int y2 = (int)((1.0 + Math.sin((x + frame) * 0.07)) * h);
+	    g.drawLine(x, y1, x, y2);
+	}
+    }
+</pre>
+
+

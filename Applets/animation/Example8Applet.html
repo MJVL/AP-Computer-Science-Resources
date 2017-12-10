@@ -1,0 +1,51 @@
+<title>Example8Applet</title>
+
+<a href=index.html#imageSequence>Return to article</a>
+<br>
+<hr>
+
+<h1>Displaying a Sequence of Images: Example8Applet</h1>
+
+<applet code=Example8Applet.class width=55 height=68>
+<param name=fps value=10>
+</applet>
+
+<hr>
+The code below shows the important methods that we had
+to update to use one image for each frame
+of the animation.
+The code for the entire applet can be found in
+<a href="Example8Applet.java">Example8Applet.java</a>.
+<p>
+<pre>
+    Image frames[];
+
+    <i>/**
+     * Initialize the applet and compute the delay between frames.
+     */</i>
+    public void init() {
+	String str = getParameter("fps");
+	int fps = (str != null) ? Integer.parseInt(str) : 10;
+	delay = (fps &gt; 0) ? (1000 / fps) : 100;
+
+	frames = new Image[10];
+	for (int i = 1 ; i &lt;= 10 ; i++) {
+	    frames[i-1] = getImage(getCodeBase(), "duke/T" + i + ".gif");
+	}
+    }
+
+    <i>/**
+     * Paint the previous frame (if any).
+     */</i>
+    public void paint(Graphics g) {
+	update(g);
+    }
+
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paintFrame(Graphics g) {
+	g.drawImage(frames[frame % 10], 0, 0, null);
+    }
+</pre>
+

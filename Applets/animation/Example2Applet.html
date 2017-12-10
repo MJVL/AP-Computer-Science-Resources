@@ -1,0 +1,45 @@
+<title>Example2Applet</title>
+
+<a href=index.html#frameRate>Return to article</a>
+<br>
+<hr>
+
+<h1>Keeping a Constant Frame Rate: Example2Applet</h1>
+
+This applet is very similar to
+<a href=Example1Applet.html>the previous example</a>,
+except that it keeps better track of time in
+the <code><b>run()</b></code> method.
+The actual code for this applet is in
+<a href=Example2Applet.java>Example2Applet.java</a>.
+This is the updated method:
+
+<p>
+
+<pre>
+    <i>/**
+     * This method is called by the thread that was created in
+     * the start method. It does the main animation.
+     */</i>
+    public void run() {
+	<i>// Remember the starting time</i>
+	long tm = System.currentTimeMillis();
+	while (Thread.currentThread() == animator) {
+	    <i>// Display the next frame of animation.</i>
+	    repaint();
+
+	    // Delay depending on how far we are behind.
+	    try {
+		tm += delay;
+		Thread.sleep(Math.max(0, tm - System.currentTimeMillis()));
+	    } catch (InterruptedException e) {
+		break;
+	    }
+
+	    <i>// Advance the frame</i>
+	    frame++;
+	}
+    }
+</pre>
+
+

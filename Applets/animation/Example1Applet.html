@@ -1,0 +1,89 @@
+<title>Example1Applet</title>
+
+<a href=index.html#thread>Return to article</a>
+<br>
+<hr>
+
+<h1>Using a Thread: Example1Applet</h1>
+
+Here is the code for a simple animation applet.
+We will use it as a starting point for developing
+more sophisticated animation applets.
+
+<p>
+
+<pre>
+<i>/**
+ * <a href=Example1Applet.java>Example1Applet</a>
+ *
+ * This is a template applet for animation.
+ * It shows how to write the basic applet so
+ * that it draws one frame of animation 
+ * at intervals defined by a frames per second (fps)
+ * parameter to the applet.
+ *
+ * @author <a href=http://java.sun.com/people/avh/>Arthur van Hoff</a>
+ */</i>
+public
+class Example1Applet extends java.applet.Applet implements Runnable {
+    int frame;
+    int delay;
+    Thread animator;
+
+    <i>/**
+     * Initialize the applet and compute the delay between frames.
+     */</i>
+    public void init() {
+	String str = getParameter("fps");
+	int fps = (str != null) ? Integer.parseInt(str) : 10;
+	delay = (fps &gt; 0) ? (1000 / fps) : 100;
+    }
+
+    <i>/**
+     * This method is called when the applet becomes visible on
+     * the screen. Create a thread and start it.
+     */</i>
+    public void start() {
+	animator = new Thread(this);
+	animator.start();
+    }
+
+    <i>/**
+     * This method is called by the thread that was created in
+     * the start method. It does the main animation.
+     */</i>
+    public void run() {
+	while (Thread.currentThread() == animator) {
+	    <i>// Display the next frame of animation.</i>
+	    repaint();
+	    
+	    <i>// Delay for a while</i>
+	    try {
+		Thread.sleep(delay);
+	    } catch (InterruptedException e) {
+		break;
+	    }
+
+	    <i>// Advance the frame</i>
+	    frame++;
+	}
+    }
+
+    <i>/**
+     * This method is called when the applet is no longer
+     * visible. Set the animator variable to null so that the
+     * thread will exit before displaying the next frame.
+     */</i>
+    public void stop() {
+	animator = null;
+    }
+}
+
+
+
+
+
+
+
+
+

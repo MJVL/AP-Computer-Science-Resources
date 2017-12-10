@@ -1,0 +1,162 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0070)http://www.bernstein-plus-sons.com/.dowling/CSC1024F11/temps_java.html -->
+<HTML><HEAD><META content="IE=5.0000" http-equiv="X-UA-Compatible">
+ <TITLE> temps.java Example of a JApplet</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<META name="GENERATOR" content="MSHTML 10.00.9200.16736"></HEAD> 
+<BODY>
+<H2 align="center">temps.java Example of a JApplet</H2>
+<P>
+<HR>
+<!-- html code for applet loading 
+ *     using object and embed tags from
+ *      Java Swing, Second Edition
+ *      Tips and Tools for Killer GUIs
+ *    By Marc Loy, Robert Eckstein, Dave Wood, James Elliott, Brian Cole
+ *      Second Edition November 2002
+ *      http://www.oreilly.com/catalog/jswing2/
+ */
+ ----> 
+<OBJECT width="350" height="150" classid="clsid:8AD9C840-044E-11D1-B3E9-00805F499D93" 
+codebase="http://java.sun.com/products/plugin/autodl/jinstall-1_3-win.cab#Version=1,3,0,0"><PARAM 
+name="CODE" value="temps">     <PARAM name="type" value="application/x-java-applet;version=1.3"> 
+    <PARAM name="scriptable" value="false">     <PARAM name="bogus" value="just testing"> 
+    <comment><EMBED width="350" height="150" pluginspage="http://java.sun.com/products/plugin/index.html#download" 
+type="application/x-java-applet;version=1.3" scriptable="false" code="temps">    
+        <NOEMBED></NOEMBED>        </comment> </OBJECT> <!--
+<APPLET CODE = temps WIDTH = 350 HEIGHT = 150>
+</APPLET>
+--> 
+<HR>
+
+<P>
+<DIV class="highlight">
+<PRE><SPAN class="c1">//</SPAN>
+<SPAN class="c1">//  <A href="http://www.bernstein-plus-sons.com/.dowling/CSC1024F11/temps.java">temps.java</A></SPAN>
+<SPAN class="c1">//  </SPAN>
+<SPAN class="c1">//</SPAN>
+<SPAN class="c1">//  Created by Herbert J. Bernstein on 10/2/11.</SPAN>
+<SPAN class="c1">//  Copyright 2011 Herbert J. Bernstein. All rights reserved.</SPAN>
+<SPAN class="c1">//</SPAN>
+<SPAN class="c1">//  A demonstration applet for temperature conversions</SPAN>
+<SPAN class="c1">//</SPAN>
+<SPAN class="c1">//  This will be set up to run both as an applet and</SPAN>
+<SPAN class="c1">//  as an application</SPAN>
+<SPAN class="c1">//</SPAN>
+<SPAN class="c1">//  The basic structure is based on the tutorial by</SPAN>
+<SPAN class="c1">//  William Wilson at</SPAN>
+<SPAN class="c1">//</SPAN>
+<SPAN class="c1">//  http://www.dreamincode.net/forums/topic/28410-application-to-japplet-and-reverse/</SPAN>
+<SPAN class="c1">//  with some useful tidbits from</SPAN>
+<SPAN class="c1">//  http://leepoint.net/notes-java/deployment/applications_and_applets/70applets.html</SPAN>
+<SPAN class="c1">//</SPAN>
+
+
+<SPAN class="kn">import</SPAN> <SPAN class="nn">java.awt.event.ActionEvent</SPAN><SPAN class="o">;</SPAN>
+<SPAN class="kn">import</SPAN> <SPAN class="nn">java.awt.event.ActionListener</SPAN><SPAN class="o">;</SPAN>
+<SPAN class="kn">import</SPAN> <SPAN class="nn">java.awt.*</SPAN><SPAN class="o">;</SPAN>
+<SPAN class="kn">import</SPAN> <SPAN class="nn">javax.swing.*</SPAN><SPAN class="o">;</SPAN>
+
+<SPAN class="kd">public</SPAN> <SPAN class="kd">class</SPAN> <SPAN class="nc">temps</SPAN> <SPAN class="kd">extends</SPAN> <SPAN class="n">JApplet</SPAN>    
+<SPAN class="o">{</SPAN>
+    
+    <SPAN class="n">appPanel</SPAN> <SPAN class="n">apppanel</SPAN><SPAN class="o">;</SPAN>
+    <SPAN class="n">JTextField</SPAN> <SPAN class="n">tempF</SPAN><SPAN class="o">;</SPAN>
+    <SPAN class="n">JTextField</SPAN> <SPAN class="n">tempC</SPAN><SPAN class="o">;</SPAN>
+    <SPAN class="kt">double</SPAN> <SPAN class="n">FahrenheitTemp</SPAN><SPAN class="o">;</SPAN>
+    <SPAN class="kt">double</SPAN> <SPAN class="n">CentigradeTemp</SPAN><SPAN class="o">;</SPAN>
+
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="nf">temps</SPAN><SPAN class="o">()</SPAN>  <SPAN class="c1">//default constructor</SPAN>
+    <SPAN class="o">{</SPAN>
+        <SPAN class="n">System</SPAN><SPAN class="o">.</SPAN><SPAN class="na">out</SPAN><SPAN class="o">.</SPAN><SPAN class="na">println</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"creating temperature conversion object"</SPAN><SPAN class="o">);</SPAN>
+    <SPAN class="o">}</SPAN>
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">init</SPAN><SPAN class="o">()</SPAN>  <SPAN class="c1">// to call on load (once)</SPAN>
+    <SPAN class="o">{</SPAN>
+        <SPAN class="c1">// System.out.println("initializing temperature conversion applet");</SPAN>
+        <SPAN class="n">Container</SPAN> <SPAN class="n">outerpane</SPAN><SPAN class="o">=</SPAN><SPAN class="n">getContentPane</SPAN><SPAN class="o">();</SPAN>  <SPAN class="c1">// The ContentPane is the</SPAN>
+                                           <SPAN class="c1">// place where we add all the</SPAN>
+                                           <SPAN class="c1">// components of the applet</SPAN>
+        <SPAN class="n">apppanel</SPAN> <SPAN class="o">=</SPAN> <SPAN class="k">new</SPAN> <SPAN class="n">appPanel</SPAN><SPAN class="o">();</SPAN>  <SPAN class="c1">// starting with a panel </SPAN>
+                                           <SPAN class="c1">// that has within it eveything</SPAN>
+                                           <SPAN class="c1">// we will draw</SPAN>
+        <SPAN class="n">outerpane</SPAN><SPAN class="o">.</SPAN><SPAN class="na">add</SPAN><SPAN class="o">(</SPAN><SPAN class="n">apppanel</SPAN><SPAN class="o">);</SPAN>
+    <SPAN class="o">}</SPAN>
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">start</SPAN><SPAN class="o">()</SPAN> <SPAN class="c1">// to call after load</SPAN>
+    <SPAN class="o">{</SPAN>
+        <SPAN class="c1">// System.out.println("temperature conversion applet starting");</SPAN>
+        
+    <SPAN class="o">}</SPAN>
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">stop</SPAN><SPAN class="o">()</SPAN> <SPAN class="c1">// to call at the end</SPAN>
+    <SPAN class="o">{</SPAN>
+        <SPAN class="c1">// System.out.println("temperature conversion applet stopping");</SPAN>
+    <SPAN class="o">}</SPAN>
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">destroy</SPAN><SPAN class="o">()</SPAN> <SPAN class="c1">// to call on exit</SPAN>
+    <SPAN class="o">{</SPAN>
+    <SPAN class="o">}</SPAN>
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="kd">class</SPAN> <SPAN class="nc">appPanel</SPAN> <SPAN class="kd">extends</SPAN> <SPAN class="n">JPanel</SPAN>  <SPAN class="c1">// this is where we really do</SPAN>
+                                          <SPAN class="c1">// the drawing for the applet</SPAN>
+    <SPAN class="o">{</SPAN>
+        <SPAN class="kd">public</SPAN> <SPAN class="nf">appPanel</SPAN><SPAN class="o">()</SPAN> <SPAN class="c1">//applet panel object</SPAN>
+        <SPAN class="o">{</SPAN>
+            <SPAN class="c1">// System.out.println("temperature conversion panel created");</SPAN>
+            <SPAN class="k">this</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setBackground</SPAN><SPAN class="o">(</SPAN><SPAN class="n">Color</SPAN><SPAN class="o">.</SPAN><SPAN class="na">yellow</SPAN><SPAN class="o">);</SPAN>
+            <SPAN class="k">this</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setLayout</SPAN><SPAN class="o">(</SPAN><SPAN class="k">new</SPAN> <SPAN class="n">FlowLayout</SPAN><SPAN class="o">());</SPAN>
+            <SPAN class="k">this</SPAN><SPAN class="o">.</SPAN><SPAN class="na">add</SPAN><SPAN class="o">(</SPAN><SPAN class="k">new</SPAN> <SPAN class="n">JLabel</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"Enter Fahrenheit Temp here:"</SPAN><SPAN class="o">));</SPAN>
+            <SPAN class="n">tempF</SPAN> <SPAN class="o">=</SPAN> <SPAN class="k">new</SPAN> <SPAN class="n">JTextField</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"?"</SPAN><SPAN class="o">,</SPAN><SPAN class="mi">20</SPAN><SPAN class="o">);</SPAN>
+            <SPAN class="k">this</SPAN><SPAN class="o">.</SPAN><SPAN class="na">add</SPAN><SPAN class="o">(</SPAN><SPAN class="n">tempF</SPAN><SPAN class="o">);</SPAN>
+            <SPAN class="k">this</SPAN><SPAN class="o">.</SPAN><SPAN class="na">add</SPAN><SPAN class="o">(</SPAN><SPAN class="k">new</SPAN> <SPAN class="n">JLabel</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"Enter Centigrade Temp here:"</SPAN><SPAN class="o">));</SPAN>
+            <SPAN class="n">tempC</SPAN> <SPAN class="o">=</SPAN> <SPAN class="k">new</SPAN> <SPAN class="n">JTextField</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"?"</SPAN><SPAN class="o">,</SPAN><SPAN class="mi">20</SPAN><SPAN class="o">);</SPAN>
+            <SPAN class="k">this</SPAN><SPAN class="o">.</SPAN><SPAN class="na">add</SPAN><SPAN class="o">(</SPAN><SPAN class="n">tempC</SPAN><SPAN class="o">);</SPAN>
+            <SPAN class="c1">// When changes are made to tempF compute tempC</SPAN>
+            <SPAN class="n">tempF</SPAN><SPAN class="o">.</SPAN><SPAN class="na">addActionListener</SPAN><SPAN class="o">(</SPAN><SPAN class="k">new</SPAN> <SPAN class="n">ActionListener</SPAN><SPAN class="o">()</SPAN> <SPAN class="o">{</SPAN>
+              <SPAN class="kd">public</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">actionPerformed</SPAN><SPAN class="o">(</SPAN><SPAN class="n">ActionEvent</SPAN> <SPAN class="n">e</SPAN><SPAN class="o">){</SPAN>
+                 <SPAN class="n">String</SPAN> <SPAN class="n">FahrenheitText</SPAN> <SPAN class="o">=</SPAN> <SPAN class="n">tempF</SPAN><SPAN class="o">.</SPAN><SPAN class="na">getText</SPAN><SPAN class="o">();</SPAN>
+                 <SPAN class="k">try</SPAN> <SPAN class="o">{</SPAN>
+                     <SPAN class="n">FahrenheitTemp</SPAN> <SPAN class="o">=</SPAN> <SPAN class="n">Double</SPAN><SPAN class="o">.</SPAN><SPAN class="na">parseDouble</SPAN><SPAN class="o">(</SPAN><SPAN class="n">FahrenheitText</SPAN><SPAN class="o">);</SPAN>
+                     <SPAN class="n">CentigradeTemp</SPAN> <SPAN class="o">=</SPAN> <SPAN class="o">(</SPAN><SPAN class="n">FahrenheitTemp</SPAN><SPAN class="o">-</SPAN><SPAN class="mi">32</SPAN><SPAN class="o">.)*</SPAN><SPAN class="mi">5</SPAN><SPAN class="o">./</SPAN><SPAN class="mi">9</SPAN><SPAN class="o">.;</SPAN>
+                     <SPAN class="n">tempC</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setText</SPAN><SPAN class="o">(</SPAN><SPAN class="n">Double</SPAN><SPAN class="o">.</SPAN><SPAN class="na">toString</SPAN><SPAN class="o">(</SPAN><SPAN class="n">CentigradeTemp</SPAN><SPAN class="o">));</SPAN>
+                 <SPAN class="o">}</SPAN><SPAN class="k">catch</SPAN> <SPAN class="o">(</SPAN><SPAN class="n">NumberFormatException</SPAN> <SPAN class="n">nfe</SPAN><SPAN class="o">)</SPAN> <SPAN class="o">{</SPAN>
+                     <SPAN class="n">tempF</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setText</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"Please enter a valid number: "</SPAN> <SPAN class="o">+</SPAN> <SPAN class="n">nfe</SPAN><SPAN class="o">.</SPAN><SPAN class="na">getMessage</SPAN><SPAN class="o">());</SPAN>
+                 <SPAN class="o">}</SPAN>
+              <SPAN class="o">}</SPAN>
+            <SPAN class="o">});</SPAN>
+            <SPAN class="c1">// When changes are made to tempC compute tempF</SPAN>
+            <SPAN class="n">tempC</SPAN><SPAN class="o">.</SPAN><SPAN class="na">addActionListener</SPAN><SPAN class="o">(</SPAN><SPAN class="k">new</SPAN> <SPAN class="n">ActionListener</SPAN><SPAN class="o">()</SPAN> <SPAN class="o">{</SPAN>
+               <SPAN class="kd">public</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">actionPerformed</SPAN><SPAN class="o">(</SPAN><SPAN class="n">ActionEvent</SPAN> <SPAN class="n">e</SPAN><SPAN class="o">){</SPAN>
+                  <SPAN class="n">String</SPAN> <SPAN class="n">CentigradeText</SPAN> <SPAN class="o">=</SPAN> <SPAN class="n">tempC</SPAN><SPAN class="o">.</SPAN><SPAN class="na">getText</SPAN><SPAN class="o">();</SPAN>
+                  <SPAN class="k">try</SPAN> <SPAN class="o">{</SPAN>
+                      <SPAN class="n">CentigradeTemp</SPAN> <SPAN class="o">=</SPAN> <SPAN class="n">Double</SPAN><SPAN class="o">.</SPAN><SPAN class="na">parseDouble</SPAN><SPAN class="o">(</SPAN><SPAN class="n">CentigradeText</SPAN><SPAN class="o">);</SPAN>
+                      <SPAN class="n">FahrenheitTemp</SPAN> <SPAN class="o">=</SPAN> <SPAN class="mi">32</SPAN><SPAN class="o">.+</SPAN> <SPAN class="n">CentigradeTemp</SPAN><SPAN class="o">*</SPAN><SPAN class="mi">9</SPAN><SPAN class="o">./</SPAN><SPAN class="mi">5</SPAN><SPAN class="o">.;</SPAN>
+                      <SPAN class="n">tempF</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setText</SPAN><SPAN class="o">(</SPAN><SPAN class="n">Double</SPAN><SPAN class="o">.</SPAN><SPAN class="na">toString</SPAN><SPAN class="o">(</SPAN><SPAN class="n">FahrenheitTemp</SPAN><SPAN class="o">));</SPAN>
+                  <SPAN class="o">}</SPAN><SPAN class="k">catch</SPAN> <SPAN class="o">(</SPAN><SPAN class="n">NumberFormatException</SPAN> <SPAN class="n">nfe</SPAN><SPAN class="o">)</SPAN> <SPAN class="o">{</SPAN>
+                      <SPAN class="n">tempC</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setText</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"Please enter a valid number: "</SPAN> <SPAN class="o">+</SPAN> <SPAN class="n">nfe</SPAN><SPAN class="o">.</SPAN><SPAN class="na">getMessage</SPAN><SPAN class="o">());</SPAN>
+                  <SPAN class="o">}</SPAN>
+               <SPAN class="o">}</SPAN>
+            <SPAN class="o">});</SPAN>
+        <SPAN class="o">}</SPAN>
+    <SPAN class="o">}</SPAN>
+    
+    <SPAN class="c1">// This is the main program to convert the applet to</SPAN>
+    <SPAN class="c1">// an application</SPAN>
+    
+    <SPAN class="kd">public</SPAN> <SPAN class="kd">static</SPAN> <SPAN class="kt">void</SPAN> <SPAN class="nf">main</SPAN><SPAN class="o">(</SPAN><SPAN class="n">String</SPAN> <SPAN class="n">args</SPAN><SPAN class="o">[])</SPAN> <SPAN class="o">{</SPAN>
+        <SPAN class="n">JFrame</SPAN> <SPAN class="n">DrawingFrame</SPAN> <SPAN class="o">=</SPAN> <SPAN class="k">new</SPAN> <SPAN class="n">JFrame</SPAN><SPAN class="o">(</SPAN><SPAN class="s">"Temperature Conversions"</SPAN><SPAN class="o">);</SPAN>  <SPAN class="c1">//Make the frame</SPAN>
+        <SPAN class="n">DrawingFrame</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setDefaultCloseOperation</SPAN><SPAN class="o">(</SPAN><SPAN class="n">JFrame</SPAN><SPAN class="o">.</SPAN><SPAN class="na">EXIT_ON_CLOSE</SPAN><SPAN class="o">);</SPAN>  <SPAN class="c1">//Be sure is closes on exit</SPAN>
+        <SPAN class="n">temps</SPAN> <SPAN class="n">applet</SPAN> <SPAN class="o">=</SPAN> <SPAN class="k">new</SPAN> <SPAN class="n">temps</SPAN><SPAN class="o">();</SPAN>                                   <SPAN class="c1">//Make an applet instance</SPAN>
+        <SPAN class="n">DrawingFrame</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setContentPane</SPAN><SPAN class="o">(</SPAN><SPAN class="n">applet</SPAN><SPAN class="o">);</SPAN>                          <SPAN class="c1">//Give this frame to the applet</SPAN>
+        <SPAN class="n">applet</SPAN><SPAN class="o">.</SPAN><SPAN class="na">init</SPAN><SPAN class="o">();</SPAN>                                                <SPAN class="c1">//Initialize the applet</SPAN>
+        <SPAN class="n">DrawingFrame</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setSize</SPAN><SPAN class="o">(</SPAN><SPAN class="mi">350</SPAN><SPAN class="o">,</SPAN><SPAN class="mi">200</SPAN><SPAN class="o">);</SPAN>                                <SPAN class="c1">//Set the frame size</SPAN>
+        <SPAN class="n">DrawingFrame</SPAN><SPAN class="o">.</SPAN><SPAN class="na">setVisible</SPAN><SPAN class="o">(</SPAN><SPAN class="kc">true</SPAN><SPAN class="o">);</SPAN>                                <SPAN class="c1">//Make the frame visible</SPAN>
+        <SPAN class="n">applet</SPAN><SPAN class="o">.</SPAN><SPAN class="na">start</SPAN><SPAN class="o">();</SPAN>                                               <SPAN class="c1">//If the applet has start logic</SPAN>
+                                                                      <SPAN class="c1">//run it</SPAN>
+        
+    <SPAN class="o">}</SPAN>
+
+<SPAN class="o">}</SPAN>
+</PRE></DIV></BODY></HTML>

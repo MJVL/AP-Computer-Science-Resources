@@ -1,0 +1,73 @@
+<title>Example6Applet</title>
+
+<a href=index.html#doubleBuffer>Return to article</a>
+<br>
+<hr>
+
+<h1>Double Buffering: Example6Applet</h1>
+
+<applet code=Example6Applet.class width=500 height=50>
+<param name=fps value=10>
+</applet>
+
+<hr>
+Here is the drawing code for the applet that
+is shown above. The code for the entire applet can be found in
+<a href="Example6Applet.java">Example6Applet.java</a>.
+<p>
+<pre>
+    Dimension offDimension;
+    Image offImage;
+    Graphics offGraphics;
+
+    <i>/**
+     * Update a frame of animation.
+     */</i>
+    public void update(Graphics g) {
+	Dimension d = size();
+
+	<i>// Create the offscreen graphics context</i>
+	if ((offGraphics == null)
+	 || (d.width != offDimension.width)
+	 || (d.height != offDimension.height)) {
+	    offDimension = d;
+	    offImage = createImage(d.width, d.height);
+	    offGraphics = offImage.getGraphics();
+	}
+
+	<i>// Erase the previous image</i>
+	offGraphics.setColor(getBackground());
+	offGraphics.fillRect(0, 0, d.width, d.height);
+	offGraphics.setColor(Color.black);
+
+	<i>// Paint the frame into the image</i>
+	paintFrame(offGraphics);
+
+	<i>// Paint the image onto the screen</i>
+	g.drawImage(offImage, 0, 0, null);
+    }
+
+    <i>/**
+     * Paint the previous frame (if any).
+     */</i>
+    public void paint(Graphics g) {
+	if (offImage != null) {
+	    g.drawImage(offImage, 0, 0, null);
+	}
+    }
+
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paintFrame(Graphics g) {
+	Dimension d = size();
+	int h = d.height / 2;
+	for (int x = 0 ; x &lt; d.width ; x++) {
+	    int y1 = (int)((1.0 + Math.sin((x - frame) * 0.05)) * h);
+	    int y2 = (int)((1.0 + Math.sin((x + frame) * 0.07)) * h);
+	    g.drawLine(x, y1, x, y2);
+	}
+    }
+
+</pre>
+

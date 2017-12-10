@@ -1,0 +1,839 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: Wyo Java Lecture Notes
+Date: Wed, 6 May 2009 11:04:50 -0400
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0004_01C9CE3A.7A0F2E10"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5512
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0004_01C9CE3A.7A0F2E10
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: mhtml:file://D:\0809schoolyear\applets\Applet Lecture Notes.mht
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" =
+"http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<HTML><HEAD><TITLE>Wyo Java Lecture Notes</TITLE><!-- InstanceBegin =
+template=3D"/Templates/Wyo_Java_Chapter_Lecture_Notes.dwt" =
+codeOutsideHTMLIsLocked=3D"false" --><!-- InstanceBeginEditable =
+name=3D"doctitle" --><!-- InstanceEndEditable -->
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Diso-8859-1"><!-- InstanceBeginEditable name=3D"head" --><!-- =
+InstanceEndEditable --><LINK=20
+href=3D"http://minich.com/education/wyo/wyostyles.css" type=3Dtext/css=20
+rel=3Dstylesheet>
+<META content=3D"MSHTML 6.00.6000.16788" name=3DGENERATOR></HEAD>
+<BODY>
+<P class=3DpageTitle>Wyo Java Ch.=20
+<!-- InstanceBeginEditable name=3D"ChapterNum" -->GUI Java<!-- =
+InstanceEndEditable --> Lecture Notes</P><!-- InstanceBeginEditable =
+name=3D"Notes" -->
+<P class=3DcolumnSubtitle>Objective #1: Create a simple hello world =
+applet</P>
+<UL>
+  <LI class=3DbodyText>A Java <STRONG>applet</STRONG> is a Java program =
+that can=20
+  be executed within a web browser window (e.g. Internet Explorer) or an =
+applet=20
+  viewer. The applet is a compiled Java .class file that resides on a =
+web=20
+  server. When a person surfing the web visits the applet's web page, =
+the=20
+  browser downloads the .class file which executes within the browser =
+window.=20
+  The actual <STRONG>.java source file</STRONG>, that was compiled to =
+create the=20
+  <STRONG>.class bytecode file</STRONG>, should not be uploaded to the =
+web=20
+  server. <BR>
+  <LI><SPAN class=3DbodyText>In theory, a Java applet will execute in =
+any web=20
+  browser on any type of computer as long as a<STRONG> Java Virtual=20
+  Machine</STRONG> (JVM) has been installed on that computer. A JVM is =
+free to=20
+  download from Sun as part of the "Java Runtime Environment" (JRE) and =
+is often=20
+  included as part of some operating systems or web browsers. However, =
+some=20
+  versions of Microsoft Internet Explorer do not support the JVM so you =
+may need=20
+  to also download the "Java Plug-in" from Sun (see =
+java.sun.com/products/plugin=20
+  ) and it may be useful to download the "Java Plug-in HTML Converter" =
+from Sun=20
+  to be able to translater HTML pages containing &lt;applet&gt; tags to =
+normal=20
+  HTML (explained below).</SPAN><BR>
+  <LI class=3DbodyText>Here is a simple Java applet that displays "Hello =
+World" in=20
+  an applet window:<BR><BR><SPAN class=3DcodeSegment>import =
+java.awt.*;<BR>import=20
+  java.applet.*; </SPAN>
+  <P class=3DcodeSegment>public class HelloWorld extends Applet<BR>{</P>
+  <P class=3DcodeSegment>&nbsp;&nbsp;&nbsp;public void paint(Graphics g) =
+
+  =
+<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.pain=
+t(g);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.drawString("Hello=20
+  World", 50, 60 );<BR>&nbsp;&nbsp;&nbsp;}<BR>}</P>
+  <LI class=3DbodyText>A Java applet must extend the Java <SPAN=20
+  class=3DcodeSegment>Applet</SPAN> class. </LI></UL>
+<P class=3DcolumnSubtitle>Objective #2: Create a Web page (html file) =
+that embeds=20
+the applet.=20
+<UL>
+  <LI class=3DbodyText>It is necessary to create a web page that will =
+embed your=20
+  applet. The web page can be created by writing HTML by hand. Or, if =
+you use=20
+  JCreator as a Java IDE, it can be used to automatically create the =
+necessary=20
+  web page.=20
+  <LI class=3DbodyText>To use JCreator's web page, create your applet by =
+clicking=20
+  File/New Project and select Java applet as the type of new project. A =
+web page=20
+  with the same name as the project will automatically be created though =
+it will=20
+  have a .htm or .html file extension.=20
+  <LI class=3DbodyText>If typing the web page by hand, you can type the =
+following=20
+  HTML code into a program like NotePad and save the file with a name =
+that ends=20
+  with .html.<BR><BR><SPAN class=3DcodeSegment>&lt;applet =
+code=3D"HelloWorld.class"=20
+  width=3D"500" height=3D"300"&gt;&lt;/applet&gt;</SPAN><BR><BR>where =
+the name of=20
+  your compiled applet class should be substituted for =
+"HelloWorld.class".=20
+  <LI class=3DbodyText>The width and height attributes of the HTML =
+applet tag can=20
+  be modified to adjust the size of the applet window. </LI></UL>
+<P class=3DcolumnSubtitle>Objective #3: Use an applet's <SPAN=20
+class=3DcodeSegment>init</SPAN>, <SPAN class=3DcodeSegment>start</SPAN>, =
+and <SPAN=20
+class=3DcodeSegment>paint</SPAN> methods.</P>
+<UL>
+  <LI class=3DbodyText>Unlike the Java applications that we programmed =
+this school=20
+  year, there is no <SPAN class=3DcodeSegment>main</SPAN> method in a =
+Java applet.=20
+  The web browser is responsible for starting the JVM, loading the =
+applet=20
+  bytecode, and starting the applet.=20
+  <LI class=3DbodyText>When the browser begins executing an applet these =
+three=20
+  methods are executed in this order: <SPAN =
+class=3DcodeSegment>init</SPAN>, <SPAN=20
+  class=3DcodeSegment>start</SPAN>, and <SPAN =
+class=3DcodeSegment>paint</SPAN>.=20
+  These three methods can be overridden in your applet.=20
+  <LI class=3DbodyText>Though not required, an <SPAN=20
+  class=3DcodeSegment><STRONG>init</STRONG></SPAN> method is useful to =
+initialize=20
+  certain properties. The <SPAN class=3DcodeSegment>init</SPAN> method =
+is only=20
+  called once when the applet is first loaded in the web browser for =
+execution.=20
+  Typical actions performed here are initialization of properties and =
+GUI=20
+  components of the applet. Sounds to be played are loaded here and =
+images to be=20
+  displayed are also loaded in the <SPAN class=3DcodeSegment>init</SPAN> =
+method.=20
+  Threads are also created here. You can write a constructor for an =
+applet class=20
+  and do initializations there as well as in the <SPAN=20
+  class=3DcodeSegment>init</SPAN> method. However when the constructor =
+is called,=20
+  the size of the applet is not available. By the time <SPAN=20
+  class=3DcodeSegment>init</SPAN> is called, the size is known and can =
+be used to=20
+  customize the initialization according to the size. In general, it is=20
+  customary to do applet initialization in the <SPAN=20
+  class=3DcodeSegment>init</SPAN> method.=20
+  <LI class=3DbodyText>The <SPAN =
+class=3DcodeSegment><STRONG>start</STRONG></SPAN>=20
+  method is called after the <SPAN class=3DcodeSegment>init</SPAN> =
+method=20
+  completes. However the <SPAN class=3DcodeSegment>start</SPAN> method =
+is executed=20
+  every time the browser returns to the applet's web page after having =
+viewed=20
+  another web page. Typical actions performed in the <SPAN=20
+  class=3DcodeSegment>start</SPAN> method are to start an animation or a =
+thread.=20
+  <LI class=3DbodyText>Whenever the applet window needs to be drawn or =
+redrawn,=20
+  the web browser's window manager calls the <SPAN=20
+  class=3DcodeSegment>paint</SPAN> method. The <SPAN=20
+  class=3DcodeSegment>paint</SPAN> method is called when the applet is =
+first=20
+  loaded. But it is also called in less obvious situations like when a =
+user=20
+  visits another web page and then goes back to the applet's web page. A =
+
+  programmer should not attempt to call the <SPAN =
+class=3DcodeSegment>paint</SPAN>=20
+  method. If a programmer does want to forcibly redraw the applet, he =
+should use=20
+  the <SPAN class=3DcodeSegment>repaint</SPAN> method with the call=20
+  statement&nbsp;&nbsp;&nbsp;&nbsp;<SPAN=20
+  class=3DcodeSegment>&nbsp;repaint();</SPAN>=20
+  <LI class=3DbodyText>The <SPAN =
+class=3DcodeSegment><STRONG>paint</STRONG></SPAN>=20
+  method receives an a parameter named <SPAN =
+class=3DcodeSegment>g</SPAN> that is=20
+  a <SPAN class=3DcodeSegment>Graphics</SPAN> object. This object stores =
+the=20
+  graphics state which includes the current color and font as well as =
+other=20
+  drawing-related properties. The <SPAN =
+class=3DcodeSegment>Graphics</SPAN> object=20
+  is part of Java's <STRONG>Abstract Windowing Toolkit</STRONG>=20
+  (<STRONG>AWT</STRONG>). This is the original user interface toolkit =
+that Sun=20
+  integrated with Java in the mid-1990's.=20
+  <LI class=3DbodyText>The statement&nbsp;&nbsp;&nbsp;<SPAN=20
+  =
+class=3DcodeSegment>&nbsp;super.paint(g);&nbsp;</SPAN>&nbsp;&nbsp;&nbsp;t=
+hough=20
+  technically optional in some situations, should be included as the =
+first=20
+  statement in the paint method. There are complex situations when =
+drawing is=20
+  mixed with GUI components that errors will occur if this statement is=20
+  overlooked.=20
+  <LI class=3DbodyText>It is necessary to import the <SPAN=20
+  class=3DcodeSegment>Java.awt.Graphics</SPAN> and <SPAN=20
+  class=3DcodeSegment>java.applet.Applet</SPAN> classes in order to make =
+use of=20
+  the AWT.<BR>
+  <LI><SPAN class=3DbodyText>However a more modern graphical interface =
+called=20
+  <STRONG>Swing</STRONG> is available if you import the </SPAN><SPAN=20
+  class=3DcodeSegment>javax.swing.JApplet</SPAN><SPAN class=3DbodyText> =
+class=20
+  instead of </SPAN><SPAN =
+class=3DcodeSegment>java.applet.Applet</SPAN><SPAN=20
+  class=3DbodyText>. To use Swing, the first line of your applet would=20
+  be</SPAN><BR><SPAN class=3DcodeSegment><BR>public class HelloWord =
+extends=20
+  JApplet</SPAN><BR>
+  <LI><SPAN class=3DbodyText>The following applet uses both an =
+</SPAN><SPAN=20
+  class=3DcodeSegment>init</SPAN><SPAN class=3DbodyText> method and a =
+</SPAN><SPAN=20
+  class=3DcodeSegment>paint</SPAN><SPAN class=3DbodyText> method to =
+display a=20
+  message on the screen</SPAN><BR><BR><SPAN class=3DcodeSegment>import=20
+  java.awt.*;<BR>import java.applet.*; </SPAN>
+  <P class=3DcodeSegment>public class HelloWorld extends=20
+  Applet<BR>{<BR>&nbsp;&nbsp;&nbsp;private String=20
+  message;<BR><BR>&nbsp;&nbsp;&nbsp;public void =
+init()<BR>&nbsp;&nbsp;&nbsp;{=20
+  <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;message =3D "Hello=20
+  World";<BR>&nbsp;&nbsp;&nbsp;}</P>
+  <P class=3DcodeSegment>&nbsp;&nbsp;&nbsp;public void paint(Graphics g) =
+
+  =
+<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.pain=
+t(g);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.drawString(message,=20
+  50, 60 );<BR>&nbsp;&nbsp;&nbsp;}<BR>}</P></LI></UL>
+<P class=3DcolumnSubtitle>Objective #4: Draw shapes and place text in an =
+applet.=20
+<UL>
+  <LI><SPAN class=3DbodyText>There are many interesting methods in the =
+<A=20
+  =
+href=3D"http://java.sun.com/j2se/1.4.2/docs/api/java/awt/Graphics.html">G=
+raphics=20
+  API</A> that can be used with the </SPAN><SPAN=20
+  class=3DcodeSegment>Graphics</SPAN><SPAN class=3DbodyText> parameter =
+</SPAN><SPAN=20
+  class=3DcodeSegment>g</SPAN><SPAN class=3DbodyText> in the =
+</SPAN><SPAN=20
+  class=3DcodeSegment>paint</SPAN><SPAN class=3DbodyText> method =
+including:</SPAN>=20
+  <UL>
+    <LI class=3DcodeSegment><STRONG>drawString</STRONG>=20
+    <LI class=3DcodeSegment>drawLine=20
+    <LI class=3DcodeSegment>drawRect=20
+    <LI class=3DcodeSegment>setBackground=20
+    <LI class=3DcodeSegment>setStroke=20
+    <LI class=3DcodeSegment>setFont<SPAN =
+class=3DcodeSegment><BR><BR></SPAN></LI></UL>
+  <LI><SPAN class=3DbodyText>To draw shapes in a color other than the =
+default=20
+  black, you can use the </SPAN><SPAN =
+class=3DcodeSegment>setColor</SPAN><SPAN=20
+  class=3DbodyText> method to change the current =
+color.</SPAN><BR><BR><SPAN=20
+  class=3DcodeSegment>g.setColor(Color.red);</SPAN><BR><BR><SPAN=20
+  class=3DbodyText>There are many color constants in the </SPAN><SPAN=20
+  class=3DcodeSegment><A=20
+  =
+href=3D"http://java.sun.com/j2se/1.4.2/docs/api/java/awt/Color.html">Colo=
+r</A></SPAN>=20
+  <SPAN class=3DbodyText>class</SPAN><SPAN class=3DbodyText> including =
+</SPAN><SPAN=20
+  class=3DcodeSegment>Color.blue</SPAN><SPAN class=3DbodyText> and =
+</SPAN><SPAN=20
+  class=3DcodeSegment>Color.green</SPAN><SPAN =
+class=3DbodyText>.</SPAN><BR><BR>
+  <LI><SPAN class=3DbodyText>It is possible to change the font that's =
+used with=20
+  the </SPAN><SPAN class=3DcodeSegment>drawString</SPAN><SPAN =
+class=3DbodyText>=20
+  method by using the </SPAN><SPAN =
+class=3DcodeSegment>setFont</SPAN><SPAN=20
+  class=3DbodyText> method.</SPAN><BR><BR><SPAN class=3DcodeSegment>Font =
+bigFont =3D=20
+  new Font("Serif", Font.BOLD, =
+48);<BR>g.setFont(bigFont);</SPAN><BR><BR><SPAN=20
+  class=3DbodyText>or using an anonymous </SPAN><SPAN=20
+  class=3DcodeSegment>Font</SPAN><SPAN class=3DbodyText> =
+object</SPAN><BR><BR><SPAN=20
+  class=3DcodeSegment>g.setFont(new Font("Serif", Font.BOLD, =
+48));</SPAN><BR>
+  <LI><SPAN class=3DbodyText>You can create a standalone class that =
+represents an=20
+  object and includes its own draw method and then instantiate objects =
+from that=20
+  class in an applet.</SPAN><BR><BR><SPAN class=3DcodeSegment>import=20
+  java.awt.Graphics; </SPAN>
+  <P class=3DcodeSegment>public class =
+StickMan<BR>{<BR>&nbsp;&nbsp;&nbsp;private=20
+  int x;<BR>&nbsp;&nbsp;&nbsp;private int =
+y;<BR><BR>&nbsp;&nbsp;&nbsp;public=20
+  StickMan(int paramX, int=20
+  =
+paramY)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x =
+=3D=20
+  paramX;<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y =3D=20
+  paramY;<BR>&nbsp;&nbsp;&nbsp;}<BR><BR>&nbsp;&nbsp;&nbsp;public void=20
+  draw(Graphics=20
+  =
+g)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;g.drawLi=
+ne(x,=20
+  y, x, y - 20);<BR>&nbsp;&nbsp;&nbsp;}<BR><BR>}<SPAN=20
+  =
+class=3DcodeSegment><BR><BR>-----------------------------------------<BR>=
+<BR>import=20
+  java.awt.*;<BR>import javax.swing.*;<BR>import java.util.Random; =
+</SPAN></P>
+  <P class=3DcodeSegment>public class StickMen extends JApplet<BR>{=20
+  <BR>&nbsp;&nbsp;&nbsp;public void paint(Graphics=20
+  =
+g)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.pa=
+int(g);</P>
+  <P class=3DcodeSegment>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Random rnd =
+=3D new=20
+  Random();<BR><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;for (int i =3D 0; =
+i &lt;=20
+  10;=20
+  =
+i++)<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;=
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;StickMan=20
+  next =3D new StickMan(rnd.nextInt(500),=20
+  =
+rnd.nextInt(300));<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;next.draw(g);<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</P>
+  <P class=3DcodeSegment>&nbsp;&nbsp;&nbsp;}<BR>} </P>
+  <LI><SPAN class=3DbodyText>See the helpful tutorial at <A=20
+  =
+href=3D"http://www.dgp.toronto.edu/~mjmcguff/learn/java/02-drawingOtherSt=
+uff/">http://www.dgp.toronto.edu/~mjmcguff/learn/java/02-drawingOtherStuf=
+f/</A>=20
+  </SPAN></LI></UL>
+<P class=3DcolumnSubtitle>Objective #5: Use GUI components including =
+<SPAN=20
+class=3DcodeSegment>JLabel</SPAN>, <SPAN =
+class=3DcodeSegment>JTextField</SPAN>, and=20
+<SPAN class=3DcodeSegment>JButton</SPAN> in an applet.=20
+<UL>
+  <LI class=3DbodyText>Objects that appear on an applet are called=20
+  <STRONG>components</STRONG> in Java because they are child classes of =
+the=20
+  Component class.=20
+  <LI class=3DbodyText>A <SPAN =
+class=3DcodeSegment><STRONG>JLabel</STRONG></SPAN>=20
+  object is similar to a label in Visual Basic. It is a read-only =
+component that=20
+  usually stores text. The <SPAN class=3DcodeSegment>setText</SPAN> =
+method can be=20
+  used to change the text that is stored in a <SPAN=20
+  class=3DcodeSegment>JLabel</SPAN>. The <SPAN =
+class=3DcodeSegment>getText</SPAN>=20
+  method can be used to retrieve the text that is stored there.=20
+  <LI class=3DbodyText>A <SPAN=20
+  class=3DcodeSegment><STRONG>JTextField</STRONG></SPAN> object is =
+similar to a=20
+  textbox in Visual Basic. It is a one-line area where the user can =
+input text.=20
+  It has a white background like textboxes in Visual Basic. You can use =
+the=20
+  <SPAN class=3DcodeSegment>setText</SPAN> and <SPAN=20
+  class=3DcodeSegment>getText</SPAN> methods with a <SPAN=20
+  class=3DcodeSegment>JTextField</SPAN>. You can also prevent the user =
+from=20
+  inputting text into a <SPAN class=3DcodeSegment>JTextField</SPAN> by =
+using the=20
+  <SPAN class=3DcodeSegment>setEditable</SPAN> method as=20
+  in&nbsp;&nbsp;&nbsp;&nbsp;<SPAN=20
+  class=3DcodeSegment>myTextField.setEditable(false);</SPAN>=20
+  <LI class=3DbodyText>A <SPAN =
+class=3DcodeSegment><STRONG>JButton</STRONG></SPAN>=20
+  object is similar to a Button object in Visual Basic.=20
+  <LI class=3DbodyText>After instantiating a components such as a <SPAN=20
+  class=3DcodeSegment>JButton</SPAN>, you must add it to the applet's =
+"content=20
+  pane" with a statement such as<BR><BR><SPAN=20
+  class=3DcodeSegment>getContentPane().add(button1);<BR><BR></SPAN>in =
+the applet's=20
+  <SPAN class=3DcodeSegment>init</SPAN> method. <SPAN=20
+class=3DcodeSegment><BR></SPAN>
+  <LI class=3DbodyText>You may want to use a layout manager when placing =
+objects=20
+  such as <SPAN class=3DcodeSegment>JLabel</SPAN>s and <SPAN=20
+  class=3DcodeSegment>JButton</SPAN>s in an applet. A layout manager =
+controls the=20
+  size and position of components in a container (i.e. applet window). =
+<BR><BR>
+  <UL>
+    <LI><SPAN class=3DcodeSegment>FlowLayout</SPAN> - This is the =
+default layout=20
+    manager for a Panel. Components are centered with their natural size =
+in a=20
+    horizontal line. If there are too many components to fit in one row, =
+the=20
+    flow layout manager uses multiple rows. Example:<BR><SPAN=20
+    class=3DcodeSegment><BR><BR>Container container =3D=20
+    getContentPane();<BR>container.setLayout(new FLowLayout());=20
+    <BR>container.add(new Button("Button 1"));<BR>container.add(new=20
+    Button("Button 2")); <BR>container.add(new Button("Button 3"));=20
+    </A></SPAN><BR><BR>
+    <LI><SPAN class=3DcodeSegment>BorderLayout</SPAN> - This is the =
+default layout=20
+    manager for a Window (e.g. Frame or Dialog). This layout has the =
+following=20
+    five areas -- North, South, East, West and Center. This layout is =
+good for=20
+    placing a row of buttons along one edge of the container (usually =
+South or=20
+    West).<BR><BR><SPAN class=3DcodeSegment><BR>Container container =3D=20
+    getContentPane();<BR>container.setLayout(new BorderLayout());=20
+    <BR>container.add("North", new Button("North")); =
+<BR>container.add("South",=20
+    new Button("South"));</SPAN><BR><BR>
+    <LI><SPAN class=3DcodeSegment>GridLayout</SPAN> - This layout puts =
+components=20
+    into a grid of cells. Each cell in the grid is the same size and the =
+
+    components grow to fill the available area. This is good for laying =
+out=20
+    containers that look like grids. In the grid constructor below the =
+grid is=20
+    being specifed to have 2 rows with 3 columns and 5 pixels between =
+cells. The=20
+    add method places objects in order from left to right, top down.=20
+    <BR><BR><SPAN class=3DcodeSegment>Container container =3D=20
+    getContentPane();<BR>GridLayout grid =3D new GridLayout(2, 3, 5, 5); =
+
+    <BR>container.setLayout(grid);<BR>container.add(new JLabel("label 1=20
+    1"));<BR>container.add(new JLabel("label 1 =
+2"));<BR>container.add(new=20
+    JLabel("label 1 3 "));<BR>container.add(new JLabel("label 2 1"));=20
+    </SPAN><BR><SPAN class=3DcodeSegment>container.add(new JLabel("label =
+2=20
+    2"));<BR>container.add(new JLabel("label 2 3 ")); =
+</SPAN><BR><BR></LI></UL>
+  <LI class=3DbodyText>You can create a dialog box similar to a =
+MessageBox in=20
+  Visual Basic with <BR><BR><SPAN=20
+  class=3DcodeSegment>JOptionPane.showMessageDialog(null, "Hello World", =
+"Alert",=20
+  JOptionPane.INFORMATION_MESSAGE); </SPAN><BR><BR>
+  <LI class=3DbodyText>See this helpful tutorial about layout managers =
+at <A=20
+  =
+href=3D"http://www.javacoffeebreak.com/java108/java108.html">http://www.j=
+avacoffeebreak.com/java108/java108.html</A>=20
+
+  <LI class=3DbodyText>See the examples at the bottom of this page <A=20
+  =
+href=3D"http://www.javacoffeebreak.com/java107/java107.html">http://www.j=
+avacoffeebreak.com/java107/java107.html</A>=20
+  </LI></UL>
+<P class=3DcolumnSubtitle>Objective #6: Work with mouse inputs in an =
+applet.</P>
+<UL>
+  <LI class=3DbodyText>In order to allow the user to click buttons in an =
+applet=20
+  you must implement the <SPAN=20
+  class=3DcodeSegment><STRONG>ActionListener</STRONG></SPAN> interface =
+and attach=20
+  listeners to your <SPAN class=3DcodeSegment>JButton</SPAN> objects (or =
+any other=20
+  object that is capable of receiving a mouse event). The first line of =
+your=20
+  applet class will look like this<BR><BR><SPAN =
+class=3DcodeSegment>public class=20
+  Demo extends JApplet implements ActionListener</SPAN><BR><BR>Then you =
+would=20
+  use this line of code in your <SPAN class=3DcodeSegment>init</SPAN> =
+method to=20
+  attach a Listener object to a <SPAN class=3DcodeSegment>JButton</SPAN> =
+named=20
+  <SPAN class=3DcodeSegment>button1</SPAN>. <BR><SPAN=20
+  =
+class=3DcodeSegment><BR>button1.addActionListener(this);</SPAN><BR><BR>Th=
+e=20
+  keyword <SPAN class=3DcodeSegment>this</SPAN> refers to the applet =
+class=20
+  itself.<BR><BR>You must override the <SPAN=20
+  class=3DcodeSegment>actionPerformed</SPAN> method that comes from the =
+<SPAN=20
+  class=3DcodeSegment>ActionListener</SPAN> class. Here is where you =
+would write=20
+  code that executes if the button is clicked<BR><BR><SPAN=20
+  class=3DcodeSegment>public void actionPerformed(ActionEvent e)=20
+  <BR>{<BR>&nbsp;&nbsp;&nbsp;if (e.getSource() =3D=3D=20
+  =
+button1)<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;la=
+bel.setText("Hello=20
+  World");<BR>&nbsp;&nbsp;&nbsp;}<BR>} </SPAN><BR><BR>The code segment =
+above=20
+  detects that the <SPAN class=3DcodeSegment>JButton</SPAN> named <SPAN=20
+  class=3DcodeSegment>button1</SPAN> was clicked (i.e. the button was =
+the source=20
+  of the <SPAN class=3DcodeSegment>ActionEvent</SPAN> parameter) and =
+displays the=20
+  phrase "Hello World" in a <SPAN class=3DcodeSegment>JLabel</SPAN> =
+object named=20
+  <SPAN class=3DcodeSegment>label</SPAN>.<BR>
+  <LI class=3DbodyText>You can also implement the <SPAN=20
+  class=3DcodeSegment><STRONG>MouseListener</STRONG></SPAN> interface to =
+detect=20
+  mouse clicks in the applet window. However you must then implement the =
+methods=20
+  <SPAN class=3DcodeSegment>mousePressed</SPAN>, <SPAN=20
+  class=3DcodeSegment>mouseReleased</SPAN>, <SPAN=20
+  class=3DcodeSegment>mouseClicked</SPAN>, <SPAN=20
+  class=3DcodeSegment>mouseEntered</SPAN>, &amp; <SPAN=20
+  class=3DcodeSegment>mouseExited</SPAN>. Here is an example that =
+overrides <SPAN=20
+  class=3DcodeSegment>mousePressed</SPAN> but leaves the other methods=20
+  empty...<BR><BR><SPAN class=3DcodeSegment>public void =
+mousePressed(MouseEvent=20
+  event)<BR>{ <BR>&nbsp;&nbsp;&nbsp;String input =3D=20
+  JOptionPane.showInputDialog("Enter your=20
+  =
+name");<BR>&nbsp;&nbsp;&nbsp;label.setText(input);<BR>&nbsp;&nbsp;&nbsp;r=
+epaint();=20
+  <BR>}<BR><BR>public void mouseReleased(MouseEvent event) {}<BR>public =
+void=20
+  mouseClicked(MouseEvent event) {}<BR>public void =
+mouseEntered(MouseEvent=20
+  event) {}<BR>public void mouseExited(MouseEvent event) {}=20
+  </SPAN><BR><BR>Notice that even if you don't want to put any code into =
+the=20
+  <SPAN class=3DcodeSegment>mouseReleased</SPAN> method, you must still =
+implement=20
+  it as an empty method. <BR>
+  <LI class=3DbodyText>See the helpful tutorial at <A=20
+  =
+href=3D"http://www.dgp.toronto.edu/~mjmcguff/learn/java/04-mouseInput/">h=
+ttp://www.dgp.toronto.edu/~mjmcguff/learn/java/04-mouseInput/</A>=20
+
+  <LI class=3DbodyText>A list of interesting mouse events can be found =
+at <A=20
+  =
+href=3D"http://www.javacoffeebreak.com/java107/java107.html">http://www.j=
+avacoffeebreak.com/java107/java107.html</A>=20
+  </LI></UL>
+<P class=3DcolumnSubtitle>Objective #7: Work with keyboard inputs in an=20
+applet.</P>
+<UL>
+  <LI class=3DbodyText>You can use the <SPAN=20
+  class=3DcodeSegment>JOptionPane.showInputDialog </SPAN>method to =
+accept user=20
+  inputs into an applet just like we did in a previous chapter.=20
+  <LI class=3DbodyText>You can also accept user input into a <SPAN=20
+  class=3DcodeSegment>JTextField</SPAN>.=20
+  <LI class=3DbodyText>You can use the <SPAN =
+class=3DcodeSegment>Double.parseDouble=20
+  </SPAN>and <SPAN class=3DcodeSegment>Integer.parseInteger</SPAN> =
+methods to=20
+  convert string inputs into primitive <SPAN =
+class=3DcodeSegment>int</SPAN> and=20
+  <SPAN class=3DcodeSegment>double</SPAN> values for mathematical =
+processing. The=20
+  following code segment adds PA sales tax to a purchase<BR><BR><SPAN=20
+  class=3DcodeSegment>String userInput =3D =
+textField.getText();<BR>double userNum =3D=20
+  Double.parseDouble(userInput);<BR>double withTax =3D userNum *=20
+  1.06;<BR>textArea.setText(new Double(withTax).toString()); =
+<BR><BR></SPAN>
+  <LI class=3DbodyText>You can also implement the <SPAN=20
+  class=3DcodeSegment><STRONG>KeyListener</STRONG></SPAN> interface to =
+detect key=20
+  presses. The first line of your applet class would be something=20
+  like:<BR><BR><SPAN class=3DcodeSegment>public class Demo extends =
+JApplet=20
+  implements KeyListener </SPAN><BR><BR>and you have to override the =
+methods=20
+  <SPAN class=3DcodeSegment>keyPressed</SPAN>, <SPAN=20
+  class=3DcodeSegment>keyReleased</SPAN>, &amp; <SPAN=20
+  class=3DcodeSegment>keyTyped</SPAN>. You can use the <SPAN=20
+  class=3DcodeSegment>KeyEvent</SPAN> class's <SPAN=20
+  class=3DcodeSegment>getKeyText</SPAN> and <SPAN=20
+  class=3DcodeSegment>getKeyCode</SPAN> methods to detect what key was =
+pressed as=20
+  in the <SPAN class=3DcodeSegment>keyPressed</SPAN> or <SPAN=20
+  class=3DcodeSegment>keyReleased</SPAN> methods:<BR><SPAN=20
+  class=3DcodeSegment><BR>public void keyPressed(KeyEvent event)<BR>{=20
+  <BR>&nbsp;&nbsp;&nbsp;outputMessage =3D "Key pressed: " +=20
+  event.getKeyText(event.getKeyCode());</SPAN><BR>} <BR>
+  <LI class=3DbodyText>You can also react according to which key was =
+pressed using=20
+  <SPAN class=3DcodeSegment>getKeyChar</SPAN> in the implementation of =
+the <SPAN=20
+  class=3DcodeSegment>keyTyped</SPAN> method as in... <BR><SPAN=20
+  class=3DcodeSegment><BR>public void keyTyped(KeyEvent=20
+  key)<BR>{<BR>&nbsp;&nbsp;&nbsp;char letter =3D=20
+  key.getKeyChar();<BR><BR>&nbsp;&nbsp;&nbsp;if (letter =3D=3D=20
+  =
+'a')<BR>&nbsp;&nbsp;&nbsp;{<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+// do=20
+  something here in response to the user's press of the letter=20
+  'a'<BR>&nbsp;&nbsp;&nbsp;}<BR>} </SPAN><BR>
+  <LI class=3DbodyText>In order to make sure that the applet responds to =
+key=20
+  presses at the very beginning of its execution, add the=20
+  statement<BR><BR>r<SPAN =
+class=3DcodeSegment>equestFocus();</SPAN><BR><BR>to the=20
+  beginning of the <SPAN class=3DcodeSegment>paint</SPAN> method.<BR>
+  <LI class=3DbodyText>See the helpful tutorial at <A=20
+  =
+href=3D"http://www.dgp.toronto.edu/~mjmcguff/learn/java/05-keyboardInput/=
+">http://www.dgp.toronto.edu/~mjmcguff/learn/java/05-keyboardInput/</A>=20
+  </LI></UL>
+<P class=3DcolumnSubtitle>Objective #8: Display an image file in an =
+applet.=20
+<UL>
+  <LI class=3DbodyText>Use an applet's <SPAN=20
+  class=3DcodeSegment><STRONG>getImage</STRONG></SPAN> method to load an =
+<SPAN=20
+  class=3DcodeSegment>Image</SPAN> object in the <SPAN=20
+  class=3DcodeSegment>init</SPAN> method:<BR><BR><SPAN =
+class=3DcodeSegment>Image=20
+  imageFile =3D getImage(getDocumentBase(), =
+"picture.gif");</SPAN><BR><BR>The=20
+  applet's <SPAN class=3DcodeSegment>getDocumentBase</SPAN> method =
+returns the=20
+  path of the Web page (i.e. html file). The image file must be located =
+in the=20
+  same directory as that file. Alternately, the <SPAN=20
+  class=3DcodeSegment>getCodeBase()</SPAN> method can be used to return =
+the path=20
+  of the applet's compiled code (i.e. .class file).<BR>
+  <LI class=3DbodyText>In the applet's <SPAN =
+class=3DcodeSegment>paint</SPAN> method=20
+  use the following statement to display the image<BR><BR><SPAN=20
+  class=3DcodeSegment>g.drawImage(imageFile, x, y, =
+this);</SPAN><BR><BR>where the=20
+  top left corner of the image will be placed at (x, y). </LI></UL>
+<P class=3DcolumnSubtitle>Objective #9: Play an audio file in an applet. =
+
+<UL>
+  <LI class=3DbodyText>In order to play sound in an applet, it's best to =
+use an=20
+  <SPAN class=3DcodeSegment><STRONG>AudioClip</STRONG></SPAN>. Add the =
+import=20
+  statement&nbsp;&nbsp;&nbsp;<SPAN class=3DcodeSegment>import=20
+  java.applet.AudioClip;</SPAN> to the top of your file.=20
+  <LI class=3DbodyText>The statement<BR><BR><SPAN =
+class=3DcodeSegment>AudioClip=20
+  sound =3D getAudioClip(getDocumentBase(), =
+"sound.au");</SPAN><BR><BR>will load=20
+  the audio file named sound.au. (It's best to practice with sound files =
+with=20
+  the .au file extension. It can be difficult to get some .wav sound =
+files to=20
+  work with applets since files compressed using ADPCM or other =
+compression=20
+  schemes may not work. The Java Sound engine supports only linear PCM =
+audio=20
+  files.)<BR>
+  <LI class=3DbodyText>The statement&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<SPAN=20
+  class=3DcodeSegment>sound.play();&nbsp;</SPAN>&nbsp;&nbsp;will play =
+the audio=20
+  clip. The statement&nbsp;&nbsp;<SPAN=20
+  class=3DcodeSegment>&nbsp;sound.stop();&nbsp;</SPAN>&nbsp;&nbsp;will =
+stop the=20
+  audio clip and the statement&nbsp;&nbsp;<SPAN=20
+  class=3DcodeSegment>&nbsp;sound.loop();&nbsp;</SPAN>&nbsp;&nbsp; will =
+cause it=20
+  to loop continuously until the <SPAN class=3DcodeSegment>stop</SPAN> =
+method is=20
+  executed.=20
+  <LI class=3DbodyText>Instead of importing java.applet.AudioClip and =
+using an=20
+  AudioClip object as described above, you can simply use the applet =
+class <SPAN=20
+  class=3DcodeSegment>play</SPAN> method to play an audio clip like this =
+
+  <BR><BR><SPAN class=3DcodeSegment>play(getDocumentBase(),=20
+  "sound.au");</SPAN><BR><BR>but after it is played one time, the clip =
+is marked=20
+  for garbage collection. Using the <SPAN =
+class=3DcodeSegment>AudioClip</SPAN>=20
+  object method allows the sound to be repeated multiple times since it =
+is=20
+  "attached" to the <SPAN class=3DcodeSegment>AudioClip</SPAN> object. =
+</LI></UL>
+<P class=3DcolumnSubtitle>Objective #10: Create animation in an applet.=20
+<UL>
+  <LI class=3DbodyText>Animation can't be performed by simply placing a =
+<SPAN=20
+  class=3DcodeSegment>g.drawImage</SPAN> statement inside of a loop in =
+the <SPAN=20
+  class=3DcodeSegment>paint</SPAN> method. However, <SPAN=20
+  class=3DcodeSegment><STRONG>Timer</STRONG></SPAN> objects or=20
+  <STRONG>threads</STRONG> can be used to perform animation. Within a =
+thread's=20
+  <SPAN class=3DcodeSegment>run</SPAN> method or a <SPAN=20
+  class=3DcodeSegment>Timer</SPAN>'s <SPAN=20
+  class=3DcodeSegment>actionPerformed</SPAN> method, you can update an =
+object's=20
+  position and repaint the object in the new position. <BR>
+  <LI class=3DbodyText>In the case of using a thread, the animation loop =
+keeps=20
+  track of the current frame and calls the method <SPAN=20
+  class=3DcodeSegment>repaint</SPAN> to update the screen. A thread =
+allows other=20
+  processes within the applet and on the computer itself execute at the =
+same=20
+  time (or at least appear that they are executing at the =
+simultaneously). You=20
+  need to implement the <SPAN class=3DcodeSegment>Runnable</SPAN> =
+interface to=20
+  create a thread. Swing is not considered to be thread-safe so you must =
+
+  use&nbsp;&nbsp;&nbsp;<SPAN class=3DcodeSegment>import java.applet.*;=20
+  </SPAN>rather than import<SPAN class=3DcodeSegment> =
+javax.swing.*;</SPAN> . See=20
+  the helpful tutorial on threads at <A=20
+  =
+href=3D"http://www.dgp.toronto.edu/~mjmcguff/learn/java/06-threads/">http=
+://www.dgp.toronto.edu/~mjmcguff/learn/java/06-threads/</A><BR>
+  <LI class=3DbodyText>Using one of these techniques, you may see =
+flickering or a=20
+  flash. This is due to the the problems that the computation for =
+repainting=20
+  each frame takes too long and that the entire background is cleared =
+before=20
+  <SPAN class=3DcodeSegment>paint</SPAN> is called. While the =
+computation of the=20
+  next frame occurs you are seeing the background of the animation. To =
+reduce=20
+  the flickering, you can use the <SPAN =
+class=3DcodeSegment>update</SPAN> method=20
+  and/or you can use backbuffering.=20
+  <UL>
+    <LI><SPAN class=3DcodeSegment>update</SPAN> method - By default, the =
+<SPAN=20
+    class=3DcodeSegment>update</SPAN> method clears the applet's =
+background and=20
+    then calls the <SPAN class=3DcodeSegment>paint</SPAN> method. By =
+overriding=20
+    the <SPAN class=3DcodeSegment>update</SPAN> method, you can draw =
+over only the=20
+    area that needs to be refreshed avoiding having the applet's entire=20
+    background to be cleared each time <SPAN =
+class=3DcodeSegment>repaint</SPAN> is=20
+    called.=20
+    <LI>backbuffering - With <STRONG>backbuffering</STRONG> (aka=20
+    <STRONG>double-buffering</STRONG>), you draw a frame into an =
+offscreen image=20
+    and then place the entire image onto the screen with one call to a =
+method.=20
+    Since the drawing is done offscreen, this is more efficient than =
+painting=20
+    new frames directly to the screen.<BR></LI></UL>
+  <LI class=3DbodyText>See the helpful tutorial on backbuffering at<A=20
+  =
+href=3D"http://www.dgp.toronto.edu/~mjmcguff/learn/java/07-backbuffer/">h=
+ttp://www.dgp.toronto.edu/~mjmcguff/learn/java/07-backbuffer/</A><BR>
+  <LI class=3DbodyText>To accumulate drawing operations for more =
+interesting=20
+  animation, see the helpful tutorial at <A=20
+  =
+href=3D"http://www.dgp.toronto.edu/~mjmcguff/learn/java/08-painting/">htt=
+p://www.dgp.toronto.edu/~mjmcguff/learn/java/08-painting/</A>=20
+  </LI></UL><!-- InstanceEndEditable --><!-- InstanceEnd =
+--></BODY></HTML>
+
+------=_NextPart_000_0004_01C9CE3A.7A0F2E10
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://minich.com/education/wyo/wyostyles.css
+
+.pageTitle {
+	FONT-WEIGHT: bolder; FONT-SIZE: large; BORDER-TOP-STYLE: none; =
+FONT-FAMILY: Arial, Helvetica, sans-serif; BORDER-RIGHT-STYLE: none; =
+BORDER-LEFT-STYLE: none; LETTER-SPACING: 0.2em; BORDER-BOTTOM-STYLE: =
+none
+}
+.pageSubtitle {
+	FONT-SIZE: xx-small; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.bodyText {
+	FONT-SIZE: smaller; BORDER-TOP-STYLE: none; FONT-FAMILY: Arial, =
+Helvetica, sans-serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: =
+none; BORDER-BOTTOM-STYLE: none
+}
+.bodyText12px {
+	FONT-SIZE: 12px; BORDER-TOP-STYLE: none; FONT-FAMILY: Arial, Helvetica, =
+sans-serif; BORDER-RIGHT-STYLE: none; BORDER-LEFT-STYLE: none; =
+BORDER-BOTTOM-STYLE: none
+}
+.apExamResultsTable {
+	BORDER-RIGHT: #ffffff thin solid; BORDER-TOP: #ffffff thin solid; =
+FONT-SIZE: xx-small; BORDER-LEFT: #ffffff thin solid; BORDER-BOTTOM: =
+#ffffff thin solid; FONT-FAMILY: Arial, Helvetica, sans-serif; =
+BACKGROUND-COLOR: #ffffff
+}
+.outsideBox {
+	BORDER-RIGHT: #000066 thin solid; BORDER-TOP: #000066 thin solid; =
+MARGIN: 20px; BORDER-LEFT: #000066 thin solid; WIDTH: 760px; =
+BORDER-BOTTOM: #000066 thin solid
+}
+.outsideBoxCalendarPages {
+	BORDER-RIGHT: #000066 thin solid; BORDER-TOP: #000066 thin solid; =
+MARGIN: 2px; BORDER-LEFT: #000066 thin solid; WIDTH: 760px; =
+BORDER-BOTTOM: #000066 thin solid
+}
+.codeSegment {
+	FONT-FAMILY: "Courier New", Courier, mono
+}
+.columnSubtitle {
+	FONT-WEIGHT: bold; FONT-SIZE: smaller; FONT-FAMILY: Arial, Helvetica, =
+sans-serif
+}
+.footnote {
+	FONT-SIZE: xx-small; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.tableCellBorders {
+	BORDER-RIGHT: #000000 thin solid; BORDER-TOP: #000000 thin solid; =
+FONT-SIZE: 10px; BORDER-LEFT: #000000 thin solid; BORDER-BOTTOM: #000000 =
+thin solid; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+
+------=_NextPart_000_0004_01C9CE3A.7A0F2E10--

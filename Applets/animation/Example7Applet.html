@@ -1,0 +1,69 @@
+<title>Example7Applet</title>
+
+<a href=index.html#movingImage>Return to article</a>
+<br>
+<hr>
+
+<h1>Moving an Image Across the Screen: Example7Applet</h1>
+
+<applet code=Example7Applet.class width=200 height=200>
+<param name=fps value=20>
+</applet>
+
+<hr>
+The code below shows the important methods that we had
+to update the images.
+The code for the entire applet can be found in
+<a href="Example7Applet.java">Example7Applet.java</a>.
+<p>
+<pre>
+    Image world;
+    Image car;
+
+    <i>/**
+     * Initialize the applet and compute the delay between frames.
+     */</i>
+    public void init() {
+	String str = getParameter("fps");
+	int fps = (str != null) ? Integer.parseInt(str) : 10;
+	delay = (fps &gt; 0) ? (1000 / fps) : 100;
+
+	world = getImage(getCodeBase(), "world.gif");
+	car = getImage(getCodeBase(), "car.gif");
+    }
+
+    <i>/**
+     * Paint the previous frame (if any).
+     */</i>
+    public void paint(Graphics g) {
+	update(g);
+    }
+
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void paintFrame(Graphics g) {
+	Dimension d = size();
+	int w = world.getWidth(this);
+	int h = world.getHeight(this);
+	
+	if ((w &gt; 0) && (h &gt; 0)) {
+	    <i>//If we've loaded the world image, draw it.</i>
+	    g.drawImage(world, (d.width - w)/2, (d.height - h)/2, this);
+	}
+
+	w = car.getWidth(this);
+	h = car.getHeight(this);
+
+	if ((w &gt; 0) && (h &gt; 0)) {
+	    <i>//If we've loaded the car image...</i>
+	    w += d.width;
+	    <i>//draw car 1</i>
+	    g.drawImage(car, d.width - ((frame * 5) % w), (d.height - h)/3, this);
+	    <i>//draw car 2</i>
+	    g.drawImage(car, d.width - ((frame * 7) % w), (d.height - h)/2, this);
+	}
+    }
+</pre>
+
+

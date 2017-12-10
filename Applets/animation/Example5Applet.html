@@ -1,0 +1,49 @@
+<title>Example5Applet</title>
+
+<a href=index.html#update>Return to article</a>
+<br>
+<hr>
+
+<h1>Overriding the update() Method: Example5Applet</h1>
+
+<applet code=Example5Applet.class width=500 height=50>
+<param name=fps value=10>
+</applet>
+
+<hr>
+
+Here is the code that draws the sine waves.
+The applet itself is shown above.
+Note that the animation
+is now a lot smoother.
+The code for the entire applet can be found in
+<a href=Example5Applet.java>Example5Applet.java</a>.
+
+<p>
+
+<pre>
+    <i>/**
+     * Paint a frame of animation.
+     */</i>
+    public void update(Graphics g) {
+	Color bg = getBackground();
+	Dimension d = size();
+	int h = d.height / 2;
+	for (int x = 0 ; x < d.width ; x++) {
+	    int y1 = (int)((1.0 + Math.sin((x - frame) * 0.05)) * h);
+	    int y2 = (int)((1.0 + Math.sin((x + frame) * 0.07)) * h);
+
+	    if (y1 > y2) {
+		int t = y1;
+		y1 = y2;
+		y2 = t;
+	    }
+	    g.setColor(bg);
+	    g.drawLine(x, 0, x, y1);
+	    g.drawLine(x, y2, x, d.height);
+	    g.setColor(Color.black);
+	    g.drawLine(x, y1, x, y2);
+	}
+    }
+</pre>
+
