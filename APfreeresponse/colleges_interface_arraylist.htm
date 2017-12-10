@@ -1,0 +1,267 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0058)http://www.cs.duke.edu/csed/ap/exams/2003/a1interface.html --><HTML><HEAD><TITLE>2003 AP Computer Science A Exam Question 1, Java, Interface Version</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"><LINK 
+href="../apcs-la/grading/a1-interface_files/apjava.css" type=text/css 
+rel=stylesheet>
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY>
+<OBJECT width="55%" data=../apcs-la/grading/copyright.html>
+<a href="../apcs-la/grading/copyright.html">Copyright information 
+accessible.</A></OBJECT>
+<P>
+<H1>2003 AP Computer Science A Exam Question 1, Java, Interface Version</H1>The 
+Java interface <CODE>College</CODE> is implemented by objects that store 
+information about colleges and universities. The interface declares methods for 
+accessing a <CODE>College</CODE> object's name, tuition, and the region in which 
+it is located. The interface also specifies constants for naming the regions. <XMP class=code>public interface College
+{
+
+    public final static String NORTHEAST = "Northeast";
+    public final static String SOUTHEAST = "Southeast";
+    public final static String NORTHWEST = "Northwest";
+    public final static String MIDWEST   = "Midwest";
+    public final static String SOUTHWEST = "Southwest";
+    public final static String WEST      = "West";    
+    public final static String SOUTH     = "South";
+    
+    public String getName();   // returns name of college
+    public String getRegion(); // returns region of college
+    public int getTuition();   // returns tuition for college
+}
+</XMP>
+<P>The class <CODE>CollegeGroup</CODE> stores information about a group of 
+colleges/universities. Part of the <CODE>CollegeGroup</CODE> class declaration 
+is shown below. <XMP class=code>import java.util.ArrayList;
+
+public class CollegeGroup
+{
+    private College[] myColleges;  // myColleges.length is # colleges
+
+
+    // precondition:  there exists a College in this group
+    //                whose name is collegeName, call this
+    //                myColleges[index]
+    // postcondition: myColleges[index].getTuition() == newTuition, i.e.,
+    //                the College with collegeName has its
+    //                newTuition as its tuition
+
+    public void updateTuition(String collegeName,
+                              int newTuition)
+    {
+        // you will write this code
+    }
+
+    // precondition:  low <= high
+    // postcondition: returns ArrayList of College objects
+    //                from this group in specified region
+    //                whose tuition is between (including)
+    //                low and high, i.e., low <= tuition <= high
+
+    public ArrayList getCollegeList(String region,
+                                    int low, int high)
+    {
+        // you will write this code
+    }
+}
+
+</XMP>
+<P>The following chart shows an example of colleges/universities that could 
+appear in an object of type <CODE>CollegeGroup</CODE>. 
+<P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>&nbsp; 
+    <TH>Name 
+    <TH>Region 
+    <TH>Tuition 
+  <TR>
+    <TD><B>0</B> 
+    <TD>Colgate University 
+    <TD>Northeast 
+    <TD>$27,025 
+  <TR class=alternateRow>
+    <TD><B>1</B> 
+    <TD>Duke University 
+    <TD>Southeast 
+    <TD>$26,000 
+  <TR></TR>
+  <TR>
+    <TD><B>2</B> 
+    <TD>Kalamazoo College 
+    <TD>Midwest 
+    <TD>$19,764 
+  <TR class=alternateRow>
+    <TD><B>3</B> 
+    <TD>Stanford University 
+    <TD>West 
+    <TD>$25,917 </TD>
+  <TR>
+    <TD><B>4</B> 
+    <TD>Florida International University 
+    <TD>Southeast 
+    <TD>$10,800</TD>
+  <TR class=alternateRow>
+    <TD><B>5</B> 
+    <TD>Dartmouth College 
+    <TD>Northeast 
+    <TD>$27,764 </TD>
+  <TR>
+    <TD><B>6</B> 
+    <TD>Spelman College 
+    <TD>Southeast 
+    <TD>$11,455 
+  <TR></TR></TBODY></TABLE>
+<P>
+<H2>Part A</H2>Write the <CODE>CollegeGroup</CODE> method 
+<CODE>updateTuition</CODE>, which is described as follows. Method 
+<CODE>updateTuition</CODE> associates a new tution with the college whose name 
+is passed as a parameter. Assume that the objects stored in the array 
+<CODE>myColleges</CODE> are instances of a class <CODE>CollegeImpl</CODE> that 
+implements the <CODE>College</CODE> interface and whose declaration is partially 
+shown below. <XMP class=code> public class CollegeImpl implements College
+ {
+     private String myName;
+     private String myRegion;
+     private int    myTuition;
+
+     public CollegeImpl(String name, String region, int tuition)
+     {
+         myName = name;
+         myRegion = region;
+         myTuition = tuition;
+     }
+     // more methods not shown
+ }
+</XMP>
+<P>Note that neither the <CODE>College</CODE> interface nor the 
+<CODE>CollegeImpl</CODE> class specify a method for changing tuition; i.e., 
+<CODE>CollegeImpl</CODE> is an immutable class. 
+<P>In writing <CODE>updateTuition</CODE> you should create a new 
+<CODE>CollegeImpl</CODE> object for the specified college, with the same name 
+and region, but a new tuition. This new object should be stored in the same 
+location of <CODE>myColleges</CODE> as the original object. 
+<P>Complete method <CODE>updateTuition</CODE> below. <XMP class=code>class CollegeGroup
+{
+    //not all methods, fields shown
+
+    // precondition:  there exists a College in this group
+    //                whose name is collegeName, call this
+    //                myColleges[index]
+    // postcondition: myColleges[index].getTuition() == newTuition, i.e.,
+    //                the College with collegeName has
+    //                newTuition as its tuition
+    public void updateTuition(String collegeName,
+                              int newTuition)
+    {
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+}
+
+</XMP>
+<H2>Part B</H2>The table below is repeated for your convenience. 
+<P>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TH>&nbsp; 
+    <TH>Name 
+    <TH>Region 
+    <TH>Tuition 
+  <TR>
+    <TD><B>0</B> 
+    <TD>Colgate University 
+    <TD>Northeast 
+    <TD>$27,025 
+  <TR class=alternateRow>
+    <TD><B>1</B> 
+    <TD>Duke University 
+    <TD>Southeast 
+    <TD>$26,000 
+  <TR></TR>
+  <TR>
+    <TD><B>2</B> 
+    <TD>Kalamazoo College 
+    <TD>Midwest 
+    <TD>$19,764 
+  <TR class=alternateRow>
+    <TD><B>3</B> 
+    <TD>Stanford University 
+    <TD>West 
+    <TD>$25,917 </TD>
+  <TR>
+    <TD><B>4</B> 
+    <TD>Florida International University 
+    <TD>Southeast 
+    <TD>$10,800</TD>
+  <TR class=alternateRow>
+    <TD><B>5</B> 
+    <TD>Dartmouth College 
+    <TD>Northeast 
+    <TD>$27,764 </TD>
+  <TR>
+    <TD><B>6</B> 
+    <TD>Spelman College 
+    <TD>Southeast 
+    <TD>$11,455 
+  <TR></TR></TBODY></TABLE>
+<P>Write the <CODE>CollegeGroup</CODE> method <CODE>getCollegeList</CODE>, which 
+is described as follows. Method <CODE>getCollegeList</CODE> returns an ArrayList 
+of colleges that are locted in the specified region and whose tuition is in the 
+range between <CODE>low</CODE> and <CODE>high</CODE>, inclusive. The size of the 
+ArrayList should be equal to the number of colleges that meet the criteria of 
+region and tuition range. 
+<P>For example, if the object <CODE>colleges</CODE> is an instance of the class 
+<CODE>CollegeGroup</CODE> and represents the entries shown in the chart above, 
+the call <XMP class=code> ArrayList list = colleges.getCollegeList(College.SOUTHEAST,10000,20000);
+</XMP>should store in <CODE>list</CODE> an ArrayList of two elements containing 
+objects representing Florida International University and Spelman College (note 
+that Duke University is not included because its tuition is not in the specified 
+range and Kalamazoo College is not included because it is not in the specified 
+region). 
+<P>Complete the method below. 
+<P><XMP class=code>  public class CollegeGroup
+  {
+      //not all methods, fields shown
+
+      private College[] myColleges;  // myColleges.length is # colleges
+
+      // precondition:  low <= high
+      // postcondition: returns ArrayList of College objects
+      //                from this group in specified region
+      //                whose tuition is between (including)
+      //                low and high, i.e., low <= tuition <= high
+
+      public ArrayList getCollegeList(String region,
+                                      int low, int high)
+      {
+
+
+
+
+
+
+
+
+
+
+
+
+      }
+   }
+</XMP>
+<HR>
+
+<ADDRESS><A href="mailto:ola@cs.duke.edu">Owen L. Astrachan</A></ADDRESS><!-- Created: Tue May 13 15:14:18 EDT 2003 --><!-- hhmts start -->Last 
+modified: Wed May 14 10:15:25 EDT 2003 <!-- hhmts end --></BODY></HTML>
