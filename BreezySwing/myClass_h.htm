@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD>
+</HEAD>
+<BODY><XMP>/*
+	myClass definition file
+	Changing  CS Curriculum to Java
+	
+	Created by Gregory D Kummer
+*/
+
+#ifndef "MYCLASS_H"
+#define "MYCLASS_H"
+
+#include "apstring.h"
+
+class myClass
+{
+	public:
+		myClass();  						//Default constructor
+		myClass(int data1, apstring data2);	//initializing constructor
+
+		void myMethod1(int someValue);		//value setting method
+		apstring getInfo();					//accessor method
+
+	private:
+		int myData;							//private member variables
+		apstring myInfo;
+}
+
+#include "myClass.cpp"
+
+#endif</XMP></BODY></HTML>

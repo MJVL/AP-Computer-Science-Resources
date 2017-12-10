@@ -1,0 +1,252 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>2000 A1</title>
+<meta name="Microsoft Theme" content="none">
+</head>
+
+<body>
+
+<p style="margin-top: 0; margin-bottom: 0">2000 A1</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">A mode is a value in an array that is 
+larger than both the value immediately before it in the array and the value 
+immediately after it.&nbsp; In other words, a mode occurs at index
+<font face="Courier">k</font> in the array <font face="Courier">A</font> if
+<font face="Courier">A[K] &gt; A[k-1]</font> and <font face="Courier">A[k] &gt; A[k+1]</font>.&nbsp; 
+The array is unimodal if the values increase until they reach a mode, then 
+decrease, do that there is only one mode.&nbsp; For example, the array<font face="Courier"> 
+A</font> shown below is unimodal with its mode occurring at index 4.&nbsp; 
+Assume that the mode does not occur at the first or last entry in the array.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="49%" id="AutoNumber1">
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0"><b>Index k</b></td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0"><b>A[k]</b></td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">0</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">3</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">1</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">5</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">2</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">9</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">3</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">10</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">4</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">12&nbsp;&nbsp; &lt;- Mode</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">5</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">11</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">6</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">9</td>
+  </tr>
+  <tr>
+    <td width="36%">
+    <p style="margin-top: 0; margin-bottom: 0">7</td>
+    <td width="64%">
+    <p style="margin-top: 0; margin-bottom: 0">4</td>
+  </tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">Consider the following class:</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">class dataSet {</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp; 
+int data[];</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp; 
+int size;&nbsp;&nbsp;&nbsp;&nbsp; //contains the number of items in data</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp; 
+public dataSet() { /*constructor - not shown */ }</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp; 
+public boolean isMode(int k) { /* you will write this in part a */}</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp; 
+public int modeIndex(); { /* you will write this in part b */ }</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp; 
+pubic void printHistogram(int longestBar, String barchar) { </font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+/* you will write this in part c */ }</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">}</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">a.&nbsp; Write the method
+<font face="Courier">isMode</font>, as started below.&nbsp; <font face="Courier">
+isMode</font> returns true if <font face="Courier">data[k]</font> is larger than
+<font face="Courier">data[k+1]</font> and larger than <font face="Courier">
+data[k-1]</font>; otherwise, it returns false.&nbsp; In the example above, the 
+call <font face="Courier">isMode(4)</font> returns true and the call
+<font face="Courier">isMode(5)</font> returns false.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">Complete the method<font face="Courier"> 
+isMode</font> below.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">/**</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;* Before 
+entering the method 0 &lt; k &lt; size - 1</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;**/</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">public boolean 
+isMode(int k) {</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><a href="2000A1_ans.html">answer</a></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">b.&nbsp; Write method
+<font face="Courier">modeIndex</font>, as started below.&nbsp;
+<font face="Courier">modeIndex</font> returns the index of the mode of data.&nbsp; 
+You may assume that data is unimodal and the mode occurs at an index k, where 0 
+&lt; k &lt; size.&nbsp; In the example above, the call <font face="Courier">
+modeIndex()</font> returns 4.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">In writing modeIndex you may call 
+method <font face="Courier">isMode</font> specified in part (a).&nbsp; Assume 
+that <font face="Courier">isMode</font> works as specified, regardless of what 
+you wrote in part (a).</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">Complete method <font face="Courier">
+modeIndex </font>below.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">/**</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;* before 
+entering the method data is unimodal and size &gt;= 3</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;**/</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">public int 
+modeIndex() {</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><a href="2000A1_ans.html">answer</a></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">c.&nbsp; Write method
+<font face="Courier">printHistogram</font>, as started below.&nbsp;
+<font face="Courier">printHistogram</font> prints a charachter histogram of 
+unimodal array of nonnegative values, <font face="Courier">data</font>, such 
+that the longest bar of the histogram (the mode) has <font face="Courier">
+longestBar</font> charachters <font face="Courier">barChar</font>, and all other 
+bars have a number of <font face="Courier">barChar</font> charachters 
+proportional to the corresponding value in the array data (rounding down).</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">For example, assume that
+<font face="Courier">int data[]</font> contains the values shown below.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">The call <font face="Courier">
+printHistogram(20, &quot;x&quot;)</font> will print the histogram shown in the output 
+column below.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber2">
+  <tr>
+    <td width="50%">
+    <table border="1" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="100%" id="AutoNumber3">
+      <tr>
+        <td width="33%">Index <font face="Courier">k</font></td>
+        <td width="33%"><font face="Courier">data[k]</font></td>
+        <td width="34%">Length of bar</td>
+      </tr>
+      <tr>
+        <td width="33%">0</td>
+        <td width="33%">3</td>
+        <td width="34%">5</td>
+      </tr>
+      <tr>
+        <td width="33%">1</td>
+        <td width="33%">5</td>
+        <td width="34%">8</td>
+      </tr>
+      <tr>
+        <td width="33%">2</td>
+        <td width="33%">9</td>
+        <td width="34%">15</td>
+      </tr>
+      <tr>
+        <td width="33%">3</td>
+        <td width="33%">10</td>
+        <td width="34%">16</td>
+      </tr>
+      <tr>
+        <td width="33%">4</td>
+        <td width="33%">12</td>
+        <td width="34%">20</td>
+      </tr>
+      <tr>
+        <td width="33%">5</td>
+        <td width="33%">11</td>
+        <td width="34%">18</td>
+      </tr>
+      <tr>
+        <td width="33%">6</td>
+        <td width="33%">9</td>
+        <td width="34%">15</td>
+      </tr>
+      <tr>
+        <td width="33%">7</td>
+        <td width="33%">4</td>
+        <td width="34%">6</td>
+      </tr>
+    </table>
+    </td>
+    <td width="50%" align="left" valign="top">
+    <p style="margin-top: 0; margin-bottom: 0">Output of call<font face="Courier"> 
+    printHistogram(20,&quot;x&quot;)</font></p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxxxxxxxxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxxxxxxxxxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxxxxxxxxxxxxxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxxxxxxxxxxxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxxxxxxxxxxx</p>
+    <p style="margin-top: 0; margin-bottom: 0">xxxxxx</td>
+  </tr>
+</table>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">In writing <font face="Courier">
+printHistogram</font>, you may call methods <font face="Courier">isMode</font> 
+and <font face="Courier">modeIndex</font> specified in parts (a) and (b).&nbsp; 
+Assume that<font face="Arial Unicode MS"> </font><font face="Courier">isMode</font> 
+and <font face="Courier">ModeIndex</font> work as specified, regardless of what 
+you wrote in parts (a) and (b).</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0">Complete the method
+<font face="Courier">printHistogram</font> below.</p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">/**</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;* before 
+entering this method the data is unimodal and the size &gt;= 3, each data element 
+is greater than 0.</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">&nbsp;**/</font></p>
+<p style="margin-top: 0; margin-bottom: 0"><font face="Courier">public void 
+printHistogram(int longestBar, String barChar) {</font></p>
+<p style="margin-top: 0; margin-bottom: 0">&nbsp;</p>
+<p style="margin-top: 0; margin-bottom: 0"><a href="2000A1_ans.html">answer</a></p>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+
+
+<HTML><HEAD>
+</HEAD>
+<BODY><XMP>/*
+	Java Class file example.
+	Changing Your CS Curriculum to Java
+	Summer 2003
+	Created by Gregory Kummer
+*/
+
+class myClass {
+
+	private int myData;
+	private String myInfo;
+
+	/**
+	 * myClass - default constructor
+	 **/
+	public myClass(){
+		myInfo = new String();
+		myData = 0;
+	}
+
+	/**
+	 * myClass - constructor, takes two parameters
+	 *           an int and String.  After execution
+	 *           myData = data1, and myInfo = data2
+	 */
+	public myClass(int data1, String data2){
+		myData = data1;
+		myInfo = data2;
+	}
+
+	/**
+	 * myMethod1 - this method takes one parameter, and int
+	 *             and increases the value of myData by the
+	 *             ammount stored in that int.
+	 **/
+	public void myMethod1(int someValue){ myData += someValue;}
+
+	/**
+	 * getInfo - this method returns the value stored by the
+	 *           private member variable myInfo.
+	 **/
+	public String getInfo() { return myInfo;}
+}</XMP></BODY></HTML>
