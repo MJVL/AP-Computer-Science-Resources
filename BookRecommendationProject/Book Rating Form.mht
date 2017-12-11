@@ -1,0 +1,759 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: Book Rating Form
+Date: Fri, 29 Apr 2011 09:31:39 -0400
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cs.toronto.edu/~mcraig/cgi-bin/book-rating-request.cgi
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5931
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Book Rating Form</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18939"></HEAD>
+<BODY>
+<H1>Rating Books</H1>
+<FORM action=3Drating-form-process.cgi>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD align=3Dright>Name (or nickname):</TD>
+    <TD><INPUT value=3D"please enter something" maxLength=3D25 size=3D25 =
+
+    name=3Dname></TD></TR>
+  <TR>
+    <TD align=3Dright>Grade as of Sept. 2009:</TD>
+    <TD><SELECT name=3Dgrade> <OPTION value=3D"pre high school">pre high =
+
+        school</OPTION> <OPTION value=3D9>9</OPTION> <OPTION =
+value=3D10>10</OPTION>=20
+        <OPTION value=3D11>11</OPTION> <OPTION selected =
+value=3D12>12</OPTION>=20
+        <OPTION value=3D"finished high school">finished high=20
+      school</OPTION></SELECT> </TD></TR></TBODY></TABLE>
+<P>There are just over 50 books on the list below. Please provide a =
+rating for=20
+as many books as you have read and then press submit. </P>
+<H2>The List</H2>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD>Douglas Adams, <B>The Hitchhiker's Guide To The Galaxy</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_0>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_0>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_0>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_0>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_0>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_0>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Richard Adams, <B>Watership Down</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_1>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_1>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_1>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_1>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_1>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_1>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Mitch Albom, <B>The Five People You Meet in Heaven</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_2>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_2>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_2>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_2>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_2>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_2>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Laurie Halse Anderson, <B>Speak</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_3>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_3>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_3>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_3>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_3>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_3>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Maya Angelou, <B>I Know Why the Caged Bird Sings</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_4>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_4>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_4>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_4>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_4>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_4>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Jay Asher, <B>Thirteen Reasons Why</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_5>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_5>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_5>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_5>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_5>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_5>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Isaac Asimov, <B>Foundation Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_6>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_6>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_6>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_6>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_6>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_6>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Ann Brashares, <B>The Sisterhood of the Travelling =
+Pants</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_7>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_7>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_7>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_7>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_7>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_7>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Libba Bray, <B>A Great and Terrible Beauty</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_8>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_8>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_8>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_8>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_8>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_8>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Dan Brown, <B>The Da Vinci Code</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_9>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_9>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_9>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_9>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_9>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_9>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Meg Cabot, <B>The Princess Diaries</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_10>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_10>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_10>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_10>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_10>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_10>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Orson Scott Card, <B>Ender's Game</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_11>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_11>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_11>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_11>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_11>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_11>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Tom Clancy, <B>The Hunt for Red October</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_12>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_12>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_12>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_12>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_12>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_12>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Suzanne Collins, <B>The Hunger Games</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_13>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_13>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_13>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_13>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_13>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_13>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>F. Scott Fitzgerald, <B>The Great Gatsby</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_14>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_14>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_14>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_14>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_14>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_14>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>John Flanagan, <B>Ranger's Apprentice Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_15>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_15>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_15>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_15>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_15>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_15>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Cornelia Funke, <B>Inkheart</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_16>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_16>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_16>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_16>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_16>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_16>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>William Gibson, <B>Neuromancer</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_17>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_17>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_17>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_17>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_17>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_17>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>William Golding, <B>Lord of the Flies</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_18>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_18>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_18>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_18>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_18>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_18>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>William Goldman, <B>The Princess Bride</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_19>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_19>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_19>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_19>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_19>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_19>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>James Gurney, <B>Dinotopia: A Land Apart from Time</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_20>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_20>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_20>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_20>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_20>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_20>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Will Hobbs, <B>Far North</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_21>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_21>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_21>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_21>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_21>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_21>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Alice Hoffman, <B>Practical Magic</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_22>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_22>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_22>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_22>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_22>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_22>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Aldous Huxley, <B>Brave New World</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_23>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_23>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_23>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_23>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_23>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_23>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Guy Gavriel Kay, <B>The Summer Tree</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_24>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_24>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_24>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_24>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_24>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_24>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Daniel Keyes, <B>Flowers For Algernon</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_25>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_25>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_25>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_25>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_25>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_25>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Patrice Kindl, <B>Owl in Love</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_26>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_26>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_26>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_26>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_26>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_26>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Masashi Kishimoto, <B>Naruto</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_27>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_27>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_27>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_27>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_27>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_27>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Tite Kubo, <B>Bleach (graphic novel)</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_28>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_28>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_28>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_28>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_28>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_28>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Elizabeth Laird, <B>Kiss the Dust</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_29>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_29>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_29>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_29>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_29>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_29>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Harper Lee, <B>To Kill a Mockingbird</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_30>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_30>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_30>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_30>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_30>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_30>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>C S Lewis, <B>The Lion the Witch and the Wardrobe</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_31>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_31>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_31>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_31>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_31>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_31>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Robert Ludlum, <B>The Bourne Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_32>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_32>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_32>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_32>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_32>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_32>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Yann Martel, <B>Life of Pi</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_33>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_33>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_33>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_33>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_33>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_33>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Lurlene McDaniel, <B>Breathless</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_34>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_34>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_34>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_34>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_34>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_34>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Stephenie Meyer, <B>Twilight Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_35>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_35>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_35>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_35>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_35>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_35>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Garth Nix, <B>Sabriel</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_36>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_36>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_36>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_36>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_36>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_36>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>George Orwell, <B>Nineteen Eighty-Four (1984)</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_37>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_37>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_37>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_37>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_37>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_37>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Christopher Paolini, <B>Eragon</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_38>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_38>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_38>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_38>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_38>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_38>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Gary Paulsen, <B>Hatchet</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_39>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_39>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_39>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_39>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_39>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_39>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Jodi Picoult, <B>My Sister's Keeper</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_40>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_40>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_40>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_40>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_40>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_40>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Philip Pullman, <B>The Golden Compass</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_41>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_41>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_41>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_41>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_41>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_41>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>J.K. Rowling, <B>Harry Potter Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_42>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_42>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_42>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_42>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_42>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_42>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Louis Sachar, <B>Holes</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_43>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_43>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_43>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_43>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_43>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_43>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Shueisha, <B>Shonen Jump Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_44>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_44>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_44>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_44>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_44>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_44>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Neil Shusterman, <B>The Shadow Club</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_45>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_45>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_45>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_45>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_45>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_45>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Jeff Smith, <B>Bone Series</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_46>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_46>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_46>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_46>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_46>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_46>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Art Spiegelman, <B>Maus: A Survivor's Tale</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_47>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_47>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_47>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_47>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_47>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_47>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Amy Tan, <B>The Joy Luck Club</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_48>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_48>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_48>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_48>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_48>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_48>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>J R R Tolkien, <B>The Lord of the Rings</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_49>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_49>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_49>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_49>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_49>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_49>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>J R R Tolkien, <B>The Hobbit</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_50>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_50>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_50>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_50>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_50>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_50>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Eric Walters, <B>Shattered</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_51>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_51>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_51>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_51>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_51>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_51>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>H G Wells, <B>The War Of The Worlds</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_52>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_52>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_52>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_52>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_52>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_52>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>Patricia C. Wrede, <B>Dealing with Dragons</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_53>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_53>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_53>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_53>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_53>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_53>Didn't =
+read it</TD></TR>
+  <TR>
+    <TD>John Wyndham, <B>The Chrysalids</B></TD>
+    <TD><INPUT value=3D5 type=3Dradio name=3Drating_54>Really liked it! =
+&nbsp;</TD>
+    <TD><INPUT value=3D3 type=3Dradio name=3Drating_54>Liked it =
+&nbsp;</TD>
+    <TD><INPUT value=3D1 type=3Dradio name=3Drating_54>OK &nbsp;</TD>
+    <TD><INPUT value=3D-3 type=3Dradio name=3Drating_54>Didn't like it =
+&nbsp;</TD>
+    <TD><INPUT value=3D-5 type=3Dradio name=3Drating_54>Hated it =
+&nbsp;</TD>
+    <TD><INPUT value=3D0 CHECKED type=3Dradio name=3Drating_54>Didn't =
+read=20
+  it</TD></TR></TBODY></TABLE>
+<P><INPUT value=3DSubmit type=3Dsubmit> </P></FORM></BODY></HTML>
