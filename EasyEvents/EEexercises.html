@@ -1,0 +1,204 @@
+<html> <title> EasyEvents Exercises </title>
+<body><h1>
+Buttons and Textfields: Exercises &nbsp; &nbsp;    v.3
+</h1><h2>
+Dr. William C. Jones, Jr. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; www.javabook.org
+</h2>
+
+The answers to unstarred exercises here are links from the main file.  Each is numbered with the section that contains the link to it.  Best is to work out an exercise on paper and be convinced your answer is right before you check it here.  For exercises for which you do not have the patience for that, you should spend at least two minutes working it out in your head before you look up the answer here.
+<p>
+
+When working out several exercises, it may be better to shrink this window so you can only see a few lines at a time.  That way, when you look up the answer to one exercise, you do not spoil things by seeing the answer to the next exercise.  
+<p>
+
+This file also contains some additional starred exercises (i.e., exercises without the answers provided).  Reading the text without doing any exercises is like going out for football without attending practice -- it saves you some time but you get killed during the big game (i.e., the larger programming assignments your teacher assigns or you choose to develop on your own).  Remember that old Computer Science proverb that football coaches stole from us:  No pain, no gain.
+<p>
+
+<a name="2"></a><h3>
+Section 2 
+</h3><pre> <font face="arial">
+
+2.1	Change RightButton to WrongButton in lines 3 and 7.  Change WrongButton to 
+	RightButton in line 4.  Note that Peru is in South America.
+
+
+
+2.2	Something bad.  There is no picture named "St. Peter's" so you will not 
+	see the cathedral; but maybe the words "Rome.jpg" will appear. 
+	Try it and see.  
+
+
+
+2.3	Insert these three statements between lines 7 and 8:  
+		add (new ELabel().text ("Where is Egypt?"));
+		add (new WrongButton().text ("Asia"));
+		add (new RightButton().text ("Africa"));
+
+
+
+</font> </pre><a name="3"></a><h3>
+Section 3 
+</h3><pre> <font face="arial">
+
+3.1	Change "900" in line 9 to say "4" instead.
+
+
+
+3.2	Replace lines 10 and 19 by the following:
+		{	popUp ("good!");
+	Replace lines 13 and 22 by the following:
+		{	popUp ("you're wrong.");
+
+
+
+3.3	After line 6, add 3 more lines exactly like lines 4-6 except the question in line 5 will be
+	"What is the square root of 144?" and line 6 will say RootField instead of BytesField.
+	Add another inner class exactly like the BytesField class except named RootField in 
+	its class heading, and line 18 replaced by the following line ("||" means "or"):
+		if (this.getText().equals ("12") || this.getText().equals ("-12"))
+
+
+</font> </pre><a name="4"></a><h3>
+Section 4 
+</h3><pre> <font face="arial">
+
+4.1	Insert after line 2:	private EField itsPhone = new EField().width (10);
+	Insert after line 9:	add (new ELabel("What is your telephone?"), itsPhone);
+	Insert after line 28:	file.println (itsPhone.getText());
+
+
+
+4.2	Add the following declaration before the public MathQuiz() heading: 
+		private ELabel myAnswer = new ELabel("the answer appears here");
+	Change "this.setText" to "myAnswer.setText" in lines 10, 13, 19, and 22.
+
+
+
+ADDITIONAL Exercise 4.5**  Write a program that asks five questions of your
+choosing, all on the same subject.  Supply a textfield for each answer, but have 
+the onEnter method do nothing for each textfield.  The user is to click a button 
+when done with the quiz; the program then tells how many answers were right.
+
+
+</font> </pre><a name="5"></a><h3>
+Section 5 
+</h3><pre> <font face="arial">
+
+5.1	Insert after line 10 an exact copy of lines 8-10, except change "Rembrandt was a 
+	painter" in line 8 to "da Vinci was a sculptor".
+
+
+
+5.2	If you left out the "1+" part of lines 16 and 22, the count would never change; it would
+	always stay zero.  But if you also inserted "1+" in front of count in lines 17 and 23, 
+	that would add the 1 to the count, so the net effect would be unchanged. 
+
+
+
+5.3	Insert the following before line 17 and also before line 23:
+		if (count < 10)
+
+
+ADDITIONAL Exercise 5.6**  If you have studied writing methods with parameters, 
+make ArtQuiz easier to code and understand when you have lots of questions:
+Add to ArtQuiz a method private void addTrue(String par) that contains the three 
+statements in lines 7-9, except with par in place of "Rembrandt was a painter" 
+(par stands for parameter).  Replace lines 7-9 with the statement 
+addTrue("Rembrandt was a painter").  Note that this has the same effect as the 
+original coding.  Second, make the analogous change for lines 4-6 for a method 
+addFalse.  Third, add six more questions, some true and some false, each 
+requiring one additional statement in the constructor.
+
+
+</font> </pre><a name="6"></a><h3>
+Section 6 
+</h3><pre> <font face="arial">
+
+6.1	Change line 11 to read:
+		itsOutput.say ("The last 5 are " + modelAccount.lastFiveTransactions());
+
+
+
+6.2	Insert after line 5:
+		add (new NumChecksButton().text ("display number of checks so far"));
+	Insert a new NumChecksButton class identical to lines 9-12 except in the
+	name of the class, and with the following in place of the statement on line 11:
+		itsOutput.say ("number of checks = " + modelAccount.numChecks());
+
+
+
+</font> </pre><a name="7"></a><h3>
+Section 7 
+</h3><pre> <font face="arial">
+
+7.1	The secret number started at 50, so waiting 1.00 seconds causes 50 onBeeps, 
+	which adds 50*13 to the number, bringing it to 700.  So the first secret number
+	is 100 because extra multiples of 100 are dropped.  An additional 4.04 seconds 
+	causes 202 onBeeps, which adds 2626 to the number, bringing it to 2726.  
+	So the second secret number is 26, because multiples of 100 are dropped.
+
+
+
+7.2	Insert after line 4:
+		private int itsLimit = 100;
+	Insert after line 9:
+		add (new LimitButton().text ("switch to 15 or back to 100"));
+	Add a new inner class:
+		private class LimitButton extends EButton
+		{	public void onClick()
+			{	if (itsLimit == 100)
+				}	itsLimit = 15;
+				}
+				else
+				{	itsLimit = 100;
+				}
+			}
+		}
+	Then change "100" to "itsLimit" in lines 14 and 15.  You could also, with 
+	some effort, change the ELabel to always say "Guess 1 to " + itsLimit.  If you're 
+	smart, It should take you only 4 guesses: guess 8, then guess 4 or 12, etc.
+
+
+7.3	Replace the declaration of itsTimer in line 4 by the following:
+		private java.util.Random randy = new java.util.Random();
+	Omit the SecretTimer inner class and line 34; replace line 20 by the following:
+		itsSecret = 1 + randy.nextInt (100);  // thus 1...100
+
+
+</font> </pre><a name="8"></a><h3>
+Section 8 
+</h3><pre> <font face="arial">
+
+8.1	Replace lines 7 and 8 by the following:
+		one.setPicture ((1 + randy.nextInt(6)) + "die.jpg");
+		two.setPicture ((1 + randy.nextInt(6)) + "die.jpg");
+	The extra parentheses are to make sure numeric addition is performed
+	before string concatenation.
+
+
+8.2	Insert the declaration of a new instance variable after line 3:
+		private int numRolls = 0;
+	Insert an initialization for it after line 14, allowing 15 rolls for each die:
+		numRolls = 30;
+	Insert before line 23 coding to stop setting delays for the dice after 30 total rolls:
+		numRolls -= 1;
+		if (numRolls > 0)
+
+
+
+8.3	Replace "1die.jpg" by "die1.jpg" in lines 7 and 8.  Change each of the 
+	three mentions of (n + "die.jpg") to ("die" + n + ".jpg"), in lines 14, 
+	16, and 27.  In line 20, use charAt(3) instead of charAt(0).
+</font> </pre>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+</body></html>

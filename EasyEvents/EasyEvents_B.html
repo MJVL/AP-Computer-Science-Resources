@@ -1,0 +1,3722 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./EasyEvents_B_files/filelist.xml">
+<link rel=Edit-Time-Data href="./EasyEvents_B_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>EasyEvents Part B</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Dr. William C. Jones  www.javabook.org</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Jones</o:LastAuthor>
+  <o:Revision>7</o:Revision>
+  <o:TotalTime>81</o:TotalTime>
+  <o:LastPrinted>2003-10-13T17:44:00Z</o:LastPrinted>
+  <o:Created>2003-10-26T14:55:00Z</o:Created>
+  <o:LastSaved>2003-10-26T20:15:00Z</o:LastSaved>
+  <o:Pages>6</o:Pages>
+  <o:Words>2700</o:Words>
+  <o:Characters>15393</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>128</o:Lines>
+  <o:Paragraphs>30</o:Paragraphs>
+  <o:CharactersWithSpaces>18903</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l138 level1 lfo43;
+	tab-stops:list .3in;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l138 level2 lfo43;
+	tab-stops:list .4in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-top-alt:thin-thick-small-gap;
+	mso-border-left-alt:thin-thick-small-gap;
+	mso-border-bottom-alt:thick-thin-small-gap;
+	mso-border-right-alt:thick-thin-small-gap;
+	mso-border-color-alt:windowtext;
+	mso-border-width-alt:4.5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";}
+ /* Page Definitions */
+@page
+	{mso-footnote-position:beneath-text;
+	mso-footnote-numbering-restart:each-section;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in .5in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.3in;
+	mso-page-numbers:1;
+	mso-header:url("./EasyEvents_B_files/header.htm") h1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:19210863;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l0:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l1
+	{mso-list-id:59602204;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:72824258;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l2:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l3
+	{mso-list-id:93789907;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:95053965;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l5
+	{mso-list-id:121846423;
+	mso-list-type:hybrid;
+	mso-list-template-ids:4099200 716098946 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l5:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l6
+	{mso-list-id:149298371;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l6:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l7
+	{mso-list-id:164829510;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l7:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l8
+	{mso-list-id:198324042;
+	mso-list-type:simple;
+	mso-list-template-ids:-281242292;}
+@list l8:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l9
+	{mso-list-id:200636251;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1767281934 1391238666 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l9:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l10
+	{mso-list-id:218396699;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l10:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l11
+	{mso-list-id:243540508;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l11:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l12
+	{mso-list-id:246380970;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l12:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l13
+	{mso-list-id:263465528;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l13:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l14
+	{mso-list-id:266546468;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l14:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l15
+	{mso-list-id:270935972;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l15:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l16
+	{mso-list-id:303239575;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l16:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l17
+	{mso-list-id:313682414;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l17:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l18
+	{mso-list-id:315647079;
+	mso-list-type:simple;
+	mso-list-template-ids:-1278463244;}
+@list l18:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l19
+	{mso-list-id:320668387;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l19:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l20
+	{mso-list-id:337193046;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l20:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l21
+	{mso-list-id:350036765;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l21:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l22
+	{mso-list-id:356322395;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l22:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l23
+	{mso-list-id:362361359;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l23:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l24
+	{mso-list-id:372655576;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l24:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l25
+	{mso-list-id:384453337;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l25:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l26
+	{mso-list-id:384529937;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l26:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l27
+	{mso-list-id:402066805;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l27:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l28
+	{mso-list-id:448474953;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l28:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l29
+	{mso-list-id:466169442;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l29:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l30
+	{mso-list-id:483744276;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l30:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l31
+	{mso-list-id:486288323;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l31:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l32
+	{mso-list-id:513229055;
+	mso-list-template-ids:323013642;}
+@list l32:level1
+	{mso-level-start-at:5;
+	mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l32:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l32:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l32:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l32:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l32:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l32:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l32:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l32:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+@list l33
+	{mso-list-id:516234035;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l33:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l34
+	{mso-list-id:529606344;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l34:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l35
+	{mso-list-id:539826874;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l35:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l36
+	{mso-list-id:544489374;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1206621254 1391238666 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l36:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l37
+	{mso-list-id:548299771;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l37:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l38
+	{mso-list-id:556866516;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l38:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l39
+	{mso-list-id:578832781;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l39:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l40
+	{mso-list-id:611012299;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l40:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l41
+	{mso-list-id:611664849;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l41:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l42
+	{mso-list-id:619577380;
+	mso-list-type:hybrid;
+	mso-list-template-ids:284617888 656576764 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l42:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l43
+	{mso-list-id:622886853;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l43:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l44
+	{mso-list-id:640505216;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l44:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l45
+	{mso-list-id:653683584;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l45:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l46
+	{mso-list-id:655232422;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l46:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l47
+	{mso-list-id:668749725;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l47:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l48
+	{mso-list-id:676620931;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l48:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l49
+	{mso-list-id:689405787;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l49:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l50
+	{mso-list-id:706954034;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l50:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l51
+	{mso-list-id:710955647;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l51:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l52
+	{mso-list-id:714548405;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l52:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l53
+	{mso-list-id:726802462;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l53:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l54
+	{mso-list-id:743258876;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l54:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l55
+	{mso-list-id:743337915;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l55:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l56
+	{mso-list-id:776566093;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l56:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l57
+	{mso-list-id:790979322;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l57:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l58
+	{mso-list-id:799375060;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l58:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l59
+	{mso-list-id:800196489;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l59:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l60
+	{mso-list-id:815799241;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l60:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l61
+	{mso-list-id:817573805;
+	mso-list-type:simple;
+	mso-list-template-ids:2066540804;}
+@list l61:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l62
+	{mso-list-id:817722248;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l62:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l63
+	{mso-list-id:859009759;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l63:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l64
+	{mso-list-id:891498935;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l64:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l65
+	{mso-list-id:899366792;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l65:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l66
+	{mso-list-id:903296367;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l66:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l67
+	{mso-list-id:909584168;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l67:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l68
+	{mso-list-id:921567522;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l68:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l69
+	{mso-list-id:922839843;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l69:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l70
+	{mso-list-id:924608593;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l70:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l71
+	{mso-list-id:930049159;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l71:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l72
+	{mso-list-id:930821892;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l72:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l73
+	{mso-list-id:940916914;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l73:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l74
+	{mso-list-id:954755034;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l74:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l75
+	{mso-list-id:995838064;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l75:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l76
+	{mso-list-id:1019351004;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l76:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l77
+	{mso-list-id:1023745987;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l77:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l78
+	{mso-list-id:1024331510;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l78:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l79
+	{mso-list-id:1028719178;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l79:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l80
+	{mso-list-id:1038773849;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l80:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l81
+	{mso-list-id:1047291078;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l81:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l82
+	{mso-list-id:1048644438;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l82:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l83
+	{mso-list-id:1066145987;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l83:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l84
+	{mso-list-id:1096025250;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l84:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l85
+	{mso-list-id:1101218750;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l85:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l86
+	{mso-list-id:1135372594;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l86:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l87
+	{mso-list-id:1149903664;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l87:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l88
+	{mso-list-id:1151486934;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l88:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l89
+	{mso-list-id:1153329680;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l89:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l90
+	{mso-list-id:1165901759;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l90:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l91
+	{mso-list-id:1166822046;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l91:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l92
+	{mso-list-id:1173451869;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l92:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l93
+	{mso-list-id:1181626382;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l93:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l94
+	{mso-list-id:1198811462;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l94:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l95
+	{mso-list-id:1228614913;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l95:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l96
+	{mso-list-id:1229339194;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l96:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l97
+	{mso-list-id:1233388718;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l97:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l98
+	{mso-list-id:1238907000;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l98:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l99
+	{mso-list-id:1241671969;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l99:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l100
+	{mso-list-id:1246066824;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l100:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l101
+	{mso-list-id:1261453785;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l101:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l102
+	{mso-list-id:1262104773;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l102:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l103
+	{mso-list-id:1298608470;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-933581862 -1054306090 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l103:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l104
+	{mso-list-id:1311791291;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l104:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l105
+	{mso-list-id:1316840396;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1845464964 1391238666 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l105:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l106
+	{mso-list-id:1319454054;
+	mso-list-template-ids:67698725;}
+@list l106:level1
+	{mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;}
+@list l106:level2
+	{mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l106:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l106:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l106:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l106:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l106:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l106:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l106:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+@list l107
+	{mso-list-id:1331905259;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l107:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l108
+	{mso-list-id:1337459567;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l108:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l109
+	{mso-list-id:1345397097;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l109:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l110
+	{mso-list-id:1352758371;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l110:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l111
+	{mso-list-id:1356268987;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l111:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l112
+	{mso-list-id:1380662043;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l112:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l113
+	{mso-list-id:1387025801;
+	mso-list-type:hybrid;
+	mso-list-template-ids:2076707130 355777420 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l113:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l114
+	{mso-list-id:1394738304;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l114:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l115
+	{mso-list-id:1411581376;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l115:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l116
+	{mso-list-id:1433092373;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l116:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l117
+	{mso-list-id:1445415823;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l117:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l118
+	{mso-list-id:1449083581;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l118:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l119
+	{mso-list-id:1459375777;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l119:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l120
+	{mso-list-id:1464618679;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l120:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l121
+	{mso-list-id:1488135778;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l121:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l122
+	{mso-list-id:1501844282;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l122:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l123
+	{mso-list-id:1507162881;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l123:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l124
+	{mso-list-id:1540363936;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l124:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l125
+	{mso-list-id:1554199483;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l125:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l126
+	{mso-list-id:1558396873;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l126:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l127
+	{mso-list-id:1565027659;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l127:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l128
+	{mso-list-id:1586457593;
+	mso-list-type:simple;
+	mso-list-template-ids:-244647458;}
+@list l128:level1
+	{mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l129
+	{mso-list-id:1602763717;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l129:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l130
+	{mso-list-id:1618639689;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l130:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l131
+	{mso-list-id:1618755302;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l131:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l132
+	{mso-list-id:1620380283;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l132:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l133
+	{mso-list-id:1624384335;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l133:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l134
+	{mso-list-id:1640070501;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l134:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l135
+	{mso-list-id:1648973840;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l135:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l136
+	{mso-list-id:1684431178;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l136:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l137
+	{mso-list-id:1695812418;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l137:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l138
+	{mso-list-id:1713651495;
+	mso-list-template-ids:264130590;}
+@list l138:level1
+	{mso-level-start-at:4;
+	mso-level-style-link:"Heading 1";
+	mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-ansi-font-size:18.0pt;}
+@list l138:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l138:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l138:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l138:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l138:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l138:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l138:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l138:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+@list l139
+	{mso-list-id:1737127683;
+	mso-list-type:simple;
+	mso-list-template-ids:-1278463244;}
+@list l139:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-ansi-font-weight:normal;
+	mso-ansi-font-style:normal;}
+@list l140
+	{mso-list-id:1739208849;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l140:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l141
+	{mso-list-id:1742213570;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l141:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l142
+	{mso-list-id:1749115982;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l142:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l143
+	{mso-list-id:1749426608;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l143:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l144
+	{mso-list-id:1752657253;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l144:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l145
+	{mso-list-id:1756777307;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1501322800 1391238666 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l145:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l146
+	{mso-list-id:1771124096;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l146:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l147
+	{mso-list-id:1795325148;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l147:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l148
+	{mso-list-id:1799258013;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l148:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l149
+	{mso-list-id:1827625443;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l149:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l150
+	{mso-list-id:1843469209;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l150:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l151
+	{mso-list-id:1891382035;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l151:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l152
+	{mso-list-id:1916360027;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l152:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l153
+	{mso-list-id:1917979506;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l153:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l154
+	{mso-list-id:1918395329;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l154:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l155
+	{mso-list-id:1965236993;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l155:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l156
+	{mso-list-id:1974676189;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l156:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l157
+	{mso-list-id:1976988998;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1954151444 1391238666 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l157:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l158
+	{mso-list-id:1978367548;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l158:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l159
+	{mso-list-id:1985159611;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l159:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l160
+	{mso-list-id:1988629365;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l160:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l161
+	{mso-list-id:2013070531;
+	mso-list-type:simple;
+	mso-list-template-ids:67698699;}
+@list l161:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0D8;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Wingdings;}
+@list l162
+	{mso-list-id:2055036162;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l162:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l163
+	{mso-list-id:2069259993;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l163:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l164
+	{mso-list-id:2074767540;
+	mso-list-type:simple;
+	mso-list-template-ids:67698689;}
+@list l164:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l165
+	{mso-list-id:2097438900;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l165:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l166
+	{mso-list-id:2105766006;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1767281934 716098946 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l166:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l167
+	{mso-list-id:2121097290;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l167:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l168
+	{mso-list-id:2127117770;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l168:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l169
+	{mso-list-id:2138521374;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l169:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l170
+	{mso-list-id:2140605617;
+	mso-list-type:simple;
+	mso-list-template-ids:67698713;}
+@list l170:level1
+	{mso-level-number-format:alpha-lower;
+	mso-level-text:"\(%1\)";
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+@list l171
+	{mso-list-id:2142575672;
+	mso-list-type:simple;
+	mso-list-template-ids:-1298515040;}
+@list l171:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:·;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l172
+	{mso-list-id:2146848576;
+	mso-list-type:simple;
+	mso-list-template-ids:67698703;}
+@list l172:level1
+	{mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.25in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>3.
+Textfields<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Our
+next example is a program that asks two simple questions. The user is to answer
+each question by typing the answer into a box provided for that purpose. The
+program's response will appear in the button or space where the user clicks or
+types. The frame is to look as follows when it first comes up for the user to
+see. If you would like to see this <b>MathQuiz</b> program in action, click
+this <a href="EEdemos_AB.html#3">execution</a> link.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:391.5pt;
+ height:68.25pt'>
+ <v:imagedata src="./EasyEvents_B_files/image001.png" o:title="screenshot4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=522 height=91
+src="./EasyEvents_B_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>When
+you solve a programming problem from scratch, you start with a drawing of how
+things look, as in the figure. Next you make a design for the solution. The
+first step of the solution is obviously to create a window or frame that will
+appear on the screen. As stated earlier, you can do this using</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> java MathQuizApp </span><span
+style='font-size:10.0pt;mso-bidi-font-family:Arial'>with a main method that
+contains the single statement</span><span style='font-size:10.0pt;font-family:
+"Courier New"'> new EFrame (new MathQuiz()); </span><span style='font-size:
+10.0pt'>or you can use an applet whose start method contains</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> setContentPane (new
+MathQuiz()); </span><span style='font-size:10.0pt'>either works.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+accompanying block contains a reasonable design for the program, once the frame
+is created. See how easily it follows from the picture. And once you have a
+design for a program, the Java coding follows easily almost line-for-line.
+Note: A <b>textfield</b> is a rectangular area where the user can type input.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<div style='border:solid windowtext .5pt;padding:1.0pt 4.0pt 1.0pt 4.0pt;
+background:#E5E5E5;mso-shading:white;mso-pattern:gray-10 auto'>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><b style='mso-bidi-font-weight:
+normal'><span style='font-size:10.0pt'>STRUCTURED NATURAL LANGUAGE DESIGN for
+MathQuiz creation<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+10.0pt;mso-bidi-font-family:Arial'>1. Add to the frame the question &quot;What
+is the square of 30?&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+10.0pt;mso-bidi-font-family:Arial'>2. Add to the frame a textfield where the
+user can type the answer to the question.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+10.0pt;mso-bidi-font-family:Arial'>3. Add to the frame the question &quot;How
+many bytes in a KB?&quot;<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+10.0pt;mso-bidi-font-family:Arial'>4. Add to the frame a textfield where the
+user can type the answer to the question.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-alt:solid windowtext .5pt;
+padding:0in;mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt'><span style='font-size:
+10.0pt;mso-bidi-font-family:Arial'>5. Suspend action until the user clicks a
+button or types in the textfield.</span><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Listing
+3 contains the MathQuiz class. The logic of the constructor follows the design:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l145 level1 lfo164;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>Line 2 adds a label that contains the question &quot;What is the square
+of 30?&quot;. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l145 level1 lfo164;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>Line 3 adds a textfield where the user will type the answer; this
+SquareField object is wide enough to hold at least 8 characters.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l145 level1 lfo164;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>Line 4 pushes the next component down to the front of the next row of
+components. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l145 level1 lfo164;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>Line 5 adds another label that displays &quot;How many bytes in a
+KB?&quot;. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l145 level1 lfo164;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>Line 6 adds a textfield where the user will type the answer; this
+BytesField object is wide enough to hold at least 8 characters. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>An EField has the same <b>setText(someString)</b>,
+<b>getText()</b>, and <b>text(someString)</b> methods that ELabels and EButtons
+have. The first two are inherited from Sun's JTextField class. Remember that
+text(someString) returns the EField itself, so you can use that value within</span><span
+style='font-size:10.0pt;mso-bidi-font-family:"Courier New"'>
+thisEFrame.add(someComponent)</span><span style='font-size:10.0pt'>. If you
+want to use color in your programs, go to this <a href="EElanguage.html#3">language</a>
+link.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>A
+subclass of <b>EField</b> is generally defined inside the EPanel subclass. You
+usually have just one method in it: <b>public void onEnter()</b> (see lines 8
+and 17) will execute when the user presses the ENTER key within the textfield.
+A SquareField object is defined here to react to the ENTER key by first looking
+at the text the user has typed; line 9 does the looking. If the user typed
+&quot;900&quot;, this textfield displays the answer &quot;good!&quot; (line
+10), otherwise it displays the answer &quot;you're wrong.&quot; (line 13). You
+can set the width of an EField, measured in characters, with the instance
+method <b>width(numCharacters)</b>; it returns the EField object itself. <i>Note
+that onEnter() is not called by coding anywhere in the program; it is called by
+the user's action of pressing the ENTER key.</i><o:p></o:p></span></p>
+
+<p class=MsoFootnoteText><span style='mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Tahoma;mso-bidi-font-family:
+"Times New Roman"'>Listing 3 The MathQuiz program<o:p></o:p></span></p>
+
+<div style='border-top:.5pt;border-left:3.0pt;border-bottom:.5pt;border-right:
+3.0pt;border-color:windowtext;border-style:solid;padding:0in 0in 0in 0in;
+background:yellow'>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>public
+class MathQuiz extends EPanel <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes"> </span>/** The View:<span style="mso-spacerun:
+yes">  </span>Lay out the GUI components. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>public MathQuiz()<span style="mso-spacerun:
+yes">                                </span></span></b><span style='font-size:
+10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">         </span><span style="mso-spacerun:
+yes">  </span>// 1<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>add
+(new ELabel (&quot;What is the square of 30?&quot;));<span style="mso-spacerun:
+yes">        </span><span style="mso-spacerun: yes">  </span>// 2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new SquareField().width (8));<span
+style="mso-spacerun: yes">     </span>//in characters <span
+style="mso-spacerun: yes">  </span>// 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (lineBreak());<span
+style="mso-spacerun: yes">                                     </span><span
+style="mso-spacerun: yes">  </span>// 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new ELabel (&quot;How many bytes in a
+KB?&quot;));<span style="mso-spacerun: yes">          </span><span
+style="mso-spacerun: yes">  </span>// 5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new BytesField().width (8));<span
+style="mso-spacerun: yes">     </span>//in characters<span style="mso-spacerun:
+yes">  </span><span style="mso-spacerun: yes">  </span>// 6<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes"> </span>/** Controllers: React to ENTER key. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private class SquareField extends EField</span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">                  </span><span style="mso-spacerun:
+yes">  </span>// 7<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>public
+void onEnter()<span style="mso-spacerun: yes">                                 
+</span><span style="mso-spacerun: yes">  </span>// 8<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>{<span style='mso-tab-count:1'>  </span><b>if</b>
+(this.getText().equals (&quot;900&quot;))<span style="mso-spacerun:
+yes">                  </span><span style="mso-spacerun: yes">  </span>// 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>this.setText
+(&quot;good!&quot;);<span style="mso-spacerun: yes">                         
+</span><span style="mso-spacerun: yes">  </span>//10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>}<span style="mso-spacerun:
+yes">                                                   </span><span
+style="mso-spacerun: yes">  </span>//11<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span><b>else</b><span style="mso-spacerun:
+yes">               </span><span style="mso-spacerun:
+yes">                                 </span><span style="mso-spacerun:
+yes">  </span>//12<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>this.setText
+(&quot;you're wrong.&quot;);<span style="mso-spacerun: yes">                 
+</span><span style="mso-spacerun: yes">  </span>//13<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>}<span style="mso-spacerun:
+yes">                                                   </span><span
+style="mso-spacerun: yes">  </span>//14<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>}<span style="mso-spacerun:
+yes">                                                      </span><span
+style="mso-spacerun: yes">  </span>//15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private class BytesField extends EField</span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">                   </span><span style="mso-spacerun:
+yes">  </span>//16<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>public
+void onEnter()<span style="mso-spacerun: yes">                                 
+</span><span style="mso-spacerun: yes">  </span>//17<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>{<span style='mso-tab-count:1'>  </span><b>if</b>
+(this.getText().equals (&quot;1024&quot;))<span style="mso-spacerun:
+yes">                 </span><span style="mso-spacerun: yes">  </span>//18<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>this.setText
+(&quot;good!&quot;);<span style="mso-spacerun: yes">                         
+</span><span style="mso-spacerun: yes">  </span>//19<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>}<span style="mso-spacerun:
+yes">            </span><span style="mso-spacerun:
+yes">                                       </span><span style="mso-spacerun:
+yes">  </span>//20<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span><b>else</b><span style="mso-spacerun:
+yes">                                                </span><span
+style="mso-spacerun: yes">  </span>//21<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>this.setText
+(&quot;you're wrong.&quot;);<span style="mso-spacerun: yes">                 
+</span><span style="mso-spacerun: yes">  </span>//22<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>}<span style="mso-spacerun:
+yes">                                                   </span><span
+style="mso-spacerun: yes">  </span>//23<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>}<span style="mso-spacerun:
+yes">                              </span><span style="mso-spacerun:
+yes">                        </span><span style="mso-spacerun: yes">  </span>//24<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><a href="EEexercises.html#3">Exercise</a> 3.1</span></b><span
+style='font-size:10.0pt'> If you changed the question in line 2 of MathQuiz to
+&quot;What is the cube root of 64?&quot;, how would you have to change the rest
+of the program to make the textfield give the right responses?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 3.2</span></b><span
+style='font-size:10.0pt'> Change MathQuiz so that, instead of displaying the
+answer in the textfield, a little box pops up with the answer. Hint: Review
+what the popUp method does.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 3.3 </span></b><span
+style='font-size:10.0pt'>Add a third question to MathQuiz that asks, &quot;What
+is the square root of 144?&quot;. Allow both right answers to the question to
+have the &quot;good!&quot; response.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 3.4*</span></b><span
+style='font-size:10.0pt'> Change GeogQuiz so that, each time the user clicks
+the picture, it changes, from Rome.jpg to Ireland.jpg to grand_canyon.jpg and
+then back to Rome.jpg. Hint: Put the picture on an EButton instead of an
+ELabel, and use the getPicture method.<o:p></o:p></span></p>
+
+<p class=MsoFootnoteText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<b><span style='font-size:10.0pt;font-family:Arial;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman";mso-ansi-language:
+EN-US;mso-fareast-language:EN-US;mso-bidi-language:AR-SA'><br clear=all
+style='page-break-before:always'>
+</span></b>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>4. Instance variables<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The OrderForm class is
+designed to let the user make a purchase. It has the user fill out his/her
+name, address, and credit card number. The user types this information in three
+different textfields. Moreover, the user can click a button to say whether the
+company can email ads to the user. The frame looks as follows when the program
+begins. </span><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>If you
+would like to see this OrderForm program in action, click this <a
+href="EEdemos_AB.html#4">execution</a> link.</span><span style='font-size:10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:390pt;height:128.25pt'>
+ <v:imagedata src="./EasyEvents_B_files/image003.png" o:title="screenshot3"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=520 height=171
+src="./EasyEvents_B_files/image004.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+three textfield components itsName, itsAddress, itsCard, and the button
+component itsAds, have to be available for use in two or more methods. So they
+are declared <u>outside of all methods</u>. This makes them <b>instance
+variables</b> of OrderForm. A declaration of an instance variable is exactly as
+for a local variable except that we put the word <b>private</b> at the
+beginning of each such declaration. This means that the compiler will not allow
+any class outside of the OrderForm class to mention an instance variable. This
+is <b>encapsulation</b> -- it guarantees the integrity of the data you keep in
+those variables. You can, however, mention an instance variable anywhere inside
+the OrderForm class.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Each
+OrderForm object you create has its own set of four instance variables (though
+we usually make only one OrderForm object in our programs). The button in the
+OrderForm class is declared in line 4 as follows:<o:p></o:p></span></p>
+
+<p class=MsoFootnoteText><span style='mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho"'><span style='mso-tab-count:1'>   </span>private
+EButton itsAds = new AdsButton().text (&quot;yes&quot;); <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>This
+creates the button and initializes what it says on it to the word
+&quot;yes&quot;. It also has the variable itsAds refer to the button. Any use
+of itsAds elsewhere in the program is a reference to this button.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+three textfields are defined similarly. They are added to the overall EPanel by
+a new kind of add method that has two parameters, such as the following in line
+6:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho"'><span style='mso-tab-count:1'>   </span>add
+(new ELabel (&quot;What is your name?&quot;), itsName);<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>This
+<b>add(someComponent, someOtherComponent) </b>method in the EPanel class
+creates a small EPanel that contains the two components and then adds that
+small EPanel to the OrderForm EPanel. The effect is to &quot;bind
+together&quot; the two components by the small EPanel, so they cannot appear on
+different rows of the display. Typically, the first component is a label and
+the second is a textfield or button. The EPanel class also has a
+three-component add method <b>add(comp1, comp2, comp3)</b> for &quot;binding
+together&quot; three related components:.<o:p></o:p></span></p>
+
+<p class=MsoFootnoteText><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The OrderForm class uses
+textfields that are just plain EFields; they do not belong to a subclass of
+EField and thus they do not have an onEnter method that contains coding. This
+means that, when the user click the ENTER key in the textfield, nothing
+happens. But when the user clicks the SubmitButton, all of the information in
+the three textfields and on the button is written to a file. <u>You may ignore
+lines 23-28 on <b>EOutputFile</b> if you wish</u> (unless your instructor says
+otherwise). It is not used elsewhere in this material. It is only here to show
+that data can be written to a disk file by an application (not by an applet).
+The close method makes sure all data goes to the physical file.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Tahoma;mso-bidi-font-family:
+"Times New Roman"'>Listing 4 The OrderForm program<o:p></o:p></span></p>
+
+<div style='border-top:.5pt;border-left:3.0pt;border-bottom:.5pt;border-right:
+3.0pt;border-color:windowtext;border-style:solid;padding:0in 0in 0in 0in;
+background:yellow'>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>public
+class OrderForm extends EPanel <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private EField itsName = new EField().width
+(20);<span style="mso-spacerun: yes">           </span>// 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private EField itsAddress = new
+EField().width (20);<span style="mso-spacerun: yes">        </span>// 2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private EField itsCard = new EField().width
+(20);<span style="mso-spacerun: yes">           </span>// 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private EButton itsAds = new AdsButton().text
+(&quot;yes&quot;);<span style="mso-spacerun: yes">      </span>// 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes"> </span>/** The View:<span style="mso-spacerun:
+yes">  </span>Lay out the GUI components. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>public OrderForm()<span style="mso-spacerun:
+yes">                               </span></span></b><span style='font-size:
+10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">           </span>// 5<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>add
+(new ELabel (&quot;What is your name?&quot;), itsName);<span
+style="mso-spacerun: yes">        </span>// 6<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new ELabel (&quot;What is your
+address?&quot;), itsAddress);<span style="mso-spacerun: yes">  </span>// 7<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new ELabel (&quot;What is your credit
+card #?&quot;),<span style="mso-spacerun: yes">         </span>// 8<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:4'>            </span>itsCard);<span style="mso-spacerun:
+yes">                                          </span>// 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new ELabel (&quot;Can we send you
+email ads?&quot;), itsAds); //10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new SubmitButton().text (&quot;Click
+here when done&quot;));<span style="mso-spacerun: yes">  </span>//11<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes"> </span>/** Controllers: React to click of button. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private class AdsButton extends EButton</span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">                     </span>//12<b><o:p></o:p></b></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>public
+void onClick()<span style="mso-spacerun:
+yes">                                    </span>//13<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>{<span style='mso-tab-count:1'>  </span><b>if</b>
+(this.getText().equals (&quot;yes&quot;))<span style="mso-spacerun:
+yes">                    </span>//14<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>this.setText
+(&quot;no&quot;);<span style="mso-spacerun: yes">                              
+</span>//15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>}<span style="mso-spacerun:
+yes">                                                     </span>//16<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span><b>else</b><span style="mso-spacerun:
+yes">                                                  </span>//17<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>this.setText
+(&quot;yes&quot;);<span style="mso-spacerun: yes">                             
+</span>//18<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>}<span style="mso-spacerun:
+yes">                            </span><span style="mso-spacerun:
+yes">                         </span>//19<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>}<span style="mso-spacerun:
+yes">                                                        </span>//20<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private class SubmitButton extends EButton</span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">                  </span>//21<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>public
+void onClick()<span style="mso-spacerun:
+yes">                                    </span>//22<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span><span style='mso-tab-count:1'>   </span>{<span
+style='mso-tab-count:1'>  </span>EOutputFile file = new EOutputFile
+(&quot;data.txt&quot;);<span style="mso-spacerun: yes">      </span>//23<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>file.println (itsName.getText());<span
+style="mso-spacerun: yes">                     </span>//24<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>file.println
+(itsAddress.getText());<span style="mso-spacerun: yes">                 
+</span>//25<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>file.println (itsCard.getText());<span
+style="mso-spacerun: yes">                     </span>//26<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>file.println (itsAds.getText());<span
+style="mso-spacerun: yes">                      </span>//27<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>file.close();<span style="mso-spacerun:
+yes">                                         </span>//28<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>}<span style="mso-spacerun:
+yes">                                                        </span>//29<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><a
+href="EEexercises.html#4">Exercise</a> 4.1</span></b><span style='font-size:
+10.0pt'> Change OrderForm by adding a request for the user's phone number.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 4.2</span></b><span
+style='font-size:10.0pt'> Change MathQuiz in Listing 3 to have one instance
+variable, a label named myAnswer. When a person enters a value in either
+textfield, display the response of &quot;good!&quot; or &quot;you're
+wrong&quot; in myAnswer instead of in the textfield itself.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 4.3*</span></b><span
+style='font-size:10.0pt'> Change GeogQuiz in Listing 1 to have the displayed
+picture switch from Rome.jpg to Ireland.jpg or vice versa, every time a
+RightButton is clicked. Hint: Have an instance variable that stores a reference
+to the ELabel with the picture.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 4.4*</span></b><span
+style='font-size:10.0pt'> Change OrderForm by adding two buttons for extra-cost
+shipping, one for express mail and one for airmail. Make them yes/no buttons
+that are initially &quot;no&quot;. Set them so that making one &quot;yes&quot;
+changes the other to &quot;no&quot; (you can't have it both ways).<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>5. Basic String operations<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>If
+you already know about the String methods length, substring, and charAt,
+Unicodes, and using a plus sign for string concatenation, you can skip directly
+to the <a href="EasyEvents_C.html">next section</a> if you wish. This section
+does not describe new GUI features, but it provides further practice with what
+you have learned so far.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+<b>ArtQuiz</b> class has eight true/false questions (though the coding
+presented here only shows two of them, to save space). Each time the user
+clicks a button to give the answer, a smiley-face appears on a label named
+toReact if the answer is right and a frowny-face appears if the answer is
+wrong. Also, the total number right so far and the total number wrong so far
+are displayed on two labels named numRight and numWrong. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+frame looks as follows when the user has already clicked &quot;true&quot; for
+each question. If you would like to see this ArtQuiz program in action, click
+this <a href="EEdemos_AB.html#5">execution</a> link.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><!--[if gte vml 1]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:396pt;height:78.75pt'>
+ <v:imagedata src="./EasyEvents_B_files/image005.png" o:title="screenshot4"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=528 height=105
+src="./EasyEvents_B_files/image006.jpg" v:shapes="_x0000_i1027"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+variables numRight, numWrong, and toReact have to be available for use in two
+or more methods. So they are declared in lines 1-3 as instance variables of
+ArtQuiz objects, outside of all methods. </span><span style='font-size:10.0pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+numRight and numWrong labels are initialized with some text. The toReact label
+does not have an initial text, because it shows a picture (smiley-face or
+frowney-face) each time the user gives an answer. These labels are added to the
+EPanel as a group by the line 12 (adding all at once binds them together). The
+pictures are in a subfolder named &quot;pic&quot; (lines 15 and 21).<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>If
+you have a string of characters s, then <b>s.length()</b> is the number of
+characters in the string. For instance, &quot;cat&quot;.length() is 3,
+&quot;stew&quot;.length() is 4, and &quot;&quot;.length() is zero. Also, <b>s.charAt(0)</b>
+is the character in the first position of s, s.charAt(1) is the character in
+the second positiion of s, etc. (numbering in Java normally starts from 0). For
+instance, &quot;cat&quot;.charAt(0) is 'c' and &quot;cat&quot;.charAt(2) is
+'t'. &quot;cat&quot;.charAt(3) is not allowed.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Each
+character has a numeric value called its <b>Unicode value</b>. The Unicode for
+digit '0' is 48, for digit '1' is 49, up through 57 for digit '9'. Therefore,
+'3' minus '0' is the number 3, '7' minus '0' is the number 7, etc. In general,
+if c is a digit character, then c - '0' is the number that we represent in
+writing by the character c. We use this in lines 13-14 to add 1 to the count of
+right answers so far: Similarly, lines 16-17 compute the new count of wrong
+answers so far.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Putting
+a plus sign between two string values creates a new string consisting of the
+first string followed by the second string. This is called <b>string</b> <b>concatenation</b>.
+For instance, if s has the value &quot;Bill&quot;, then s + &quot; rules&quot;
+has the value &quot;Bill rules&quot;. Putting a plus sign between a numeric
+value and a string of characters, as in count+&quot;right&quot; where count is
+an int variable, converts the number to the character(s) that represent it in
+writing. <o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoFootnoteText>If s is any String value, the expression <b>s.substring(1)</b>
+is the string consisting of all characters except the first one. In general,
+s.substring(k) is all but the first k characters. You will see this substring
+String method used from time to time later in this material.</p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:Tahoma;mso-bidi-font-family:
+"Times New Roman"'>Listing 5 The ArtQuiz program<o:p></o:p></span></p>
+
+<div style='border-top:.5pt;border-left:3.0pt;border-bottom:.5pt;border-right:
+3.0pt;border-color:windowtext;border-style:solid;padding:0in 0in 0in 0in;
+background:yellow'>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>public
+class ArtQuiz extends EPanel <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private ELabel numRight = new ELabel (&quot;0
+right&quot;); <span style="mso-spacerun: yes"> </span><span
+style="mso-spacerun: yes">         </span>// 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private ELabel numWrong = new ELabel (&quot;0
+wrong&quot;);<span style="mso-spacerun: yes">  </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">        </span>// 2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private ELabel toReact = new ELabel(&quot;&quot;);<span
+style="mso-spacerun: yes">  </span>// no text <span style="mso-spacerun:
+yes">       </span>// 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes"> </span>/** The View: <span style="mso-spacerun:
+yes"> </span>Lay out the GUI components. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>public ArtQuiz()<span style="mso-spacerun:
+yes">                                     </span><span style="mso-spacerun:
+yes"> </span><span style="mso-spacerun: yes"> </span></span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">     </span>// 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>add
+(new ELabel (&quot;Mozart was a dancer&quot;));<span style="mso-spacerun:
+yes">          </span><span style="mso-spacerun: yes"> </span><span
+style="mso-spacerun: yes">     </span>// 5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new WrongButton().text
+(&quot;true&quot;));<span style="mso-spacerun: yes">              </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes">    </span>//
+6<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new RightButton().text (&quot;false&quot;));<span
+style="mso-spacerun: yes">              </span><span style="mso-spacerun:
+yes"> </span><span style="mso-spacerun: yes">   </span>// 7<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new ELabel (&quot;Rembrandt was a
+painter&quot;));<span style="mso-spacerun: yes">         </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes">  </span>// 8<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new RightButton().text
+(&quot;true&quot;));<span style="mso-spacerun: yes">                 </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes"> </span>// 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (new WrongButton().text
+(&quot;false&quot;));<span style="mso-spacerun: yes">                 </span><span
+style="mso-spacerun: yes"> </span>//10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:4'>            </span>// several more questions would be
+here<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (lineBreak());<span
+style="mso-spacerun: yes">                          </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">            </span>//11<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>add (numRight, toReact, numWrong);<span
+style="mso-spacerun: yes">           </span><span style="mso-spacerun:
+yes"> </span><span style="mso-spacerun: yes">           </span>//12<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes"> </span>/** Controllers: React to click of button or
+to ENTER key. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private class RightButton extends
+EButton<span style="mso-spacerun: yes">    </span></span></b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">    </span><span style="mso-spacerun: yes"> </span><span
+style="mso-spacerun: yes">          </span>//13<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>public
+void onClick()<span style="mso-spacerun: yes">                          </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">         </span>//14<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>{<span style='mso-tab-count:1'>  </span>toReact.setPicture
+(&quot;pic/smileyface.gif&quot;);<span style="mso-spacerun: yes">   </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">        </span>//15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>int count = 1 +
+numRight.getText().charAt (0) - '0'; <span style="mso-spacerun: yes"> </span>//16<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>numRight.setText (count + &quot; right
+so far&quot;); <span style="mso-spacerun: yes">          </span>//17<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>}<span style="mso-spacerun:
+yes">                                              </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">         </span>//18<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private class WrongButton extends
+EButton<span style="mso-spacerun: yes">          </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">        </span></span></b><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho"'>//19<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>public
+void onClick()<span style="mso-spacerun: yes">                           
+</span><span style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">       </span>//20<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>{<span style='mso-tab-count:1'>  </span>toReact.setPicture
+(&quot;pic/frowneyface.gif&quot;);<span style="mso-spacerun: yes">    </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">      </span>//21<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>int count = 1 +
+numWrong.getText().charAt (0) - '0'; <span style="mso-spacerun:
+yes"> </span>//22<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:3'>         </span>numWrong.setText (count + &quot; wrong
+so far&quot;);<span style="mso-spacerun: yes">       </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun:
+yes">   </span>//23<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:2'>      </span>}<span style="mso-spacerun:
+yes">                                                     </span><span
+style="mso-spacerun: yes"> </span><span style="mso-spacerun: yes">  </span>//24<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt'><a href="EEexercises.html#5">Exercise</a> 5.1</span></b><span
+style='font-size:10.0pt'> Change ArtQuiz to add the true/false question for
+&quot;da Vinci was a sculptor&quot;. <o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 5.2</span></b><span
+style='font-size:10.0pt'> What difference would it make if you left out the
+&quot;1+&quot; part of lines 16 and 22? What if you also added 1 to count in
+lines 17 and 23?<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 5.3</span></b><span
+style='font-size:10.0pt'> The ArtQuiz class starts giving bad information if
+the user answers more than 9 questions right. Change ArtQuiz so that it does
+not try to add any more to numRight when the count of right answers reaches 9;
+do the same for numWrong.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 5.4*</span></b><span
+style='font-size:10.0pt'> There are e.g. 8 true/false questions altogether in
+the finished ArtQuiz class, a test-taker could click the correct answer to one
+of them 8 times and then show off the score of 8 right and 0 wrong. Change
+ArtQuiz to prevent this as follows: Each time a button is clicked, put a period
+at the beginning of its text, e.g., change &quot;true&quot; to
+&quot;.true&quot;. But do not count it as an answer if its text already has a
+period (because it was already counted as an answer). Hint: Check whether the
+first character on the button == '.'.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>Exercise 5.5*</span></b><span
+style='font-size:10.0pt'> Add two instance variables to ArtQuiz, both of int
+type, both initialized to zero. One will keep count of the number of wrong
+answers and the other will keep track of the number of right answers. Replace
+lines 16 and 22 to use these two variables appropriately. Also include the
+protective change described in Exercise 5.3.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>Link to <a
+href="EasyEvents_C.html">next section</a> (Part C)<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

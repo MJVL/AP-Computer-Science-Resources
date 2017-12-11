@@ -1,0 +1,1577 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 9">
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./EasyEvents_C_files/filelist.xml">
+<link rel=Edit-Time-Data href="./EasyEvents_C_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+<title>EasyEvents Part C</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Bill Jones</o:Author>
+  <o:Template>Normal</o:Template>
+  <o:LastAuthor>Jones</o:LastAuthor>
+  <o:Revision>27</o:Revision>
+  <o:TotalTime>209</o:TotalTime>
+  <o:LastPrinted>2003-10-26T14:28:00Z</o:LastPrinted>
+  <o:Created>2003-10-23T09:37:00Z</o:Created>
+  <o:LastSaved>2003-10-26T23:05:00Z</o:LastSaved>
+  <o:Pages>5</o:Pages>
+  <o:Words>2256</o:Words>
+  <o:Characters>12863</o:Characters>
+  <o:Company> </o:Company>
+  <o:Lines>107</o:Lines>
+  <o:Paragraphs>25</o:Paragraphs>
+  <o:CharactersWithSpaces>15796</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Print</w:View>
+  <w:DisplayHorizontalDrawingGridEvery>0</w:DisplayHorizontalDrawingGridEvery>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-alt:"Arial Unicode MS";
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:0 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:128;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:fixed;
+	mso-font-signature:1 134676480 16 0 131072 0;}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+h1
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	mso-list:l2 level1 lfo2;
+	tab-stops:list .3in;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-font-kerning:14.0pt;
+	mso-bidi-font-weight:normal;}
+h2
+	{mso-style-update:auto;
+	mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.4in;
+	text-indent:-.4in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	mso-list:l2 level2 lfo2;
+	tab-stops:list .4in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+h3
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h4
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-font-weight:normal;}
+h5
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:normal;}
+h6
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:6;
+	font-size:11.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:7;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:8;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{mso-style-next:Normal;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:9;
+	font-size:9.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";
+	font-weight:bold;
+	mso-bidi-font-weight:normal;
+	font-style:italic;
+	mso-bidi-font-style:normal;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 3.0in right 6.0in;
+	font-size:12.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+p.MsoBodyText, li.MsoBodyText, div.MsoBodyText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	border:none;
+	mso-border-top-alt:thin-thick-small-gap;
+	mso-border-left-alt:thin-thick-small-gap;
+	mso-border-bottom-alt:thick-thin-small-gap;
+	mso-border-right-alt:thick-thin-small-gap;
+	mso-border-color-alt:windowtext;
+	mso-border-width-alt:4.5pt;
+	padding:0in;
+	mso-padding-alt:1.0pt 4.0pt 1.0pt 4.0pt;
+	font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoBodyText3, li.MsoBodyText3, div.MsoBodyText3
+	{margin:0in;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:Arial;
+	mso-fareast-font-family:"Times New Roman";}
+a:link, span.MsoHyperlink
+	{color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;
+	text-underline:single;}
+p.MsoPlainText, li.MsoPlainText, div.MsoPlainText
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Times New Roman";
+	mso-bidi-font-family:"Times New Roman";}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Courier New";
+	mso-fareast-font-family:"Courier New";}
+ /* Page Definitions */
+@page
+	{mso-footnote-position:beneath-text;
+	mso-footnote-numbering-restart:each-section;}
+@page Section1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in .5in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.3in;
+	mso-page-numbers:1;
+	mso-header:url("./EasyEvents_C_files/header.htm") h1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+@list l0
+	{mso-list-id:200636251;
+	mso-list-type:hybrid;
+	mso-list-template-ids:1767281934 1391238666 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l1
+	{mso-list-id:544489374;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1206621254 1391238666 67698691 67698693 67698689 67698691 67698693 67698689 67698691 67698693;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.25in;
+	mso-level-number-position:left;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-family:Symbol;}
+@list l2
+	{mso-list-id:1713651495;
+	mso-list-template-ids:264130590;}
+@list l2:level1
+	{mso-level-start-at:4;
+	mso-level-style-link:"Heading 1";
+	mso-level-text:%1;
+	mso-level-tab-stop:.3in;
+	mso-level-number-position:left;
+	margin-left:.3in;
+	text-indent:-.3in;
+	mso-ansi-font-size:18.0pt;}
+@list l2:level2
+	{mso-level-style-link:"Heading 2";
+	mso-level-text:"%1\.%2";
+	mso-level-tab-stop:.4in;
+	mso-level-number-position:left;
+	margin-left:.4in;
+	text-indent:-.4in;}
+@list l2:level3
+	{mso-level-text:"%1\.%2\.%3";
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	margin-left:.5in;
+	text-indent:-.5in;}
+@list l2:level4
+	{mso-level-text:"%1\.%2\.%3\.%4";
+	mso-level-tab-stop:.6in;
+	mso-level-number-position:left;
+	margin-left:.6in;
+	text-indent:-.6in;}
+@list l2:level5
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5";
+	mso-level-tab-stop:.7in;
+	mso-level-number-position:left;
+	margin-left:.7in;
+	text-indent:-.7in;}
+@list l2:level6
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6";
+	mso-level-tab-stop:.8in;
+	mso-level-number-position:left;
+	margin-left:.8in;
+	text-indent:-.8in;}
+@list l2:level7
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7";
+	mso-level-tab-stop:.9in;
+	mso-level-number-position:left;
+	margin-left:.9in;
+	text-indent:-.9in;}
+@list l2:level8
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8";
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	margin-left:1.0in;
+	text-indent:-1.0in;}
+@list l2:level9
+	{mso-level-text:"%1\.%2\.%3\.%4\.%5\.%6\.%7\.%8\.%9";
+	mso-level-tab-stop:1.1in;
+	mso-level-number-position:left;
+	margin-left:1.1in;
+	text-indent:-1.1in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="1030"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=EN-US link=blue vlink=purple style='tab-interval:.25in'>
+
+<div class=Section1>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt'>6. Textareas<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+BankView program has a textfield where the user can enter a deposit in a bank
+account or a withdrawal. Positive numbers indicate deposits and negative
+numbers indicate checks. It also has a button that the user clicks to see the
+last five transactions made. Each user input produces a remark in the large
+rectangular output area. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+BankView frame looks as shown in the accompanying figure after inputs of 100,
+-30, and 42, and a button click, except that the bottom part of the output area
+has been cut off. Scroll bars will appear when the textarea has too much
+material to display at one time. If you would like to see this BankView program
+in action, click this <a href="EEdemos_CD.html">execution</a> link.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><!--[if gte vml 1]><v:shapetype
+ id="_x0000_t75" coordsize="21600,21600" o:spt="75" o:preferrelative="t"
+ path="m@4@5l@4@11@9@11@9@5xe" filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><v:shape id="_x0000_i1025" type="#_x0000_t75" style='width:385.5pt;
+ height:108.75pt'>
+ <v:imagedata src="./EasyEvents_C_files/image001.png" o:title="screenshot6"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=514 height=145
+src="./EasyEvents_C_files/image002.jpg" v:shapes="_x0000_i1025"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+BankView class in Listing 6 has two variables, modelAccount and itsOutput, that
+contain objects that have to be accessed in <u>several</u> methods of the
+class. This means you have to define them as instance variables, <u>outside</u>
+of all methods, as shown in lines 1 and 2. The modelAccount object keeps track
+of checks and deposits for a bank account. The itsOutput object keeps track of
+a large area where information written by the program is to appear. We
+construct it in line 2, we add it to the frame in line 8, and we write
+information to it in lines 11 and 18.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt;
+mso-bidi-font-family:Arial'>A</span><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>n <b>ETextArea</b> object displays a large amount of textual
+information. The ETextArea construction in line 2 creates a rectangular area
+suitable for writing up to 10 rows of words, each row having room for at least
+42 characters. This kind of component is a <b>textarea</b>. You will also have
+scroll bars on this area, so the user can scroll up-and-down or left-and-right
+to read all the material printed there. You add one line to the information
+displayed in an ETextArea by using <b>someETextArea.say(messageString)</b>. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>An
+ETextArea also has the same setText and getText methods that ELabels, EButtons,
+and EFields have. In particular, <b>someETextArea.setText(&quot;&quot;)</b>
+clears the area.<o:p></o:p></span></p>
+
+<p class=MsoFootnoteText><span style='mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Line
+7 of this class constructs a new UpdateField (a subclass of EField), then sets
+its width to be 5 characters. Since the width method returns the EField object
+itself, you can apply the text method to it, setting its text to be a zero.
+Since the text method also returns the EField object itself, you can use it as
+the parameter for the add method. All you need for an applet that contains the
+BankView program is the following:<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'>public class BankViewApplet
+extends javax.swing.JApplet <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>public void start() <o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:1'>  </span>setContentPane
+(new BankView());<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;font-family:"Courier New"'>}<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'>The constructor lays out a
+button and a textfield for input and a textarea for output (lines 3-8). Then
+the runtime system pauses until some event takes place: When the button is
+clicked, a record of the last five transactions in the bank account appears in
+the textarea (line 11; see the figure above). When the user enters a new
+transaction in the textfield (line 15), it is checked to make sure it is not
+blank (line 16). If so, the bank account is updated (line 17) and then the
+current balance is printed in the textarea (lines 18-19). Line 21 erases the
+textfield for the user's convenience. <o:p></o:p></span></p>
+
+<p class=MsoFootnoteText><span style='mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoPlainText><span style='font-family:Tahoma;mso-bidi-font-family:
+"Times New Roman"'>Listing 6 The BankView program (uses the BankAccount class)<o:p></o:p></span></p>
+
+<div style='border-top:.5pt;border-left:3.0pt;border-bottom:.5pt;border-right:
+3.0pt;border-color:windowtext;border-style:solid;padding:0in 0in 0in 0in;
+background:yellow'>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>public
+class BankView extends EPanel <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>private BankAccount modelAccount = new BankAccount();<span
+style="mso-spacerun: yes">       </span>// 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style='mso-tab-count:1'>   </span>private ETextArea itsOutput = new ETextArea
+(10, 42);<span style="mso-spacerun: yes">       </span>// 2<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">  </span>/** The View:<span style="mso-spacerun:
+yes">  </span>Lay out the GUI components. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>public BankView()<span style="mso-spacerun:
+yes">                                         </span></span></b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>// 3<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>{<span style='mso-tab-count:1'>  </span>add (new
+LastFiveButton().text<span style="mso-spacerun: yes">                          
+</span>// 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+4'>            </span>(&quot;show last five transactions&quot;));<span
+style="mso-spacerun: yes">                  </span>// 5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>      </span>add (new ELabel (&quot;Enter deposit(+) or
+check(-)&quot;),<span style="mso-spacerun: yes">        </span>// 6<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+4'>            </span>new UpdateField().width (5).text (&quot;0&quot;));<span
+style="mso-spacerun: yes">           </span>// 7<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>      </span>add (itsOutput);<span style="mso-spacerun:
+yes">                                         </span>// 8<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><span
+style="mso-spacerun: yes">  </span>/** Controllers: React to click of button or
+ENTER key. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>private class LastFiveButton extends EButton<span
+style="mso-spacerun: yes">              </span></span></b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">  </span>// 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>{<span style='mso-tab-count:1'>  </span>public void onClick()<span
+style="mso-spacerun: yes">                                    </span>//10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>      </span>{<span style='mso-tab-count:1'>  </span>itsOutput.say
+(modelAccount.lastFiveTransactions());<span style="mso-spacerun: yes"> 
+</span>//11<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>      </span>}<span style="mso-spacerun:
+yes">                                                        </span>//12<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>private class UpdateField extends EField</span></b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">                    </span>//13<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>{<span style='mso-tab-count:1'>  </span>public void onEnter()<span
+style="mso-spacerun: yes">                                    </span>//14<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>      </span>{<span style='mso-tab-count:1'>  </span>String input =
+this.getText();<span style="mso-spacerun: yes">                       
+</span>//15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+3'>         </span><b>if</b> (input.length() &gt; 0)<span style="mso-spacerun:
+yes">                               </span>//16<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt;font-family:"Courier New"'><span
+style='mso-tab-count:3'>         </span>{<span style='mso-tab-count:1'>  </span>modelAccount.makeChange
+(input);<span style="mso-spacerun: yes">                   </span>//17<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+4'>            </span>itsOutput.say (modelAccount.currentBalance() +<span
+style="mso-spacerun: yes">     </span>//18<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+5'>               </span>&quot; = balance.&quot;);<span style="mso-spacerun:
+yes">                                 </span>//19<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+3'>         </span>}<span style="mso-spacerun:
+yes">                                                     </span>//20<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+3'>         </span>this.setText (&quot;&quot;);<span style="mso-spacerun:
+yes">  </span>// clear the entry field<span style="mso-spacerun: yes">         
+</span>//21<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+2'>      </span>}<span style="mso-spacerun:
+yes">                                                        </span>//22<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style='mso-tab-count:
+1'>   </span>}<span style='mso-tab-count:1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='border:none;mso-border-top-alt:.5pt;mso-border-left-alt:
+3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;mso-border-color-alt:
+windowtext;mso-border-style-alt:solid;padding:0in;mso-padding-alt:0in 0in 0in 0in'><span
+style='font-size:10.0pt;font-family:"Courier New"'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>This
+program follows the standard <b>MVC (model-view-controller)</b> <b>design</b>: <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>The constructor creates the <b>view</b> (what the user sees on the
+screen and interacts with) and then suspends the action of the program until
+some input event occurs. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>The last two methods are the <b>controllers</b> of what goes on in the
+program, reacting to events. <o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l0 level1 lfo4;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+font-family:Symbol;mso-bidi-font-family:Arial'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-family:
+Arial'>The BankAccount object stores information that is accessed at several
+points in the execution of the program. So it is a <b>model</b> of a part of
+the real world (a bank account in this case). The controllers act as
+intermediaries between the model and the view. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>The
+BankAccount makeChange method, called in line 17, accepts any string of one or
+more characters and makes the change for a check (if less than zero) or a deposit.
+The methods in this class have nothing to do with GUIs, so we do not discuss
+them here. You should study the discussion of the BankAccount class at this <a
+href="EElanguage.html#6">language</a> link if you are not fully familiar with
+how to make this kind of class.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><a
+href="EEexercises.html#6">Exercise</a> 6.1</span></b><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'> Change BankView so that it says &quot;The
+last 5 are &quot; before it lists the five.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Exercise
+6.2</span></b><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'> Change
+BankView as follows, on the assumption that BankAccount has another instance
+method, numChecks(), to tell the number of checks so far:<span
+style="mso-spacerun: yes">  </span>Clicking a button causes the number of
+checks to appear in the textarea.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>Exercise
+6.3*</span></b><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'> Revise
+BankView to have two textfields, one for checks only and one for deposits only.
+Both will be entered as positive numbers. Delete any leading '$' character from
+input sent to the makeChange method. Hint: Use the substring method.<o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Exercise
+6.4**</span></b><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>
+Write a program that has one textfield and one textarea. The user is to enter
+numbers in the textfield. After each number is entered, write a line that says
+&quot;INPUT: &quot; followed by the user's input, then a line that gives the
+average of all numbers entered so far. Hint: The statement</span><span
+style='font-size:10.0pt;font-family:"Courier New"'> n =
+Integer.parseInt(this.getText()) </span><span style='font-size:10.0pt;
+mso-bidi-font-family:Arial'>produces the numeric equivalent of the string of
+characters that the user enters. Have a variable that tracks the total entered
+and another variable that counts how many entries are made.<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><b><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>7.
+Timers<o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>A
+subclass of <b>ETimer</b> is generally defined inside the EPanel subclass. It <u>must</u>
+have an <b>onBeep()</b> instance method. You use the instance method <b>delay(m)</b>
+to tell the timer to wait for a period of m <b>milliseconds</b> before
+executing its onBeep method. 1000 milliseconds is 1 second.<span
+style="mso-spacerun: yes">  </span>The delay method returns the ETimer object
+itself, so it can be used in e.g.</span><span style='font-size:10.0pt;
+font-family:"Courier New"'> add (new XTimer().delay(1200))</span><span
+style='font-size:10.0pt;mso-bidi-font-family:Arial'>. You can stop the beeping
+with the ETimer <b>stop()</b> method. ETimer is a subclass of ELabel, since an
+ETimer is often used to display a picture that changes frequently, once each
+time onBeep is called. So you have available the setPicture, getPicture,
+setText, and getText methods. <o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt;mso-bidi-font-family:Arial'>Example:
+You could add the following three statements in the constructor of any of the
+example classes we have had. They will display a picture of Rome for just 1.2
+seconds, then replace the picture of Rome by the picture of Ireland, if you
+have defined the RomeTimer class shown:<o:p></o:p></span></p>
+
+<p class=MsoNormal><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<pre><span style='mso-fareast-font-family:"Times New Roman"'><span
+style='mso-tab-count:1'>        </span>ETimer flash = new RomeTimer();<o:p></o:p></span></pre><pre><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:
+1'>        </span>flash.setPicture (&quot;Rome.jpg&quot;);<o:p></o:p></span></pre><pre><span
+style='mso-fareast-font-family:"Times New Roman"'><span style='mso-tab-count:
+1'>        </span>add (flash);<o:p></o:p></span></pre><pre><span
+style='mso-fareast-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:1'>   </span>private
+class RomeTimer extends ETimer<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:1'>   </span>{<span
+style='mso-tab-count:1'>  </span>public void onBeep()<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:2'>      </span>{<span
+style='mso-tab-count:1'>  </span>this.setPicture (&quot;Ireland.jpg&quot;);<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:2'>      </span>}<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style='mso-tab-count:1'>   </span>}<o:p></o:p></span></p>
+
+<p class=MsoPlainText style='tab-stops:.25in'><span style='mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='tab-stops:.25in'><span style='mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Each EButton
+and EField has a setEnabled method: <b>x.setEnabled(false)</b> keeps the user
+from clicking the button or typing in the textfield. <b>x.setEnabled(true)</b>
+re-activates the component. When a component is first created, it is of course
+already enabled.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>The GuessNumberGame is a subclass of EPanel you can
+put in an EFrame (for an application) or a JApplet (for an applet in a
+webpage). The design is to have a button the user clicks to start a new game.
+When that happens, the program chooses a secret number from 1 to 100 and
+invites the user to guess it. Each time the user types a guess into the
+textfield, the response is &quot;Too high&quot; or &quot;Too low&quot;,
+whichever is appropriate. When the user gets it right, the response is
+&quot;Right. Congratulations!&quot; and the game stops; the user clicks the
+button to play again. The GuessNumberGame frame looks as shown in the
+accompanying figure, after a guess of 40 which was too high. </span><span
+style='font-size:10.0pt;mso-bidi-font-family:Arial'>If you would like to see
+this GuessNumberGame program in action, click this <a href="EEdemos_CD.html#7">execution</a>
+link.</span><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-family:Arial'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-family:Arial'><!--[if gte vml 1]><v:shape id="_x0000_i1026"
+ type="#_x0000_t75" style='width:386.25pt;height:58.5pt'>
+ <v:imagedata src="./EasyEvents_C_files/image003.png" o:title="screenshot6"/>
+</v:shape><![endif]--><![if !vml]><img border=0 width=515 height=78
+src="./EasyEvents_C_files/image004.jpg" v:shapes="_x0000_i1026"><![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>The GuessNumberGame class in Listing 7 has four
+instance variables, since they have to be accessed in several methods of the
+class:<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo6;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>The
+textfield named <u>itsInput</u> is declared in line 1 to allow room for 3 or
+more characters. It is added to the panel in line 8. It is disabled initially
+in lines 10, and again disabled at the end of each game in line 35. It is
+enabled at the start of a game in line 19, when the user clicks the button that
+says &quot;Click to play the game&quot;.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo6;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>The
+label named <u>itsAnswer</u> is declared in line 2 to initially have no text
+(indicated by the empty string &quot;&quot;).<span style="mso-spacerun: yes"> 
+</span>It displays the program's responses in lines 27, 30, and 33.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo6;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>The
+integer value named <u>itsSecret</u> is the secret number the program chooses.
+The program checks it against the user's guess in lines 26 and 29.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='margin-left:.25in;text-indent:-.25in;mso-list:l1 level1 lfo6;
+tab-stops:list .25in'><![if !supportLists]><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><![endif]><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>The
+timer named <u>itsTimer</u> is declared in line 4. Its purpose is to choose a
+secret number. It does this by adding 13 to itsSecret number 50 times a second
+(i.e., a delay of 20 milliseconds between additions) until the user clicks the
+button to start the game. But when it goes over 100, it subtracts 100 to keep
+it in the range of 1 through 100 (lines 13-15). In general <b>x += k</b>
+changes x to be k more than it was, and <b>x -= k</b> changes x to be k less
+than it was.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='tab-stops:.25in'><span style='mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>This is a
+workable way to generate a number sort of at random in the range from 1 to 100.
+By adding 13 each time, which is a prime number, this method cycles through all
+100 possibilities once each two seconds. Since the user will probably take one
+or more seconds from the time &quot;Congratulations!&quot; is displayed to the
+start of the next game, this is acceptably &quot;random&quot;. Of course,
+nothing is actually random about the way a computer functions. <o:p></o:p></span></p>
+
+<p class=MsoPlainText style='tab-stops:.25in'><span style='mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoPlainText style='tab-stops:.25in'><span style='mso-bidi-font-size:
+12.0pt;font-family:Arial;mso-bidi-font-family:"Times New Roman"'>Another way to
+produce a random number is have an instance variable <b>java.util.Random randy
+= new java.util.Random();</b> then each call of <b>randy.nextInt(n)</b>
+produces a &quot;random&quot; non-negative number less than n. Exercise 7.3
+illustrates its use.<span style="mso-spacerun: yes">  </span>Note that the
+ETimer is not added to the display, since there is nothing to show about this
+particular ETimer; but usually there is.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>Line 25 has to obtain a number from the string of
+characters that the user typed in the textfield.<span style="mso-spacerun:
+yes">  </span>It uses the standard</span><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt;mso-bidi-font-family:Arial'> <b>Integer.parseInt(someString)</b>
+meth</span><span style='font-size:10.0pt;mso-bidi-font-size:12.0pt'>od to
+derive the number.<o:p></o:p></span></p>
+
+<pre><span style='mso-bidi-font-size:12.0pt;font-family:Arial;mso-fareast-font-family:
+"Times New Roman";mso-bidi-font-family:"Times New Roman"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></pre>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt;
+font-family:Tahoma;mso-bidi-font-family:"Times New Roman"'>Listing 7 The GuessNumberGame
+program<o:p></o:p></span></p>
+
+<div style='border-top:.5pt;border-left:3.0pt;border-bottom:.5pt;border-right:
+3.0pt;border-color:windowtext;border-style:solid;padding:0in 0in 0in 0in;
+background:yellow'>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'>public class GuessNumberGame
+extends EPanel <o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'>{<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><span style='mso-tab-count:
+1'>   </span>private EField itsInput = new PlayOneGame().width (3);<span
+style="mso-spacerun: yes">      </span>// 1<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><span style='mso-tab-count:
+1'>   </span>private ELabel itsAnswer = new ELabel (&quot;&quot;);</span><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">                 </span>// 2</span><span style='font-size:10.0pt;
+font-family:"Courier New";mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><span style='mso-tab-count:
+1'>   </span>private int itsSecret = 50;</span><span style='font-size:10.0pt;
+font-family:"Courier New"'><span style="mso-spacerun:
+yes">                        </span><span style="mso-spacerun:
+yes">         </span>// 3</span><span style='font-size:10.0pt;font-family:"Courier New";
+mso-fareast-font-family:"MS Mincho"'><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><span style='mso-tab-count:
+1'>   </span>private ETimer itsTimer = new SecretTimer().delay (20);<span
+style="mso-spacerun: yes">     </span>// 4<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><span style="mso-spacerun:
+yes">  </span>/** The View:<span style="mso-spacerun: yes">  </span>Lay out the
+GUI components. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>public GuessNumberGame()</span></b><span
+style='font-size:10.0pt;font-family:"Courier New"'><span style="mso-spacerun:
+yes">                                    </span>// 5<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:
+1'>  </span>add (new StartGame().text (&quot;Click to play the
+game&quot;));<span style="mso-spacerun: yes">  </span><span
+style="mso-spacerun: yes"> </span>// 6<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>add (new ELabel
+(&quot;Guess 1 to 100&quot;));<span style="mso-spacerun:
+yes">                     </span>// 7<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>add (itsInput);<span
+style="mso-spacerun: yes">                                          </span>// 8<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>add (itsAnswer);<span
+style="mso-spacerun: yes">                                         </span>// 9<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>itsInput.setEnabled
+(false);<span style="mso-spacerun: yes">                            </span><span
+style="mso-spacerun: yes"> </span>//10<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:
+1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><span style="mso-spacerun:
+yes">  </span>/** Controllers: React to various events. */<o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>private class
+SecretTimer extends ETimer<span style="mso-spacerun: yes">                 
+</span></span></b><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">  </span>//11<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:
+1'>  </span>public void onBeep()<span style="mso-spacerun:
+yes">                                     </span>//12<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>{<span
+style='mso-tab-count:1'>  </span>itsSecret += 13;<span style="mso-spacerun:
+yes">                     </span><span style="mso-spacerun:
+yes">                 </span>//13<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>if (itsSecret &gt;
+100)<span style="mso-spacerun: yes">                                 
+</span>//14<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:4'>            </span>itsSecret -=
+100;<span style="mso-spacerun: yes">                                 
+</span>//15<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>this.delay
+(20);<span style="mso-spacerun: yes">                                     
+</span>//16<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>}<span
+style="mso-spacerun: yes">                                              
+</span><span style="mso-spacerun: yes">         </span>//17<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:
+1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New";mso-fareast-font-family:"MS Mincho"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>private class StartGame
+extends EButton</span></b><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">                     </span>//18<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:
+1'>  </span>public void onClick()<span style="mso-spacerun:
+yes">                                    </span>//19<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>{<span
+style='mso-tab-count:1'>  </span>itsTimer.stop();<span style="mso-spacerun:
+yes">                                      </span>//20<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>itsInput.setEnabled
+(true);<span style="mso-spacerun: yes">                           </span>//21<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>}<span
+style="mso-spacerun:
+yes">                                                        </span>//22<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:
+1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><b><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>private class
+PlayOneGame extends EField<span style="mso-spacerun: yes">                 
+</span></span></b><span style='font-size:10.0pt;font-family:"Courier New"'><span
+style="mso-spacerun: yes">  </span>//23<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>{<span style='mso-tab-count:
+1'>  </span>public void onEnter()<span style="mso-spacerun:
+yes">                            </span><span style="mso-spacerun:
+yes">        </span>//24<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>{<span
+style='mso-tab-count:1'>  </span>int guess = Integer.parseInt
+(this.getText());<span style="mso-spacerun: yes">        </span>//25<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span><b>if</b> (guess
+&gt; itsSecret)<span style="mso-spacerun: yes">                               
+</span>//26<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>{<span
+style='mso-tab-count:1'>  </span>itsAnswer.setText (&quot;Too high&quot;);<span
+style="mso-spacerun: yes">                    </span>//27<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>}<span
+style="mso-spacerun: yes">                                                    
+</span>//28<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span><b>else if</b>
+(guess &lt; itsSecret)<span style="mso-spacerun:
+yes">                           </span>//29<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>{<span
+style='mso-tab-count:1'>  </span>itsAnswer.setText (&quot;Too low&quot;);<span
+style="mso-spacerun: yes">                     </span>//30<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>}<span
+style="mso-spacerun: yes">                                                    
+</span>//31<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span><b>else</b><span
+style="mso-spacerun: yes">  </span>// don't continue, this game is over<span
+style="mso-spacerun: yes">            </span>//32<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>{<span
+style='mso-tab-count:1'>  </span>itsAnswer.setText (&quot;Right.
+Congratulations!&quot;);<span style="mso-spacerun: yes">     </span>//33<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:4'>            </span>itsTimer.delay
+(20);<span style="mso-spacerun: yes">                               </span>//34<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:4'>            </span>itsInput.setEnabled
+(false);<span style="mso-spacerun: yes">                       </span>//35<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:3'>         </span>}<span
+style="mso-spacerun: yes">                                                    
+</span>//36<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:2'>      </span>}<span
+style="mso-spacerun: yes">              </span><span style="mso-spacerun:
+yes">                                          </span>//37<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'><span style='mso-tab-count:1'>   </span>}<span style='mso-tab-count:
+1'>  </span>//======================<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in;border:none;mso-border-top-alt:.5pt;
+mso-border-left-alt:3.0pt;mso-border-bottom-alt:.5pt;mso-border-right-alt:3.0pt;
+mso-border-color-alt:windowtext;mso-border-style-alt:solid;padding:0in;
+mso-padding-alt:0in 0in 0in 0in'><span style='font-size:10.0pt;font-family:
+"Courier New"'>}<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><a href="EEexercises.html#7">Exercise</a> 7.1</span></b><span
+style='font-size:10.0pt;mso-bidi-font-size:12.0pt'> What is the first secret
+number the program chooses, if the user waits exactly 1.00 seconds before
+clicking the button? What is the second secret number, if the user waits
+exactly 4.04 seconds before clicking the button again?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>Exercise 7.2</span></b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'> Change GuessNumberGame to have another instance
+variable itsLimit, which is initially 100. The secret number is 1 up through
+itsLimit. Provide another button the user can click to change itsLimit to 15
+(to make the game easier for small children) or back again to 100. How many
+guesses would it take you to get it right if itsLimit is 15?<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>Exercise 7.3</span></b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'> Change GuessNumberGame to use a java.util.Random
+object instead of a timer.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>Exercise 7.4*</span></b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'> You can get along without the setEnabled method if
+you have to. To do this, eliminate all references to it and then declare an
+instance variable isEnabled, set to true or false appropriately. Test isEnabled
+in the onEnter method to see if the textfield should react in any way.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>Exercise 7.5**</span></b><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'> Write a program that asks three questions of
+your choosing. Supply a textfield for each answer, but have the onEnter method
+do nothing for each textfield. At the end of 30 seconds, the program
+&quot;calls time&quot; and tells how many answers were right.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'>Exercise 7.6**</span></b><span style='font-size:
+10.0pt;mso-bidi-font-size:12.0pt'> After you write the program for the
+preceding exercise, add a label that counts down to zero starting from 30,
+changing once each second.<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><span style='font-size:10.0pt'>Link
+to <a href="EasyEvents_D.html">next section</a> (Part D)<o:p></o:p></span></p>
+
+<p class=MsoNormal style='tab-stops:.25in'><b><span style='font-size:10.0pt;
+mso-bidi-font-size:12.0pt'><![if !supportEmptyParas]>&nbsp;<![endif]><o:p></o:p></span></b></p>
+
+</div>
+
+</body>
+
+</html>

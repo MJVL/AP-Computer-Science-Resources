@@ -1,0 +1,160 @@
+<html><title> EasyEvents: language</title>
+
+<body><h1>
+Easy Event-Handling: Language  &nbsp; &nbsp; &nbsp; v.3
+</h1><h2>
+Dr. William C. Jones, Jr. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;                              www.javabook.org
+</h2>
+
+The individual discussions here are links from the main file.  Each is numbered with the section that contains the link to it.
+
+
+
+Section 0.  Java prerequisites
+</h3>
+
+You need to know a little about programming in Java before you study this material; the necessary knowledge is reviewed here.  For one thing, you need to know that Java has a class of objects named String.  A String constant is indicated by quote marks, as in<tt> String s = "Hello World!"</tt>.
+<p>
+
+If you want to test whether two String values s and t are equal in terms of the characters they contain, you see whether the expression<tt> s.equals(t) </tt> is true or false.  You do not test<tt> s==t</tt>; the == symbol is mainly for use with numeric values.
+<p>
+
+Some methods have parameters, that is, values that give the information the object needs to carry out the assigned task.  You will not need to know how to define methods with parameters or return values, but you need to know how to use existing ones.    
+<p>
+
+In a method call, parameters are written inside the parentheses that follow the name of the method.  For instance, you will see in this material statements such as the following:
+<pre>
+	someObject.setText("you're wrong");
+</pre>
+
+This displays the string of characters "you're wrong" (without quotes) on the object.  You can retrieve the string currently displayed if you use the expression<tt> someObject.getText()</tt>.  Parameters can also be numbers, as in<tt> someObject.width(8) </tt>or true/false values, as in<tt> setVisible(true) </tt>.  
+<p>
+
+Say you have a class of objects named e.g. Turtle that you have written or someone has written for you (such as classes in the Sun library).  Say that this class allows you to create a Turtle object using<tt> sam = new Turtle()</tt>.  Then you can create a subclass of it named MyClass as follows:
+<pre>
+	<b>public class MyClass extends Turtle
+	{
+		public void doMyOwnMethod()</b>
+		{	// your coding goes here
+		}
+	}
+</pre>
+
+That is, you make sure that your class says<tt> extends Turtle </tt>(or whatever name is provided) and you define your own instance methods inside your class.  Now you can create a MyClass object using<tt> sue = new MyClass()</tt>, and you can tell it to carry out the instructions in doMyOwnMethod using<tt> sue.doMyOwnMethod()</tt>.  If you only need the MyClass object to execute just one command, you can skip storing the object in a variable; just use a statement such as<tt> new MyClass().doMyOwnMethod()</tt>.
+<p>
+
+A class meant to be compiled in a separate file is generally declared as <u>public</u>, so it can be used by other classes.  Methods belonging to a class are usually declared as <u>public</u>, so they can be used by outside classes.  They are sometimes declared as <u>private</u>, when they are not for outside classes to use.  Variables belonging to a class are usually declared as <u>private</u>.  
+<p>
+
+You also need to be able to understand and use an if-statement, such as:
+<pre>
+	<b>if</b> (this.getText().equals ("900"))
+	{	this.setText ("good!");
+	}
+	<b>else</b>
+	{	this.setText ("wrong");
+	}
+</pre>
+
+The left and right braces {  } have to be nested properly (left matched to right).  In more complex situations, you may have one or more additional alternatives.  For instance, you could add the following phrase immediately before the else in the above statement:
+<pre>
+	<b>else if</b> (this.getText().equals ("899"))  // part of the above
+	{	this.setText ("close!");
+	}
+</pre>
+
+In other cases, you may have several of these else-if phrases.  In simpler cases, you may omit all else-phrases of the if-statement.  The following is a complete statement:
+<pre>
+	<b>if</b> (input.length() > 0)
+	{	modelAccount.makeChange (input);
+		itsOutput.say (modelAccount.currentBalance());
+	}
+</pre>
+
+If you have only one statement inside the braces in one of these phrases, you are permitted to omit the braces around that statement.
+<p>
+
+
+
+
+<a name="1"></a><h3>
+Section 1.  Running GeogQuiz (and other EPanel subclasses) in applets and BlueJ
+</h3>
+
+If you want to create a webpage that contains an applet for GeogQuiz, you first write the applet, as follows. 
+<pre>
+	<b>public class GeogQuizApplet extends javax.swing.JApplet
+	{
+		public void start()</b>
+		{	setContentPane (new GeogQuiz());
+		}	//======================
+	}
+</pre>
+
+This puts a GeogQuiz object, the panel that has the content of the applet, inside the applet area.  In the webpage itself, you put the following HTML code (a very simple webpage that has nothing but this applet can consist of only these two lines):
+<pre>
+	&lt;APPLET CODE="GeogQuizApplet.class" 
+		WIDTH=700 HEIGHT=600&gt;  &lt;/APPLET&gt;
+</pre>
+
+Now if you compile the GeogQuizApplet class along with the GeogQuiz class and the various E-object classes, the webpage will display the same thing that the application frame displays.  Note that you are required to set the size of the applet in the HTML coding.  By contrast, an application program invokes the EFrame constructor, as in the following class.  That constructor contains coding that set the size and calls setContentPane for the GeogQuiz object.
+<pre>
+	<b>class GeogQuizApp
+	{
+		public static void main (String[] args)</b>
+		{	new EFrame (new GeogQuiz());
+		}	//======================
+	}
+</pre>
+<p>
+
+You may of course choose a different size.  The one shown makes the applet 700 pixels wide and 600 pixels tall.  That is only somewhat smaller than a standard 14-inch monitor's screen.
+<p>
+
+To run the GeogQuiz program from BlueJ, you need to do the following, which is implicit in the single<tt> new EFrame (new GeogQuiz()) </tt>statement in the definition of GeogQuizApp:<p>
+<ol type="1">
+
+<li> Click on the GeogQuiz class box and select its constructor.  This creates a GeogQuiz object, gives it the name GeogQuiz_1, and puts a picture of it on the workbench.
+<li>Click on the EFrame class box and select its constructor.  It will ask you for the parameter, which you enter as GeogQuiz_1. This causes the EFrame to appear on your screen.
+</ol>
+<p>
+
+
+
+<a name="3"></a><h3>
+Section 3. Using Color in Java programs  
+</h3>
+
+The Sun standard library contains the java.awt.Color class, which defines thirteen standard colors: black, blue, cyan, darkGray, gray, green, lightGray, magenta, orange, pink, yellow, red, and white.  Note that<tt> java.awt.Color.cyan </tt>is a greenish-blue and<tt> java.awt.Color.magenta </tt>is reddish-blue.  You can also create your own color by supplying red/green/blue (RGB) values in the range from 0 to 255, inclusive, as in 
+<pre>
+	new java.awt.Color(16, 255, 0) // green with a reddish tinge
+</pre>
+
+The ELabel, EButton, and EField classes, as well as other component classes discussed later, are subclasses of Sun's JComponent, which has the following two methods.  You can use the setBackground method to change the background color of the component from the standard white supplied for E-objects.  And you can change the color of the characters (i.e., the foreground) displayed on a component with the setForeground method.
+<pre>
+	someComponent.setBackground (someColor);
+	someComponent.setForeground (someColor);
+</pre>
+
+If you use the java.awt.Color class frequently in your coding, you can put at the top of your source code file a line that says<tt> import java.awt.*; </tt>then you can just refer to the class as Color instead. 
+
+
+
+
+
+<a name="6"></a><h3>
+Section 6. Discussion of the BankAccount class of objects  
+</h3>
+
+This part is not currently available.
+<p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+&nbsp; <p>
+
+
+</body></html>

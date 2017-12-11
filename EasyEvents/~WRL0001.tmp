@@ -1,0 +1,31 @@
+<html><title> Read_me for EasyEvents files</title>
+<body>
+This <b>EasyEvents</b> material is suitable as a supplement to any CS 1 Java textbook, starting only a few weeks into the semester.  Students learn to do GUI programming using event-handlers such as buttons and textfields.  The special library of <b>E-objects </b> furnished here makes their use as simple and easy as possible.  The instructional material gives a quick but adequate explanation of all but the most basic Java language features, which makes it independent of the particular CS 1 textbook used.  It should even be adequate by itself for most students who have completed a full CS 1 course in <u>another</u> programming language.
+<p>
+<a href="EasyEvents_A.html"> Click here<a> to start the tutorial on E-object classes.
+<p>
+The downloadable <a href="EasyEvents.zip"> zipped folder</a> fits easily onto a floppy disk, less than 900K. If all you want is the .html files and the E-object library .java and .class files, <a href="EEessentials.zip">click here </a>for the zipped folder of only 29 files.
+<p>
+All of the material is accessible over the internet from my server. Individual users should feel free to study it on-line.  For extended study, <b>it would save me bandwidth if you downloaded the zipped folder and unzipped it on your own machine.</b> As long as you put any programs that use these E-objects in the same folder as the E-object .class files, you should have no trouble compiling your programs. 
+<p>
+If you are a teacher of CS 1, then after a few weeks or a few months of having your students use these E-object classes, you will find it highly manageable to switch your students to the use of Sun's standard javax.swing library.  I believe this is the best way for students to come to a thorough understanding of the javax.swing library.  They can easily remember what is the nonstandard stuff, since it all starts with E (EField, EButton, etc.).
+<p>
+<big>
+Feel free to email me any suggestions for improvements, requests for clarifications, or appreciative notes, at jonesw@ccsu.edu.
+<p>
+Dr. William C. Jones<br>
+Professor of Computer Science<br>
+Central Connecticut State University<br>
+October 2003</big>
+<p>
+List of the 103 files in the full zipped folder:  this index plus
+<ul>
+<li> 10 .html files (the main instructional material), 
+<li> 9 .java files for the E-object library, 
+<li> 10 .class files for the E-object library, and
+<li> 16 .java files for the 8 sample programs,
+<li> 50 .class files for the 8 sample programs.
+<li> 7 .jpg and .gif files for the 8 sample programs to use,
+</ul>
+</body>
+</html>
