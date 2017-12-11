@@ -1,0 +1,8 @@
+	private <classpassedtodraw> <declaration> = null;
+
+	public void paint(Graphics g) {
+		super.paint(g);
+		if (<declaration> != null) {
+			Draw(oldPoly);
+		}
+	}

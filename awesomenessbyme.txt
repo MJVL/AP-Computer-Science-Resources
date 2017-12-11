@@ -1,0 +1,40 @@
+public class Timer extends java.lang.Thread{
+		public Timer(){;
+		}
+		
+		public void run(){
+			while(true){
+				try{
+					Thread.sleep(50);
+					move();
+					for (Asteroid asteroid : asteroids){
+						asteroid.move();
+						if (collide(asteroid))
+							death();
+					}
+					for (int i = 0; i < missles.size(); i++){
+						missles.get(i).move();
+						System.out.println(missles.get(i).hit(asteroids));
+						if (missles.get(i).hit(asteroids) >= 0){
+							Asteroid asteroid = asteroids.get(missles.get(i).hit(asteroids));
+							score += 90 / asteroid.size;
+							if (asteroid.size > 1){
+								Random r = new Random();
+								asteroids.add(new Asteroid(asteroid.x, asteroid.y, asteroid.size - 1, r.nextInt(16)));
+								asteroids.add(new Asteroid(asteroid.x, asteroid.y, asteroid.size - 1, r.nextInt(16)));
+							}
+							asteroids.remove(missles.get(i).hit(asteroids));
+							missles.remove(i);
+							i--;
+						}
+						else if (missles.get(i).x < 0 || missles.get(i).x > 600 || missles.get(i).y < 0 || missles.get(i).y > 600){
+							missles.remove(i);
+							i--;
+						}
+					}
+					repaint();
+				}
+				catch(Exception e){}
+			}
+		}
+	}

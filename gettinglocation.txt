@@ -1,0 +1,1 @@
+fishx[0]=theObjects[id-1].location().row();

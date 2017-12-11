@@ -1,0 +1,1 @@
+double d=(new Double(str)).doubleValue();0

@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class helloworld1011 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		int ans=1;
+		Scanner bob2= new Scanner(System.in);
+		int age, dogyears;
+		String first;
+		do
+		{
+			Scanner bob= new Scanner(System.in);
+			System.out.println("Enter your name:");
+			first=bob.nextLine();
+			System.out.println("Enter your age:");
+			age=bob.nextInt();
+			dogyears=age*7;		
+			System.out.println("Hello, "+first+". You are "+Integer.toString(dogyears)+" dogyears old.");
+			System.out.println("Run again (1-yes/2-no)?");
+			ans=bob2.nextInt();
+		}while(ans==1);
+		
+		
+		
+	}
+
+}

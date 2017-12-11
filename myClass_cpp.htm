@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0068)http://ww2.sudol.com:81/education/apsummer/westchester02/myClass.cpp -->
+<HTML><HEAD>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.2920.0" name=GENERATOR></HEAD>
+<BODY><XMP>/*
+	myClass implementation file
+	Changing your CS Curriculum to Java
+	Summer 2003
+	Created by Gregory Kummer
+*/
+
+myClass::myClass()
+{
+	myData = 0;
+	myInfo = "";
+}
+
+myClass::myClass(int data1, apstring data2) :
+	myData(data1),
+	myInfo(data2)
+{
+}
+
+void myClass::myMethod1(int someValue)
+//postcondition: myData has been increased by someValue
+{
+	myData += someValue;
+}
+
+apstring myClass::getInfo()
+//postcondition: returns the value of myInfo
+{
+	return myInfo;
+}
+</XMP></BODY></HTML>
