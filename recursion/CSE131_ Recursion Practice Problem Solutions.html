@@ -1,0 +1,150 @@
+
+<!-- saved from url=(0068)http://www.cs.wustl.edu/~kjg/cse131/modules/recursion/solutions.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252"><title>
+CSE131: Recursion Practice Problem Solutions
+</title>
+
+</head><body><center>
+<h1>Recursion: Solutions to Practice Problems</h1>
+</center>
+
+Ask if you are surprised by any of these answers.
+
+<ol>
+<li><p>
+<table border="1" spacing="10">
+<tbody><tr><th>Procedure</th><th>Termination Condition</th><th>Base Case Return Value</th></tr>
+<tr><td>factorial</td><td>n &lt;= 1</td><td>1</td></tr>
+<tr><td>sum1toN</td><td>n &lt; 1</td><td>0</td></tr>
+<tr><td>add</td><td>i == 0</td><td>j</td></tr>
+<tr><td>fib</td><td>n &lt;= 1</td><td>n</td></tr>
+</tbody></table>
+
+</p><p>
+</p></li><li><p>
+<table border="1" spacing="10">
+<tbody><tr><th>Procedure</th><th>Recursive Call(s)</th></tr>
+<tr><td>factorial</td><td>factorial(n-1)</td></tr>
+<tr><td>sum1toN</td><td>sum1toN(n-1)</td></tr>
+<tr><td>add</td><td>add(i-1, j+1)</td></tr>
+<tr><td>fib</td><td>fib(n-1) and fib(n-2)</td></tr>
+</tbody></table>
+
+</p><p>
+</p></li><li><pre>factorial(5)
+5 * factorial(4)
+5 * 4 * factorial(3)
+5 * 4 * 3 * factorial(2)
+5 * 4 * 3 * 2 * factorial(1)
+5 * 4 * 3 * 2 * 1
+120
+
+Execution stack:
+factorial(1)    n = 1
+           return = 1
+factorial(2)    n = 2
+           return = -   (not yet assigned)
+factorial(3)        3
+                    -
+factorial(4)        4
+                    -
+factorial(5)        5
+                    -
+</pre>
+
+<p>
+</p></li><li><pre>sum1toN(5)
+5 + sum1toN(4)
+5 + 4 + sum1toN(3)
+5 + 4 + 3 + sum1toN(2)
+5 + 4 + 3 + 2 + sum1toN(1)
+5 + 4 + 3 + 2 + 1 + sum1toN(0)
+5 + 4 + 3 + 2 + 1 + 0
+15
+</pre>
+
+<p>
+
+</p></li><li>
+<pre>
+<img src="./CSE131_ Recursion Practice Problem Solutions_files/add.gif">
+
+
+
+Execution stack:
+add(0,14)       i =  0
+                j = 14
+           return = 14
+add(1,13)       i =  1
+                j = 13
+           return =  -   (not yet assigned)
+add(2,12)            2
+                    12
+                     -
+add(3,11)            3
+                    11
+                     -
+add(4,10)            4
+                    10
+                     -
+add(5,9)             5
+                     9
+                     -
+</pre>
+
+<p>
+</p></li><li><br> 
+
+<img src="./CSE131_ Recursion Practice Problem Solutions_files/fib.gif">
+
+
+
+<p>
+</p></li><li><pre>double investmentValue(double investment, double interestRate, int years) {
+   if (years == 0)
+      return investment;
+   else
+      return investmentValue(investment * (1 + interestRate), interestRate, years-1);
+}
+</pre>
+
+<p>
+</p></li><li><pre>double amountOwed(double loan, double interestRate, double payment, int months) {
+   if (months == 0)
+      return loan;
+   else
+      return amountOwed(loan * (1 + interestRate/12) - payment, interestRate, payment, months-1);
+}
+</pre>
+
+<p>
+</p></li><li><pre>String duplicate(String s, int i) {
+   if (i == 0)
+      return "";
+   else
+      return s + duplicate(s, i-1);
+}
+</pre>
+
+<p>
+</p></li><li><pre>String doubleSuccessively(String s, int i) {
+   if (i == 0)
+      return s;
+   else
+      return doubleSuccessively(s + s, i-1);
+}
+</pre>
+
+</li></ol>
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
