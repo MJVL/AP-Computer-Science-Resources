@@ -1,0 +1,13 @@
+Microsoft Visual Studio Solution File, Format Version 1.00
+Project("{66355F20-A65B-11D0-BFB5-00A0C91EBFA0}") = "TerminalIOtest2", "TerminalIOtest2.vjp", "{5AFC8BED-CD57-4EA0-BB07-396A0EFA56D5}"
+EndProject
+Global
+	GlobalSection(LocalDeployment) = postSolution
+		StartupProject = {5AFC8BED-CD57-4EA0-BB07-396A0EFA56D5}
+	EndGlobalSection
+	GlobalSection(BuildOrder) = postSolution
+		0 = {5AFC8BED-CD57-4EA0-BB07-396A0EFA56D5}
+	EndGlobalSection
+	GlobalSection(DeploymentRoot) = postSolution
+	EndGlobalSection
+EndGlobal
