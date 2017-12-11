@@ -1,0 +1,153 @@
+#headerpart * {
+	box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+#headerpart {
+	left: 0px; top: 0px; width: 100%; position: fixed; z-index: 99; box-shadow: 0px 1px 0px rgba(255,255,255,0.102); background-color: rgb(28, 28, 28); -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .102); -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .102);
+}
+#topnav {
+	width: 100%; text-align: center; overflow: visible; z-index: 5; max-height: 60px;
+}
+#topnav ul {
+	list-style: none;
+}
+#topnav a {
+	padding: 0px 0.55em; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+}
+#topnav a:visited {
+	color: rgb(170, 170, 170); font-weight: 700;
+}
+#topnav li:hover > a {
+	color: rgb(255, 255, 255); font-weight: 700; border-bottom-color: rgb(255, 191, 0); border-bottom-width: 4px; border-bottom-style: solid; background-color: rgb(28, 28, 28);
+}
+#topnav li > ul > li:hover > a {
+	color: rgb(255, 191, 0); border-bottom-color: transparent; border-bottom-width: 4px; border-bottom-style: solid; box-shadow: none;
+}
+#topnav > ul > li {
+	font-size: 14px; float: left; display: block; position: relative;
+}
+#topnav > ul {
+	margin: auto; padding: 0px; display: inline-block;
+}
+#topnav ul {
+	z-index: 99;
+}
+#topnav > ul li:hover > ul {
+	display: block;
+}
+#topnav > ul > li > ul {
+	background: rgb(28, 28, 28); padding: 0px; left: 0px; top: 100%; width: 100%; display: none; position: absolute; min-width: 250px;
+}
+#topnav > ul > li > ul > li {
+	width: 100%; clear: left; float: none; display: block; position: relative;
+}
+#topnav > ul > li > ul > li a {
+	padding: 0px 10px; width: 100%; text-align: left; line-height: 3em; font-size: 80%;
+}
+#topnav > ul > li > ul > li > ul {
+	background: rgb(28, 28, 28); padding: 0px; left: 100%; top: 0px; width: 100%; display: none; position: absolute; min-width: 250px;
+}
+#topnav li a {
+	text-align: center; color: rgb(170, 170, 170); line-height: 57px; font-size: 100%; font-weight: 700; text-decoration: none; border-bottom-color: transparent; border-bottom-width: 4px; border-bottom-style: solid; float: left; display: block;
+}
+#topnav li a img {
+	left: 0px; top: 8px; float: left; position: absolute;
+}
+#topnav li.currentpage > a {
+	color: rgb(255, 191, 0);
+}
+#logo {
+	left: 20px; top: 10px; width: 118px; height: 40px; position: absolute; z-index: 6;
+}
+#searchfixed {
+	top: 20px; width: 200px; height: 40px; right: 20px; line-height: 20px; position: absolute; z-index: 6;
+}
+#searchfixed form {
+	margin: 0px;
+}
+#searchwrapper {
+	width: 100%; position: relative;
+}
+#search_field {
+	padding: 0px 0px 0px 5px; border-radius: 5px; border: currentColor; width: 150px; height: 20px; margin-left: 40px; background-color: rgb(252, 252, 252); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+#search_button {
+	top: 4px; right: 15px; position: absolute;
+}
+#topnav li > ul > li:hover > a {
+	border-bottom-color: transparent; border-bottom-width: 4px; border-bottom-style: solid; box-shadow: none;
+}
+#topnav li#home-icon a {
+	background: url("http://www.vogella.com/img/common/xhome_gray.png.pagespeed.ic.IYDdOflRCa.png") no-repeat center / 24px 24px; width: 40px; height: 60px; text-indent: 100%; overflow: hidden; display: block; white-space: nowrap; -webkit-background-size: 24px 24px; -moz-background-size: 24px 24px; -o-background-size: 24px 24px;
+}
+#topnav li.currentpage#home-icon a {
+	background: url("http://www.vogella.com/img/common/xhome_yellow.png.pagespeed.ic.DfyHFKBXef.png") no-repeat center / 24px 24px; -webkit-background-size: 24px 24px; -moz-background-size: 24px 24px; -o-background-size: 24px 24px;
+}
+@media only screen and (max-width:526px)
+{
+#headerpart {
+	padding-top: 0px; position: absolute;
+}
+#topnav li a {
+	line-height: 39px;
+}
+#topnav {
+	height: auto !important; max-height: none;
+}
+#topnav ul {
+	width: 100%;
+}
+#logo {
+	display: none;
+}
+#searchfixed {
+	display: none;
+}
+#container {
+	margin: 60px auto 0px !important;
+}
+#trainingcontainer {
+	margin: 60px auto 0px !important;
+}
+#topnav > ul > li > ul > li a {
+	display: none;
+}
+#topnav li#home-icon {
+	margin-top: 10px; display: block;
+}
+}
+@media only screen and (max-width:900px) and (min-width:527px)
+{
+#headerpart {
+	padding-top: 60px;
+}
+#topnav li a {
+	line-height: 35px;
+}
+#topnav {
+	max-height: none;
+}
+#topnav ul {
+	width: 100%;
+}
+#logo {
+	left: 10px;
+}
+#searchfixed {
+	width: 150px; right: 10px;
+}
+#search_button {
+	right: 15px;
+}
+#search_field {
+	width: 145px; height: 35px; margin-left: 0px;
+}
+#container {
+	margin: 101px auto 0px !important;
+}
+#trainingcontainer {
+	margin: 101px auto 0px !important;
+}
+#topnav li#home-icon {
+	display: none;
+}
+}

@@ -1,0 +1,183 @@
+#logo .site-title {
+	display: block !important;
+}
+#logo .site-description {
+	display: block !important;
+}
+body {
+	border-top-color: rgb(0, 0, 0); border-top-width: 0px; border-top-style: solid; background-attachment: scroll; background-repeat: no-repeat; background-color: rgb(238, 238, 238);
+}
+#header {
+	background-position: top; border: 0px solid currentColor; padding-top: 40px; padding-bottom: 40px; margin-top: 0px; margin-bottom: 0px; background-repeat: no-repeat;
+}
+#logo .site-title a {
+	font: bold 32px/1em "Special Elite", arial, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+#logo .site-description {
+	font: 13px/1em "Helvetica Neue", Helvetica, sans-serif; color: rgb(153, 153, 153); font-size-adjust: none; font-stretch: normal;
+}
+#wrapper {
+	border-radius: 3px; border: 1px solid rgb(219, 219, 219); padding-right: 30px; padding-left: 30px; margin-top: 20px; margin-bottom: 20px; box-shadow: 0px 1px 5px rgba(0,0,0,0.3); background-color: rgb(255, 255, 255); -moz-border-radius: 3px; -webkit-border-radius: 3px; -moz-box-shadow: 0px 1px 5px rgba(0, 0, 0, .3); -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, .3);
+}
+body {
+	font: 13px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+p {
+	font: 13px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+h1 {
+	font: bold 28px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+h2 {
+	font: bold 24px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+h3 {
+	font: bold 20px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+h4 {
+	font: bold 16px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+h5 {
+	font: bold 14px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+h6 {
+	font: bold 12px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.post .title {
+	font: bold 26px/1.2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.page .title {
+	font: bold 26px/1.2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.post .title a:link {
+	font: bold 26px/1.2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.post .title a:visited {
+	font: bold 26px/1.2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.page .title a:link {
+	font: bold 26px/1.2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.page .title a:visited {
+	font: bold 26px/1.2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.post-meta {
+	font: 11px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(153, 153, 153); font-size-adjust: none; font-stretch: normal;
+}
+.entry {
+	font: 13px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.entry p {
+	font: 13px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.post-more {
+	font: 12px/1.5em "Helvetica Neue", Helvetica, sans-serif; border-top-color: rgb(230, 230, 230); border-bottom-color: rgb(230, 230, 230); border-top-width: 0px; border-bottom-width: 0px; border-top-style: solid; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+#post-author {
+	border-radius: 5px; border: 1px solid rgb(230, 230, 230); background-color: rgb(250, 250, 250); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+#connect {
+	border-radius: 5px; border: 1px solid rgb(230, 230, 230); background-color: rgb(250, 250, 250); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+.nav-entries a {
+	font: 12px/1em "Helvetica Neue", Helvetica, sans-serif; color: rgb(136, 136, 136); font-size-adjust: none; font-stretch: normal;
+}
+.woo-pagination {
+	font: 12px/1em "Helvetica Neue", Helvetica, sans-serif; color: rgb(136, 136, 136); font-size-adjust: none; font-stretch: normal;
+}
+.woo-pagination a {
+	color: rgb(136, 136, 136) !important;
+}
+.woo-pagination a:hover {
+	color: rgb(136, 136, 136) !important;
+}
+.widget h3 {
+	font: bold 14px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); border-bottom-color: rgb(230, 230, 230); border-bottom-width: 1px; border-bottom-style: solid; font-size-adjust: none; font-stretch: normal;
+}
+.widget_recent_comments li {
+	border-color: rgb(230, 230, 230);
+}
+#twitter li {
+	border-color: rgb(230, 230, 230);
+}
+.widget p {
+	font: 12px/1.5em Arial, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.widget .textwidget {
+	font: 12px/1.5em Arial, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.widget {
+	font: 12px/1.5em Arial, sans-serif; border-radius: 0px; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal; -moz-border-radius: 0px; -webkit-border-radius: 0px;
+}
+#tabs .inside li a {
+	font: bold 12px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.widget_woodojo_tabs .tabbable .tab-pane li a {
+	font: bold 12px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+#tabs .inside li span.meta {
+	font: 11px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.widget_woodojo_tabs .tabbable .tab-pane li span.meta {
+	font: 11px/1.5em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+#tabs ul.wooTabs li a {
+	font: 11px/2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+.widget_woodojo_tabs .tabbable .nav-tabs li a {
+	font: 11px/2em "Helvetica Neue", Helvetica, sans-serif; color: rgb(85, 85, 85); font-size-adjust: none; font-stretch: normal;
+}
+ul.nav li a {
+	font: 14px/1em Arial, sans-serif; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+#navigation ul.rss a {
+	font: 14px/1em Arial, sans-serif; color: rgb(102, 102, 102); font-size-adjust: none; font-stretch: normal;
+}
+#navigation ul.nav li ul {
+	border: 1px solid rgb(219, 219, 219);
+}
+#navigation ul.nav > li {
+	border-right-color: rgb(219, 219, 219); border-right-width: 1px; border-right-style: solid;
+}
+#navigation ul li:first-child {
+	border-radius: 5px 0px 0px 5px; -moz-border-radius: 5px 0 0 5px; -webkit-border-radius: 5px 0 0 5px;
+}
+#navigation ul li:first-child a {
+	border-radius: 5px 0px 0px 5px; -moz-border-radius: 5px 0 0 5px; -webkit-border-radius: 5px 0 0 5px;
+}
+#navigation {
+	border-radius: 5px; border: 1px solid rgb(219, 219, 219); -moz-border-radius: 5px; -webkit-border-radius: 5px;
+}
+#top ul.nav li a {
+	font: 12px/1.6em Arial, sans-serif; color: rgb(221, 221, 221); font-size-adjust: none; font-stretch: normal;
+}
+#footer {
+	font: 13px/1em "Helvetica Neue", Helvetica, sans-serif; color: rgb(153, 153, 153); font-size-adjust: none; font-stretch: normal;
+}
+#footer p {
+	font: 13px/1em "Helvetica Neue", Helvetica, sans-serif; color: rgb(153, 153, 153); font-size-adjust: none; font-stretch: normal;
+}
+#footer {
+	border-width: 1px 0px 0px; border-style: solid; border-color: rgb(219, 219, 219) currentColor currentColor; border-radius: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px;
+}
+.magazine #loopedSlider .content h2.title a {
+	font: bold 24px/1em Arial, sans-serif; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.magazine #loopedSlider .content .excerpt p {
+	font: 12px/1.5em Arial, sans-serif; color: rgb(204, 204, 204); font-size-adjust: none; font-stretch: normal;
+}
+.business #loopedSlider .content h2 {
+	font: bold 24px/1em Arial, sans-serif; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+.business #loopedSlider .content h2.title a {
+	font: bold 24px/1em Arial, sans-serif; color: rgb(255, 255, 255); font-size-adjust: none; font-stretch: normal;
+}
+#wrapper .business #loopedSlider .content p {
+	font: 12px/1.5em Arial, sans-serif; color: rgb(204, 204, 204); font-size-adjust: none; font-stretch: normal;
+}
+.archive_header h1 {
+	font: bold 18px/1em Arial, sans-serif; color: rgb(34, 34, 34); font-size-adjust: none; font-stretch: normal;
+}
+.archive_header {
+	border-bottom-color: rgb(230, 230, 230); border-bottom-width: 1px; border-bottom-style: solid;
+}

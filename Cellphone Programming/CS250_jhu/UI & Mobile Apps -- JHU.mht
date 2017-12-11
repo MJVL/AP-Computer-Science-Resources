@@ -1,0 +1,190 @@
+From: <Saved by Windows Internet Explorer 8>
+Subject: UI & Mobile Apps -- JHU
+Date: Mon, 9 May 2011 11:21:16 -0400
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cs.jhu.edu/~joanne/cs250/index.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.5931
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>UI & Mobile Apps -- JHU</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.18939"></HEAD>
+<BODY>
+<CENTER>
+<H1><B>600.250 User Interfaces and Mobile Applications<BR>Spring=20
+2011</H1></B></CENTER>
+<HR color=3D#000000 SIZE=3D3>
+
+<CENTER><FONT size=3D+1><B>Welcome to the home page for User Interfaces =
+and Mobile=20
+Applications at JHU, Spring 2011.<BR>Please check this page and the =
+links below=20
+frequently for updates.=20
+<P>[<A href=3D"http://www.cs.jhu.edu/~joanne/cs250">CS250 Home</A>] [<A=20
+href=3D"http://blackboard.jhu.edu/">Blackboard</A>] [<A=20
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/assign.html">Assignments</A>]=
+ <BR>[<A=20
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/lectures.ppt">Lectures.ppt</A=
+>] [<A=20
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/lectures.pdf">Lectures.pdf</A=
+>] [<A=20
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/schedule.html">Schedule =
+detail</A>]=20
+[<A href=3D"http://www.cs.jhu.edu/~joanne/cs250/schedule.pdf">Schedule=20
+timeline</A>] <BR>[<A=20
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/syllabus.html">Syllabus</A>] =
+[<A=20
+href=3D"http://ethics.jhu.edu/">Ethics Code</A>] [<A=20
+href=3D"http://www.cs.jhu.edu/~joanne">Joanne's Homepage</A>] =
+</CENTER></FONT></B>
+<P>
+<HR>
+<EM>Announcements: </EM></B>
+<UL>
+  <LI>Grab the latest version of the <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/gpa5.zip">GPA app</A> =
+here. This is=20
+  exactly how we left it with full course database functionality and the =
+course=20
+  list with edit/delete context menu working at the end of class on =
+4/21. (The=20
+  attempts to set preferences are still not working.)=20
+  <LI>Sensors lecture by Prof. Terzis: <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/Sensors.pdf">slides</A> =
+and <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/FallDetector.zip">Fall =
+Detector=20
+  code</A>=20
+  <LI>Databases lecture by Prof. Ahmad: <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/databases.pdf">slides</A>. =
+
+  <LI>Grab the third version of the <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/gpa3.zip">GPA app</A> =
+here. This is=20
+  exactly how we left it with most of the database functionality working =
+at the=20
+  end of class on 4/12. There is also a little feature on the quickCalc =
+view=20
+  that displays a toast if your GPA gets below 2.0. (The attempts to set =
+
+  preferences are still not working.)=20
+  <LI>Grab the second version of the <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/gpa2.zip">GPA app</A> =
+here. It has a=20
+  working options menu and the quickCalc activity. The attempts to set=20
+  preferences are not quite working yet.=20
+  <LI>Grab the first version of the <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/gpa1.zip">GPA app</A> =
+here.=20
+  <LI>The lecture notes are here in <A=20
+  =
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/lectures.ppt">powerpoint</A> =
+and <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/lectures.pdf">pdf</A> =
+formats.=20
+  <LI>The ongoing course schedule is here in <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/schedule.html">link =
+detail</A> and=20
+  <A href=3D"http://www.cs.jhu.edu/~joanne/cs250/schedule.pdf">time-line =
+
+  layout</A> formats.=20
+  <LI>The class GPA design is here in <A=20
+  =
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/classGPA.pptx">powerpoint</A>=
+ and <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/classGPA.pdf">pdf</A> =
+formats.=20
+  <LI>Getting onto the Hopkins wireless network requires a few set-up =
+steps.=20
+  Here are <A=20
+  =
+href=3D"http://www.it.johnshopkins.edu/bin/i/x/WirelessDroid-June10.pdf">=
+instructions</A>=20
+  from JHU IT. I don't think you need to type WIN\ before your user =
+name. The=20
+  trick is getting a wireless connection long enough to go through the =
+JHARS=20
+  registration using the browser on your phone. Also, there is a =
+wireless=20
+  timeout setting you can access by hitting the menu key when in wi-fi =
+settings=20
+  and choosing advanced. It might help to make the wireless sleep =
+setting=20
+  "never".=20
+  <LI>If you want to view your phone on your laptop, download this =
+application:=20
+  <A =
+href=3D"http://blog.ribomation.com/2010/01/droidscreen/">DroidScreen</A>.=
+=20
+  Follow the set-up instructions regarding the Android adb. You will =
+also need=20
+  to set the phone setting: Settings -&gt; Applications -&gt; =
+Development -&gt;=20
+  USB debugging ON. Windows users may also have to grab a USB driver =
+from=20
+  motorola: <A=20
+  =
+href=3D"http://developer.motorola.com/docstools/USB_Drivers/">http://deve=
+loper.motorola.com/docstools/USB_Drivers/</A>.=20
+
+  <LI>If you are new to the CS department, complete an account form for =
+Joanne.=20
+  Then remember to see Steve, with your J-card, in NEB 250 to get CS Lab =
+access.=20
+  Check the door for his office hours. </LI></UL>
+<P><EM>Useful links:</EM>=20
+<UL>
+  <LI>The lecture notes are here in <A=20
+  =
+href=3D"http://www.cs.jhu.edu/~joanne/cs250/lectures.pptx">powerpoint</A>=
+ and <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/lectures.pdf">pdf</A> =
+formats.=20
+  <LI>The ongoing course schedule is here in <A=20
+  href=3D"http://www.cs.jhu.edu/~joanne/cs250/schedule.html">link =
+detail</A> and=20
+  <A href=3D"http://www.cs.jhu.edu/~joanne/cs250/schedule.pdf">time-line =
+
+  layout</A> formats.=20
+  <LI><A=20
+  =
+href=3D"http://www.cs.jhu.edu/~scott/oose/projects/android-tips.shtml">Ph=
+one=20
+  usage tips</A>=20
+  <LI><A=20
+  =
+href=3D"http://www.cs.jhu.edu/support/wiki/index.php/Developing_For_Andro=
+id_Using_Eclipse">CS=20
+  Lab<A> development instructions=20
+  <LI><A href=3D"http://www.eclipse.org/">Eclipse website:</A> go to =
+Downloads for=20
+  the basic IDE (Gallileo recommended), before installing the Android =
+ADT=20
+  plug-in, then go to Resources -&gt; Getting Started for usage =
+tutorials.=20
+  <LI><A href=3D"http://developer.android.com/" target=3D_blank>Android =
+Developer=20
+  website:</A> download development tools, use as your primary reference =
+source.=20
+  <BR>
+  <LI><A href=3D"http://java.sun.com/javase/6/docs/api" =
+target=3D_blank>Java=20
+  API:</A> description of classes and methods=20
+  <LI><A href=3D"http://java.sun.com/javase/downloads/index.jsp">Java =
+SDK=20
+  downloads:</A> choose the most recent version of the J2SE/JDK. You =
+don't need=20
+  NetBeans or JSEE for this course. Install this <B>before</B> you =
+install=20
+  Eclipse.=20
+  <LI><A href=3D"http://developer.apple.com/java">Java SDK downloads for =
+Macs</A>:=20
+  Macs come with a version of the JDK, but you might want to update.=20
+  <LI><A href=3D"http://www.cs.jhu.edu/~joanne/cs107/code" =
+target=3D_blank>Code=20
+  examples</A> from Intro Programming in Java (600.107) - look in the=20
+  directories for examples of each topic. </LI></UL></FONT>
+<P></P></BODY></HTML>

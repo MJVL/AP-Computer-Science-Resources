@@ -1,0 +1,252 @@
+@import url( http://fonts.googleapis.com/css?family=Droid+Sans:400,700|Bitter:400,700&subset=latin-ext );
+@import url( header.css );
+@import url( table.css );
+@import url( social.css );
+@import url( ie.css );
+@import url( sourcecode.css );
+body {
+	background: rgb(245, 245, 245); line-height: 1.5; font-family: "Droid Sans",sans-serif;
+}
+.article {
+	padding: 0px 25px; left: 180px; top: 54px; width: 60%; color: rgb(0, 0, 0); position: absolute; background-color: rgb(255, 255, 255);
+}
+.article a {
+	color: rgb(16, 16, 16); font-weight: 700;
+}
+.article .toc a {
+	color: rgb(16, 16, 16); font-weight: 700;
+}
+.title {
+	font-family: Montserrat,sans-serif;
+}
+.author {
+	font-family: Montserrat,sans-serif;
+}
+.toc {
+	font-family: Montserrat,sans-serif;
+}
+.title a {
+	height: 1px; padding-top: 60px; margin-top: -60px; display: block;
+}
+img {
+	height: auto; max-width: 100%;
+}
+.toc p {
+	font-size: 1.3em;
+}
+h1 {
+	color: rgb(17, 17, 17);
+}
+hr {
+	border: 0px currentColor; height: 1px; color: rgb(238, 238, 238); background-color: rgb(238, 238, 238);
+}
+h2.title {
+	color: rgb(51, 51, 51); font-size: 20px;
+}
+h3.title {
+	color: rgb(51, 51, 51); font-size: 16px;
+}
+.mediaobject {
+	padding: 20px;
+}
+p {
+	line-height: 20px; font-family: Helvetica,Arial,Verdana,sans-serif; font-size: 14px; margin-right: 10px; margin-left: 10px;
+}
+div.figure {
+	margin: 0px; padding: 0px;
+}
+div.figure p {
+	margin: 0px; text-align: center; text-indent: 0px; font-style: italic;
+}
+#leftcol {
+	top: 60px; width: 18%; position: absolute;
+}
+#rightcol {
+	left: 1010px; top: 60px; width: 15%; position: absolute;
+}
+#foot {
+	font-weight: bolder;
+}
+.btn {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); padding: 5px 14px 6px; border-radius: 4px; transition:0.1s linear; color: rgb(51, 51, 51); line-height: normal; font-size: 13px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255) 25%, rgb(230, 230, 230)); background-repeat: no-repeat; background-color: rgb(230, 230, 230); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-border-radius: 4px; -webkit-border-radius: 4px; -webkit-transition: .1s linear all; -moz-transition: .1s linear all; -o-transition: .1s linear all; border-image: initial;
+}
+.btn2 {
+	border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); padding: 5px 14px 6px; border-radius: 4px; transition:0.1s linear; color: rgb(51, 51, 51); line-height: normal; font-size: 13px; text-decoration: none; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); text-shadow: 0px 1px 1px rgba(255,255,255,0.75); background-image: linear-gradient(rgb(255, 255, 255), rgb(255, 255, 255) 25%, rgb(230, 230, 230)); background-repeat: no-repeat; background-color: rgb(230, 230, 230); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-border-radius: 4px; -webkit-border-radius: 4px; -webkit-transition: .1s linear all; -moz-transition: .1s linear all; -o-transition: .1s linear all; border-image: initial;
+}
+.btn2 {
+	width: 130px; height: 34px; text-align: center; font-size: 16px; margin-left: 12px;
+}
+.tip p {
+	margin: 0px 0px 1em;
+}
+.note p {
+	margin: 0px 0px 1em;
+}
+.warning p {
+	margin: 0px 0px 1em;
+}
+.tip {
+	border-width: 1px 1px 1px 10px; border-style: dashed dashed dashed solid; border-color: gray; padding: 8px; overflow: hidden;
+}
+.warning {
+	border-width: 1px 1px 1px 10px; border-style: dashed dashed dashed solid; border-color: gray; padding: 8px; overflow: hidden;
+}
+.note {
+	border-width: 1px 1px 1px 10px; border-style: dashed dashed dashed solid; border-color: gray; padding: 8px; overflow: hidden;
+}
+.tip h3::after {
+	content: ":";
+}
+.warning h3::after {
+	content: ":";
+}
+.note h3::after {
+	content: ":";
+}
+.tip p {
+	display: inline;
+}
+.tip h3 {
+	display: inline;
+}
+.warning p {
+	display: inline;
+}
+.warning h3 {
+	display: inline;
+}
+.note p {
+	display: inline;
+}
+.note h3 {
+	display: inline;
+}
+.releaseinfo {
+	font-family: Arial,Helvetica,Geneva,sans-serif;
+}
+.copyright {
+	font-family: Arial,Helvetica,Geneva,sans-serif;
+}
+.pubdate {
+	font-family: Arial,Helvetica,Geneva,sans-serif;
+}
+.property {
+	font-style: italic;
+}
+.guilabel {
+	font-style: italic;
+}
+.guibutton {
+	font-style: italic;
+}
+.filename {
+	font-style: italic;
+}
+.guimenu {
+	font-style: italic;
+}
+.guisubmenu {
+	font-style: italic;
+}
+.keysym {
+	font-style: italic; font-weight: bold;
+}
+td.header {
+	background: 0% rgb(238, 238, 238); font: bold 11px/normal verdana, arial, sans-serif; color: rgb(0, 0, 0); padding-top: 3px; padding-bottom: 3px; font-size-adjust: none; font-stretch: normal;
+}
+.hl-keyword {
+	color: rgb(127, 0, 85); font-weight: bold;
+}
+.emphasis {
+	font-weight: bolder;
+}
+a {
+	color: rgb(0, 0, 204);
+}
+.toc a {
+	overflow: hidden; font-weight: normal; text-decoration: none;
+}
+.list ul {
+	padding-left: 0px; margin-left: 0px;
+}
+.list li {
+	list-style: none;
+}
+.vogella-training {
+	margin-right: 10px; float: left;
+}
+#kindle {
+	top: 10px; width: 200px; right: 0px; position: absolute; z-index: 4;
+}
+.toc {
+	background: rgb(241, 241, 241); border-radius: 9px; border: 1px solid rgb(225, 225, 225); width: 97%; line-height: 1.4; padding-left: 20px; font-size: 90%; -moz-border-radius: 9px; -webkit-border-radius: 9px;
+}
+.training-bg {
+	width: 200px; height: 364px; position: relative;
+}
+.image-z {
+	left: 0px; top: 0px; position: absolute; z-index: 2;
+}
+.button1 {
+	left: 20px; bottom: 70px; position: absolute;
+}
+.button2 {
+	left: 20px; bottom: 20px; position: absolute;
+}
+a.btn-training {
+	color: rgb(255, 255, 255); z-index: 4;
+}
+.btn-training:link {
+	color: rgb(255, 255, 255); z-index: 4;
+}
+.btn-training:visited {
+	color: rgb(255, 255, 255); z-index: 4;
+}
+.btn-training {
+	background: -ms-linear-gradient(rgb(255, 48, 25) 0%, rgb(207, 4, 4) 100%); border-width: 1px; border-style: solid; border-color: rgb(209, 23, 30) rgb(209, 23, 30) rgb(173, 20, 25); padding: 10px; border-radius: 8px; transition:0.1s linear; width: 140px; height: 20px; text-align: center; color: rgb(255, 255, 255); line-height: normal; font-size: 1em; font-weight: 700; text-decoration: none; margin-top: 10px; display: inline-block; cursor: pointer; box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 0px 1px 2px rgba(0,0,0,0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-border-radius: 8px; -webkit-border-radius: 8px; -webkit-transition: .1s linear all; -moz-transition: .1s linear all; -o-transition: .1s linear all; border-image: initial;
+}
+.bottom_left {
+	left: 3.4%; bottom: 28px; display: none; position: fixed; z-index: 1;
+}
+.bottom_right {
+	left: 84%; display: none;
+}
+@media only screen and (min-width:1300px)
+{
+.article {
+	margin: auto !important; left: 0px; top: 54px; width: 850px; position: relative !important;
+}
+#rightcol {
+	left: auto !important; top: 60px; width: 200px; right: 20px !important; position: absolute;
+}
+#leftcol {
+	left: 20px; top: 60px; width: 160px; position: absolute;
+}
+#kindle img {
+	height: 180px;
+}
+}
+@media only screen and (max-width:900px)
+{
+.article {
+	top: 90px;
+}
+}
+@media only screen and (max-device-width:1080px)
+{
+#rightcol {
+	display: none;
+}
+#leftcol {
+	display: none;
+}
+#kindle {
+	display: none;
+}
+.article {
+	left: 0px; top: 110px; width: 100%; padding-left: 5px;
+}
+.toc {
+	width: 90%;
+}
+}

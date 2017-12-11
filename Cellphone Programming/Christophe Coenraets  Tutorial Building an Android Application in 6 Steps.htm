@@ -1,0 +1,2291 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0042)http://coenraets.org/blog/androidtutorial/ -->
+<!DOCTYPE html><HTML dir="ltr" lang="en-US"><HEAD>
+<META charset="UTF-8"><TITLE>Christophe Coenraets  |  Tutorial: Building an 
+Android Application in 6 Steps</TITLE>
+<META name="robots" content="index, follow"><LINK rel="stylesheet" type="text/css" 
+href="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/style.css" 
+media="all"><LINK rel="pingback" href="http://coenraets.org/blog/xmlrpc.php">
+<LINK title="Christophe Coenraets » Feed" rel="alternate" type="application/rss+xml" 
+href="http://coenraets.org/blog/feed/"><LINK title="Christophe Coenraets » Comments Feed" 
+rel="alternate" type="application/rss+xml" href="http://coenraets.org/blog/comments/feed/">
+<SCRIPT type="text/javascript">//<![CDATA[
+	// Google Analytics for WordPress by Yoast v4.2.2 | http://yoast.com/wordpress/google-analytics/
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount','UA-721308-1']);
+	_gaq.push(['_trackPageview'],['_trackPageLoadTime']);
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	//]]></SCRIPT>
+<LINK title="Christophe Coenraets » Tutorial: Building an Android Application in 6 Steps Comments Feed" 
+rel="alternate" type="application/rss+xml" href="http://coenraets.org/blog/androidtutorial/feed/">
+<LINK id="woo-options-styling-css" rel="stylesheet" type="text/css" href="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/blog.css" 
+media="all"><LINK id="woo-responsive-layout-css" rel="stylesheet" type="text/css" 
+href="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/generator.css" 
+media="screen"><LINK id="woo-layout-dynamic-css" rel="stylesheet" type="text/css" 
+href="http://coenraets.org/blog/androidtutorial/?woo-layout-css=load&amp;ver=3.4.2" 
+media="all">
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/comment-reply.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/jquery.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/third-party.js"></SCRIPT>
+
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/jquery.flexslider.min.js"></SCRIPT>
+
+<SCRIPT type="text/javascript">
+/* <![CDATA[ */
+var woo_localized_data = {"select_a_page":"Select a page:"};
+/* ]]> */
+</SCRIPT>
+
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/general.js"></SCRIPT>
+<LINK title="RSD" rel="EditURI" type="application/rsd+xml" href="http://coenraets.org/blog/xmlrpc.php?rsd">
+<LINK rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://coenraets.org/blog/wp-includes/wlwmanifest.xml"><LINK 
+title="AIR Application with Embedded Tomcat" rel="prev" href="http://coenraets.org/blog/air-samples/air-application-with-embedded-tomcat/">
+<LINK title="Employee Directory — Android Market App Companion Page" rel="next" 
+href="http://coenraets.org/blog/air-for-android-samples/employee-directory/">
+<META name="GENERATOR" content="MSHTML 9.00.8112.16457"><LINK rel="canonical" 
+href="http://coenraets.org/blog/androidtutorial/">
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/swfobject.js"></SCRIPT>
+<!-- Theme version -->
+<META name="generator" content="Canvas 5.0.10">
+<META name="generator" content="WooFramework 5.4.2"><!-- Google Webfonts -->
+<LINK rel="stylesheet" type="text/css" href="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/css.css"><!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+<META content="IE=edge,chrome=1" http-equiv="X-UA-Compatible"><!--  Mobile viewport scale -->
+<META name="viewport" content="initial-scale=1.0; maximum-scale=1.0; user-scalable=yes">
+<META id="syntaxhighlighteranchor" name="syntaxhighlighter-version" content="3.1.3"><!-- Custom Favicon -->
+<LINK rel="shortcut icon" href="http://coenraets.org/blog/wp-content/uploads/2012/11/christophe.png"><!-- Options Panel Custom CSS -->
+<STYLE type="text/css">
+.entry img {
+  background: none;
+  border: medium none;
+  padding: 5px;
+}
+
+</STYLE>
+<!-- Woo Shortcodes CSS --><LINK rel="stylesheet" type="text/css" href="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/shortcodes.css"><!-- Custom Stylesheet -->
+<LINK rel="stylesheet" type="text/css" href="http://coenraets.org/blog/wp-content/themes/canvas/custom.css"></HEAD>
+<BODY class="page page-id-1030 page-template-default gecko boxed-layout one-col width-960 one-col-960">
+<DIV id="wrapper">
+<DIV id="header" class="col-full">
+<DIV id="logo"><SPAN class="site-title"><A 
+href="http://coenraets.org/blog/">Christophe Coenraets</A></SPAN><SPAN class="site-description">The 
+Web Platform and Mobile Application Development</SPAN></DIV><!-- /#logo -->
+<H3 class="nav-toggle icon"><A href="http://coenraets.org/blog/androidtutorial/#navigation">Navigation</A></H3></DIV><!-- /#header -->
+<DIV id="navigation" class="col-full">
+<UL class="rss fr">
+  <LI class="sub-rss"><A class="icon" 
+  href="http://coenraets.org/blog/feed/"></A></LI></UL>
+<UL id="main-nav" class="nav fl">
+  <LI id="menu-item-4594" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4594"><A 
+  href="http://coenraets.org/">Home</A></LI>
+  <LI id="menu-item-4863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4863"><A 
+  href="http://coenraets.org/blog/phonegap-tutorial/">PhoneGap Tutorial</A></LI>
+  <LI id="menu-item-2661" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2661"><A 
+  href="http://coenraets.org/blog/bio/">Bio</A></LI></UL></DIV><!-- /#navigation --><!-- #content Starts -->
+<DIV id="content" class="col-full">
+<DIV id="main-sidebar-container"><!-- #main Starts -->
+<DIV id="main">
+<DIV class="post-1030 page type-page status-publish hentry">
+<H1 class="title">Tutorial: Building an Android Application in 6 Steps</H1>	
+<DIV class="entry">
+<P>A few months ago, when I started working with Android, I built an Employee 
+Directory application as an experimentation project. I thought this application 
+could be useful to other developers starting with Android, so I’ve made it 
+available as a <A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/">Google Code project</A>. The 
+Employee Directory application is built in six easy steps, each building on top 
+of each other. The end result is a simple, yet functional application that 
+allows you to:</P>
+<UL>
+  <LI>Look up employees by name in a local SQLite database</LI>
+  <LI>Look at the details of an employee</LI>
+  <LI>Call, email, text an employee from within the application</LI>
+  <LI>Navigate up and down the organization’s org chart</LI></UL>
+<P>You can download the Eclipse projects <A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/downloads/list">here</A>. 
+androidtutorial-1.0.zip includes a project for each step. EmployeeDirectory6 is 
+the final application. If you prefer, you can also browse the source code <A 
+onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/#svn/trunk/ androidtutorial">here</A>.</P>
+<H2>Setting Up and Running the Projects in Eclipse</H2>
+<P>Here are some quick steps to set up and run the projects in Eclipse. If you 
+just want to see how the application is built without setting up the projects, 
+go straight to Step 1 below.</P>
+<OL>
+  <LI>Download androidtutorial-1.0.zip <A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+  href="http://code.google.com/p/androidtutorial/downloads/list">here</A> (or 
+  check out the project from the trunk).</LI>
+  <LI>Follow the steps described <A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://developer.android.com']);" 
+  href="http://developer.android.com/sdk/index.html">here</A> to install the 
+  Android SDK and the ADT plugin for Eclipse.</LI>
+  <LI>In Eclipse, create a new Workspace and set its default Java Compiler 
+  compliance level to 1.5.</LI>
+  <LI>Import the projects: File &gt; Import &gt; General &gt; Existing Projects 
+  into Workspace, and point to the androidtutorial directory.</LI>
+  <LI>Click <A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://developer.android.com']);" 
+  href="http://developer.android.com/guide/developing/eclipse-adt.html">here</A> 
+  for instructions on how to run your projects using the Android emulator or on 
+  your device.</LI></OL>
+<H2>Step 1: Basic Layout</H2>
+<P>In this first step, we define the user interface for searching employees.</P>
+<P><IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir1.jpg"></P>
+<P><STRONG>Code highlights:</STRONG></P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory1/src/samples/employeedirectory/EmployeeList.java">EmployeeList.java</A>: 
+The default Activity of the application. setContentView() is used to set the 
+layout to main.xml.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory1/res/layout/main.xml">main.xml</A>: 
+ the layout for the default activity of the application.</P>
+<H2>Step 2: Working with Lists</H2>
+<P>In this second step, we add a ListView component that will be used (in the 
+following step) to display the list of employees matching the search criteria. 
+In this step, we just use an ArrayAdapter to display sample data in the 
+list.</P>
+<P><IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir2.jpg"></P>
+<P><STRONG>Code highlights:</STRONG></P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory2/res/layout/main.xml">main.xml</A>: 
+The updated layout with the ListView.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory2/src/samples/employeedirectory/EmployeeList.java">EmployeeList.java</A>: 
+An ArrayAdapter is used to populate the ListView.</P>
+<H2>Step 3: Working with a SQLite Database</H2>
+<P>In this third step, we use a SQLite database to persist the employees. When 
+the user clicks the Search button, we query the database, and populate the list 
+with the employees matching the search criteria.</P>
+<P><IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir3.jpg"></P>
+<P><STRONG>Code highlights:</STRONG></P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory3/src/samples/employeedirectory/EmployeeList.java">EmployeeList.java</A>:</P>
+<UL>
+  <LI>In onCreate(), we use the DatabaseHelper class to open the database.</LI>
+  <LI>In search(), we use a Cursor to query the database. We then use a 
+  SimpleCursorAdapter to bind the ListView to the Cursor using a custom layout 
+  (employee_list_item) to display each item in the list.</LI></UL>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory3/src/samples/employeedirectory/DatabaseHelper.java">DatabaseHelper.java</A>: 
+We extend SQLiteOpenHelper to manage the access to our database: If the database 
+doesn’t yet exist, we create the employee table and populate it with sample 
+data. </P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory3/res/layout/employee_list_item.xml">employee_list_item.xml</A>: 
+Layout to display each item in the list.</P>
+<H2>Step 4: Using Intents and passing information between Activities</H2>
+<P>In this fourth step, we create an Activity to display the details of the 
+employee selected in the list. We start the EmployeeDetails activity by creating 
+an Intent.</P>
+<P><IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir4.jpg"></P>
+<P><STRONG>Code highlights:</STRONG></P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory4/src/samples/employeedirectory/EmployeeList.java">EmployeeList.java</A>: 
+in onListItemClick, we create a new Intent for the EmployeeDetails class, add 
+the employee id to the intent using intent.putExtra(), and start a new 
+Activity.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory4/src/samples/employeedirectory/EmployeeDetails.java">EmployeeDetails.java</A>: 
+The Employee details activity. We retrieve the id of the employee using 
+getIntent().getIntExtra(). We then use a Cursor to retrieve the employee 
+details.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory4/res/layout/employee_details.xml">employee_details.xml</A>: 
+A simple layout to display the details of an employee.</P>
+<H2>Step 5: Calling, Emailing, and Texting an Employee</H2>
+<P>In this fifth step, we interact with some of the built-in capabilities of our 
+phone. We use Intents to allow the user to call, email, or text an employee. We 
+reuse the EmployeeDetails Activity to allow the user to display the details of 
+the manager of the selected employee.</P>
+<P><IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir5.jpg"></P>
+<P><STRONG>Code highlights:</STRONG></P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory5/src/samples/employeedirectory/EmployeeDetails.java">EmployeeDetails.java</A>:</P>
+<UL>
+  <LI>In onCreate(), we build an array of actions (call, email, sms, view 
+  manager) available to the user depending on the information available for the 
+  displayed employee (for example, we only create a “Call mobile” action if the 
+  employee’s mobile phone number is available in the database).</LI>
+  <LI>EmployeeActionAdapter is a custom list adapter that binds each action in 
+  the actions array to the action_list_item layout.</LI>
+  <LI>In onListItemClick(), we create an Intent corresponding to the action 
+  selected by the user, and start a new activity with that intent.</LI></UL>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory5/res/layout/action_list_item.xml">action_list_item.xml</A>: 
+Layout for each action in the actions list.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory5/res/layout/employee_details.xml">employee_details.xml</A>: 
+Updated employee details layout.</P>
+<H2>Step 6: Navigating Up and Down the Org Chart</H2>
+<P>In this sixth step, we create a new Activity to display the Direct Reports of 
+the selected employee, allowing the user of the application to navigate up and 
+down the org chart of the organization. We also improve some elements of the 
+application: for example, we polish the user interface in several layouts, and 
+we populate the database using an XML documents as opposed to the hardcoded 
+sample data used in the previous steps.</P>
+<P><IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir6a.jpg"><BR>
+<IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir6b.jpg"><BR>
+<IMG src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/empdir6c.jpg"></P>
+<P><STRONG>Code highlights:</STRONG></P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory6/src/samples/employeedirectory/DirectReports.java">DirectReports.java</A>: 
+A new Activity to display the direct reports of a specific employee.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory6/res/layout/direct_reports.xml">direct_reports.xml</A>: 
+The layout for the DirectReports Activity.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory6/src/samples/employeedirectory/EmployeeDetails.java">EmployeeDetails.java</A>: 
+“View direct reports” is added to the list of actions. When the user selects 
+that action, a new Intent is created for the DirectReports Activity, and a new 
+Activity is started using that Intent.</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory6/src/samples/employeedirectory/DatabaseHelper.java">DatabaseHelper.java</A>: 
+Instead of populating the database with hardcoded sample data, the employee 
+table is now created and populated from an XML file (sql.xml).</P>
+<P><A onclick="javascript:_gaq.push(['_trackEvent','outbound-article','http://code.google.com']);" 
+href="http://code.google.com/p/androidtutorial/source/browse/trunk/%20androidtutorial/EmployeeDirectory6/res/raw/sql.xml">sql.xml</A>: 
+The xml file used to create and populate the employee table.</P>
+<H2>Related Article</H2>
+<P>I built the same application using Flex 4 and AIR for Android. You can check 
+it out <A href="http://coenraets.org/blog/air-for-android-samples/employee-directory-for-android/">here</A>.</P></DIV><!-- /.entry -->
+<DIV class="fix"></DIV></DIV><!-- /.post -->
+<DIV id="comments">
+<H3 id="comments-title">124 Responses to <EM>Tutorial: Building an Android 
+Application in 6 Steps</EM></H3>
+<OL class="commentlist">
+  <LI class="comment even thread-even depth-1"><A name="comment-119"></A>
+  <DIV id="li-comment-119" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536.png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Spencer</SPAN><SPAN 
+  class="date">October 10, 2010 at 12:27 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-119">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-119" class="comment-entry">
+  <P>This example has helped me out greatly! But… I’m working with Android 2.1 
+  and your step 4 package because I can’t seem to get step 6 working with 2.1 
+  .</P>
+  <P>My question is for step 4. Every time I modify values from 
+  DatabaseHelper.java the changes don’t show up. I must uninstall the 
+  application each time and reinstall it for changes to be seen.</P>
+  <P>Is there any way you can help me out? I tried running an sql command at 
+  line 27 with no luck:<BR>db.execSQL(“DELETE * FROM employee”);<BR>
+  db.execSQL(sql);</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-119", "119", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=119#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment odd alt depth-2"><A name="comment-62561"></A>
+    <DIV id="li-comment-62561" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(1).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">Tom</SPAN><SPAN 
+    class="date">May 19, 2012 at 9:05 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-62561">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-62561" class="comment-entry">
+    <P>This is way old but in case anyone else is reading it;</P>
+    <P>standard sql would be “DELETE FROM employee” – the asterix is only used 
+    to say select ‘everything’ e.g. all columns.  note the delete here will 
+    empty the table more common would be to delete from where ID e.g<BR>“DELETE 
+    FROM employee where PERSONID = 1″ etc</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-62561", "62561", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=62561#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+    <LI class="comment even depth-2"><A name="comment-160369"></A>
+    <DIV id="li-comment-160369" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(2).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">AMD</SPAN><SPAN 
+    class="date">November 2, 2012 at 4:54 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-160369">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-160369" class="comment-entry">
+    <P>@Spencer I am having the same problem. Can somebody help me</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-160369", "160369", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=160369#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-120"></A>
+  <DIV id="li-comment-120" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(3).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">manish</SPAN><SPAN 
+  class="date">November 8, 2010 at 6:36 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-120">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-120" class="comment-entry">
+  <P>Great Tutorial.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-120", "120", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=120#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-121"></A>
+  <DIV id="li-comment-121" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(4).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://khanh@khanhngn.com']);" 
+  href="http://khanh@khanhngn.com" rel="external nofollow">hans</A></SPAN><SPAN 
+  class="date">November 25, 2010 at 2:53 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-121">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-121" class="comment-entry">
+  <P>Thank you for the great Tutorials.<BR>I have a question for step 4. If I 
+  don’t want to create database in class DatabaseHelper, so I want to copy my 
+  own database from assets into data/data/mypackage/databases. I had many tries 
+  but no luck. Can you help me? Thank you.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-121", "121", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=121#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-122"></A>
+  <DIV id="li-comment-122" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(5).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://sabaritheflexian.com']);" 
+  href="http://sabaritheflexian.com/" 
+  rel="external nofollow">Nathan5x</A></SPAN><SPAN class="date">December 1, 2010 
+  at 12:58 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-122">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-122" class="comment-entry">
+  <P>Much needed one for getting started.</P>
+  <P>Thanks a lot Chris.. :)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-122", "122", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=122#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-123"></A>
+  <DIV id="li-comment-123" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(6).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Tanweer</SPAN><SPAN 
+  class="date">December 6, 2010 at 2:50 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-123">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-123" class="comment-entry">
+  <P>Hello,</P>
+  <P>I am building an AIR application for Android device and want to capture the 
+  inputs through voice using Android Speech API .</P>
+  <P>Can you please guide me how to do this.</P>
+  <P>Regards,<BR>Tanweer</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-123", "123", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=123#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment odd alt depth-2"><A name="comment-22062"></A>
+    <DIV id="li-comment-22062" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(7).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">nnn</SPAN><SPAN 
+    class="date">February 9, 2012 at 8:56 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-22062">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-22062" class="comment-entry">
+    <P>fgsdtrg</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-22062", "22062", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=22062#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-124"></A>
+  <DIV id="li-comment-124" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(8).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Gibby</SPAN><SPAN 
+  class="date">December 14, 2010 at 10:43 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-124">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-124" class="comment-entry">
+  <P>Is there anyway to add a newline character to a value when you populate 
+  your database via sql.xml?? I’ve tried using \n but it just gets displayed</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-124", "124", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=124#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-125"></A>
+  <DIV id="li-comment-125" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(9).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Giumazzi</SPAN><SPAN 
+  class="date">December 15, 2010 at 4:35 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-125">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-125" class="comment-entry">
+  <P>First I want to excuse for my previous post in the wrong section (air).<BR>
+  I’d like to know how use a SQLite DB from asset folder to the application 
+  database directory.<BR>I have tried to  modify the  database helper but 
+  without result.<BR>Can you give me any help?</P>
+  <P>Tanks in advance.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-125", "125", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=125#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-126"></A>
+  <DIV id="li-comment-126" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(10).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Fedrix</SPAN><SPAN 
+  class="date">December 30, 2010 at 2:36 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-126">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-126" class="comment-entry">
+  <P>Thanks a lot Chris…… this tutorials helped me lot ….thank u once again…</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-126", "126", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=126#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-127"></A>
+  <DIV id="li-comment-127" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(11).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Gilad</SPAN><SPAN 
+  class="date">January 1, 2011 at 1:14 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-127">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-127" class="comment-entry">
+  <P>Very nice tutorial!!!!! It really helped me! Thanks alot!!!</P>
+  <P>I was slightly confused about the SQL part and would appreciate a more 
+  elaborate explanation.</P>
+  <P>Thanks again!</P>
+  <P>Gilad</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-127", "127", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=127#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-128"></A>
+  <DIV id="li-comment-128" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(12).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">raj</SPAN><SPAN 
+  class="date">January 13, 2011 at 4:04 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-128">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-128" class="comment-entry">
+  <P>plz,tell me how to create and run android application in detail bcoz i dont 
+  know much about android appliaction</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-128", "128", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=128#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-129"></A>
+  <DIV id="li-comment-129" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(12).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">raj</SPAN><SPAN 
+  class="date">January 13, 2011 at 4:05 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-129">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-129" class="comment-entry">
+  <P>am using eclipse3.4 help me how to create and run android application</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-129", "129", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=129#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-130"></A>
+  <DIV id="li-comment-130" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(13).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Super</SPAN><SPAN 
+  class="date">January 23, 2011 at 12:24 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-130">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-130" class="comment-entry">
+  <P>A very nice tutorial!  It helped me to understand some basic idea in 
+  Android programming.  Thanks a lot!</P>
+  <P>I’d suggest including the main.xml in the Code highlights of “Step 3″, the 
+  linkage of Seach button and Search function is defined in the xml.  It’s 
+  really important.  It takes me few hours to trace the reason why my program 
+  doesn’t work as expected (I try to follow the steps without download your 
+  source)….</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-130", "130", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=130#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-131"></A>
+  <DIV id="li-comment-131" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(14).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Pa1</SPAN><SPAN 
+  class="date">January 25, 2011 at 4:56 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-131">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-131" class="comment-entry">
+  <P>Hey Christophe, Thanks a ton for providing such a Gr8 tutorial. Its 
+  extremely helpful.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-131", "131", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=131#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-132"></A>
+  <DIV id="li-comment-132" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(15).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Reohn</SPAN><SPAN 
+  class="date">January 28, 2011 at 1:15 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-132">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-132" class="comment-entry">
+  <P>Super, thanks for that comment!  I had just spent an hour puzzling over 
+  that connection as well!  Besides that little oversight this is a great 
+  tutorial!  Thanks!</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-132", "132", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=132#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment odd alt depth-2"><A name="comment-34673"></A>
+    <DIV id="li-comment-34673" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(16).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">Jasbeer</SPAN><SPAN class="date">March 
+    21, 2012 at 11:58 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-34673">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-34673" class="comment-entry">
+    <P>i found the tutorial very very nice my point of view .</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-34673", "34673", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=34673#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-133"></A>
+  <DIV id="li-comment-133" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(15).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Reohn</SPAN><SPAN 
+  class="date">January 28, 2011 at 6:17 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-133">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-133" class="comment-entry">
+  <P>I don’t know if anyone else had this problem, but in step four I change all 
+  my code (even downloaded the source code and pasted it directly into my 
+  project) but it is causing the emulator to crash (the application stopped 
+  unexpectedly).  There are no errors or even warnings in my code.  If I revert 
+  to step 3 the code still works.  At step 4 however I can search and the list 
+  comes up, but when I click on one of the list items it closes.  The debugger 
+  stops at a stack error “Native.Start.main(String[]) line: not available 
+  [native method] and in the details it says source not found.  Any ideas?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-133", "133", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=133#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-134"></A>
+  <DIV id="li-comment-134" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(17).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.softechsolutions.com.au']);" 
+  href="http://www.softechsolutions.com.au/" 
+  rel="external nofollow">Bala</A></SPAN><SPAN class="date">February 1, 2011 at 
+  11:03 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-134">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-134" class="comment-entry">
+  <P>Awesome stuff mate. Excellent tutes and will go a long way in helping us 
+  get a start with Android.</P>
+  <P>Cheers</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-134", "134", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=134#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-135"></A>
+  <DIV id="li-comment-135" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(18).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Steve</SPAN><SPAN 
+  class="date">February 4, 2011 at 2:00 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-135">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-135" class="comment-entry">
+  <P>In step 4 I had to add a . in front of EmployeeDetails (so should be 
+  .EmployeeDetails — compare and make sure it looks the same as .EmployeeList), 
+  I believe this is to state it is a class off the package defined…hope this 
+  helps others stuck on step 4</P>
+  <P>btw…great tutorial!</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-135", "135", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=135#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-136"></A>
+  <DIV id="li-comment-136" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(18).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Steve</SPAN><SPAN 
+  class="date">February 4, 2011 at 6:22 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-136">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-136" class="comment-entry">
+  <P>…sorry, in my previous post, I am talking about updates in the 
+  AndroidManifest.xml file</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-136", "136", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=136#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-137"></A>
+  <DIV id="li-comment-137" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(19).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Ali</SPAN><SPAN 
+  class="date">February 11, 2011 at 6:26 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-137">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-137" class="comment-entry">
+  <P>Hi Christophe,</P>
+  <P>What a great tutorial I love it and have been using it for my own project 
+  but I need a little bit help if that’s ok.  I want to insert 
+  latitude/longitude in the database using ‘sql statements’ and convert that 
+  into an address (e.g. London Road, UK) and show it on google maps. Is it 
+  possible to do this and how? Thanks in advance.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-137", "137", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=137#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-138"></A>
+  <DIV id="li-comment-138" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/02b74e4bfc346c990dcd68b9c92c351c.png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">vlodimer</SPAN><SPAN 
+  class="date">February 20, 2011 at 7:08 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-138">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-138" class="comment-entry">
+  <P>this project is only for android v.2.2+?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-138", "138", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=138#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-139"></A>
+  <DIV id="li-comment-139" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(20).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.kubicals.com']);" 
+  href="http://www.kubicals.com/" 
+  rel="external nofollow">vedavyas</A></SPAN><SPAN class="date">March 1, 2011 at 
+  3:50 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-139">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-139" class="comment-entry">
+  <P>Hi Christophe,</P>
+  <P>I am new to the android world<BR>i want to display the data from sqlite in 
+  the form of  list by using listview<BR>each list item should contain different 
+  icons<BR> plz…. help me</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-139", "139", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=139#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-140"></A>
+  <DIV id="li-comment-140" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(21).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Mike</SPAN><SPAN 
+  class="date">March 2, 2011 at 4:45 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-140">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-140" class="comment-entry">
+  <P>Christophe</P>
+  <P>I am new to flex development so i apologize if this is a simple problem to 
+  fix.</P>
+  <P>I am using flex 4.5 burrito on windows 7.</P>
+  <P>i keep getting a 2032 error when i try to run the application for the first 
+  time.</P>
+  <P>RPC Fault faultString=”HTTP request error” faultCode=”Server.Error.Request” 
+  faultDetail=”Error: [IOErrorEvent type="ioError" bubbles=false 
+  cancelable=false eventPhase=2 text="Error #2032: Stream Error. URL: 
+  app:/assets/employees.xml" errorID=2032]. URL: ../assets/employees.xml”]<BR>at 
+  mx.rpc::AbstractInvoker/http://www.adobe.com/2006/flex/mx/internal::faultHandler()[E:\dev\hero_private_beta\frameworks\projects\rpc\src\mx\rpc\AbstractInvoker.as:345]<BR>
+  	at 
+  mx.rpc::Responder/fault()[E:\dev\hero_private_beta\frameworks\projects\rpc\src\mx\rpc\Responder.as:68]<BR>
+  	at 
+  mx.rpc::AsyncRequest/fault()[E:\dev\hero_private_beta\frameworks\projects\rpc\src\mx\rpc\AsyncRequest.as:113]<BR>
+  	at 
+  DirectHTTPMessageResponder/errorHandler()[E:\dev\hero_private_beta\frameworks\projects\rpc\src\mx\messaging\channels\DirectHTTPChannel.as:410]<BR>
+  	at flash.events::EventDispatcher/dispatchEventFunction()<BR>	at 
+  flash.events::EventDispatcher/dispatchEvent()<BR>	at 
+  flash.net::URLLoader/onComplete()</P>
+  <P>any ideas on how to resolve ?</P>
+  <P>thx</P>
+  <P>mike</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-140", "140", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=140#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-142"></A>
+  <DIV id="li-comment-142" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/537ae1d0e85bfa8ebbb79312bad98571.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Marie Sheldon</SPAN><SPAN class="date">March 
+  17, 2011 at 10:03 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-142">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-142" class="comment-entry">
+  <P>I solved my issue :</P>
+  <P>For some reason, it is impossible to call a webserver from your device in 
+  Debug or Regular mode when the Network Monitor in Flash Builder is on. 
+  (!!!)<BR>So I just turned it off and my app started to work.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-142", "142", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=142#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-143"></A>
+  <DIV id="li-comment-143" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(22).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">me</SPAN><SPAN class="date">March 
+  18, 2011 at 7:39 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-143">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-143" class="comment-entry">
+  <P>Hello &amp; Thank U for tutorials! ;)<BR>Especially for this one! :)<BR>
+  Bookmarked page.<BR>Hopping get more tutorials! ;)<BR>Especially with GPS or 
+  Google Maps API :)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-143", "143", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=143#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-144"></A>
+  <DIV id="li-comment-144" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(23).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://mobilemassmoneyinfo.blogspot.com']);" 
+  href="http://mobilemassmoneyinfo.blogspot.com/" rel="external nofollow">Mobile 
+  Mass Money</A></SPAN><SPAN class="date">March 26, 2011 at 1:58 am</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-144">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-144" class="comment-entry">
+  <P>What an article. You have solved all the questions which newbies have in 
+  their mind. Keep up with this. With the help of your article even i can start 
+  making good applications</P>
+  <P>Thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-144", "144", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=144#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-145"></A>
+  <DIV id="li-comment-145" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(24).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Vivek Rathaur</SPAN><SPAN class="date">May 
+  19, 2011 at 6:29 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-145">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-145" class="comment-entry">
+  <P>Thank you very much Sir. Your code and tutorial helped me a lot in escaping 
+  from the web of the  ListViews. Now i can do better. Thanks a lot again.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-145", "145", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=145#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-146"></A>
+  <DIV id="li-comment-146" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(25).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">george</SPAN><SPAN 
+  class="date">May 25, 2011 at 4:01 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-146">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-146" class="comment-entry">
+  <P>thank you for your source code, coz it help help us big time..<BR>am having 
+  an error on EmployeeDetails on line 29<BR>known as EmployeeAction cannot be 
+  resolved to  a type, also I dont know what it means<BR>help me out please coz 
+  am stuck</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-146", "146", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=146#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-147"></A>
+  <DIV id="li-comment-147" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(25).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">george</SPAN><SPAN 
+  class="date">May 25, 2011 at 4:08 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-147">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-147" class="comment-entry">
+  <P>Mr. Cristophe<BR>am requesting if you can send me the codes<BR>that will 
+  help me create another interface<BR>for entering data into the Employee 
+  Directory</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-147", "147", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=147#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-148"></A>
+  <DIV id="li-comment-148" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(26).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Mike</SPAN><SPAN 
+  class="date">June 8, 2011 at 4:38 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-148">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-148" class="comment-entry">
+  <P>New to Android and this was a big help!!</P>
+  <P>Thanks for the well put together example and study of this matter.</P>
+  <P>The only!! matter that was not explained was how to update the data .<BR>Is 
+  there a edit menu system hook that  inflates on long item press,native to the 
+  OS.<BR>That allows the user to update the Name and Numbers etc.??<BR>Could you 
+  show how that would be done.</P>
+  <P>Thanks for sharing,</P>
+  <P>Mike</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-148", "148", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=148#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-149"></A>
+  <DIV id="li-comment-149" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(27).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://udemy.com']);" 
+  href="http://udemy.com/" rel="external nofollow">Alvin</A></SPAN><SPAN class="date">June 
+  20, 2011 at 1:03 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-149">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-149" class="comment-entry">
+  <P>Hi Christophe,</P>
+  <P>I’m on the biz dev team at Udemy, a website that lets anyone create and 
+  take a course online. We’ve recently had top-tier partners (with distribution 
+  to over 800,000 users) request courses on building Android applications using 
+  Adobe Flex.</P>
+  <P>We’ve seen your 6-step Android tutorial and love your work. We’d like to 
+  invite you to create a course on <A onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.udemy.com']);" 
+  href="http://www.udemy.com/" rel="nofollow">http://www.udemy.com/</A>. On 
+  Udemy, we provide tools to build your own course, and its completely free. If 
+  you charge for your course, you keep 80% of the revenue you generate.</P>
+  <P>Technical courses have been in huge demand on Udemy– Bess Ho’s “Learn to 
+  Develop an iPhone or iPad application in 4 weeks,” and Zed Shaw’s “Learn 
+  Python the Hard Way” have generated over $90,000 in sales in their first two 
+  months! The demand for development courses continues to grow but we don’t have 
+  enough to sell.</P>
+  <P>Would you be interested in setting up a call to learn more?</P>
+  <P>Best,<BR>Alvin Hsia</P>
+  <P>P.S. Please feel free to forward this information on to anyone else you 
+  think may be interested</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-149", "149", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=149#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-150"></A>
+  <DIV id="li-comment-150" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(28).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://espaciotemporal.com']);" 
+  href="http://espaciotemporal.com/" rel="external nofollow">android 
+  developer</A></SPAN><SPAN class="date">June 29, 2011 at 9:59 am</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-150">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-150" class="comment-entry">
+  <P>I love your post.<BR>Your writing is very helpful to me, who happened to 
+  learn about the android.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-150", "150", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=150#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-151"></A>
+  <DIV id="li-comment-151" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(29).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">moses</SPAN><SPAN 
+  class="date">July 6, 2011 at 6:05 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-151">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-151" class="comment-entry">
+  <P>nice tutorial but in the 3rd step i get an error in the main.xml that says 
+  the attribute onClick is not in the android package what can i do pliz 
+help</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-151", "151", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=151#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-152"></A>
+  <DIV id="li-comment-152" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(30).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">paul</SPAN><SPAN 
+  class="date">July 7, 2011 at 2:09 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-152">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-152" class="comment-entry">
+  <P>Hi Chris</P>
+  <P>I am developing a Flex 4 web application and need to create a php service 
+  that performs a multiple table insert of related tables.<BR>Kindly help with 
+  structure. Below are my tables</P>
+  <P>clients (title, firstName, lastName)<BR>clientdependants (client_id, 
+  dependantNames, dependantDateOfBirth, dependantRelationship)<BR>
+  clientssupportworker (client_id, supportWorker_id, sw_firstName, 
+  sw_lastName)<BR>riskissues (client_id, riskIssue)</P>
+  <P>thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-152", "152", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=152#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-153"></A>
+  <DIV id="li-comment-153" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(31).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Scott</SPAN><SPAN 
+  class="date">July 16, 2011 at 8:25 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-153">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-153" class="comment-entry">
+  <P>Great tutorial.  One error though… Dwight is “Asst. to the Regional 
+  Manager” not “Asst. Regional Manager”.  ;-)</P>
+  <P>LOVE the contacts you used.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-153", "153", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=153#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-154"></A>
+  <DIV id="li-comment-154" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(32).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">vinod</SPAN><SPAN 
+  class="date">July 19, 2011 at 9:54 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-154">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-154" class="comment-entry">
+  <P>I need to create a reusable component for Database use. If anyone can tell 
+  me how can I do this will be great help.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-154", "154", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=154#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-155"></A>
+  <DIV id="li-comment-155" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(33).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Abdul latheef</SPAN><SPAN class="date">July 
+  21, 2011 at 12:05 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-155">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-155" class="comment-entry">
+  <P>Hi</P>
+  <P>Thank you for your article , very useful for me.<BR>with regards<BR>
+  Latheef</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-155", "155", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=155#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-156"></A>
+  <DIV id="li-comment-156" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(34).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Ram</SPAN><SPAN class="date">July 
+  23, 2011 at 12:58 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-156">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-156" class="comment-entry">
+  <P>Hi sir,<BR>             dis s nice tutorial for me.  It’s good article. 
+  thx.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-156", "156", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=156#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-157"></A>
+  <DIV id="li-comment-157" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(35).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Pallav</SPAN><SPAN 
+  class="date">July 23, 2011 at 12:31 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-157">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-157" class="comment-entry">
+  <P>Really amazing tutorial. Liked it to the core.</P>
+  <P>Thanks.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-157", "157", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=157#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-158"></A>
+  <DIV id="li-comment-158" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(36).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">swathi</SPAN><SPAN 
+  class="date">August 10, 2011 at 12:48 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-158">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-158" class="comment-entry">
+  <P>nice tutorial….how to add a image for the same…ie storing url of image in 
+  sqlite and download and display the image along with text data in the list</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-158", "158", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=158#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-159"></A>
+  <DIV id="li-comment-159" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(37).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">george nyarko</SPAN><SPAN class="date">August 
+  11, 2011 at 10:37 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-159">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-159" class="comment-entry">
+  <P>can someone please help me design an android application that will dial 
+  only one number when a user clicks on the icon or short. and how to compile it 
+  .a step by step manual will do me great.thank you all</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-159", "159", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=159#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-160"></A>
+  <DIV id="li-comment-160" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(38).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Ratih</SPAN><SPAN 
+  class="date">August 12, 2011 at 3:12 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-160">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-160" class="comment-entry">
+  <P>Thank you,<BR>It’s really simple tutorial but very very helpful.</P>
+  <P>can i ask you, i cannot view the data (cannot read data from database). 
+  What’s my problem?</P>
+  <P>Regards,<BR>RNg</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-160", "160", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=160#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-161"></A>
+  <DIV id="li-comment-161" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(39).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Thomas Francl</SPAN><SPAN class="date">August 
+  19, 2011 at 5:26 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-161">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-161" class="comment-entry">
+  <P>This is the first useful example that actually works!  Thank you 
+  Christophe.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-161", "161", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=161#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-162"></A>
+  <DIV id="li-comment-162" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(40).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Hema Venkataraman</SPAN><SPAN 
+  class="date">August 20, 2011 at 5:38 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-162">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-162" class="comment-entry">
+  <P>Thanks so much for the tutorial.<BR>I Created Family and FamilyDetails 
+  instead of employee<BR> I am stuck in the step 4. When I click on the list 
+  item it just opens an empty screen with the app name. It does not show up the 
+  details of the family. I used the log also whatever I logged after the call to 
+  Super create in the Family Details class also is not getting printed. I am 
+  doubtful whether it has started the Family Details Activity at all.</P>
+  <P>The log final lines are:</P>
+  <P>I/ActivityManager(   68): Starting: Intent { 
+  cmp=com.familydb/.FamilyDetails (has extras) } from pid 337<BR>
+  I/ActivityManager(   68): Displayed com.familydb/.FamilyDetails: +524ms</P>
+  <P>That is it. I am not seeing anything except the app name on the top and 
+  empty screen below.</P>
+  <P>Can anyone help me ?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-162", "162", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=162#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-164"></A>
+  <DIV id="li-comment-164" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(41).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Gianni</SPAN><SPAN 
+  class="date">December 14, 2011 at 7:18 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-164">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-164" class="comment-entry">
+  <P>Very useful. Code well built</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-164", "164", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=164#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-165"></A>
+  <DIV id="li-comment-165" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/4bc97c0cda172bcc9c9554f62605fab0.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://kiranatama.com']);" 
+  href="http://kiranatama.com/" rel="external nofollow">agus @ ROR 
+  Developer</A></SPAN><SPAN class="date">December 14, 2011 at 11:47 
+  pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-165">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-165" class="comment-entry">
+  <P>Great tutorial! Now, how do we package the files (or turn it into an app) 
+  so that we don’t have to have our phone plugged into our computer to access 
+  it?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-165", "165", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=165#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-166"></A>
+  <DIV id="li-comment-166" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(42).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">yogi</SPAN><SPAN 
+  class="date">December 17, 2011 at 9:41 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-166">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-166" class="comment-entry">
+  <P>hey give the complete project zip……….</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-166", "166", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=166#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-167"></A>
+  <DIV id="li-comment-167" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(43).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.vertygoeclypse.com']);" 
+  href="http://www.vertygoeclypse.com/" 
+  rel="external nofollow">Colin</A></SPAN><SPAN class="date">December 30, 2011 
+  at 11:52 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-167">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-167" class="comment-entry">
+  <P>Hey,<BR>I am now learning to program in Android and I am trying your 
+  tutorials, I am having an issue with step 3 as the data is not showing up in 
+  the emulator. I believe I possibly typed something wrong but I cannot seem to 
+  find it. Can you assist me please.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-167", "167", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=167#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-168"></A>
+  <DIV id="li-comment-168" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(44).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://student']);" 
+  href="http://student/" rel="external nofollow">ANdres</A></SPAN><SPAN class="date">January 
+  3, 2012 at 6:00 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-168">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-168" class="comment-entry">
+  <P>Hi,<BR>Great tutorial!! and its funny how you used “the office” employees 
+  for your tutorial :)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-168", "168", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=168#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-9692"></A>
+  <DIV id="li-comment-9692" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(45).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Ian Vilar</SPAN><SPAN class="date">January 
+  13, 2012 at 1:54 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-9692">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-9692" class="comment-entry">
+  <P>Thank you very much for the tutorial, I’m starting android development and 
+  it helped me a lot to understand somethings.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-9692", "9692", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=9692#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-11751"></A>
+  <DIV id="li-comment-11751" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(46).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">naveen</SPAN><SPAN 
+  class="date">January 17, 2012 at 7:40 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-11751">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-11751" class="comment-entry">
+  <P>how to set the different icon to the list in android…….plz help me</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-11751", "11751", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=11751#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment even depth-2"><A name="comment-12935"></A>
+    <DIV id="li-comment-12935" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ec18edaae59b069a7650d3b42b3bed28.png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://androidresearch.wordpress.com']);" 
+    href="http://androidresearch.wordpress.com/" 
+    rel="external nofollow">AndroidResearch</A></SPAN><SPAN class="date">January 
+    19, 2012 at 3:44 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-12935">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-12935" class="comment-entry">
+    <P>@naveen, for what you want to achieve I believe you should consider this 
+    post: <A onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://androidresearch.wordpress.com']);" 
+    href="http://androidresearch.wordpress.com/2012/01/07/building-a-custom-fancy-listview-in-android/" 
+    rel="nofollow">http://androidresearch.wordpress.com/2012/01/07/building-a-custom-fancy-listview-in-android/</A></P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-12935", "12935", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=12935#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-14116"></A>
+  <DIV id="li-comment-14116" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(47).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Vik</SPAN><SPAN 
+  class="date">January 22, 2012 at 12:44 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-14116">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-14116" class="comment-entry">
+  <P>How to show the content of the database to enable me to navigate up and 
+  down the org chart of the organization. My emulator can only show one at the 
+  time.</P>
+  <P>great tutorial thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-14116", "14116", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=14116#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-14633"></A>
+  <DIV id="li-comment-14633" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/0e385edd8c5462d5f371ace0638e17af.png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">shoe</SPAN><SPAN 
+  class="date">January 23, 2012 at 8:10 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-14633">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-14633" class="comment-entry">
+  <P>Sorry to stray from the crowd but…<BR>In short your tutorial does noting 
+  more than provide the code. Youve simply thrown some rubbish example at us and 
+  then began with a sort of step 1… here’s the basics. Oh great i thought… then… 
+  step 2.. but by the time we get to step 2 we’re lost. Nice try though.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-14633", "14633", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=14633#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-14825"></A>
+  <DIV id="li-comment-14825" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/b365b870226024bbd1c0210c654e7d01.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">tanu</SPAN><SPAN 
+  class="date">January 24, 2012 at 7:16 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-14825">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-14825" class="comment-entry">
+  <P>its nt enough for the begineer :(</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-14825", "14825", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=14825#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-15127"></A>
+  <DIV id="li-comment-15127" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(48).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Richard</SPAN><SPAN 
+  class="date">January 24, 2012 at 11:19 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-15127">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-15127" class="comment-entry">
+  <P>Hi,</P>
+  <P>When I download the tutorial code and import it into eclipse. I am greeted 
+  with the error message.</P>
+  <P>[2012-01-24 20:41:39 - EmployeeDirectory1] Unable to resolve target 
+  ‘android-8′</P>
+  <P>and</P>
+  <P>Project ‘EmployeeDirectory1′ is missing required source folder: ‘gen’</P>
+  <P>How do I go about resolving the issue?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-15127", "15127", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=15127#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-16505"></A>
+  <DIV id="li-comment-16505" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(49).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">zahid</SPAN><SPAN 
+  class="date">January 27, 2012 at 11:51 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-16505">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-16505" class="comment-entry">
+  <P>Any body have full project code of this application plz mail me at <A href="mailto:zahidiqbal1990@yahoo.com">zahidiqbal1990@yahoo.com</A> 
+  I will be very thankful to him/her.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-16505", "16505", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=16505#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-19198"></A>
+  <DIV id="li-comment-19198" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(50).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Yunus</SPAN><SPAN 
+  class="date">February 1, 2012 at 2:04 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-19198">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-19198" class="comment-entry">
+  <P>Unfortunately, only first record in the xml file added to the database. I 
+  cant make other records to insert to database. Is anybody have a similar 
+  problem like that ?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-19198", "19198", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=19198#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment odd alt depth-2"><A name="comment-19201"></A>
+    <DIV id="li-comment-19201" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(50).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">Yunus</SPAN><SPAN 
+    class="date">February 1, 2012 at 2:19 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-19201">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-19201" class="comment-entry">
+    <P>It’s OK. cause of some missing escape chars.</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-19201", "19201", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=19201#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+    <UL class="children">
+      <LI class="comment even depth-3"><A name="comment-22355"></A>
+      <DIV id="li-comment-22355" class="comment-container">
+      <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(47).png" 
+      width="40" height="40"></DIV>
+      <DIV class="comment-head"><SPAN class="name">Vik</SPAN><SPAN 
+      class="date">February 10, 2012 at 5:02 am</SPAN><SPAN class="perma"><A 
+      title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-22355">#</A></SPAN><SPAN 
+      class="edit"></SPAN></DIV><!-- /.comment-head -->
+      <DIV id="comment-22355" class="comment-entry">
+      <P>Hi Yunus,<BR>I have the same problem. What do you mean by escape 
+      chars.<BR>Thanks for your help</P>
+      <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-22355", "22355", "respond", "1030")' 
+      href="http://coenraets.org/blog/androidtutorial/?replytocom=22355#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+    </UL></LI>
+    <LI class="comment odd alt depth-2"><A name="comment-24285"></A>
+    <DIV id="li-comment-24285" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(51).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">Henry</SPAN><SPAN 
+    class="date">February 16, 2012 at 6:57 pm</SPAN><SPAN class="perma"><A 
+    title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-24285">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-24285" class="comment-entry">
+    <P>Hi,</P>
+    <P>Did you manage to sort out how to insert new employees?</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-24285", "24285", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=24285#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-21173"></A>
+  <DIV id="li-comment-21173" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(52).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Fadi Ramadan</SPAN><SPAN class="date">February 
+  6, 2012 at 7:54 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-21173">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-21173" class="comment-entry">
+  <P>How can i keep the list showing?<BR>I want the list to show up even if i 
+  didn’t input anything and when you use the search bar it kinda filters the 
+  items out!<BR>PLEASE help :)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-21173", "21173", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=21173#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-21771"></A>
+  <DIV id="li-comment-21771" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(52).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Fadi Ramadan</SPAN><SPAN class="date">February 
+  8, 2012 at 12:16 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-21771">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-21771" class="comment-entry">
+  <P>How can I autoclick the search item!<BR>I want to auto click the 
+  button!!!!<BR>so that the list comes up by defualt and then you can search 
+  it!</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-21771", "21771", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=21771#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment even depth-2"><A name="comment-31313"></A>
+    <DIV id="li-comment-31313" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(53).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">Steve</SPAN><SPAN 
+    class="date">March 11, 2012 at 4:46 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-31313">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-31313" class="comment-entry">
+    <P>Hi, Great tutorial, thanks.</P>
+    <P>Can you tell me how i would auto populate the list view?</P>
+    <P>When we enter the listview, it is blank until 1: we request search 
+    results, or 2: click the search button when the EditText is empty. I would 
+    like to populate the listview with the full contents of my database when we 
+    first enter the activity.</P>
+    <P>Any help would be appreciated, thanks.</P>
+    <P>Thanks,<BR>Stevie.</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-31313", "31313", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=31313#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-22077"></A>
+  <DIV id="li-comment-22077" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(52).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Fadi Ramadan</SPAN><SPAN class="date">February 
+  9, 2012 at 9:57 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-22077">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-22077" class="comment-entry">
+  <P>How can i add a photo ? to details and a thumbnail to the listview???<BR>
+  Please help !!!</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-22077", "22077", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=22077#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-22280"></A>
+  <DIV id="li-comment-22280" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(54).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.farukonder.net']);" 
+  href="http://www.farukonder.net/" 
+  rel="external nofollow">Faruk</A></SPAN><SPAN class="date">February 9, 2012 at 
+  11:04 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-22280">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-22280" class="comment-entry">
+  <P>hi,<BR>When I started this tutorial this morning, I did not know almost 
+  nothing  about how to write an application to android. but this article help 
+  me a lot.  </P>
+  <P>thanks for your greate work</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-22280", "22280", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=22280#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-22386"></A>
+  <DIV id="li-comment-22386" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(55).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">ekrem</SPAN><SPAN 
+  class="date">February 10, 2012 at 7:26 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-22386">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-22386" class="comment-entry">
+  <P>Great work</P>
+  <P>I have question about  your search routine</P>
+  <P>cursor = db.rawQuery(“SELECT _id, firstName, lastName, title FROM employee 
+  WHERE firstName || ‘ ‘ || lastName LIKE ?”,   new String[]{“%” + 
+  searchText.getText().toString() + “%”});<BR>your search parameter is sql 
+  searching whit LIKE  parameter<BR>when type ” s” then starting search and then 
+  listing  includade first name first character “s”<BR>how I can setting your  
+  search routine whitout LIKE parameter </P>
+  <P>so when type only “s” character system dont result any  record even include 
+  firstame  start character “s”</P>
+  <P>sorty my englısh</P>
+  <P>regards</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-22386", "22386", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=22386#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-22486"></A>
+  <DIV id="li-comment-22486" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(55).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">ekrem</SPAN><SPAN 
+  class="date">February 10, 2012 at 2:10 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-22486">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-22486" class="comment-entry">
+  <P>in search routine ,<BR>how I can showing screen “no employee found” if not 
+  finding matching  employee name<BR>whit toast message</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-22486", "22486", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=22486#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-23200"></A>
+  <DIV id="li-comment-23200" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(56).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://anwebservices.com']);" 
+  href="http://anwebservices.com/" rel="external nofollow">AN Web 
+  Services</A></SPAN><SPAN class="date">February 13, 2012 at 2:01 am</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-23200">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-23200" class="comment-entry">
+  <P>WOW… Great shortcut to what i need to create list of social club members. 
+  Great article. Thanks for sharing :)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-23200", "23200", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=23200#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-23634"></A>
+  <DIV id="li-comment-23634" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/3cf6a6d19050370830db85c6eab90a99.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.mobileappwizard.com']);" 
+  href="http://www.mobileappwizard.com/" rel="external nofollow">Android app 
+  builder</A></SPAN><SPAN class="date">February 14, 2012 at 12:41 pm</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-23634">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-23634" class="comment-entry">
+  <P>Android is the phone whose market is day after day increasing. People are 
+  using the phone with android OS because it is too cheaper and provide the 
+  great stability to user of this.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-23634", "23634", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=23634#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-24280"></A>
+  <DIV id="li-comment-24280" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(51).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Henry</SPAN><SPAN 
+  class="date">February 16, 2012 at 6:28 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-24280">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-24280" class="comment-entry">
+  <P>Hi,</P>
+  <P>I am trying to add/remove emplyees in the sql.xml file but nothing seems to 
+  work. The original list just keeps loading everytime. can you help with this 
+  please?</P>
+  <P>Thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-24280", "24280", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=24280#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-26364"></A>
+  <DIV id="li-comment-26364" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(57).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">F. A.</SPAN><SPAN 
+  class="date">February 23, 2012 at 6:37 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-26364">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-26364" class="comment-entry">
+  <P>Dwight is Assistant TO THE Regional Manager ;)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-26364", "26364", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=26364#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-26454"></A>
+  <DIV id="li-comment-26454" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/5535295c69d23b872494f6b137badf4d.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.andolasoft.com']);" 
+  href="http://www.andolasoft.com/" 
+  rel="external nofollow">Andolasoft</A></SPAN><SPAN class="date">February 24, 
+  2012 at 5:16 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-26454">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-26454" class="comment-entry">
+  <P>This is quit interesting for android application developer. But if you have 
+  any question about Android problem then you can ask me.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-26454", "26454", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=26454#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-26565"></A>
+  <DIV id="li-comment-26565" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(58).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://bxvxcxg.net']);" 
+  href="http://bxvxcxg.net/" rel="external nofollow">Gisela 
+  Novoa</A></SPAN><SPAN class="date">February 24, 2012 at 4:34 pm</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-26565">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-26565" class="comment-entry">
+  <P>Excellent article. I like your zero bs articles they’re the main reason I 
+  keep coming back here.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-26565", "26565", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=26565#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-27085"></A>
+  <DIV id="li-comment-27085" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(59).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.carsanjay.com']);" 
+  href="http://www.carsanjay.com/" 
+  rel="external nofollow">carsanjay</A></SPAN><SPAN class="date">February 26, 
+  2012 at 7:24 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-27085">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-27085" class="comment-entry">
+  <P>this is tutorial for me who want to get started for android programming. 
+  thanks uncle !</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-27085", "27085", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=27085#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-27305"></A>
+  <DIV id="li-comment-27305" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/7180b8ccf61a6d622eb5229963da553f.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.arthisoft.com']);" 
+  href="http://www.arthisoft.com/andoird" rel="external nofollow">android app 
+  development</A></SPAN><SPAN class="date">February 27, 2012 at 12:31 
+  pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-27305">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-27305" class="comment-entry">
+  <P>great share and its really good that build an application by own with out 
+  anybodies help too good keep on buddy</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-27305", "27305", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=27305#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-28122"></A>
+  <DIV id="li-comment-28122" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(60).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Girish</SPAN><SPAN 
+  class="date">February 29, 2012 at 8:50 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-28122">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-28122" class="comment-entry">
+  <P>Hi, i’m new to android. tell me how to set the text which is fetched from 
+  database and in each row there should be two or more textviews with 
+  buttons.Please tell me how to implement this.U can send source code to my mail 
+  id <A href="mailto:girishbht5@gmail.com">girishbht5@gmail.com</A></P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-28122", "28122", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=28122#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-30369"></A>
+  <DIV id="li-comment-30369" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(61).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://electronicprojs.blogspot.com']);" 
+  href="http://electronicprojs.blogspot.com/" 
+  rel="external nofollow">Muninder</A></SPAN><SPAN class="date">March 7, 2012 at 
+  12:28 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-30369">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-30369" class="comment-entry">
+  <P>Very nice article, just a comment please mention the pre-requisite as 
+  Android Version &gt;1.5<BR>Coz Android 1.5 doesn’t support = &gt; 
+  android:onClick=”search” /&gt;</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-30369", "30369", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=30369#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-30591"></A>
+  <DIV id="li-comment-30591" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(62).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">NarasingaMoorthy</SPAN><SPAN 
+  class="date">March 8, 2012 at 7:11 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-30591">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-30591" class="comment-entry">
+  <P>Hi,this is nice …its very use full for me..i am using step 6 in my android 
+  application..i created sql.xml file  for inserted my data (id ,name and phone 
+  number)first time created and listed in my emulator…my question is inserted 
+  again record in my sql its not affected emulator..my problem is again and 
+  again  repeated… please help me..</P>
+  <P>thanks in advance…</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-30591", "30591", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=30591#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-30895"></A>
+  <DIV id="li-comment-30895" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(63).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.farasbee.com']);" 
+  href="http://www.farasbee.com/blog" 
+  rel="external nofollow">Muralidhar</A></SPAN><SPAN class="date">March 9, 2012 
+  at 10:49 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-30895">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-30895" class="comment-entry">
+  <P>Nice tutorial!<BR>Found another cool tutorial on how to make a super simple 
+  android app super quickly here <A onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://bit.ly']);" 
+  href="http://bit.ly/xisquz" rel="nofollow">http://bit.ly/xisquz</A></P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-30895", "30895", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=30895#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-31082"></A>
+  <DIV id="li-comment-31082" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(64).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Matt</SPAN><SPAN 
+  class="date">March 10, 2012 at 6:54 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-31082">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-31082" class="comment-entry">
+  <P>Actually, Dwight Schrute is “Assistant to the General Manager”/</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-31082", "31082", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=31082#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-32699"></A>
+  <DIV id="li-comment-32699" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(65).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Renato Fernandes</SPAN><SPAN 
+  class="date">March 15, 2012 at 7:20 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-32699">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-32699" class="comment-entry">
+  <P>Is it just me or the tutorial misses the listener for the button? Well, I 
+  managed to fix this by including at the EmployeeList class the following 
+  inside onCreate() method:</P>
+  <P>        Button searchButton = (Button)findViewById(R.id.searchButton);<BR>  
+        searchButton.setOnClickListener(new OnClickListener() {<BR>
+  			@Override<BR>			public void onClick(View view) {<BR>
+  				search(employeeList);<BR>			}<BR>		});</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-32699", "32699", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=32699#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment odd alt depth-2"><A name="comment-96231"></A>
+    <DIV id="li-comment-96231" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(66).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">winux</SPAN><SPAN 
+    class="date">July 16, 2012 at 5:03 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-96231">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-96231" class="comment-entry">
+    <P>Is it just me or the tutorial misses the listener for the button? Well, I 
+    managed to fix this by including at the EmployeeList class the following 
+    inside onCreate() method:</P>
+    <P>Button searchButton = (Button)findViewById(R.id.searchButton);<BR>
+    searchButton.setOnClickListener(new OnClickListener() {<BR>@Override<BR>
+    public void onClick(View view) {<BR>search(employeeList);<BR>}<BR>});</P>
+    <P>I think you are right I am nor trying to locate the exact location so I 
+    can insert the Button</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-96231", "96231", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=96231#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-32798"></A>
+  <DIV id="li-comment-32798" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(67).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">herethere</SPAN><SPAN class="date">March 
+  16, 2012 at 2:49 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-32798">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-32798" class="comment-entry">
+  <P>how do I change the database, changing the names, titles, contact nos., 
+  etc?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-32798", "32798", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=32798#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-34997"></A>
+  <DIV id="li-comment-34997" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(68).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">anbu</SPAN><SPAN 
+  class="date">March 22, 2012 at 7:57 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-34997">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-34997" class="comment-entry">
+  <P>this tutorial is nice &amp; help to me. i am new Android Developer . this 
+  field is very new for me. this tutorial is very helpful &amp; GUIDE TO ME . 
+  THANKS.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-34997", "34997", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=34997#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-even depth-1"><A name="comment-37140"></A>
+  <DIV id="li-comment-37140" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(69).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Dave</SPAN><SPAN 
+  class="date">March 27, 2012 at 9:15 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-37140">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-37140" class="comment-entry">
+  <P>Can somebody tell me how you can change the database entries please? 
+  Thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-37140", "37140", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=37140#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-odd thread-alt depth-1"><A name="comment-39838"></A>
+  <DIV id="li-comment-39838" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(70).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://mobileappwizard.com']);" 
+  href="http://mobileappwizard.com/" rel="external nofollow">Android App 
+  Builder</A></SPAN><SPAN class="date">April 2, 2012 at 4:35 am</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-39838">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-39838" class="comment-entry">
+  <P>I agree with you.This is quit interesting for android application 
+  developer. But if you have any question about Android problem then you can ask 
+  me..Thanks for the great info!!</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-39838", "39838", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=39838#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container -->
+  <UL class="children">
+    <LI class="comment even depth-2"><A name="comment-47827"></A>
+    <DIV id="li-comment-47827" class="comment-container">
+    <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(71).png" 
+    width="40" height="40"></DIV>
+    <DIV class="comment-head"><SPAN class="name">Aarvi</SPAN><SPAN 
+    class="date">April 18, 2012 at 2:01 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+    href="http://coenraets.org/blog/androidtutorial/#comment-47827">#</A></SPAN><SPAN 
+    class="edit"></SPAN></DIV><!-- /.comment-head -->
+    <DIV id="comment-47827" class="comment-entry">
+    <P>Hey Team,<BR>I was good till step 2, but in Step 3,  I am unable to 
+    populate the list when click on the Search button.<BR>1. I have added the 
+    search method on the onClick event of Button.<BR>2. Also I have added the 
+    listener for the Button in the onCreate Method.<BR>Button searchButton = 
+    (Button)findViewById(R.id.btnSearch);<BR>searchButton.setOnClickListener(new 
+    OnClickListener() {<BR>@Override<BR>public void onClick(View view) {<BR>
+    search(lstViewResources);<BR>}<BR>});</P>
+    <P>But both the things above didnt work out.<BR>Can you help me with this 
+    problem. Also one thing I was unable to SOP the values and strings, I dnt 
+    know if I am doing something wrong, but I think it must be pretty 
+    straightforward with the SOP command.</P>
+    <P>Thanks in advance for the suggestions<BR>Aarvi</P>
+    <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-47827", "47827", "respond", "1030")' 
+    href="http://coenraets.org/blog/androidtutorial/?replytocom=47827#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  </UL></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-40082"></A>
+  <DIV id="li-comment-40082" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/066f204e98bf9e8e4c4c48939483879c.png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Pierre</SPAN><SPAN 
+  class="date">April 2, 2012 at 6:17 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-40082">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-40082" class="comment-entry">
+  <P>“we populate the database using an XML documents as opposed to the 
+  hardcoded sample data used in the previous steps”</P>
+  <P>I can understand having your data in an XML file. Separating data from code 
+  sounds like a good idea. But raw sql statements? How is this better than your 
+  java Database helper?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-40082", "40082", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=40082#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-47824"></A>
+  <DIV id="li-comment-47824" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(71).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Aarvi</SPAN><SPAN 
+  class="date">April 18, 2012 at 1:46 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-47824">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-47824" class="comment-entry">
+  <P>Thank you so much for the post.<BR>Its really great for helping the newbies 
+  like me.<BR>I have done good till step 2, but after that I am unable to 
+  populate the list.<BR>1. I have added the search method on the onClick event 
+  of Button.<BR>2. Also I have added the listener for the Button in the onCreate 
+  Method.<BR>			Button searchButton = (Button)findViewById(R.id.btnSearch);<BR>
+  			searchButton.setOnClickListener(new OnClickListener() {<BR>			@Override<BR>
+  			public void onClick(View view) {<BR>			search(lstViewResources);<BR>
+  			}<BR>			});</P>
+  <P>But both the things above didnt work out.<BR>Can any one help me with this 
+  problem. Also one thing I was unable to SOP the values and strings, I dnt know 
+  if I am doing something wrong, but I think it must be pretty straightforward 
+  with the SOP command.</P>
+  <P>Thanks in advance for the suggestions<BR>Aarvi</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-47824", "47824", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=47824#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-56336"></A>
+  <DIV id="li-comment-56336" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(72).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Prakash</SPAN><SPAN 
+  class="date">May 7, 2012 at 9:21 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-56336">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-56336" class="comment-entry">
+  <P>I am new to android. can u tell me how to save tamil words in android 
+  database and retrieve it.. i have searched many things but nothing worked 
+  out.. Help me..</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-56336", "56336", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=56336#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-61514"></A>
+  <DIV id="li-comment-61514" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(73).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://none']);" 
+  href="http://none/" rel="external nofollow">Chris</A></SPAN><SPAN 
+  class="date">May 17, 2012 at 6:37 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-61514">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-61514" class="comment-entry">
+  <P>Id like to accomplish the same but I would like to import my Directory data 
+  from a .csv file. The data includes name, location, phone number, ect. I want 
+  the app user to be able to seach the directory based on different filters 
+  (location, ect). Once a person from the directory is loaded, Id like to have 
+  the option of the user uploading a photo that would appear on the bottom that 
+  entry page (in a photo album).</P>
+  <P>Not sure how/If the 2 databases can be created using this method. i am also 
+  looking into AppInventor/Twdb.</P>
+  <P>Thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-61514", "61514", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=61514#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-62233"></A>
+  <DIV id="li-comment-62233" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(74).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">gayathri</SPAN><SPAN 
+  class="date">May 19, 2012 at 5:01 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-62233">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-62233" class="comment-entry">
+  <P>hello,<BR>i want to build an app in which after taking picture it should 
+  give some information can u guide me how to do this..<BR>thank you</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-62233", "62233", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=62233#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-64326"></A>
+  <DIV id="li-comment-64326" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(75).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Carribean</SPAN><SPAN class="date">May 
+  23, 2012 at 12:09 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-64326">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-64326" class="comment-entry">
+  <P>WOW! This tutorial is Marvelous. Its so understandable and step-by-step 
+  guide.<BR>Please can you help me out.<BR>I am developing a GPS tracking app on 
+  Android 2.2 using Eclipse IDE and want to send Location updates between two 
+  Android phones so that both can track one another over the Map.<BR> Its like 
+  if some family members go somewhere then they can track each other’s location 
+  on the map using GPS by using this app.<BR> Please I dont know where to start, 
+  please I need help, its urgent.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-64326", "64326", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=64326#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-66530"></A>
+  <DIV id="li-comment-66530" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(76).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://system071.cytrontech.com']);" 
+  href="http://system071.cytrontech.com/" 
+  rel="external nofollow">phontric</A></SPAN><SPAN class="date">May 28, 2012 at 
+  7:20 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-66530">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-66530" class="comment-entry">
+  <P>Thank you So much, its hard to find tutorials that are Complex but simple 
+  to Understand this is one of those tutorials very simple concept of Using the 
+  SQLiteDb in android.</P>
+  <P>Your concept was very useful to me so let me shear what i did with your 
+  concept.</P>
+  <P>DBHandler CLass (Snipit)<BR>
+  ================================================<BR>/////[OPEN THE 
+  DATABASE]/////////////////////////////////////////////////////////////////////////////////<BR> 
+  public DbHandler open() throws SQLException{<BR>	 Log.d(“chk”, “chk 3  
+  dbhelper call  open”);<BR>db = dbhlper.getWritableDatabase();</P>
+  <P>	 return this;<BR> }</P>
+  <P>/////[CLOSE THE 
+  DATABASE]///////////////////////////////////////////////////////////////////////////////<BR> 
+  public void close(){<BR>	 db.close();<BR> }</P>
+  <P>///[SEARCH 
+  SET]/////////////////////////////////////////////////////////////////////////////////////////////////////<BR>
+  public Cursor search(String stext)throws SQLException{<BR>	 Log.d(“dbchk”, 
+  “Search fucation call”);<BR>return db.rawQuery(“SELECT _id, ”<BR>+” 
+  entery_name ”        //Colm 0 get (ID)<BR>                        +”, Fcity ”  
+             //Colm 1 get<BR>			            +”, Fdate ”             //Colm 2 
+  get<BR>                        +”, lgps ”              //Colm 3 get<BR>			     
+         +”, SysMonth ”          //Colm 4 get<BR>                        +”, 
+  SysYear ”           //Colm 5 get<BR>                        +”, TimeEvent”     
+       //Colm 6 get<BR>			            +” FROM taggingTable ”  //Table to 
+  GetFrom<BR>                        +” WHERE ”              //Checker 
+  KEYWORD<BR>			            +” Post_Code ”          //Colm to LookIn 1<BR>       
+                   +” || ‘ ‘ || ”          //Colm to LookIn 2<BR>			            
+  +” Fdate || ”           //Colm to LookIn 3<BR>                        +” 
+  SysMonth || ”        //Colm to LookIn 4<BR>			            +” SysYear ”         
+     //Colm to LookIn 5<BR>                        +” LIKE ?”, new String[]{“%” 
+  + stext + “%”});     //Search String “stext” from the call Activity<BR> }</P>
+  <P>===========================================================================================</P>
+  <P>CallingActivity class **note: this is any class that is goting to call the 
+  DB<BR>CallingActivity Class (Snipit)<BR>
+  ============================================================================================<BR>
+  DBHandler dbHler = new DHandler();<BR>Cursor cCursor;</P>
+  <P>public void searchqry(View view){<BR>		dbHdler.open();<BR>		cCursor = 
+  dbHdler.search(searchText.getText().toString());   //What is passed is a 
+  String<BR>				adapter = new SimpleCursorAdapter(this,<BR>
+  						R.layout.queryreturn,<BR>						cCursor,<BR>						new String[] 
+  {“entery_name”, “Fcity”, “lgps” , “TimeEvent” ,”_id”},<BR>new int[] 
+  {R.id.tvSrchImgName, R.id.tvSrchCity, R.id.tvSrchGPS ,R.id.tvSrchTime , 
+  R.id.tvSrchTID});<BR>				monthList.setAdapter(adapter);<BR>
+  		dbHdler.close();<BR>	}</P>
+  <P>=============================================================================================</P>
+  <P>My Calling Activity has not idea whats going on in the Database on the 
+  DBhandler<BR>this way you can apply this to other Activity which want to call 
+  the search.</P>
+  <P>more of setup one time used many times </P>
+  <P>but i dont take any create for this all the credit is Christophe for 
+  showing this concept<BR>Thank you </P>
+  <P>I will add your site as a link to my Website i am a Website admin for many 
+  website i think i will add Links<BR>on them as well in relavent to the content 
+  here.<BR>Hit back on mrsweetps11v?a?gmail?dot?com</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-66530", "66530", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=66530#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-77472"></A>
+  <DIV id="li-comment-77472" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(77).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Ronny</SPAN><SPAN 
+  class="date">June 16, 2012 at 8:28 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-77472">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-77472" class="comment-entry">
+  <P>I just cant add this sign &amp; not even like this &amp; og &amp; og 
+  \u0026.<BR>I har in the sql.xml like this –&gt; INSERT INTO employee 
+  VALUES(27,’Enoksen&amp; …….)<BR>but it´gives me error.<BR>not even this<BR>
+  INSERT INTO employee VALUES(27,’Enoksen&amp;’….) works<BR>help me how do i 
+  overcome the use of amp/&amp; in the sql statement lines, please help me.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-77472", "77472", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=77472#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-84872"></A>
+  <DIV id="li-comment-84872" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(78).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">suresh s</SPAN><SPAN 
+  class="date">June 27, 2012 at 5:08 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-84872">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-84872" class="comment-entry">
+  <P>I am new to android . Can someone help me to develop a battery saver for 
+  android 2.1.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-84872", "84872", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=84872#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A 
+  name="comment-98503"></A>
+  <DIV id="li-comment-98503" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(79).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">somebody</SPAN><SPAN 
+  class="date">July 20, 2012 at 6:41 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-98503">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-98503" class="comment-entry">
+  <P>Why do people keep linking the Android to Windows for? The AndroidOS is 
+  Linux-based…</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-98503", "98503", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=98503#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-100652"></A>
+  <DIV id="li-comment-100652" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(80).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.tapedition.com']);" 
+  href="http://www.tapedition.com/" rel="external nofollow">Digital 
+  Publishing</A></SPAN><SPAN class="date">July 24, 2012 at 9:15 am</SPAN><SPAN 
+  class="perma"><A title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-100652">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-100652" class="comment-entry">
+  <P>Thank you for this great tutorial..It helped me lot…Moreover those who are 
+  interested in creating new apps for them its very useful.Thanks for sharing 
+  this great article…NIce job…Keep sharing..</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-100652", "100652", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=100652#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-101668"></A>
+  <DIV id="li-comment-101668" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(81).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">angelo</SPAN><SPAN 
+  class="date">July 26, 2012 at 1:30 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-101668">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-101668" class="comment-entry">
+  <P>hi i just tried your application but when i click the button the 
+  application crashes am i missing something?i followed every step i am new to 
+  android could you please help<BR>thanks</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-101668", "101668", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=101668#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-105595"></A>
+  <DIV id="li-comment-105595" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(82).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.rtechinsane.in']);" 
+  href="http://www.rtechinsane.in/" rel="external nofollow">anil</A></SPAN><SPAN 
+  class="date">August 1, 2012 at 2:30 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-105595">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-105595" class="comment-entry">
+  <P>nice tutorial,www.rtechinsane.in</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-105595", "105595", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=105595#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-105596"></A>
+  <DIV id="li-comment-105596" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(82).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.rtechinsane.in']);" 
+  href="http://www.rtechinsane.in/" rel="external nofollow">anil</A></SPAN><SPAN 
+  class="date">August 1, 2012 at 2:31 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-105596">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-105596" class="comment-entry">
+  <P>nice tutorial,</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-105596", "105596", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=105596#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-106860"></A>
+  <DIV id="li-comment-106860" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(83).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">toyu</SPAN><SPAN 
+  class="date">August 4, 2012 at 5:36 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-106860">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-106860" class="comment-entry">
+  <P>Thank you.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-106860", "106860", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=106860#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-113073"></A>
+  <DIV id="li-comment-113073" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(84).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">leela</SPAN><SPAN 
+  class="date">August 19, 2012 at 10:45 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-113073">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-113073" class="comment-entry">
+  <P>send me source code….</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-113073", "113073", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=113073#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-114239"></A>
+  <DIV id="li-comment-114239" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(85).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://mikepua.blogspot.com']);" 
+  href="http://mikepua.blogspot.com/" rel="external nofollow">Mike 
+  Pua</A></SPAN><SPAN class="date">August 22, 2012 at 7:33 pm</SPAN><SPAN class="perma"><A 
+  title="Direct link to this comment" href="http://coenraets.org/blog/androidtutorial/#comment-114239">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-114239" class="comment-entry">
+  <P>Very useful tutorial specially that search thing :) Been searching for 
+  actual code with layout on search feature for the list contents..</P>
+  <P>Thanks.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-114239", "114239", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=114239#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-131316"></A>
+  <DIV id="li-comment-131316" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(86).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://yahoo.com']);" 
+  href="http://yahoo.com/" rel="external nofollow">kalidas</A></SPAN><SPAN 
+  class="date">October 2, 2012 at 10:45 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-131316">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-131316" class="comment-entry">
+  <P>Great tutorials…</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-131316", "131316", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=131316#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-133527"></A>
+  <DIV id="li-comment-133527" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/f53e54af78f689212d5c5d0e7bc2b0b3.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://gmail.com']);" 
+  href="http://gmail.com/" rel="external nofollow">unknown</A></SPAN><SPAN 
+  class="date">October 5, 2012 at 3:46 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-133527">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-133527" class="comment-entry">
+  <P>where are the source codes?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-133527", "133527", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=133527#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-151530"></A>
+  <DIV id="li-comment-151530" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(87).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Philip</SPAN><SPAN 
+  class="date">October 27, 2012 at 12:15 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-151530">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-151530" class="comment-entry">
+  <P>I foudn an article which was quite good and easy to follow and create a 
+  simple app… <A onclick="javascript:_gaq.push(['_trackEvent','outbound-comment','http://www.vaidy.org']);" 
+  href="http://www.vaidy.org/10/post/2012/10/basic-ui-tutorial.html" rel="nofollow">http://www.vaidy.org/10/post/2012/10/basic-ui-tutorial.html</A></P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-151530", "151530", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=151530#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-159968"></A>
+  <DIV id="li-comment-159968" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/865e960c71be4073debc3ae4a05016d2.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Euge</SPAN><SPAN 
+  class="date">November 2, 2012 at 10:35 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-159968">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-159968" class="comment-entry">
+  <P>Hi</P>
+  <P>Thanks for this tutorial, it is most informative.  There is one small thing 
+  though:</P>
+  <P>everything works fine up to step 5, when I make the changes to 
+  EmployeeDetails I get an error with EmployeeAction -<BR>protected List 
+  actions;<BR>gives the following error: “EmployeeAction cannot be resolved to a 
+  type”<BR>this is repeated for every instance of  EmployeeAction – ideas?</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-159968", "159968", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=159968#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-179915"></A>
+  <DIV id="li-comment-179915" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(88).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Ritesh</SPAN><SPAN 
+  class="date">November 16, 2012 at 11:53 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-179915">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-179915" class="comment-entry">
+  <P>how can i connect my database table which is located in 
+  c://wamp/www/project/ i.e in wamp server?? means i want to connect my tables 
+  to this project, in wat location i need to change the code…   please help 
+  me</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-179915", "179915", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=179915#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-209709"></A>
+  <DIV id="li-comment-209709" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(89).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">tlam</SPAN><SPAN 
+  class="date">December 5, 2012 at 5:51 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-209709">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-209709" class="comment-entry">
+  <P>Hello,</P>
+  <P>I followed the steps till #4, and the sample doesn’t work anymore.  My 
+  ListView acts as if it is not clickable and performs no action.  Also, 
+  “SimpleCursorAdapter” is deprecated, so what other class I should use?</P>
+  <P>Thanks.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-209709", "209709", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=209709#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-226719"></A>
+  <DIV id="li-comment-226719" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(90).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">surekha</SPAN><SPAN 
+  class="date">December 13, 2012 at 5:42 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-226719">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-226719" class="comment-entry">
+  <P>but i want how to built an android application if required coding</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-226719", "226719", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=226719#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-276374"></A>
+  <DIV id="li-comment-276374" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/f69d07dd579e08cfed59525ae5843a28.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Moksudul</SPAN><SPAN 
+  class="date">January 12, 2013 at 6:53 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-276374">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-276374" class="comment-entry">
+  <P>Any body have full project code of this application? please mail me at <A 
+  href="mailto:sufal_cse@yahoo.com">sufal_cse@yahoo.com</A> I will be very 
+  thankful to him/her.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-276374", "276374", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=276374#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-279643"></A>
+  <DIV id="li-comment-279643" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(91).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">swedenonline</SPAN><SPAN class="date">January 
+  14, 2013 at 12:42 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-279643">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-279643" class="comment-entry">
+  <P>Simple and easy way to interact with database and different layouts :)</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-279643", "279643", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=279643#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-338464"></A>
+  <DIV id="li-comment-338464" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(92).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name">Vikas</SPAN><SPAN 
+  class="date">February 25, 2013 at 8:34 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-338464">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-338464" class="comment-entry">
+  <P>Hello Sir,<BR>I am getting an error in EmployeeList.java in 
+  onListItemClick() method. It says that the String cannot be converted into 
+  Cursor..<BR>Error is ClassCastException..<BR>Please help me.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-338464", "338464", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=338464#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-346178"></A>
+  <DIV id="li-comment-346178" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/88fa48650af004da08d0f4034b31c979.jpg" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.esta-register.org']);" 
+  href="http://www.esta-register.org/" 
+  rel="external nofollow">esta</A></SPAN><SPAN class="date">March 4, 2013 at 
+  10:14 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-346178">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-346178" class="comment-entry">
+  <P>nice and cute tutorial. tnx for sharing</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-346178", "346178", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=346178#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment odd alt thread-even depth-1"><A name="comment-346185"></A>
+  <DIV id="li-comment-346185" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(93).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.ieltsclass.ir']);" 
+  href="http://www.ieltsclass.ir/" rel="external nofollow">آیلتس</A></SPAN><SPAN 
+  class="date">March 4, 2013 at 10:22 am</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-346185">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-346185" class="comment-entry">
+  <P>this tutorial is nice and useful for me.</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-346185", "346185", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=346185#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI>
+  <LI class="comment even thread-odd thread-alt depth-1"><A name="comment-347705"></A>
+  <DIV id="li-comment-347705" class="comment-container">
+  <DIV class="avatar"><IMG class="avatar avatar-40 photo" alt="" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/ad516503a11cd5ca435acc9bb6523536(94).png" 
+  width="40" height="40"></DIV>
+  <DIV class="comment-head"><SPAN class="name"><A class="url url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.k1100rs.de']);" 
+  href="http://www.k1100rs.de/index.php5?title=Benutzer_Diskussion:ColleenGo" 
+  rel="external nofollow">Darline Herschel Emely Derrick Ester Ben Tonie Dino 
+  Teresa Rodrick Mitsue Randal Eusebia Stacey Lavonda Arthur Janise Brandon 
+  Kristan Jess Annmarie Wendell Allyn Derick Keila Curt Tammara Eldridge Bree 
+  Lenny Tona Luther Laurene Mariano Kitty Arturo Sarah </A></SPAN><SPAN class="date">March 
+  5, 2013 at 12:48 pm</SPAN><SPAN class="perma"><A title="Direct link to this comment" 
+  href="http://coenraets.org/blog/androidtutorial/#comment-347705">#</A></SPAN><SPAN 
+  class="edit"></SPAN></DIV><!-- /.comment-head -->
+  <DIV id="comment-347705" class="comment-entry">
+  <P>Wow, marvelous blog layout! How long have you been blogging for?</P>
+  <P>you make blogging look easy. The overall look of your website is 
+  wonderful,<BR>let alone the content! Darline Herschel Emely Derrick Ester Ben 
+  Tonie Dino Teresa Rodrick Mitsue Randal Eusebia Stacey Lavonda Arthur Janise 
+  Brandon Kristan Jess<BR>Annmarie Wendell Allyn Derick Keila Curt Tammara 
+  Eldridge Bree<BR>Lenny Tona Luther Laurene Mariano Kitty Arturo Sarah Kennith 
+  Felecia Charley Rosie Donte Carmela Louis Norah Kip Melissa Johnathon Carma 
+  Gil Olivia Chauncey Fannie Oswaldo<BR>Denisse Gus Sharon Domingo Glinda Lesley 
+  Minta Irving<BR>Altagracia Dong Kathryne Markus Lori Alfredo Candie Steven 
+  Lara Hiram Tawna Dario Deeann Loren<BR>Tracey Wesley Corey Miles Ja Garth Geri 
+  Carter Easter Harris Laurel Kent Moon Stephen Madonna Val Carleen Neal Liberty 
+  Jerold Lady Alejandro Billie Miles</P>
+  <DIV class="reply"><A class="comment-reply-link" onclick='return addComment.moveForm("comment-347705", "347705", "respond", "1030")' 
+  href="http://coenraets.org/blog/androidtutorial/?replytocom=347705#respond">Reply</A></DIV><!-- /.reply --></DIV><!-- /comment-entry --></DIV><!-- /.comment-container --></LI></OL>
+<H3 id="comments-title">Trackbacks/Pingbacks</H3>
+<OL class="commentlist">
+  <LI id="comment-163"><SPAN class="author"><A class="url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://delphi-resource.com']);" 
+  href="http://delphi-resource.com/2011/android/" 
+  rel="external nofollow">Android - Programming Resources</A></SPAN> - 			<SPAN 
+  class="date">September 21, 2011</SPAN><SPAN class="pingcontent">
+  <P>[...] Building an Android Application in 6 Steps In this tutorial, you will 
+  learn to build an Android application in just 6 steps. [...]</P></SPAN></LI>
+  <LI id="comment-23606"><SPAN class="author"><A class="url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://x81.gabrielfair.com']);" 
+  href="http://x81.gabrielfair.com/blog/2012/02/14/more-sqlite/" rel="external nofollow">More 
+  SQLite | CPSC X81 BLOG</A></SPAN> - 			<SPAN class="date">February 14, 
+  2012</SPAN><SPAN class="pingcontent">
+  <P>[...] Example 4 Tutorial     Uncategorized   ← Great Database link.      /* 
+   */ [...]</P></SPAN></LI>
+  <LI id="comment-44190"><SPAN class="author"><A class="url" onclick="javascript:_gaq.push(['_trackEvent','outbound-commentauthor','http://www.geeknaut.com']);" 
+  href="http://www.geeknaut.com/how-to-make-android-apps-11197227.html" rel="external nofollow">How 
+  To Make Android Apps: Top Resources and Tutorials</A></SPAN> - 			<SPAN class="date">April 
+  11, 2012</SPAN><SPAN class="pingcontent">
+  <P>[...] [Visit Site] [...]</P></SPAN></LI></OL></DIV>
+<DIV id="respond">
+<H3 id="reply-title">Leave a Reply <SMALL><A style="display: none;" id="cancel-comment-reply-link" 
+href="http://coenraets.org/blog/androidtutorial/#respond" rel="nofollow">Click 
+here to cancel reply.</A></SMALL></H3>
+<FORM id="commentform" method="post" action="http://coenraets.org/blog/wp-comments-post.php">
+<P class="comment-form-author"><INPUT id="author" class="txt" tabIndex="1" 
+aria-required="true" name="author" size="30" type="text"><LABEL 
+for="author">Name <SPAN class="required">(required)</SPAN></LABEL> </P>
+<P class="comment-form-email"><INPUT id="email" class="txt" tabIndex="2" 
+aria-required="true" name="email" size="30" type="text"><LABEL for="email">Email 
+(will not be published) <SPAN class="required">(required)</SPAN></LABEL> </P>
+<P class="comment-form-url"><INPUT id="url" class="txt" tabIndex="3" name="url" 
+size="30" type="text"><LABEL for="url">Website</LABEL></P>
+<P class="comment-form-comment"><LABEL class="hide" 
+for="comment">Comment</LABEL><TEXTAREA id="comment" tabIndex="4" aria-required="true" cols="50" rows="10" name="comment"></TEXTAREA></P>
+<P class="form-submit"><INPUT id="submit" name="submit" value="Submit Comment" type="submit"><INPUT 
+id="comment_post_ID" name="comment_post_ID" value="1030" type="hidden"><INPUT 
+id="comment_parent" name="comment_parent" value="0" type="hidden"></P>
+<P style="display: none;"><INPUT id="akismet_comment_nonce" name="akismet_comment_nonce" 
+value="039495f0bf" type="hidden"></P></FORM></DIV><!-- #respond -->
+<SCRIPT type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#commentform').submit(function() {
+            _gaq.push(
+                ['_setAccount','UA-721308-1'],
+                ['_trackEvent','comment']
+            );
+        });
+    });    
+</SCRIPT>
+</DIV><!-- /#main --></DIV><!-- /#main-sidebar-container --></DIV><!-- /#content -->
+<DIV id="footer" class="col-full">
+<DIV id="copyright" class="col-left">
+<P>© 2013 Christophe Coenraets. All Rights Reserved. </P></DIV>
+<DIV id="credit" class="col-right">
+<P>Powered by <A title="WordPress" href="http://wordpress.org/">WordPress</A>. 
+Designed by <A title="WooThemes" href="http://www.woothemes.com/"><IMG alt="Woo Themes" 
+src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/woothemes.png" 
+width="74" height="19"></A></P></DIV></DIV><!-- /#footer  --></DIV><!-- /#wrapper -->
+<DIV class="fix"></DIV><!--/.fix--><!-- Woo Tabs Widget -->
+<SCRIPT type="text/javascript">
+jQuery(document).ready(function(){
+	// UL = .wooTabs
+	// Tab contents = .inside
+
+	var tag_cloud_class = '#tagcloud';
+
+	//Fix for tag clouds - unexpected height before .hide()
+	var tag_cloud_height = jQuery( '#tagcloud').height();
+
+	jQuery( '.inside ul li:last-child').css( 'border-bottom','0px' ); // remove last border-bottom from list in tab content
+	jQuery( '.wooTabs').each(function(){
+		jQuery(this).children( 'li').children( 'a:first').addClass( 'selected' ); // Add .selected class to first tab on load
+	});
+	jQuery( '.inside > *').hide();
+	jQuery( '.inside > *:first-child').show();
+
+	jQuery( '.wooTabs li a').click(function(evt){ // Init Click funtion on Tabs
+
+		var clicked_tab_ref = jQuery(this).attr( 'href' ); // Strore Href value
+
+		jQuery(this).parent().parent().children( 'li').children( 'a').removeClass( 'selected' ); //Remove selected from all tabs
+		jQuery(this).addClass( 'selected' );
+		jQuery(this).parent().parent().parent().children( '.inside').children( '*').hide();
+
+		jQuery( '.inside ' + clicked_tab_ref).fadeIn(500);
+
+		 evt.preventDefault();
+
+	})
+})
+</SCRIPT>
+
+<SCRIPT type="text/javascript">
+/* <![CDATA[ */
+var wooFeedbackL10n = {"nextButton":"Next \u2192","prevButton":"\u2190 Previous"};
+/* ]]> */
+</SCRIPT>
+
+<SCRIPT type="text/javascript" src="Christophe%20Coenraets%20%20Tutorial%20Building%20an%20Android%20Application%20in%206%20Steps_files/feedback.js"></SCRIPT>
+<!-- Dynamic page generated in 1.554 seconds. --><!-- Cached page generated by WP-Super-Cache on 2013-03-05 16:12:19 --><!-- super cache --></BODY></HTML>
