@@ -1,0 +1,87 @@
+﻿<html>
+  <head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="_UpgradeReport_Files\UpgradeReport.css"/>
+
+<script language="javascript">
+	function outliner () {
+		oMe = window.event.srcElement
+		//get child element
+		var child = document.all[event.srcElement.getAttribute("child",false)];
+		//if child element exists, expand or collapse it.
+		if (null !=child)
+			child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+	}
+
+	function changepic() {
+		uMe = window.event.srcElement;
+		var check = uMe.src.toLowerCase();
+		if (check.lastIndexOf("upgradereport_plus.gif") != -1)
+		{
+			uMe.src = "_UpgradeReport_Files/UpgradeReport_Minus.gif"
+		}
+		else
+		{
+			uMe.src = "_UpgradeReport_Files/UpgradeReport_Plus.gif"
+		}
+	}
+</script>
+<title>Upgrade report for TerminalIOtest.vjp</title></head>
+  <body topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();">
+    <h1>Upgrade report for TerminalIOtest.vjp</h1>
+    <p>
+      <table class="note">
+        <tr>
+          <td>
+            <b>Time of upgrade: </b>
+          </td>
+          <td>11/20/2003 10:15:10 AM</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Upgraded project file: </b>
+          </td>
+          <td>TerminalIOtest_NET.vjsproj</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Project type: </b>
+          </td>
+          <td>Console Application</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Startup object: </b>
+          </td>
+          <td>Class1</td>
+        </tr>
+      </table>
+    </p>
+    <h2>Analysis of project files was bypassed by user</h2>
+    <h2>Project was upgraded with no issue </h2>
+    <p>
+      <table class="note">
+        <tr>
+          <td>
+            <IMG alt="expand/collapse section" height="11" width="9" onclick="changepic()" src="_UpgradeReport_Files/UpgradeReport_Plus.gif" child="AddInfo0" />
+            <b>Additional upgrade information</b>
+          </td>
+        </tr>
+        <tr class="collapsed" id="AddInfo0">
+          <td>
+            <table class="note">
+              <tr>
+                <td valign="top">1. </td>
+                <td>Project property classpath is different in release and debug configurations. Release configuration value was used </td>
+              </tr>
+              <tr>
+                <td valign="top">2. </td>
+                <td>Startup object in the Visual J++ project type is different in debug and release configurations. Information from the release configuration was used in the upgrade.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </table>
+    </p>
+  </body>
+</html>
