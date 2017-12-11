@@ -1,0 +1,95 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0075)http://www.cs.duke.edu/education/courses/spring04/cps004/eclipseApplet.html -->
+<HTML><HEAD>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY bgColor=white>
+<H1>Using Eclipse in CompSci 4 </H1>
+<H3>Addendum for Creating Applets in Eclipse </H3>
+<P>For the purposes of these notes, we are going to deal with a project named 
+<I>Iliad </I>and a package named <I>homer</I> and a class named <I>Troy</I>. You 
+need to substitute the actual names of project, package, and class(es) you want 
+to work on. The details apply to the machines in 229 Social Sciences, the ICC. 
+Other Windows environments are very similar. 
+<H2>Using Eclipse </H2>
+<UL>
+  <LI><B>Starting Eclipse </B>
+  <UL>
+    <LI>Double Click on <B>Classroom Applications on the Desktop </B>
+    <LI>Double Click on <B>eclipse.exe </B></LI></UL>
+  <LI><B>Making a Project</B> 
+  <UL>
+    <LI><B>File-&gt;New-&gt;Project</B> 
+    <LI><B>Java-&gt;Java Project </B>
+    <LI>Click on <B>Next</B> 
+    <LI>For Project Name type <I>Iliad</I> 
+    <LI>Click on <B>Finish</B> 
+    <LI>If asked: Switch to Java Perspective? <B>Yes</B> </LI></UL>
+  <LI><B>Creating a Class</B> 
+  <UL>
+    <LI>Select (Click on) <I>Iliad</I> 
+    <LI><B>File-&gt;New-&gt;Class</B> 
+    <LI>Name: <I>Troy</I> 
+    <LI>SuperClass: <B>java.applet.Applet</B> 
+    <LI>If there is a check before "public void main(String[] args)" 
+    <B>unclick</B> this box. 
+    <LI><B>Finish</B> </LI></UL>
+  <LI><B>Editing Source Code</B> 
+  <UL>
+    <LI>Make sure you add an <B>public void init() </B>method 
+    <LI>Add the required code as needed 
+    <LI>(Don't make too many changes before recompiling) 
+    <LI>(It will usually be easier to locate errors after limited changes&gt; 
+    <LI>Click on the <B>diskette icon</B> to save <BR>(or <B>File-&gt;Save</B>) 
+    </LI></UL>
+  <LI><B>Compiling Source Code</B> 
+  <UL>
+    <LI>Always be sure to <B>save</B> any changes before compiling (Unsaved 
+    files show an asterisk in the fields above the main window.) 
+    <LI>Select (Click on)<I>Iliad</I> 
+    <LI><B>Project-&gt;Rebuild Project</B> </LI></UL>
+  <LI><B>Executing Your Program</B> <BR>If any changes were made, you must 
+  Compile first (see above). 
+  <UL>
+    <LI>Click on <I>Homer.java </I>
+    <LI><B>Run-&gt;Run as-&gt;Java Applet </B></LI></UL>
+  <LI><B>Saving Project Locally</B> 
+  <UL>
+    <LI>Click on <I>Iliad</I> 
+    <LI><B>File-&gt;Export</B> 
+    <LI>Select <B>Jar file</B> 
+    <LI>Click on <B>Next</B> 
+    <LI>Jar file: click on <B>Browse</B> 
+    <LI>double click on <B>My Computer</B> 
+    <LI>Use filename <I>myhomer.jar </I>
+    <LI>Click on <B>Save</B> 
+    <LI>Click on <B>Finish</B> </LI></UL></LI></UL>
+<H2>Local Testing </H2>To run/test the applet on the local machine <I>using a 
+web browser</I> (running it in Eclipse uses a piece of software called the 
+appletviewer) you can do the following: (It is assumed that you have created 
+<I>myhomer.jar </I>as shown in the previous step.) 
+<UL>
+  <LI><B>Create an HTML file that invokes the applet </B>
+  <UL>
+    <LI>Use any tool that you want to create a web page 
+    <LI>it must include: <BR><TT>&lt;applet code="Troy.class" 
+    archive="myhomer.jar" <BR>height=200 width=200&gt;&lt;/applet&gt;</TT> 
+    <LI><B>Save</B> it with the name <I>myhomer.html</I> 
+    <LI>Under Windows you should be able to double-click on <I>myhomer.html</I>. 
+    This should bring up a web page which, in turn, should start the applet. 
+    </LI></UL></LI></UL>
+<H2>Saving Project (Installing in Web Page Directory)</H2>You should now have 
+<I>myhomer.jar</I> and <I>myhomer.html </I>on you desktop. To allow access from 
+any browser, these must be copied to the appropriate location on your acpub file 
+system. 
+<UL>
+  <LI>Starting with <B>My Computer </B>browse: 
+  <LI>to the <B>P: drive</B>, then <B>public_html </B>folder, then your <B>cps4 
+  </B>folder. 
+  <LI>Drag both <I>myhomer.html</I> and <I>myhomer.jar</I> to the <B>cps4 
+  </B>folder. <BR>(This will copy them.) 
+  <LI>Now, using any browser, use the URL: 
+  "http://www.duke.edu/~yourloginid/cps4/myhomer.html" <BR>This should run your 
+  applet 
+  <LI>You can also put a link to <I>myhomer.html</I>, into an existing web page. 
+  </LI></UL></BODY></HTML>

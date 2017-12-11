@@ -1,0 +1,165 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0049)http://www.cs.wcupa.edu/~rkline/Java/applets.html -->
+<HTML><HEAD><TITLE>Java Applets</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<STYLE type=text/css>@import url( ../coursestyle.css );
+@import url( ../extrastyle.css );
+@import url( ../pagebreak.css );
+BODY {
+	FONT-SIZE: 10pt
+}
+TABLE {
+	FONT-SIZE: 10pt
+}
+LI P {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px
+}
+</STYLE>
+
+<SCRIPT src="Java Applets_files/funcs.js"></SCRIPT>
+
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY>
+<H2>Java Applets<BR><SPAN style="FONT-SIZE: 75%">(last updated: Feb 6, 
+2007)</SPAN> </H2>
+<FORM method=post><SPAN 
+style="FONT-SIZE: 11pt">Select&nbsp;font&nbsp;size:</SPAN> <SELECT 
+onchange=submit() name=font_size> <OPTION value=8>8pt</OPTION> <OPTION 
+  value=9>9pt</OPTION> <OPTION value=10 selected>10pt</OPTION> <OPTION 
+  value=11>11pt</OPTION> <OPTION value=12>12pt</OPTION> <OPTION 
+  value=14>14pt</OPTION> <OPTION value=16>16pt</OPTION></SELECT> </FORM>
+<H3>Client-side web programming/Applet execution</H3>Java Applets are used for 
+web-based <I>client-side</I> programming in contrast to <I>server-side</I> 
+programming effected by Java Servlets and Server Pages. Client-side programming 
+means that the HTML content delivered to the browser contains programmatic 
+content. The most common programming language used is JavaScript (or, more 
+correctly, ECMA script) built-in to the browser. Up to version 1.1.3, Java used 
+to be built into browsers; however this method of delivery was abandoned, in 
+part because of a legal dispute between SUN Microsystems and Microsoft. 
+<P>The browser can be programmed by any language which can be delivered through 
+a <I>plugin</I>. This is the manner by which modern Java Applets are executed. 
+Plugins are widely available for many types of programming systems such as 
+Macromedia's Flash player. </P>To run a Java Applet in a browser, the Java 
+plugin must be installed. In the Windows framework, all recent lastest Java 
+installations check for installed browsers (such as IE) and query the user 
+whether to install the browser plugin for that version of Java. It is also 
+possible to run Java Applets independent of the browser through the 
+<TT>appletviewer</TT> tool; however, the default security restrictions are not 
+as rigid for <TT>appletviewer</TT> execution as they are for browser execution. 
+<H4>The Java plugin</H4>It's relatively automatic to install the latest version 
+of the Java plugin in Windows systems. In Linux systems, the plugin installation 
+may not be automatic. The standard JDK plugins are available in the 
+<TT>jre/plugin</TT> subdirectory of the JDK distribution directory. For example, 
+using the 6, the actual plugin might be this file: <PRE>/usr/local/jdk1.6.0/jre/plugin/i386/ns7/libjavaplugin_oji.so
+</PRE>If, say, you're using Mozilla firefox, this plugin must be "installed" 
+into the <TT>plugins</TT> subdirectory of the distribution, which may be this 
+directory: <PRE>/usr/lib/mozilla-firefox/plugins/
+</PRE>In that case, I recommend changing to the mozilla plugins directory and 
+(as root) making a <I>symbolic link</I> to the Java plugin: <PRE># cd MOZILLA-FIREFOX-PLUGINS-DIRECTORY
+# ln -s PATH-TO-PLUGIN/libjavaplugin_oji.so .
+</PRE>From the command line shell, you can invoke <TT>SampleApplet.html</TT> 
+executed by firefox by: <PRE>$ firefox -url SampleApplet.html
+</PRE>
+<H3>Applets</H3>The Java applet classes are these 
+<UL class=notes>
+  <LI><TT>java.awt.Applet</TT> the older AWT class 
+  <LI><TT>javax.swing.JApplet</TT>, the Swing class which extends 
+  <TT>java.awt.Applet</TT> </LI></UL>We are interested exclusively in the modern 
+<TT>JApplet</TT>. Unlike an application, a <TT>JApplet</TT> is not executed 
+directly by the java interpreter. Instead it is loaded and executed by the java 
+interpreter built-in to the Java plugin. In particular, a JApplet has no 
+<TT>main</TT> function; instead, it is controlled by standard functions 
+activated by the plugin (or <TT>appletviewer</TT>), including these, among 
+others: <PRE class=n>public void init();     // the JApplet is loaded
+public void start();    // the browser applet is viewed
+public void stop();     // the browser leaves the applet page
+public void destroy();  // the JApplet is unloaded
+</PRE>An applet is activated through HTML-specific tags, often in a HTML file 
+called as <I>stub</I>, whose sole purpose is to cause the browser/viewer to load 
+the applet. Here is a sample stub file: <PRE>&lt;applet code="MyApplet"
+        width="300" height="100"
+&gt;
+&lt;/applet&gt;
+</PRE>In order to run the <TT>MyApplet</TT> class we would co-locate 
+<TT>MyApplet.class</TT> along with <TT>MyApplet.html</TT> in the same directory 
+and then point our browser to <TT>MyApplet.html</TT>, or, via 
+<TT>appletviewer</TT>: <PRE class=n>appletviewer MyApplet.html
+</PRE>
+<H3>HtmlConverter</H3>The <TT>applet</TT> tag is deprecated by HTML standards, 
+and so, even though the applet tag will probably work as is, you are encouraged 
+to convert it to the modern form using the <TT>object</TT> tag. The Java 
+Development Kit provides a converter operation called <TT>HtmlConverter</TT> 
+specifically for converting the <TT>applet</TT> tag usages. From a shell command 
+line, run: <PRE class=n>HtmlConverter MyApplet.html
+</PRE>A backup copy of <TT>MyApplet.html</TT> is made in a separate directory 
+and <TT>MyApplet.html</TT> is converted to the object form. You can also simply 
+run <TT>HtmlConverter</TT> without parameters and allow it to choose the target 
+applet stub file. 
+<H3>Applet Security Restrictions</H3>An applet is downloaded from a server an 
+runs in the browser and so the Java plugin in a browser enforces, by default, 
+stark security restrictions over what the applet can do. This is clearly 
+necessary to protect applets from inadvertently (or maliciously) accessing files 
+and client-side services which it shouldn't do. In particular, 
+<UL class=notes>
+  <LI>an applet cannot access client-side files 
+  <LI>an applet cannot execute many of the <TT>System</TT> functions, such as 
+  <TT>exit</TT>. 
+  <LI>an applet cannot connect to sites other than the one from which it was 
+  downloaded </LI></UL>By default, the <B>only</B> external access permitted an 
+applet is to make a socket connection back to the server from which the applet 
+was downloaded. Therefore, since our MySQL database server is actually a socket 
+connection to port 3306, we can connect to it so long as 
+<UL class=notes>
+  <LI>the web server is also the database server 
+  <LI>the firewall permits the browser connection to the database </LI></UL>One 
+can also circumvent the security restrictions by an elaborate mechanism which 
+involves creating a digital certificate and attaching it to a JAR file 
+containing the applet. 
+<H3>Accessing Jar files</H3>The <TT>archive</TT> attribute can be used to access 
+classes in jar files. <PRE>&lt;applet
+  code="MyApplet"
+  archive="JarFile1.jar,JarFile2.jar"
+  width="300" height="100"
+&gt;
+Applet Didn't Load
+&lt;/applet&gt;
+</PRE>This is particularly useful for accessing our MySQL driver. Indeed, the 
+class <TT>MyApplet.class</TT> itself may be part of a JAR file and we can avoid 
+any class files with the applet. JAR files can be created using the <TT>jar</TT> 
+utility provided with JDK. 
+<H3>Run-time parameters</H3>We cannot use our standard <TT>ResourceBundle</TT> 
+to deliver run-time parameters since this is effectively file access prohibited 
+by the applet security mechanism. In its place we can deliver parameters through 
+the HTML stub file as follows: <PRE>&lt;applet
+  code="MyApplet"
+  width="300" height="100"
+&gt;
+&lt;param name="param_name1" value="param_value1" /&gt;
+&lt;param name="param_name2" value="param_value2" /&gt;
+Applet Didn't Load
+&lt;/applet&gt;
+</PRE>Within the applet itself, these parameters can be read using the 
+<TT>getParameter</TT> function as follows: <PRE>String value = getParameter("param_name1");
+...
+</PRE>
+<H3>Rewriting a Java GUI application as a JApplet</H3>The rewrite of a Java GUI 
+<TT>JFrame</TT>-based application to a <TT>JApplet</TT> is fairly simple. The 
+major difficulty is dealing with the security restrictions. Here are the major 
+rewrite changes that need to be done. 
+<OL class=notes>
+  <LI>Replace <TT>JFrame</TT> by <TT>JApplet</TT> 
+  <LI>Eliminate the <TT>main</TT> function (it doesn't hurt to keep it in, it's 
+  just not used) 
+  <LI>Replace the constructor by <TT>public void init()</TT> 
+  <LI>Elminate any calls to <TT>super</TT> for base-class initialization 
+  <LI>Remove statements which control the <TT>JFrame</TT> GUI such as: <PRE class=n>setDefaultCloseOperation, setSize, setVisible
+</PRE>
+  <LI>Eliminate any statements which are prohibited by security restrictions, 
+  such as <TT>System.exit(0)</TT> 
+  <LI>Place any jar files used within the directory holding the stub file and 
+  access them in the archive attribute as a comma-separated list. Actually it 
+  doesn't have to be <I>right there</I>, it's just that the web server may not 
+  permit access to the jar file just anywhere in the system. 
+  <LI>Modify the code so that any runtime parameters are delivered by the 
+  <TT>getParameter</TT> function using parameters defined within the applet's 
+  HTML stub file. </LI></OL></BODY></HTML>

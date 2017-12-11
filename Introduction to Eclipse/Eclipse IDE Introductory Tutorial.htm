@@ -1,0 +1,729 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3c.org/TR/1999/REC-html401-19991224/loose.dtd">
+<!-- saved from url=(0078)http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html -->
+<HTML><HEAD><TITLE>Eclipse IDE: Introductory Tutorial</TITLE><LINK 
+href="Eclipse IDE Introductory Tutorial_files/doc-rel.css" type=text/css 
+rel=stylesheet>
+<STYLE type=text/css>.box {
+	BORDER-RIGHT: red 1pt solid; BORDER-TOP: red 1pt solid; BORDER-LEFT: red 1pt solid; WIDTH: 75%; BORDER-BOTTOM: red 1pt solid
+}
+.mark {
+	COLOR: #ff0000
+}
+</STYLE>
+
+<META http-equiv=Content-Type content="text/html; charset=iso-8859-1">
+<META content="MSHTML 6.00.2800.1106" name=GENERATOR></HEAD>
+<BODY><!-- ================================== -->
+<H1>Eclipse IDE: Introductory Tutorial</H1><!-- ================================== --><B>NOTE:</B> Revised 
+January 18 / 06 
+<P><B>NOTE: These tutorial were done using Eclipse version 3.1</B> 
+<P><B>NOTE: In these tutorials we install Eclipse, workspaces and other files 
+related to the tutorials in a directory called <CODE>c:\eclipse31</CODE>. If you 
+are using another directory such as your home directory <CODE>c:\Documents and 
+Settings\username\eclipse31</CODE> you will need to replace 
+<CODE>c:\eclipse31</CODE> everywhere with your directory.</B></P>
+<BLOCKQUOTE>We assume that you have installed Java 1.5 and Eclipse and have 
+  defined an Eclipse workspace. If not go to the <A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/index.html">main 
+  index</A>. 
+  <HR>
+  <A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#objective">Objective</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#point">The 
+  Point Class</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#circle">The 
+  Circle Class</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#circletester">The 
+  CircleTester Class</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#javaperspective">The 
+  Java Perspective</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#creatingprojects">Creating 
+  the Projects</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#creatingpackages">Creating 
+  the Packages</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#addingclasses1">Adding 
+  Classes to the geometry Package</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#addingpoint">Adding 
+  the Point Class</A><BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#addingcircle">Adding 
+  the Circle Class</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#testing">Testing 
+  Point and Circle with the Scrapbook</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#creatingcircletester">Creating 
+  the CircleTester class</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#why">Why 
+  Didn't it Work?</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#compiling">Compiling 
+  Classes</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#runningapp">Running 
+  the CircleTester Application</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#defaultjre">Changing 
+  the Default JRE that Eclipse Uses</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#closing">Closing 
+  a Project</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#help">The 
+  Eclipse Help System</A><BR><A 
+  href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/intro-tutorial.html#nexttutorial">Next 
+  Tutorial: Javadoc Configuration Tutorial</A> 
+  <HR>
+</BLOCKQUOTE>
+<H2><A name=objective>Objective</A></H2><!-- ================================= -->
+<P>In Eclipse program development is first organized at the top level into one 
+or more workspaces. Each workspace contains one or more projects. A project is 
+normally used to contain a Java application, applet, or library of classes.</P>
+<P>Each project contains one or more Java packages and finally each Java package 
+contains one or more classes or interfaces.</P>
+<P>In this tutorial we show how to create two Java projects in our default 
+workspace and how to use packages to write three classes (1) A 
+<CODE>Point</CODE> class that represents points in the plane, (2) A 
+<CODE>Circle</CODE> class that represents circles, and (3) a 
+<CODE>CircleTester</CODE> class to test these classes.</P>
+<P>The first project, called <CODE>geoproject</CODE>, contains a package called 
+<CODE>geometry</CODE> that contains the <CODE>Point</CODE> and 
+<CODE>Circle</CODE> classes.</P>
+<P>The second project, called <CODE>geotesterproject</CODE>, contains a package 
+called <CODE>geotester</CODE> that contains the <CODE>CircleTester</CODE> 
+class.</P>
+<P>We could have used just one project containing two packages but we want to 
+illustrate here how classes in different projects can reference each other.</P>
+<P>Here are the three classes: 
+<H3><A name=point>Point</A></H3><PRE><SPAN class=mark>package geometry;</SPAN>
+/**
+ * A class representing immutable geometrical points (x,y)
+ * in the plane.
+ */
+public class Point
+{
+   private double x;
+   private double y;
+
+   /**
+    * Construct a point from its coordinates.
+    * @param x the x coordinate of the point
+    * @param y the y coordinate of the point
+    */
+   public Point(double x, double y)
+   {
+     this.x = x;
+     this.y = y;
+   }
+
+   /**
+    * Construct the default point (0,0).
+    */
+   public Point()
+   {
+      x = 0.0;
+      y = 0.0;
+   }
+
+   /**
+    * Return the x coordinate of this point.
+    * @return the x coordinate of this point
+    */
+   public double getX()
+   {
+      return x;
+   }
+
+   /**
+    * Return the y coordinate of this point.
+    * @return the y coordinate of this point
+    */
+   public double getY()
+   {
+      return y;
+   }
+   
+   /**
+    * @return a string representation of a Point
+    */
+   public String toString()
+   {
+      return "Point[" + x + ", " + y + "]";
+   }
+}
+</PRE>
+<HR>
+
+<H3><A name=circle>Circle</A></H3><PRE><SPAN class=mark>package geometry;</SPAN>
+/**
+ * A class representing immutable geometrical circles.
+ * Each circle is described by its center (a Point object)
+ * and its radius (a double number).
+ */
+public class Circle
+{
+   private Point center;
+   private double radius;
+
+   /**
+    * Construct circle with given center point and radius.
+    * @param p the center of the circle
+    * @param r the radius of the circle
+    */
+   public Circle(Point p, double r)
+   {
+      center = p;
+      radius = r;
+   }
+
+   /**
+    * Construct circle with given center coordinates and radius.
+    * @param x the x coordinate of the circle center
+    * @param y the y coordinate of the circle center
+    * @param r the radius of the circle
+    */
+   public Circle(double x, double y, double r)
+   {
+      center = new Point(x,y);
+      radius = r;
+   }
+
+   /**
+    * Construct a default circle: a unit circle with center (0,0)
+    * and radius 1.
+    */
+   public Circle()
+   {
+      center = new Point();
+      radius = 1;
+   }
+
+   /**
+    * Return radius of circle.
+    * @return radius of circle
+    */
+   public double getRadius()
+   {
+      return radius;
+   }
+
+   /**
+    * Return center of circle.
+    * @return center of circle
+    */
+   public Point getCenter()
+   {
+      return center;
+   }
+
+   /**
+    * @return a string representation of a Circle
+    */
+   public String toString()
+   {
+      return "Circle[" + center + ", " + radius + "]";
+   }
+}
+</PRE>
+<HR>
+
+<H3><A name=circletester>CircleTester</A></H3><PRE><SPAN class=mark>package geotester;</SPAN>
+/**
+ * A short class to show how to test the Circle and Point classes.
+ * This version contains a main method.
+ */
+public class CircleTester
+{
+   public CircleTester()
+   {
+   }
+
+   /**
+    * Test the Point and Circle classes.
+    */
+   public void doTest()
+   {
+      Point center = new Point(3,4);
+      Circle c1 = new Circle();
+      Circle c2 = new Circle(center, 5);
+      Circle c3 = new Circle(3, 4, 5);
+      System.out.println("c1 = " + c1);
+      System.out.println("c2 = " + c2);
+      System.out.println("c3 = " + c3);
+      
+      double radius = c2.getRadius();
+      double x = c2.getCenter().getX();
+      double y = c2.getCenter().getY();
+      System.out.println("Radius = " + radius);
+      System.out.println("Center x = " + x);
+      System.out.println("Center y = " + y);
+   }
+   
+   public static void main(String[] args)
+   {
+      CircleTester tester = new CircleTester();
+      tester.doTest();
+   }
+}
+</PRE>
+<H2><A name=javaperspective>The Java Perspective</H2><!-- ============================================== -->Run 
+Eclipse by double clicking its shortcut. When Eclipse runs for the first time it 
+asks for the name of the default workspace. It should show the workspace you 
+created in the <A 
+href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/eclipse-install.html">eclipse-install</A> 
+notes. 
+<P>Select this workspace and you will get the welcome window. Close this window 
+by clicking on its close button (X): 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/welcome-close.jpg"> 
+</CENTER>
+<P></P>Now you should see the default Eclipse IDE. 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/java-perspective-1.jpg"> </CENTER>
+<P></P>
+<P>By default Eclipse runs with the Java Perspective. This is exacly the 
+perspective we need to write Java projects. You can verify this in the top right 
+corner of the IDE: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/java-perspective-2.jpg"></CENTER>
+<P></P>
+<P>There are other perspectives that we don't need right now. If you are curious 
+click on "Window" in the menu bar: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/java-perspective-3.jpg"></CENTER>
+<P></P>If you find that you are in a different perspective you can use this menu 
+to choose the "Java Perspective" (choose "Open Perspective") or you can choose 
+"Reset Perspective" to obtain the default perspective. 
+<P>The main Eclipse window is divided into several windows. On the left is the 
+"Package Explorer" which is empty until we create our first Java project.</P><!-- ==================================================== -->
+<H2><A name=creatingprojects>Creating the Projects</A></H2><!-- ==================================================== -->
+<P>A Java project contains classes and other resources needed to define a Java 
+class library, application, or applet. To create a project called 
+<CODE>geoproject</CODE> select "New" from the "File" menu and select 
+"Project...":</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-1.jpg"></CENTER>
+<P></P>
+<P>This gives the following dialog box:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-2.jpg"></CENTER>
+<P></P>
+<P>Select "Java Project" if it is not already selected and click "Next &gt;" to 
+obtain the "Create a Java project" dialog box 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-3.jpg"></CENTER>
+<P></P>
+<P>where we have entered the name <CODE>geoproject</CODE> in the "Project name:" 
+field. Also verify that the three radio buttons are as shown. </P>
+<P>We now need to tell Eclipse that we want to use Java 5 for all projects. 
+Notice that the JDK compliance is set currently to <CODE>1.4</CODE>. To change 
+this click on the link "Configure default..." in the JDK compliance area to 
+obtain 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-4.jpg"></CENTER>
+<P></P>
+<P>where we have used the drop down box for "Compiler compliance level:" to 
+choose 5.0 instead of 1.4.</P>
+<P>Click "OK" to get the dialog box 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-4a.jpg"></CENTER>
+<P></P>
+<P>Select "Yes" to return to the "Create a Java project" dialog box 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-4b.jpg"></CENTER>
+<P></P>
+<P>Verify that the project name is <CODE>geoproject</CODE> and that the default 
+compiler compliance is 5.0. Now whenever you create a project the compliance 
+will be 5.0. </P>
+<P>Finally click "Finish" and The "Package Explorer" window now shows that we 
+have created a project called <CODE>geoproject</CODE>:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-5.jpg"></CENTER>
+<P></P>
+<P>Click the plus sign to open the package explorer tree:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geoproject-6.jpg"></CENTER>
+<P></P>
+<P>This shows that the Java Runtime Environment (JRE) version 1.5.0_04 is 
+associated with this project. 
+<P>To create project <CODE>geotesterproject</CODE> there is no need to change 
+the compiler compliance so from the "File" menu select "New", select 
+"Project...", select "Java Project", click "Next&gt;", enter the name 
+<CODE>geotesterproject</CODE> in the "Project name" field and click "Finish" to 
+get</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/geotesterproject-1.jpg"></CENTER>
+<P></P>
+<P>Hint: There is a toolbar button to directly create a project.</P>
+<P><B>Note: Each project represents a classpath so there are two classpaths 
+here</B>. A classpath is a directory in which Java searches for classes. 
+<H2><A name=creatingpackages>Creating The Packages</A></H2><!-- ==================================================== -->
+<P>Now we need to create the <CODE>geometry</CODE> package in project 
+<CODE>geoproject</CODE>. To do this first select project <CODE>geoproject</CODE> 
+in the "Package Explorer":</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/new-package-1.jpg"></CENTER>
+<P>
+<P>From the "File" menu select "New" and select "Package": 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/new-package-2.jpg"></CENTER>
+<P>This gives the "Create a new Java package" dialog box 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/new-package-3.jpg"></CENTER>
+<P>The "Source Folder:" name is shown (it's just the project name) and we can 
+type the package name <CODE>geometry</CODE> into the "Name:" field: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/new-package-4.jpg"></CENTER>
+<P>Now click the "Finish" button and the the "Package Explorer" window will look 
+like: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-1.jpg"></CENTER>
+<P>Now repeat these steps to create the <CODE>geotester</CODE> package in the 
+<CODE>geotesterproject</CODE> project: In the "Package Explorer" window select 
+project <CODE>geotesterproject</CODE>. From the "File" menu select "New", select 
+"Package", type the name <CODE>geotester</CODE> in the "Name:" field and click 
+the "Finish" button. 
+<P>Now the "Package Explorer" window looks like. 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-2.jpg"></CENTER>
+<P>Notice that the JRE System Library (Java Runtime Environment) is 
+automatically added to each project. This simply means that the standard Java 
+packages and classes such as the <CODE>Math</CODE> class and the 
+<CODE>String</CODE> class, are made available to any classes in the project.</P>
+<P>Hint: There is a toolbar button for creating a package. </P>
+<H2><A name=addingclasses1>Adding Classes to the geometry Package</A></H2><!-- =================================================================== -->
+<P>The project and package structure is now complete so we can add the 
+<CODE>Point</CODE> and <CODE>Circle</CODE> classes to the <CODE>geometry</CODE> 
+package.</P>
+<H3><A name=addingpoint>Adding the Point class</A></H3>
+<P>Select the <CODE>geometry</CODE> package in the "Package Explorer". Now 
+select the "File" menu, select "New", select "Class":</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/new-class-1.jpg"></CENTER>
+<P>
+<P>This gives the "Create a new Java class" dialog box:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/new-class-2.jpg"></CENTER>
+<P>
+<P>Notice that the "Source Folder:" and "Package:" fields are automatically set 
+(the source folder name is just the project name) so just type 
+<CODE>Point</CODE>, the name of the class, in the "Name: " field and click the 
+"Finish" button.</P>
+<P>The "Package Explorer" window now looks like</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-3.jpg"></CENTER>
+<P></P>
+<P>and the Editor window shows the class template:</P>
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/point-1.jpg"></CENTER>
+<P></P>
+<P>Note that the package statement is automatically placed into the 
+<CODE>Point</CODE> class source file. <B>Except for comments, it must be the 
+first statement in the file.</B> Instead of typing our <CODE>Point</CODE> class 
+text you can just select the <CODE>Point</CODE> text at the beginning of this 
+tutorial, use Control-C to copy the text, then select all the text in the Editor 
+window and use Control-V to replace it. Save the file (choose "Save" from "File" 
+menu, or click the picture of the floppy disk (<SUB><IMG 
+src="Eclipse IDE Introductory Tutorial_files/save.jpg"></SUB>) near the top left 
+of the tool bar) and the class is automatically compiled. The editor window 
+should now look like</P>
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/point-2.jpg"></CENTER>
+<P></P>
+<H3><A name=addingcircle>Adding the Circle class</A></H3>
+<P>Now repeat the above steps to create the <CODE>Circle</CODE> class in the 
+<CODE>geometry</CODE> package (From "File" menu select "New", select "Class", 
+enter Circle in the "Name:" field, click "Finish").</P>When you are done the 
+"Package Explorer" window should look like:
+<P></P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-4.jpg"></CENTER>
+<P></P>
+<P>After cutting and pasting the <CODE>Circle</CODE> class into the editor 
+window and saving it the editor window now looks like:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/circle-1.jpg"></CENTER>
+<P></P>
+<P>The editor is a multi-tabbed editor. Each tab corresponds to one file. A file 
+can be closed by clicking the "X" in its tab. Files can be loaded into the 
+editor by double clicking their name in the "Package Explorer" window. The 
+editor window can be maximized or minimized using the buttons <SUB><SUB><IMG 
+src="Eclipse IDE Introductory Tutorial_files/maximize-1.jpg"></SUB></SUB> in the 
+top right corner of the editor window.</P>
+<H2><A name=testing>Testing Point and Circle with the Scrapbook</A></H2><!-- ============================================== -->
+<P>The <CODE>Point</CODE> and <CODE>Circle</CODE> classes do not have 
+<CODE>main</CODE> methods so they cannot be directly tested without writing a 
+class with a main method. Later we will use the <CODE>CircleTester</CODE> class 
+to test them.</P>
+<P>However, in Eclipse it is possible to test these classes using a scrapbook 
+page, without creating a tester class, as follows:</P>
+<P>Select the <CODE>geometry</CODE> package in the "Package Explorer". From the 
+"File" menu select "New", select "File", type <CODE>test.jpage</CODE> into the 
+"File name:" field and click the "Finish" button. The empty file 
+<CODE>test.jpage</CODE> is now displayed in the Editor window: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-1.jpg"></CENTER>
+<P></P>
+<P>and the "Package Explorer" window looks like</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-5.jpg"></CENTER>
+<P></P>
+<P>You can create as many scrapbook pages as you like but they should all have 
+the extension <CODE>jpage</CODE>.</P>
+<P>Type some statements in the scrapbook page so that it looks like:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-2.jpg"></CENTER>
+<P></P>
+<P>Save the file and select all the text:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-3.jpg"></CENTER>
+<P></P>
+<P>There are two ways to execute the selected code in the scrapbook page. You 
+can either click the execute button on the tool bar (green circle containing a 
+triangle with a J (<SUB><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-4.jpg"></SUB>), or right 
+click the scrapbook page and select execute. Try it and you should see some 
+errors:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-5.jpg"></CENTER>
+<P></P>
+<P>The <CODE>Point</CODE> and <CODE>Circle</CODE> classes are not recognized. 
+They are in packages and we need to import them into the scrapbook.</P>
+<P>First delete the error text in the scrapbook. To import classes into the 
+scrapbook right click on the scrapbook window and select "Set Imports ..." to 
+obtain the dialog box</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-6.jpg"></CENTER>
+<P></P>
+<P>Click the "Add Packages" button, and type g in the input box (shows all 
+packages beginning with g) to get:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-7.jpg"></CENTER>
+<P></P>
+<P>Click OK to get</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/scrapbook-8.jpg"></CENTER>
+<P></P>
+<P>Finally, click the "OK" button and all classes in the geometry package have 
+been added to the scrapbook's classpath.</P>
+<P>Now return to the scrapbook, select all the text and execute it to obtain the 
+following results in the console window:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/console-1.jpg"></CENTER>
+<P></P>
+<P>Each time you want to execute some code from a scrapbook page you must select 
+it first. Only the selected text will be executed. The results are appended to 
+the console window. However you can clear the text by right clicking on the 
+console window and selecting "Clear" or by clicking on the eraser (<SUB><IMG 
+src="Eclipse IDE Introductory Tutorial_files/eraser-1.jpg"></SUB>) on the 
+console window toolbar. You can also stop execution by clicking the red square 
+(<SUB><IMG 
+src="Eclipse IDE Introductory Tutorial_files/red-square.jpg"></SUB>).</P>
+<P>The statements you type in the scrapbook must make sense. For example, it is 
+not possible to execute just the last 4 lines in the example since the object 
+references <CODE>p</CODE> and <CODE>c</CODE> are not defined in these lines: 
+each time a block of statements is executed there is no memory of previously 
+executed statements. 
+<H2><A name=creatingcircletester>Creating the CircleTester class</A></H2><!-- ================================================================== -->
+<P>Now let us add the <CODE>CircleTester</CODE> class to the 
+<CODE>geotester</CODE> package in project <CODE>geotesterproject</CODE>. This is 
+done in the same way as for the <CODE>Point</CODE> and <CODE>Circle</CODE> 
+classes.</P>
+<P>Select the <CODE>geotester</CODE> package in the "Package Explorer":</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-6.jpg"></CENTER>
+<P></P>
+<P>From the "File" menu select "New", select "Class" and in the "Name:" field 
+type <CODE>CircleTester</CODE>. Since this class contains a <CODE>main</CODE> 
+method you can click the box for the <CODE>main</CODE> method:</P>
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/main-1.jpg"></CENTER>
+<P></P>
+<P>and then click the "Finish" button. The "Package Explorer" window now looks 
+like</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-7.jpg"></CENTER>
+<P></P>
+<P>and the Editor window shows</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/circletester-1.jpg"></CENTER>
+<P></P>
+<P>Notice that a stub for the <CODE>main</CODE> method is provided. A Javadoc 
+comment template is also provided. </P>
+<P>Note: Instead of cutting and pasting the text for this class you may want to 
+type the <CODE>CircleTester</CODE> class yourself just to see how the editor 
+works and then save it (click <SUB><IMG 
+src="Eclipse IDE Introductory Tutorial_files/save.jpg"></SUB> on the 
+toolbar).</P>
+<H2><A name=why>Why didn't it work?</A></H2><!-- ===================================== -->
+<P>After saving the file you will notice in the editor window contains</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/editor-errors-1.jpg"></CENTER>
+<P></P>
+<P>There are four error markers in the left margin. Hold the mouse cursor over 
+one of them to see some details:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/editor-errors-2.jpg"></CENTER>
+<P></P>
+<P>Also click on the "Problems" tab in the window below the editor:</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/editor-errors-3.jpg"></CENTER>
+<P></P>
+<P>It seems that the <CODE>Point</CODE> and <CODE>Circle</CODE> classes are not 
+recognized. The problem is that the <CODE>CircleCalculator</CODE> class is 
+referencing classes <CODE>Point</CODE> and <CODE>Circle</CODE> that are in 
+another package and in another project. 
+<P>Right now only the <CODE>geotesterproject</CODE> is on our classpath and we 
+need to add the <CODE>geoproject</CODE> classpath to it so that 
+<CODE>Point</CODE> and <CODE>Circle</CODE> classes can be found. <B>Each project 
+represents a classpath</B>.</P>
+<P>We need to "link" the two projects together and use <B>import statements</B>. 
+To do this first select <CODE>geotesterproject</CODE> in the "Package Explorer" 
+window (click on it). Note that red error icons are also shown in the "Package 
+Explorer". 
+<P>Now select the "Project" menu and select "Properties". This gives the dialog 
+box 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/project-properties-1.jpg"></CENTER>
+<P>Select "Java Build Path" from the list and select the "Projects" tab: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/project-properties-2.jpg"></CENTER>
+<P>Now click the "Add..." button and put a check mark in the geoproject entry 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/project-properties-3.jpg"></CENTER>
+<P>Click the "OK" button to get 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/project-properties-4.jpg"></CENTER>
+<P>which shows that the build path now contains the project 
+<CODE>geoproject</CODE> so the classpath now contains both projects. Click "OK" 
+and return to the editor window and add the following <CODE>import</CODE> 
+statements after the package statement: <PRE>import geometry.Point;
+import geometry.Circle;
+</PRE>These statements are needed because the <CODE>Point</CODE> and 
+<CODE>Circle</CODE> classes are in a different package from 
+<CODE>CircleTester</CODE>. Save the file and all error messages in the 
+<CODE>CircleTester</CODE> class have disappeared: 
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/circletester-2.jpg"></CENTER>
+<P>
+<H2><A name=compiling>Compiling Classes</H2><!-- ===================================== -->Have you noticed that 
+we didn't need to compile any classes? Eclipse checks and compiles your code as 
+you enter it and when you save the class so there is no need to explicitly 
+compile any classes. 
+<H2><A name=runningapp>Running the CircleTester Application</A></H2><!-- ============================================================= -->
+<P>You can now execute <CODE>CircleTester</CODE> as a Java application since it 
+has a <CODE>main</CODE> method. First select <CODE>CircleTester.java</CODE> in 
+the "Package Explorer" window or in the editor window. Then from the "Run" menu 
+select "Run As", and select "Java Application":</P>
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/run-1.jpg"></CENTER>
+<P></P>
+<P>The results in the console window are</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/console-2.jpg"></CENTER>
+<P></P>
+<P><B>WARNING:</B> Make sure you select the <CODE>CircleTester</CODE> class each 
+time you want to run it.</P>
+<P><B>TIP:</B> To run a class like <CODE>CircleTester</CODE> again you can 
+choose "Run Last Launched" from the "Run" menu or simply press "Ctrl F11".</P><!-- ================================================================ -->
+<H2><A name=defaultjre>Changing the Default JRE that Eclipse Uses</A></H2><!-- ================================================================ -->
+<P>Now is the time to change the Default JRE (Java Runtime Environment) that 
+Eclipse uses. We need to use a JRE that is part of a JDK (Java Software 
+Development Kit). Normally when Eclipse is installed it use a JRE that is not 
+part of a JDK (it uses the same JRE that Eclipe itself uses).</P>
+<P>So far we have been using a JRE that is not part of a JDK. To verify this 
+just look at one of the projects we have developed in the "Package Explorer". It 
+will show 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-1.jpg"></CENTER>
+<P></P>and we need to use <CODE>jdk1.5.0_04</CODE>.
+<P></P>
+<P>The following directory shows where the JRE and JDK are located.</P>
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-2.jpg"></CENTER>
+<P></P>
+<P>We arecurrently using the JRE in directory <CODE>jre1.5.0_04</CODE> and we 
+need to use the one in <CODE>jdk1.5.0_04</CODE>:</P>
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-3.jpg"></CENTER>
+<P></P>
+<P>It's in directory <CODE>jre</CODE>. Thus the full path to the JRE that we 
+want is <PRE>c:\Program Files\Java\jdk1.5.0_04\jre
+</PRE>To change the JRE return to Eclipse and from the Eclipse "Window" menu 
+select "Preferences": 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-4.jpg"></CENTER>
+<P></P>Use "Search" to search for jre's in "c:\Program Files\java" 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-5.jpg"></CENTER>
+<P></P>Click "OK" to return to the preferences dialog: 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-6.jpg"></CENTER>
+<P></P>Adjust the check marks to obtain 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-7.jpg"></CENTER>
+<P></P>Click "OK" to make the changes and notice that the "Project Explorer" 
+shows the changes. 
+<P>
+<CENTER><IMG src="Eclipse IDE Introductory Tutorial_files/jre-8.jpg"></CENTER>
+<P></P><!-- ======================================= -->
+<H2><A name=closing>Closing a Project</A></H2><!-- ======================================= -->
+<P>When you are finished with a project, or you are not currently working on it, 
+you should close it. This does <CB>not</B> delete the project. It can be 
+restored again by opening it.</P>
+<P>For example, to close <CODE>geotesterproject</CODE> select it in the Package 
+Explorer (click on it), right click it and choose "Close Project" on the menu. 
+Do the same for <CODE>geoproject</CODE> and the "Package Explorer" window now 
+looks like</P>
+<P>
+<CENTER><IMG 
+src="Eclipse IDE Introductory Tutorial_files/package-explorer-8.jpg"></CENTER>
+<P></P>
+<P>indicating that the projects are not available. This does not delete them. If 
+you need to open them again just select each project, right click it and choose 
+"Open Project" from the menu.</P>
+<H2><A name=help>The Eclipse Help System</A></H2><!-- ========================================== -->Eclipse comes 
+with a complete help system. To access it select the "Help" menu. 
+<H2><A name=nexttutorial>Javadoc Configuration Tutorial</A></H2><!-- ========================================================= -->The 
+next <A 
+href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/javadoc-tutorial.html">javadoc 
+tutorial</A> shows how to configure Eclipse to generate javadoc for your 
+projects and how to access the API documentation that you installed in the <A 
+href="http://www.cs.laurentian.ca/badams/c1047/eclipse-tutorials/java-install.html">java 
+installation</A> notes. </BODY></HTML>

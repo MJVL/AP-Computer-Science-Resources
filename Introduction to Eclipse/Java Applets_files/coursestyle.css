@@ -1,0 +1,84 @@
+BODY {
+	PADDING-RIGHT: 0.2in; PADDING-LEFT: 0.2in; BACKGROUND: white; PADDING-BOTTOM: 0.2in; PADDING-TOP: 0.1in; FONT-FAMILY: sans-serif
+}
+H2 {
+	TEXT-ALIGN: center
+}
+H3 {
+	COLOR: red
+}
+H4 {
+	COLOR: magenta
+}
+A:link {
+	COLOR: green; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: blue; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #cc66cc; TEXT-DECORATION: underline
+}
+DIV.n {
+	MARGIN-TOP: 6px; PADDING-LEFT: 15pt; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+DIV.m {
+	MARGIN-TOP: 6px; PADDING-LEFT: 15pt; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+PRE {
+	MARGIN-TOP: 6px; PADDING-LEFT: 15pt; MARGIN-BOTTOM: 6px; PADDING-BOTTOM: 3px; PADDING-TOP: 3px
+}
+TD.x {
+	WIDTH: 400px
+}
+.smtb {
+	MARGIN-TOP: 6px; MARGIN-BOTTOM: 6px
+}
+DIV.contents TABLE {
+	FONT-SIZE: 90%; FONT-FAMILY: sans-serif
+}
+DIV.contents {
+	BORDER-RIGHT: black thin solid; PADDING-RIGHT: 10px; BORDER-TOP: black thin solid; FONT-SIZE: 90%; BORDER-LEFT: black thin solid; PADDING-TOP: 15px; BORDER-BOTTOM: black thin solid; FONT-FAMILY: sans-serif
+}
+DIV.contents LI {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 5px
+}
+UL.notes LI {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 5px
+}
+OL.notes LI {
+	MARGIN-TOP: 5px; MARGIN-BOTTOM: 5px
+}
+OL.notes LI P {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px
+}
+UL.notes LI P {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px
+}
+UL.smallmargin {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px
+}
+OL.smallmargin {
+	MARGIN-TOP: 4px; MARGIN-BOTTOM: 4px
+}
+OL.outer LI {
+	MARGIN-BOTTOM: 16px
+}
+.ssf {
+	FONT-FAMILY: sans-serif
+}
+.lh3 {
+	LINE-HEIGHT: 3ex
+}
+DIV.break {
+	PAGE-BREAK-AFTER: always
+}
+.hidden {
+	PADDING-RIGHT: 4px; PADDING-LEFT: 4px; FONT-SIZE: 90%; PADDING-BOTTOM: 4px; PADDING-TOP: 4px; BACKGROUND-COLOR: #99ccff
+}
+TABLE.class_notes {
+	FONT-SIZE: 90%; MARGIN: 0px 0px 0px 15px; LINE-HEIGHT: 2.6ex
+}
+TT.file {
+	COLOR: brown
+}

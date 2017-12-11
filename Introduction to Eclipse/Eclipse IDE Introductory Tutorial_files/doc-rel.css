@@ -1,0 +1,57 @@
+BODY {
+	FONT-SIZE: 100%; MARGIN-LEFT: 1%; MARGIN-RIGHT: 1%; FONT-FAMILY: "Times New Roman", "Times", serif; BACKGROUND-COLOR: #ffffff
+}
+.sans {
+	FONT-WEIGHT: bold; FONT-SIZE: 90%; COLOR: #660066; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+H1 {
+	PADDING-RIGHT: 2pt; PADDING-LEFT: 2pt; FONT-WEIGHT: bold; FONT-SIZE: 175%; PADDING-BOTTOM: 2pt; COLOR: #ffffff; PADDING-TOP: 2pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #804000; TEXT-ALIGN: center
+}
+H2 {
+	PADDING-RIGHT: 2pt; PADDING-LEFT: 2pt; FONT-WEIGHT: bold; FONT-SIZE: 150%; PADDING-BOTTOM: 2pt; COLOR: #ffffff; PADDING-TOP: 2pt; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #0000ff; TEXT-ALIGN: center
+}
+H3 {
+	FONT-WEIGHT: bold; FONT-SIZE: 125%; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+H4 {
+	FONT-WEIGHT: bold; FONT-SIZE: 125%; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif
+}
+CODE {
+	FONT-SIZE: 100%; FONT-FAMILY: "Courier New", Courier, monospace
+}
+HR {
+	BACKGROUND-COLOR: #0000ff
+}
+.smalltt {
+	FONT-SIZE: 90%; COLOR: #000099; FONT-FAMILY: "Courier New", Courier, monospace
+}
+PRE {
+	MARGIN-TOP: 0.5em; FONT-SIZE: 90%; MARGIN-BOTTOM: 0.5em; MARGIN-LEFT: 2em; FONT-FAMILY: "Courier New", Courier, monospace
+}
+A:hover {
+	COLOR: black; BACKGROUND-COLOR: #6666ff
+}
+.mytable TABLE {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 100%; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.mytable TR {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 100%; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.mytable TH {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 100%; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.mytable TD {
+	BORDER-RIGHT: #000000 1px solid; BORDER-TOP: #000000 1px solid; FONT-SIZE: 100%; BORDER-LEFT: #000000 1px solid; BORDER-BOTTOM: #000000 1px solid
+}
+.mytable DL {
+	MARGIN-BOTTOM: 0em
+}
+.mytable PRE {
+	MARGIN: 0em
+}
+.mytable TH {
+	BACKGROUND-COLOR: #ccccff
+}
+.mytable TD {
+	BACKGROUND-COLOR: #ffffff
+}

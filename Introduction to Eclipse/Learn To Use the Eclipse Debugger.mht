@@ -1,0 +1,1070 @@
+From: <Saved by Windows Internet Explorer 7>
+Subject: Learn To Use the Eclipse Debugger
+Date: Mon, 4 Feb 2008 08:00:32 -0500
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.comscigate.com/debug/learn_Debug.htm
+X-MimeOLE: Produced By Microsoft MimeOLE V6.00.2900.3138
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Learn To Use the Eclipse Debugger</TITLE>
+<META http-equiv=3DContent-Type content=3D"text/html; =
+charset=3Dwindows-1252">
+<META content=3D"MSHTML 6.00.5730.11" name=3DGENERATOR></HEAD>
+<BODY text=3D#000000 vLink=3D#b00000 aLink=3Dred link=3Dred =
+bgColor=3D#f8f4d0>
+<CENTER>
+<H1>Learn To Use the Eclipse Debugger</H1></CENTER>
+<CENTER>
+<TABLE cellPadding=3D10 border=3D5>
+  <TBODY>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>*</H1></TD>
+    <TD>
+      <CENTER>
+      <H1>Mark Dexter</H1></CENTER>
+      <CENTER>
+      <H1>Eclipse &amp; Java: Using the Debugger</H1></CENTER>
+      <P><FONT color=3Ddarkgreen size=3D+1><B>The link to the Camtasia =
+movie=20
+      tutorial where each note is found follows that note. If you are =
+confused=20
+      by the note or don't understand what it is referring to, you may =
+puruse=20
+      that tutorial to refresh your memory.</B></FONT></P>
+      <P><FONT color=3Dblack><B>Debugger</B></FONT> <FONT =
+color=3Dpurple>is a set of=20
+      tools that allows us to:<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* =
+pause a=20
+      running program at any =
+point.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*=20
+      examine the contents of the variables.</FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><B>To display line numbers:</B> &nbsp; <FONT =
+color=3Dred><B>Window &#8594;=20
+      Preferences... &#8594; General &#8594; Editors &#8594; Test =
+Editors &#8594; Check the box "Show=20
+      line numbers" &#8594; OK</FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><FONT color=3Dblack><B>To set a breakpoint:</B></FONT> &nbsp; =
+<FONT=20
+      color=3Dred><B>Double click on gutter to immediate left of line of =
+source=20
+      code.</FONT> <FONT color=3Dpurple><I>Breakpoint tells debugger to =
+pause at=20
+      this point.</I></FONT> <FONT color=3Dblack><B>To eliminate a=20
+      breakpoint:</B></FONT> &nbsp; <FONT color=3Dred><B>Double click =
+the=20
+      breakpoint.</FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><FONT color=3Dblack><B>To START a debug session:</B></FONT> =
+&nbsp; <FONT=20
+      color=3Dred><B>Run &#8594; Debug As &#8594; Java Application =
+&#8594; Editors &#8594; There appears=20
+      the dialog box "<I>Confirm Perspective Switch</I>" &#8594; Check =
+"Remember my=20
+      decision" &#8594; Yes</FONT> <FONT color=3Dpurple><I>Eclipse =
+switches to the Debug=20
+      perspective.</I></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><FONT color=3Dblack><B>To STOP a debug session:</B></FONT> =
+&nbsp; <FONT=20
+      color=3Dred><B>Press the stop button (red square).</B></FONT> [ <A =
+
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> ]=20
+      <P><FONT color=3Dblack><B>To start a NEW debug session:</B></FONT> =
+&nbsp;=20
+      <FONT color=3Dred><B>Press the Debug Button (looks like an insect=20
+      "bug").</B></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> ]=20
+      <P><FONT color=3Dblack><B>Debugger's Debug View: &nbsp; =
+</B></FONT><FONT=20
+      color=3Dpurple><I>shows<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* =
+Class being=20
+      run.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Thread being=20
+      run.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;* Stack Frame(s) - =
+where we=20
+      are in the program.</I></P>
+      <P><FONT color=3Dblack><B>To work the Debug View:</B></FONT> =
+&nbsp;=20
+      <BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT color=3Dred>Resume=20
+      button</FONT> continues execution until another breakpoint or end =
+of=20
+      program.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT =
+color=3Dred>Terminate=20
+      button</FONT> stops the debug=20
+      session.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT =
+color=3Dred>Step Into=20
+      &lt;F5&gt; button</FONT> moves into the method or constructor =
+being called=20
+      and pauses.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT =
+color=3Dred>Step=20
+      Over &lt;F6&gt; button</FONT> executes current line of code and =
+stops at=20
+      next line.<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<FONT =
+color=3Dred>Step=20
+      Return &lt;F7&gt; button</FONT> finishes the current method and =
+returns to=20
+      the calling method.</I></FONT></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><FONT color=3Dblack><B>To go to another line without using a =
+breakpoint &#8594;=20
+      Use the "Run to Line" command:</B></FONT> &nbsp; <FONT =
+color=3Dred><I>Select=20
+      (click on) the target line &#8594; Run (or Right Click) &#8594; =
+Run to Line=20
+      &lt;Ctrl&gt;&lt;R&gt;</I></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> ]=20
+      <P><FONT color=3Dblack><B>Debugger's Job Editor:</B></FONT> <FONT=20
+      color=3Dpurple><I>highlights line of code that we are about to=20
+      execute.</I></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><FONT color=3Dblack><B>Debugger's Outline View:</B></FONT> =
+<FONT=20
+      color=3Dpurple><I></I></FONT>[ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ]=20
+      <P><FONT color=3Dblack><B>To set up Debug Filters to skip Java =
+language=20
+      classes and third party libraries:</B></FONT> &nbsp; <FONT=20
+      color=3Dred><B>Right click in Debug Window &#8594; Edit Step =
+Filters... &#8594; Check=20
+      box "Use Step Filters &#8594; Check box "Java.*" &#8594; OK</FONT> =
+&nbsp; <FONT=20
+      color=3Dpurple><I>This filters out any packages starting with the =
+word=20
+      "Java" and thereby lets us skip all of the "Java" related stack =
+frames.=20
+      Note, back in the Debug Window, that the "Use Step Filters" button =
+is now=20
+      toggled on. Ensure that it is on when you want the filters to be=20
+      operational.</I></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> ]=20
+      <P><FONT color=3Dblack><B>Debugger's Stack Frames (in the Debug=20
+      View):</B></FONT> <FONT color=3Dpurple><I>The top stack frame in a =
+stack=20
+      always point to where we are presently. A new stack frame is added =
+to the=20
+      top of the stack when entering a constructor or method. The top =
+stack=20
+      frame is removed when returning from a constructor or =
+method.</I></FONT>=20
+      <FONT color=3Dblack><B>Selection of Stack Frame correspondingly =
+changes the=20
+      members in the Variables View and the selected line in the Editor=20
+      View.</B></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> ]=20
+      <P><FONT color=3Dblack><B>Debugger's Variables View (Upper right =
+portion of=20
+      screen) let's us see the value of variable in real =
+time:</B></FONT> [ <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+      target=3D_blank>Lesson&nbsp;01</A> ] <FONT =
+color=3Dpurple><I>Variables are=20
+      defined (ie: "in scope") corresponding generally to the currently =
+selected=20
+      stack frame (Debug View) and specifically to the currently =
+selected source=20
+      code line (Editor View). Variables and their values change as you =
+step=20
+      through the code.</I></FONT> <FONT color=3Dblack><B>Detailed Pane =
+of=20
+      Variables View:</B></FONT> <FONT color=3Dred><B>Select a variable =
+or object=20
+      &#8594; Notice the display in the lower portion ofthe view, aka =
+"the detailed=20
+      pane" &#8594; This is the output of the toString() method of the =
+selected=20
+      variable. &nbsp; <FONT color=3Dblack><B>Menu of Variables =
+View:</B></FONT>=20
+      <FONT color=3Dpurple><I>Select options from the two submenus, =
+"Java" (which=20
+      members to display) and "Layout".</I></FONT> <FONT =
+color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> <FONT color=3Dblack>]</FONT>=20
+      <P><FONT color=3Dblack><B>To inspect the value of an object that =
+is in=20
+      scope:</B></FONT> &nbsp; <FONT color=3Dred><I>[=20
+      &lt;Ctrl&gt;&lt;Shift&gt;&lt;I&gt; ] or Select (click on) the =
+object &#8594;=20
+      Right Click &#8594; Inspect</FONT> &nbsp; <FONT =
+color=3Dpurple>View values of=20
+      variables (Variables View)</I></FONT> <FONT color=3Dblack>[</FONT> =
+<A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+      target=3D_blank>Lesson&nbsp;02</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Add a Dynamic Watch =
+Expression:</B></FONT> &nbsp;=20
+      <FONT color=3Dpurple><I>To see the value of an expression that is =
+not a=20
+      simple variable</I></FONT> <FONT color=3Dred><B>Window &#8594; =
+Show View &#8594;=20
+      Expressions Right Click &#8594; Add Watch Expression... Type any =
+expression &#8594;=20
+      OK</B></FONT> &nbsp; <FONT color=3Dpurple><I>Values will change =
+dynamically=20
+      as you step through the code.</I></FONT> <FONT =
+color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson03/lesson03.html"=20
+      target=3D_blank>Lesson&nbsp;03</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Add a Static (Snap Shot) Watch=20
+      Expression:</B></FONT> &nbsp; <FONT color=3Dred><B>Window &#8594; =
+Show View &#8594;=20
+      Display</B></FONT> &#8594; <FONT color=3Dpurple><I>Notice Display =
+View has opened=20
+      at the bottom of the screen </I></FONT>&#8594; <FONT =
+color=3Dred><B>Type any=20
+      expression (can use Code Assist) &#8594; Highlight the expression =
+&#8594; Right Click=20
+      &#8594; Inspect</B></FONT> &#8594; <FONT color=3Dpurple><I>We see =
+values in the pop-up=20
+      window</I></FONT><FONT color=3Dred><B> &#8594; =
+&lt;Ctrl&gt;&lt;Shift&gt;&lt;I&gt;=20
+      &#8594; moves everything to the Expressions View =
+&#8594;</B></FONT> <FONT=20
+      color=3Dpurple><I>Will NOT change dynamically as you step through =
+the code=20
+      unless you do this:</I></FONT> <FONT color=3Dred><B>&#8594; Right =
+mouse click &#8594;=20
+      Convert to Watch Expression.</B></FONT> <FONT =
+color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson03/lesson03.html"=20
+      target=3D_blank>Lesson&nbsp;03</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Add Dnynamic code to the Display=20
+      Window:</B></FONT> &nbsp; <FONT color=3Dred><B>Window &#8594; Show =
+View &#8594;=20
+      Display</B></FONT> &#8594; <FONT color=3Dpurple><I>Notice Display =
+View has opened=20
+      at the bottom of the screen.</I></FONT> &#8594; <FONT =
+color=3Dred><B>Type any Java=20
+      code (can use Code Assist). &#8594; Highlight the expression. =
+&#8594; Right click. &#8594;=20
+      Execute &#8594;</B></FONT> &nbsp; <FONT color=3Dpurple><I>Output =
+is printed in the=20
+      Console View just as if running from a Java =
+application.</I></FONT> <FONT=20
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson03/lesson03.html"=20
+      target=3D_blank>Lesson&nbsp;03</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Selecting Valid Parts of an Expression =
+&#8594; Highlight=20
+      top-most part of an expression &#8594; then drill down one level =
+at a=20
+      time:</B></FONT> &nbsp; <FONT color=3Dred><I>Place cursor anywhere =
+on the=20
+      expression &#8594; &lt;Alt&gt;&lt;Shift&gt;&lt;UP&gt;</B></FONT> =
+<FONT=20
+      color=3Dblack><B>To restore previous selection:</B></FONT> &nbsp; =
+<FONT=20
+      color=3Dred><B>Place cursor anywhere on the expression &#8594;=20
+      &lt;Alt&gt;&lt;Shift&gt;&lt;DOWN&gt;</B></I></FONT> <FONT=20
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson03/lesson03.html"=20
+      target=3D_blank>Lesson&nbsp;03</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Debugger's Breakpoints View (Upper right =
+portion=20
+      of screen):</B></FONT> &nbsp; <FONT color=3Dpurple><I>Can toggle =
+breakpoints=20
+      on and off, create new breakpoints or delete =
+breakpoints.</I></FONT> <FONT=20
+      color=3Dblack><B>Add Java Exception breakpoint:</B></FONT> &nbsp; =
+&nbsp;=20
+      <FONT color=3Dred><B>Click Java Exception Breakpoint Button (just =
+above=20
+      Breakpoints View) OR &#8594; Run &#8594; Add Java Exception =
+Breakpoint... &#8594;</B></FONT>=20
+      <FONT color=3Dpurple><I>Opens a Java Exception Breakpoint dialog =
+box=20
+      </I></FONT>&nbsp; <FONT color=3Dred><B>Type the kind of exception =
+to look=20
+      for <FONT color=3Dpurple><I>{ Note: With JUnit Tests, always use =
+caught=20
+      exceptions since all JUnit Tests are caught exception.</I> =
+]</FONT> &#8594;=20
+      Click on the "Matching Item" selection &#8594; </B></FONT><FONT=20
+      color=3Dpurple><I>A NullPointerException is added to the =
+Breakpoints=20
+      View.</I></FONT> <FONT color=3Dblack><B>Change Java Exception =
+breakpoint=20
+      Properties:</B></FONT> &nbsp; &nbsp; <FONT color=3Dred><B>Go to =
+Brealpoints=20
+      View &#8594; Right click on a particular exception &#8594; =
+Breakpoint Properties...=20
+      &#8594;</B></FONT> <FONT color=3Dpurple><I>You see the Java =
+Exception Breakpoint=20
+      Properties dialog box.</I></FONT> <FONT color=3Dred><B>&#8594; =
+Check/uncheck as=20
+      desired &#8594; OK</B></FONT> <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson04/lesson04.html"=20
+      target=3D_blank>Lesson&nbsp;04</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>To Terminate &amp; Relaunch a Debug=20
+      Session:</B></FONT> &nbsp; <FONT color=3Dred><I>Right click in the =
+Debug=20
+      dialog window. &#8594; Terminate and Relaunch</I></B></FONT> <FONT =
+
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson04/lesson04.html"=20
+      target=3D_blank>Lesson&nbsp;04</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Hot Code Replace:</B></FONT> &nbsp; =
+<FONT=20
+      color=3Dred><I>Change code in debugger. &#8594; =
+Resume</I></B></FONT> <FONT=20
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson04/lesson04.html"=20
+      target=3D_blank>Lesson&nbsp;04</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>To go back to beginning of =
+method:</B></FONT>=20
+      &nbsp; <FONT color=3Dred><I>Click "Drop To Frame" =
+button.</I></B></FONT>=20
+      <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson04/lesson04.html"=20
+      target=3D_blank>Lesson&nbsp;04</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Set number of times to bypass breakpoint =
+before=20
+      suspending execution:</B></FONT> &nbsp; &nbsp; <FONT=20
+      color=3Dred><B>Breakpoints tab &#8594; Right click the breakpoint =
+&#8594; Breakpoint=20
+      Properties... &#8594; Enter number of times to bypass breakpoint. =
+&#8594; OK <FONT=20
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Conditional Breakpoints (suspend only if =
+condition=20
+      is true):</B></FONT> &nbsp; <B>Set number of times to bypass =
+breakpoint=20
+      before suspending execution:</B></FONT> &nbsp; &nbsp; <FONT=20
+      color=3Dred><B>Breakpoints tab &#8594; Right click the breakpoint =
+&#8594; Breakpoint=20
+      Properties... &#8594; Type condition ( Example: =
+this.getBooksForPerson( p1=20
+      ).size() &gt; 0 ) &#8594; OK <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Watchpoints (field =
+breakpoints):</B></FONT> &nbsp;=20
+      <FONT color=3Dpurple><I>This is useful for identifying where a =
+certain value=20
+      is used or changed. Set one watchpoint instead of setting multiple =
+
+      breakpoints!</I></FONT> &nbsp; Click in trough beside name of a =
+field=20
+      Click on Debug Perspective &#8594; Breakpoints tab &#8594; Right =
+click breakpoint &#8594;=20
+      Breakpoint Propertis dialog appears &#8594; May suspend on <FONT=20
+      color=3Ddarkgreen>Field Access</FONT> or on <FONT =
+color=3Ddarkgreen>Field=20
+      Modification</FONT> &#8594; OK <FONT color=3Dpurple><I>Execution =
+suspends whenever=20
+      that field is accessed.</I></FONT> <FONT color=3Dblack>[</FONT> <A =
+
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Set breakpoint only the first time that =
+a new=20
+      class is loaded:</B></FONT> &nbsp; &nbsp; <FONT =
+color=3Dred><B>Click in=20
+      trough beside name of a class. <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Stop in Main Breakpoint:</B></FONT> =
+&nbsp; <FONT=20
+      color=3Dpurple><I>Set breakpoint at first line of code, which is =
+upon=20
+      entering the main method.</I></FONT> &nbsp; <FONT =
+color=3Dred><B>Run &#8594; Open=20
+      Debug Dialog... &#8594; Java Application &#8594; Class (eg: =
+MyLibrary) &#8594; OPens the run=20
+      configuration dialog &#8594; Check <FONT color=3Ddarkgreen>Stop in =
+main</FONT> &#8594;=20
+      Debug &nbsp; <FONT color=3Dpurple><I>Execution will now always =
+stop at the=20
+      first line of code in the main( ) method.</I></FONT> <FONT=20
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Suspend a program during a debug session =
+at any=20
+      moment</B></FONT> &nbsp; &nbsp; <FONT color=3Dred><B>Press the =
+Suspend=20
+      Button.</B></FONT> <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Step into Selection</B></FONT> &nbsp; =
+&nbsp; <FONT=20
+      color=3Dred><B>Hold &lt;Ctrl&gt;&lt;Alt&gt; &#8594; Hover over =
+name of method &#8594;=20
+      Name of method turns into a hyperlink &#8594; Click hyperlink with =
+mouse &#8594; You=20
+      will step into the method. &#8594; OR &#8594; Select name of =
+method &#8594;=20
+      &lt;Ctrl&gt;&lt;F5&gt;</B></FONT> <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>See source code without Debugger =
+stepping into the=20
+      selection. Works in Editor and does not require that there be a =
+Debugger=20
+      session working.</B></FONT> &nbsp; &nbsp; <FONT =
+color=3Dred><B>Select name=20
+      of method &#8594; Press &lt;Ctrl&gt; and hover over name of method =
+&#8594; Name of=20
+      method turns into a hyperlink &#8594; Click on method hyperlink =
+&amp;rarrr;=20
+      Source code of method then opens.</B></FONT> &nbsp; <FONT=20
+      color=3Dpurple><I>Note that position of Debugger has not moved at=20
+      all.</I></FONT> <FONT color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+      target=3D_blank>Lesson&nbsp;05</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Configure Eclipse to use a special =
+version of a=20
+      JRE (Java Runtime Engine) that will allow us to Debug into Java =
+classes.=20
+      <FONT color=3Dbrown size=3D+1>&nbsp; <U>This allows us to study =
+the source=20
+      code of the standard Java libraries. &nbsp; This allows us to step =
+into=20
+      and study the code of the top Java programmers =
+themselves!</U></FONT>=20
+      &nbsp; &nbsp; <FONT color=3Dred><B>Window &#8594; Preferences =
+&#8594; Java &#8594; Installed=20
+      JREs &#8594; </B></FONT><FONT color=3Dpurple><I>Observe that you =
+have your=20
+      standard JRE installed.</I></FONT> <FONT color=3Dred><B>&#8594; =
+Add... &#8594; JRE Type:=20
+      <FONT color=3Ddarkgreen>Standard VM</FONT> &#8594; JRE Name: <FONT =
+
+      color=3Ddarkgreen>Debug JRE</FONT> &#8594; Browse... &#8594; Go to =
+the JDK home=20
+      directory. Example: <FONT color=3Ddarkgreen>C:\Program=20
+      Files\Java\jdk1.6.0_01</FONT> &#8594; <FONT =
+color=3Dpurple><I>Expand (click "+")=20
+      and observe that you have both source code and =
+Javadocs.</I></FONT> &#8594; OK &#8594;=20
+      <FONT color=3Dpurple><I>Keep the standard JRE as the default for =
+new=20
+      projects by leaving it checked. Do not place a check beside the =
+new Debug=20
+      JRE.</I></FONT> &#8594; OK &#8594; <FONT color=3Dpurple><I>Now add =
+the Debug JRE to the=20
+      project.</I></FONT> &#8594; Select the project &#8594; Project =
+&#8594; Properties &#8594; Java=20
+      Build Path &#8594; Libraries tab &#8594; Add Library &#8594; JRE =
+System Library &#8594; Next&gt; &#8594;=20
+      Click radio button to select Alternate JRE &#8594; Select <FONT=20
+      color=3Ddarkgreen>Debug JRE</FONT> &#8594; Finish &#8594; <FONT =
+color=3Dpurple><I>We will=20
+      now remove the standard JRE.</I></FONT> &#8594; Click on the =
+standard JRE &#8594;=20
+      Remove &#8594; <FONT color=3Dpurple><I>Standard JRE is only =
+removed from the=20
+      project, not the system!</I></FONT> &#8594; OK</B></FONT> &nbsp; =
+<FONT=20
+      color=3Dpurple><I>Now when you look at your project, it =
+says</I></FONT>=20
+      <FONT color=3Ddarkgreen><B>JRE System Library [Debug =
+JRE]</B></FONT> &#8594; <FONT=20
+      color=3Dpurple><I>Eclipse rebuilt the project using the new Debug=20
+      JRE.</I></FONT> &nbsp; <FONT color=3Dpurple><I>We can now debug =
+right into=20
+      the Java System classes.</I></FONT> <FONT color=3Dblack>[</FONT> =
+<A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson06/lesson06.html"=20
+      target=3D_blank>Lesson&nbsp;06</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Use the Debugger to Study Object =
+references and=20
+      the String .equals( ) method.</B></FONT> <FONT =
+color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson06/lesson06.html"=20
+      target=3D_blank>Lesson&nbsp;06</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Run a recursive method in debug mode to =
+learn more=20
+      about how recursion works.</B></FONT> &nbsp; <FONT =
+color=3Dpurple><I>A=20
+      recursive method is a method that calls itself (that calls itself, =
+that=20
+      calls itself ....) Some value(s) change during the calls to =
+eventually end=20
+      the program, otherwise the program would never end.</I></FONT> =
+&nbsp;=20
+      &nbsp; <FONT color=3Dred><B>Open the factorial method in the =
+MyUtilities=20
+      class. &#8594; <FONT color=3Dpurple><I>Note that this method works =
+only if=20
+      n&lt;=3D12 since the maximum value that a Java integer can be is=20
+      2,147,483,647.</I></FONT> &nbsp; &nbsp; <FONT color=3Dred><B>Press =
+resume &#8594;=20
+      Observe the creation of a new stack frame on top as you call the =
+new=20
+      method again, going one level deeper into the program. &#8594; =
+Notice that the=20
+      variable "result" does not take on a value while the method =
+continues=20
+      being called because it has not yet been evaluated. &#8594; =
+Continue pressing=20
+      resume observing the value of n decreasing until it becomes less =
+than 1 &#8594;=20
+      Step over &#8594; The base case (n&lt;=3D1) kicks in, ending the =
+recursive process=20
+      &#8594; This is where we BEGIN doing our calculation &#8594; Step =
+over until n=3D2, then=20
+      we find our first stack value for result (result=3D2) &#8594; =
+Press "Step Return"=20
+      to get out of that stack frame, noting that n=3D3 &#8594; Step =
+over, noting that=20
+      result=3D6 &#8594; Step Return and Step Over again to see n=3D4, =
+result=3D24 &#8594; Step=20
+      Return and Step Over again to finally get n=3D5 and result=3D120 =
+<FONT=20
+      color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson07/lesson07.html"=20
+      target=3D_blank>Lesson&nbsp;07</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Run a recursive method in debug mode a =
+second time=20
+      for more explanation. (Begin at time 6:20 of lesson =
+#7.)</B></FONT> &nbsp;=20
+      &nbsp; <FONT color=3Dred><B>Click the Debug button. (It looks like =
+an insect=20
+      type bug.) &#8594; Click the resume button until you get to n=3D1. =
+&#8594; Think of it=20
+      this way &#8594; <FONT color=3Dpurple><I>Each time that we call =
+the recursive=20
+      method, we add another frame on top of the stack until we =
+eventually get=20
+      to the point where n=3D1. Up until this point, no real =
+calculations have=20
+      been done. The frames are just holding the places for the=20
+      yet-to-be-determined return values from the factorial (recursive) =
+methods.=20
+      When we finally get the the value n=3D1, we will not return any =
+more stack=20
+      frames because we are just going to return the value of 1. Since =
+the top=20
+      frame can now return the value of 1, the result is returned from =
+the top=20
+      frame to the frame just below it. That is when the actual =
+calculation(s)=20
+      take place.</P>
+      <P>Thus there are two parts to processing a factorial method:</P>
+      <OL>
+        <LI>Add stack frames for each method call until the method stops =
+calling=20
+        itself.=20
+        <LI>Return the result from the top frame to the one below, =
+remove the=20
+        top stack, and continue returning results until we are back to =
+the=20
+        original calling method. </LI></OL>
+      <P>There are thus two conditions for recursive methods.</P>
+      <OL>
+        <LI>The method must eventually stop calling itself.=20
+        <LI>You need enough memory to hold the stack frames. <FONT=20
+        color=3Dblack>[</FONT> <A=20
+        =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson07/lesson07.html"=20
+        target=3D_blank>Lesson&nbsp;07</A> <FONT color=3Dblack>]</FONT>
+        <P></P></LI></OL>
+      <P><FONT color=3Dblack><B>Rewind the Program Back to An Earlier =
+Frame. Take=20
+      another look at the Drop To Frame command.</B></FONT> &nbsp; <FONT =
+
+      color=3Dpurple><I>Rerun the debug session.</I></FONT> &nbsp; <FONT =
+
+      color=3Dred><B>Press resume until n=3D1. &#8594; In lesson 4, we =
+learned that=20
+      pressing the "Drop to Frame" button would "rewind the debug =
+session" by=20
+      pressing a previous line in the Editor View and then pressing the=20
+      "Drop-to-Frame" button. &#8594; OR &#8594; Select a lower stack =
+frame and go back to=20
+      that frame. &#8594; Remember that the top stack frame is where we =
+are right now=20
+      in the program. Thus each lower stack frame is from an earlier =
+point in=20
+      the program. Therefore selecting a lower stack frame takes us back =
+in=20
+      time. &#8594; Clcik on a lower stack frame &#8594; Click on the =
+Drop to Frame button.=20
+      &#8594; The program returns to that point in the program. &#8594; =
+There are some=20
+      things that are done in a program that prevents rewinding the =
+program. The=20
+      the Drop to Frame button becomes disabled. <FONT =
+color=3Dblack>[</FONT> <A=20
+      =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson07/lesson07.html"=20
+      target=3D_blank>Lesson&nbsp;07</A> <FONT =
+color=3Dblack>]</FONT></P>
+      <P><FONT color=3Dblack><B>Uses of Drop to Frame Button if the =
+Program Can Be=20
+      Rewound</B></FONT></P>
+      <OL>
+        <LI>Select an earlier line in the Editor View.=20
+        <LI>Select a lower stack frame. <FONT color=3Dblack>[</FONT> <A=20
+        =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson07/lesson07.html"=20
+        target=3D_blank>Lesson&nbsp;07</A> <FONT color=3Dblack>]</FONT>=20
+      =
+</LI></OL></B></FONT></I></FONT></B></FONT></B></FONT></B></FONT></B></FO=
+NT></B></FONT></B></FONT></B></FONT></B></FONT></B></B></TD>
+    <TD>
+      <CENTER>
+      <H1>Testing and Debugging</H1></CENTER>
+      <CENTER>
+      <TABLE bgColor=3Dlime>
+        <TBODY>
+        <TR>
+          <TD>
+            <CENTER><FONT size=3D+1><I><B>Test-Driven=20
+            Development</B></I></FONT></CENTER>
+            <OL>
+              <LI>Think about what the method should do.=20
+              <LI>Write a test case that will test this method.=20
+              <LI>Write the new method.=20
+              <LI>Test the new method.=20
+              <LI>When it passes ... we're done! </LI></OL>
+            <P>... the unit tests document the program without the need =
+to=20
+            maintain separate written documentation that can easily =
+become out=20
+            of date.</P>
+            <CENTER><FONT size=3D-1>Mark Dexter, <I><B><U>Using =
+Test-First=20
+            =
+Development</U></B></I></FONT></CENTER></TD></TR></TBODY></TABLE><BR><BR>=
+
+      <CENTER>
+      <TABLE bgColor=3Dlime>
+        <TBODY>
+        <TR>
+          <TD>
+            <CENTER><FONT =
+size=3D+1><I><B>Debugging</B></I></FONT></CENTER>
+            <OL>
+              <LI>Start a debug session.=20
+              <LI>Set and use breakpoints.=20
+              <LI>Navigate through a program with step commands.=20
+              <LI>Examine variables and expressions. </LI></OL>
+            <CENTER><FONT size=3D-1>Mark Dexter, <I><B><U>Eclipse &amp; =
+Java:=20
+            Using the=20
+      =
+Debugger</U></B></I></FONT></CENTER></TD></TR></TBODY></TABLE><BR><BR>
+      <TABLE bgColor=3Dpink>
+        <TBODY>
+        <TR>
+          <TD>
+            <P>Follow and implement the lessons and activities of Mark =
+Dexter's=20
+            seven 15-minute tutorials of <FONT color=3Dred><B>Using the=20
+            Debugger</B></FONT> [<A=20
+            =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger"=20
+            target=3D_blank>csg</A>] [<A=20
+            =
+href=3D"http://eclipsetutorial.sourceforge.net/debugger.html"=20
+            target=3D_blank>web</A>]</P>
+            <BLOCKQUOTE>Refer to this <A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/Debugger-T=
+utorial-Companion-Document.pdf"=20
+              target=3D_blnk>Tutorial Companion Guide =
+[pdf]</A>.</BLOCKQUOTE>
+            <BLOCKQUOTE>Import this <A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/DebuggerTu=
+torial"=20
+              target=3D_blnk>DebuggerTutorial</A> project into your =
+Eclipse=20
+              workspace. Click <A=20
+              =
+href=3D"http://www.comscigate.com/debug/learn_Debug.htm#copyProject">here=
+</A>=20
+              for directions.</BLOCKQUOTE>
+            <OL>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/lesson01.html"=20
+              target=3D_blank>Startup, Step Over, Step Into, Step =
+Return</A> [<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson01/DEBUG01/"=20
+              target=3D_blank>End&nbsp;Prj&nbsp;01</A>]</P>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/lesson02.html"=20
+              target=3D_blank>Examine Contents of Variables</A> [<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson02/DEBUG02/"=20
+              target=3D_blank>End&nbsp;Prj&nbsp;02</A>]</P>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson03/lesson03.html"=20
+              target=3D_blank>Add Watch Sessions, JUnit Tests</A> [<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson03/DEBUG03/"=20
+              target=3D_blank>End&nbsp;Prj&nbsp;03</A>]</P>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson04/lesson04.html"=20
+              target=3D_blank>Exception Breakpoints, Change Values</A> =
+[<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson04/DEBUG04/"=20
+              target=3D_blank>End&nbsp;Prj&nbsp;04</A>]</P>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/lesson05.html"=20
+              target=3D_blank>Breakpoint Options, Watchpoints</A> [<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson05/DEBUG05/"=20
+              target=3D_blank>End&nbsp;Prj&nbsp;05</A>]</P>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson06/lesson06.html"=20
+              target=3D_blank>Debug into Java System Classes</A> &#8594; =
+Object=20
+              references and the equals( ) method. [<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson06/DEBUG06/"=20
+              target=3D_blank>End&nbsp;Prj&nbsp;06</A>]</P>
+              <LI>
+              <P><A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson07/lesson07.html"=20
+              target=3D_blank>Study Recursion, Stack Frames</A> &#8594; =
+Anatomy of a=20
+              recursive method. [<A=20
+              =
+href=3D"http://www.comscigate.com/environ/Eclipse/tut/debugger/debugger-l=
+esson07/DEBUG07/"=20
+              =
+target=3D_blank>End&nbsp;Prj&nbsp;07</A>]</P></LI></OL></TD></TR></TBODY>=
+</TABLE></CENTER></CENTER></TD></TR>
+  <TR>
+    <TD bgColor=3Dwhite colSpan=3D3><A name=3DcopyProject>
+      <CENTER>
+      <H3>Create A "New" Project From An Existing Project</H3></CENTER>
+      <P><FONT size=3D-1><I>These are really "backups of prior stages" =
+of a=20
+      single, cumulative project. It would be tragic if, upon =
+experiencing a=20
+      "bug" during tutorial #12 that could not be corrected, you had to =
+redo all=20
+      eleven prior tutorials in order to continue the project. Taking a =
+few=20
+      moments at the beginning of each new stage of the project (each =
+new=20
+      tutorial) ensures that you always have a "last good stage" that is =
+only=20
+      one tutorial away. This also facilitates later review of code of a =
+
+      specific tutorial at that particular stage of =
+development.</I></FONT></P>
+      <OL>
+        <LI>
+        <P><B>Create a new project:</B> &nbsp; File &#8594; New &#8594; =
+Project.. &#8594; Java &#8594;=20
+        Java Project &#8594; Next &#8594; <I>Project Name: =
+<B>TB12</B></I> &#8594; Create new=20
+        project in workspace &#8594; Select a JRE (Java Runtime =
+Environment) &#8594; Select=20
+        Project layout &#8594; Finish</P>
+        <LI>
+        <P><B>Copy path of location of source project:</B> &nbsp; Right =
+mouse=20
+        click name of project &#8594; Properties &#8594; Select =
+("highlight") the location=20
+        (eg: "<I><B>H:\TotalBeginnerProjects\TB11</B></I>") &#8594; Copy =
+with=20
+        &lt;Ctrl-C&gt; &#8594; Cancel</P>
+        <LI>
+        <P><B>Open the Import Wizard:</B> &nbsp; Select ("highlight") =
+name of=20
+        new project &#8594; From the main menu bar, select File &#8594; =
+Import....</P>
+        <LI>
+        <P><B>Select Type of Resources To Import:</B> &nbsp; General =
+&#8594; File=20
+        System &#8594; Next.</P>
+        <LI>
+        <P><B>Specify Path and Files To Import:</B> &nbsp; Identify =
+source=20
+        directory as the "From directory:" &#8594; Paste &lt;Ctrl-V&gt; =
+location of=20
+        the source project (eg: =
+"<I><B>H:\TotalBeginnerProjects\TB11</B></I>") &#8594;=20
+        Click the "Browse..." button &#8594; The "Import from directory" =
+dialog box=20
+        appears with name of source folder &#8594; Click "OK" &#8594; =
+Click the "Select All"=20
+        button &#8594; Type name of "Into folder" (<I>existing</I> =
+destination folder)=20
+        if it is not already there. &#8594; Check &#10003; "Overwrite =
+existing resources=20
+        without warning" &#8594; Select "Create selected folders only" =
+&#8594;=20
+        Finish</P></LI></OL></A></TD></TR>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>1</H1></TD>
+    <TD>
+      <CENTER>
+      <H1>MIT Tutorial [pdf]<BR>[<A=20
+      href=3D"http://www.comscigate.com/debug/debugMIT.pdf" =
+target=3D_blank>csg</A>]=20
+      [<A=20
+      =
+href=3D"http://ocw.mit.edu/NR/rdonlyres/Civil-and-Environmental-Engineeri=
+ng/1-00Fall-2005/145F679E-ECF0-4C9F-AA7F-C5AF2F6E425B/0/lecture03.pdf"=20
+      target=3D_blank>web</A>] </H1></CENTER></TD>
+    <TD>
+      <P>This excellent tutorial introduces the Eclipse Java =
+Debugger.</P></TD></TR>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>2</H1></TD>
+    <TD>
+      <CENTER>
+      <H1>UBC Tutorial<BR>[<A=20
+      href=3D"http://www.comscigate.com/debug/DebuggingLab.html"=20
+      target=3D_blank>csg</A>] [<A=20
+      =
+href=3D"http://www.ugrad.cs.ubc.ca/~cs211/labs/DebuggingLab/DebuggingLab.=
+html"=20
+      target=3D_blank>web</A>] </H1></CENTER></TD>
+    <TD>
+      <P>This excellent tutorial introduces the Eclipse Java =
+Debugger.</P></TD></TR>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>3</H1></TD>
+    <TD>
+      <CENTER>
+      <H1>Leszek Tutorial<BR>[<A=20
+      href=3D"http://www.comscigate.com/debug/Debugging.htm"=20
+      target=3D_blank>csg</A>] [<A=20
+      href=3D"http://linuxdevices.com/articles/AT6046208714.html"=20
+      target=3D_blank>web</A>] </H1></CENTER></TD>
+    <TD>
+      <P>This excellent tutorial introduces the Eclipse Java =
+Debugger.</P></TD></TR>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>4</H1></TD>
+    <TD>
+      <CENTER>
+      <H1>Wisconsin Tutorial<BR>[<A=20
+      href=3D"http://www.comscigate.com/debug/wisconsin/index.html"=20
+      target=3D_blank>csg</A>] [<A=20
+      =
+href=3D"http://www.cs.wisc.edu/~cs302/resources/EclipseDebugTutorial/"=20
+      target=3D_blank>web</A>] </H1></CENTER></TD>
+    <TD>
+      <P>This excellent tutorial introduces the Eclipse Java =
+Debugger.</P></TD></TR>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>5</H1></TD>
+    <TD>
+      <CENTER>
+      <H1>Dave Quigley Tutorial<BR>[<A=20
+      href=3D"http://www.comscigate.com/environ/fsl/index.php.0.html"=20
+      target=3D_blank>csg</A>] [<A=20
+      =
+href=3D"http://www.fsl.cs.sunysb.edu/~dquigley/cse219/index.php?it=3Decli=
+pse&amp;tt=3Ddebug&amp;pf=3Dy"=20
+      target=3D_blank>web</A>] </H1></CENTER></TD>
+    <TD>
+      <P>This excellent tutorial by Stony Brook University's Dave =
+Quigley=20
+      introduces the Eclipse Java Debugger.</P></TD></TR>
+  <TR vAlign=3Dtop bgColor=3D#ccffff>
+    <TH>Task</TH>
+    <TH>Topic</TH>
+    <TH>Assignments</TH></TR>
+  <TR vAlign=3Dtop>
+    <TD align=3Dmiddle>
+      <H1>ODB</H1></TD>
+    <TD>
+      <CENTER>
+      <H1><A href=3D"http://www.lambdacs.com/debugger/debugger.html"=20
+      target=3D_blank>Omniscient Debugging</A><BR></H1></CENTER></TD>
+    <TD>
+      <P>This is <FONT color=3Dred><B>not</B></FONT> an Eclipse Debugger =
+plug-in,=20
+      but this does look like a really interesting debugger though. On =
+18=20
+      February 2007 the author, Bil Lewis &lt;Bil@LambdaCS.com&gt; made =
+the=20
+      following statement regarding its use with Eclipse.</P>
+      <BLOCKQUOTE><A =
+href=3D"http://www.lambdacs.com/debugger/debugger.html"=20
+        target=3D_blank>Eclipse will launch the ODB from the RUN menu. =
+[Import the=20
+        ODB, set the main class to be com.lambda.Debugger.Debugger, and =
+set the=20
+        argument to be the program you want to run. (It's a bit lame, =
+but=20
+        simple. I am begging some folks for help with Eclipse.) I expect =
+the=20
+        same can be done for other IDEs.]</A>=20
+</BLOCKQUOTE></TD></TR></TBODY></TABLE></CENTER>
+<HR align=3Dcenter noShade SIZE=3D2>
+
+<ADDRESS>
+<CENTER><FONT size=3D1>URL: &nbsp; <A =
+href=3D"http://www.comscigate.com/"=20
+target=3D_blank>http://www.comscigate.com/</A> &nbsp;&nbsp; Last =
+Revised:=20
+&nbsp;February 4, =
+2006<BR><BR></FONT></CENTRE></ADDRESS></CENTER></BODY></HTML>
