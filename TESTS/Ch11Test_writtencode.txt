@@ -1,0 +1,23 @@
+Ch 11 Test - Code
+
+
+
+Assume a class called playing card has been written that has two pieces of private data - value (2-A) and suit (Spades, Diamonds, Hearts, and Clubs), fill constructor and random fill constuctor(default), sets/gets, and toString methods (2C - two of clubs, AH - ace of hearts).
+
+
+
+a)	Write a seperate class called deck that creates an Arraylist of 52 unique cards and has a Shuffle method that would shuffle the deck and a DealHand method that passes in how many cards in the hand and returns an Arraylist of that number of cards that was sent and removes the cards from your deck.
+
+
+
+b)	Write a main that instatiates the above deck and deals a different hand of 5 cards to two users(System .out.println).
+
+
+
+
+
+
+
+
+
+
