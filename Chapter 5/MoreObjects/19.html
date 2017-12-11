@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Class or static Members</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/19.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="20.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="18.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Class or static Members</h1>
+<p>
+A method or a field in a Java program can be declared <code>
+static</code>. This means the member belongs to the class rather
+than to an individual object. 
+</p>
+
+<p>If a variable is static, then when any object in the class
+changes the value of the variable, that value changes for all
+objects in the class.</p>
+
+
+
+<p>For example, suppose the <code>Car</code> class contained a
+<code>speedLimit</code> field that was set to 112 kph (70 mph).
+This would be the same for all cars. If it changed (by act of
+Congress) for one car, it would have to change for all cars. This
+is a typical static field.</p>
+
+
+<p>Methods are often static is if they neither access nor modify
+any of the instance (non-static) fields of a class and they do not
+invoke any non-static methods in the class. This is common in
+calculation methods like a square root method that merely operate
+on their arguments and return a value. One way of thinking of it is
+that a method should be static if it neither uses nor needs to use
+<code>this</code>.</p>
+
+  
+
+
+
+<hr/><div align="center"><a href="18.html">Previous</a> 
+                 | <a href="20.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 11, 1999</div></body></html>

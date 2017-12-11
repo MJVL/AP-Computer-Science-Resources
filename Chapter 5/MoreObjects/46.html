@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Implementing the Cloneable Interface</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/46.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="47.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="45.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Implementing the Cloneable Interface</h1>
+<p>
+The <code>java.lang.Object</code> class contains a <code>
+clone()</code> method that returns a bitwise copy of the current
+object. 
+</p>
+
+<p><code>protected native Object clone() throws
+CloneNotSupportedException</code></p>
+
+<p>Not all objects are cloneable. It particular only instances of
+classes that implement the <code>Cloneable</code> interface can be
+cloned. Trying to clone an object that does not implement the
+<code>Cloneable</code> interface throws a <code>
+CloneNotSupportedException</code>.</p>
+
+<p>For example, to make the <code>Car</code> class cloneable, you
+simply declare that it implements the <code>Cloneable</code>
+interface. Since this is only a <dfn>marker interface</dfn>, you do
+not need to add any methods to the class.</p>
+
+<pre xml:space="preserve"><code>public class Car extends MotorVehicle implements Cloneable {
+
+  // ...
+
+}</code></pre>
+
+<p>
+For example
+</p>
+
+
+
+<pre xml:space="preserve"><code>Car c1 = new Car("New York A12 345", 150.0);
+Car c2 = (Car) c1.clone();</code></pre>
+
+<p>Most classes in the class library do not implement <code>
+Cloneable</code> so their instances are not cloneable.</p>
+
+<p>Most of the time, clones are <dfn>shallow copies</dfn>. In other
+words if the object being cloned contains a reference to another
+object A, then the clone contains a reference to the same object A,
+not to a clone of A. If this isn't the behavior you want, you can
+override <code>clone()</code> yourself.</p>
+
+<p>You may also override <code>clone()</code> if you want to make a
+subclass uncloneable, when one of its superclasses does implement
+<code>Cloneable</code>. In this case simply use a <code>
+clone()</code> method that throws a <code>
+CloneNotSupportedException</code>. For example,</p>
+
+<pre xml:space="preserve"><code> public Object clone() throws CloneNotSupportedException {
+    throw new CloneNotSupportedException("Can't clone a SlowCar");
+    // never get here
+    return this;
+  }</code></pre>
+
+<p>
+You may also want to override <code>clone()</code> to make it
+<code>public</code> instead of <code>protected</code>. In this
+case, you can simply fall back on the superclass implementation.
+For example,
+</p>
+
+
+
+<pre xml:space="preserve"><code> public Object clone() throws CloneNotSupportedException {
+    return super.clone();
+  }</code></pre>
+
+
+
+
+
+<hr/><div align="center"><a href="45.html">Previous</a> 
+                 | <a href="47.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999, 2003 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              March 5, 2003</div></body></html>

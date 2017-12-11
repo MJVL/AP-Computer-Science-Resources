@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>What is Object Oriented Programming?</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/01.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="02.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="index.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">What is Object Oriented Programming?</h1>
+<p>
+In classic, procedural programming you try to make the real world
+problem you're attempting to solve fit a few, pre-determined data
+types: integers, floats, Strings, and arrays perhaps. In object
+oriented programming you create a model for a real world system.
+Classes are programmer-defined types that model the parts of the
+system.
+</p>
+
+<p>A <dfn>class</dfn> is a programmer defined type that serves as a
+blueprint for instances of the class. You can still have ints,
+floats, Strings, and arrays; but you can also have cars,
+motorcycles, people, buildings, clouds, dogs, angles, students,
+courses, bank accounts, and any other type that's important to your
+problem.</p>
+
+<p>Classes specify the data and behavior possessed both by
+themselves and by the objects built from them. A class has two
+parts: the fields and the methods. Fields describe what the class
+is. Methods describe what the class does.</p>
+
+<p>Using the blueprint provided by a class, you can create any
+number of objects, each of which is called an <dfn>instance</dfn>
+of the class. Different objects of the same class have the same
+fields and methods, but the values of the fields will in general
+differ. For example, all humans have eye color but the color of
+each human's eyes can be different from others.</p>
+
+<p>On the other hand, objects have the same methods as all other
+objects in the class except in so far as the methods depend on the
+value of the fields and arguments to the method.</p>
+
+<p>This dichotomy is reflected in the runtime form of objects.
+Every object has a separate block of memory to store its fields,
+but the bytes in the actual methods are shared between all objects
+in a class.</p>
+
+<p>Another common analogy is that a class is to an object as a
+cookie cutter is to a cookie. One cookie cutter can make many
+cookies. There may be only one class, but there can be many objects
+in that class. Each object is an instance of one class.</p>
+
+
+
+
+
+
+
+<hr/><div align="center"><a href="02.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              February 1, 1997</div></body></html>

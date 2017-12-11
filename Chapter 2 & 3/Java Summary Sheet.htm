@@ -1,0 +1,434 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional">
+<html>
+<head>
+<meta name="generator" content="HTML Tidy, see www.w3.org">
+<title>Java Summary Sheet</title>
+<link type="text/css" rel="stylesheet" href="./phs.css">
+</head>
+<body>
+<h3 class="rf">Java Summary Sheet for Mason High School APCS
+Classes</h3>
+
+<h4 class="rf">Control Structures</h4>
+
+A simple if..else statement 
+
+<div class="codebox">
+<pre>
+    if ( a &gt; b )
+        System.out.println( a + " is larger than " + b );
+    else
+        System.out.println( b + " is larger than " + a );
+</pre>
+</div>
+
+Checking a range 
+
+<div class="codebox">
+<pre>
+    // is x in range low .. high?
+    if ( low &lt;= x &amp;&amp; x &gt;= high )
+    {
+        System.out.println ( "in range" );
+    }
+    else
+    {
+        System.out.println ( "out of range" );
+    }
+</pre>
+</div>
+
+An if statement with multiple expressions and an else statement. 
+
+<div class="codebox">
+<pre>
+if (testscore &gt;= 90) {
+      grade = 'A';
+} else if (testscore &gt;= 80) {
+      grade = 'B';
+} else if (testscore &gt;= 70) {
+      grade = 'C';
+} else if (testscore &gt;= 60) {
+      grade = 'D';
+} else {
+      grade = 'F';
+}
+</pre>
+</div>
+
+Switch/Case 
+
+<div class="codebox">
+<pre>
+    // n should be char or int
+    switch ( n )
+    {
+        case 1:
+           System.out.println ( "one" );
+        break;
+           case 2:
+        System.out.println ( "two" );
+           break;
+        default:
+           System.out.println ( "something else" );
+    }
+</pre>
+</div>
+
+<h4 class="rf">Loops</h4>
+
+For loop 
+
+<div class="codebox">
+<pre>
+    for ( int i = 0; i &lt;= n; i++ )
+    {
+        System.out.println( i );
+    }
+</pre>
+</div>
+
+Enumeration 
+
+<div class="codebox">
+<pre>
+    for ( Enumeration e = props.propertyNames(); e.hasMoreElements(); )
+    {
+        String key = (String) e.nextElement();
+        System.out.println ( key );
+    }
+</pre>
+</div>
+
+Iterator 
+
+<div class="codebox">
+<pre>
+    for ( Iterator iter = list.iterator(); iter.hasNext(); )
+    {
+        String key = (String) iter.next();
+        System.out.println( key );
+    }
+</pre>
+</div>
+
+While 
+
+<div class="codebox">
+<pre>
+    while ( moreData() )
+    {
+        readIt();
+    }
+</pre>
+</div>
+
+Do/While 
+
+<div class="codebox">
+<pre>
+    do
+    {
+        readIt();
+        if ( done() ) 
+            break;
+        if ( bypassThisOne() ) 
+            continue;
+        processIt();
+    }
+    while ( moreData() );
+</pre>
+</div>
+
+<h4 class="rf">Try/Catch/Throw</h4>
+
+<div class="codebox">
+<pre>
+    public class Test
+    {
+        public static void main (String [] args)
+        {
+            try {
+                dangerMethod();
+            }
+            catch ( StrangeException e )  {
+                System.out.println ( "exception" + e.getMessage() );
+            }
+        }
+    
+        void dangerMethod() throws StrangeException
+        {
+            if ( unexpected() ) throw new StrangeException ( "from dangerMethod" ) ;
+        } 
+    }
+</pre>
+</div>
+
+<h4 class="rf">Primitives (used in our course)</h4>
+
+<table border="2" cellspacing="0" cellpadding="4" summary=
+"primitives">
+<tr>
+<th style="background:lightsteelblue">Type</th>
+<th style="background:lightsteelblue">Signed?</th>
+<th style="background:lightsteelblue">Bits</th>
+<th style="background:lightsteelblue">Bytes</th>
+<th style="background:lightsteelblue">Lowest</th>
+<th style="background:lightsteelblue">Highest</th>
+</tr>
+
+<tr>
+<td>boolean</td>
+<td>n/a</td>
+<td>1</td>
+<td>1</td>
+<td>false</td>
+<td>true</td>
+</tr>
+
+<tr>
+<td>char</td>
+<td>unsigned Unicode</td>
+<td>16</td>
+<td>2</td>
+<td>'\u0000'</td>
+<td>'\uffff'</td>
+</tr>
+
+<tr>
+<td>int</td>
+<td>signed</td>
+<td>32</td>
+<td>4</td>
+<td>-2,147,483,648</td>
+<td>+2,147,483,647</td>
+</tr>
+
+<tr>
+<td>long</td>
+<td>signed</td>
+<td>64</td>
+<td>8</td>
+<td>-9,223,372,036,854,775,808</td>
+<td>+9,223,372,036,854,775,807</td>
+</tr>
+
+<tr>
+<td>double</td>
+<td>signed exponent and mantissa</td>
+<td>64</td>
+<td>8</td>
+<td>&plusmn;4.94065645841246544e-324</td>
+<td>&plusmn;1.79769313486231570e+308</td>
+</tr>
+</table>
+
+<h4 class="rf">Keywords</h4>
+
+<table border="2" cellspacing="0" cellpadding="4" summary=
+"keywords">
+<tr>
+<th colspan="5" style="background:lightsteelblue">Java
+Keywords</th>
+</tr>
+
+<tr>
+<td>abstract</td>
+<td>do</td>
+<td>import</td>
+<td>public</td>
+<td>throws</td>
+</tr>
+
+<tr>
+<td>boolean</td>
+<td>double</td>
+<td>instanceof</td>
+<td>return</td>
+<td>transient</td>
+</tr>
+
+<tr>
+<td>break</td>
+<td>else</td>
+<td>int</td>
+<td>short</td>
+<td>try</td>
+</tr>
+
+<tr>
+<td>byte</td>
+<td>extends</td>
+<td>interface</td>
+<td>static</td>
+<td>void</td>
+</tr>
+
+<tr>
+<td>case</td>
+<td>final</td>
+<td>long</td>
+<td>strictfp</td>
+<td>volatile</td>
+</tr>
+
+<tr>
+<td>catch</td>
+<td>finally</td>
+<td>native</td>
+<td>super</td>
+<td>while</td>
+</tr>
+
+<tr>
+<td>char</td>
+<td>float</td>
+<td>new</td>
+<td>switch</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>class</td>
+<td>for</td>
+<td>package</td>
+<td>synchroni<b>z</b>ed</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>continue</td>
+<td>if</td>
+<td>private</td>
+<td>this</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<td>default</td>
+<td>implements</td>
+<td>protected</td>
+<td>throw</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th colspan="5" style="background:lightsteelblue">Reserved keywords
+(not currently in use)</th>
+</tr>
+
+<tr>
+<td>const</td>
+<td>goto</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+
+<tr>
+<th colspan="5" style="background:lightsteelblue">Reserved
+Literals</th>
+</tr>
+
+<tr>
+<td>null</td>
+<td>true</td>
+<td>false</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+
+<h4 class="rf">Precedence (in descending priority order)</h4>
+
+<table border="2" cellspacing="0" cellpadding="4" summary=
+"precedence">
+<tr>
+<th style="background:lightsteelblue">Operator</th>
+<th style="background:lightsteelblue">Association</th>
+</tr>
+
+<tr>
+<td>postfix operators</td>
+<td><code>[] . (<em>params</em>) <em>expr</em>++
+<em>expr</em>--</code></td>
+</tr>
+
+<tr>
+<td>unary operators</td>
+<td><code>++<em>expr</em> --<em>expr</em> +<em>expr</em>
+-<em>expr</em> ~ !</code></td>
+</tr>
+
+<tr>
+<td>creation or cast</td>
+<td><code>new (<em>type</em>)<em>expr</em></code></td>
+</tr>
+
+<tr>
+<td>multiplicative</td>
+<td><code>* / %</code></td>
+</tr>
+
+<tr>
+<td>additive</td>
+<td><code>+ -</code></td>
+</tr>
+
+<tr>
+<td>shift</td>
+<td><code>&lt;&lt; &gt;&gt; &gt;&gt;&gt;</code></td>
+</tr>
+
+<tr>
+<td>relational</td>
+<td><code>&lt; &gt; &lt;= &gt;= instanceof</code></td>
+</tr>
+
+<tr>
+<td>equality</td>
+<td><code>== !=</code></td>
+</tr>
+
+<tr>
+<td>bitwise AND</td>
+<td><code>&amp;</code></td>
+</tr>
+
+<tr>
+<td>bitwise exclusive OR</td>
+<td><code>^</code></td>
+</tr>
+
+<tr>
+<td>bitwise inclusive OR</td>
+<td><code>|</code></td>
+</tr>
+
+<tr>
+<td>logical AND</td>
+<td><code>&amp;&amp;</code></td>
+</tr>
+
+<tr>
+<td>logical OR</td>
+<td><code>||</code></td>
+</tr>
+
+<tr>
+<td>conditional</td>
+<td><code>? :</code></td>
+</tr>
+
+<tr>
+<td>assignment</td>
+<td><code>= += -= *= /= %= &amp;= ^= |= &lt;&lt;= &gt;&gt;=
+&gt;&gt;&gt;=</code></td>
+</tr>
+</table>
+
+<hr>
+ <!-- last edit: 3-Nov-2002 -->
+</body>
+</html>
+

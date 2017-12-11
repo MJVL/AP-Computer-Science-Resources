@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Methods</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/08.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="09.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="07.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Methods</h1>
+<p>
+Data types aren't much use unless you can do things with them. For
+this purpose classes have methods. Fields say what a class <em>
+is</em>. Methods say what a class <em>does</em>. The fields and
+methods of a class are collectively referred to as the <dfn>members
+of the class</dfn>.
+</p>
+
+<p>The classes you've encountered up till now have mostly had a
+single method, <code>main()</code>. However, in general classes can
+have many different methods that do many different things. For
+instance the <code>Car</code> class might have a method to make the
+car go as fast as it can. For example,</p>
+
+
+
+<pre xml:space="preserve"><code>class Car {
+
+  String licensePlate = "";    // e.g. "New York 543 A23"
+  double speed        = 0.0;   // in kilometers per hour
+  double maxSpeed     = 120.0; // in kilometers per hour
+  
+  // accelerate to maximum speed
+  // put the pedal to the metal
+  void floorIt() {
+    this.speed = this.maxSpeed;  
+  }
+  
+}</code></pre>
+
+<p>
+The fields are the same as before, but now there's also a method
+called <code>floorIt()</code>. It begins with the Java keyword
+<code>void</code> which is the return type of the method. Every
+method must have a return type which will either be <code>
+void</code> or some data type like <code>int</code>, <code>
+byte</code>, <code>float</code>, or <code>String</code>. The return
+type says what kind of the value will be sent back to the calling
+method when all calculations inside the method are finished. If the
+return type is <code>int</code>, for example, you can use the
+method anywhere you use an <code>int</code> constant. If the return
+type is <code>void</code> then no value will be returned.
+</p>
+
+<p><code>floorIt</code> is the name of this method. The name is
+followed by two empty parentheses. Any arguments passed to the
+method would be passed between the parentheses, but this method has
+no arguments. Finally an opening brace ( <code>{</code> ) begins
+the body of the method.</p>
+
+<p>There is one statement inside the method</p>
+
+<p><code>this.speed = this.maxSpeed;</code></p>
+
+<p>Notice that within the <code>Car</code> class the field names
+are prefixed with the keyword <code>this</code> to indicate that
+I'm referring to fields in the current object.</p>
+
+<p>Finally the <code>floorIt()</code> method is closed with a
+<code>}</code> and the class is closed with another <code>
+}</code>.</p>
+
+<p>Question: what are some other methods this class might need? Or,
+another way of putting it, what might you want to do with a <code>
+Car</code> object?</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="07.html">Previous</a> 
+                 | <a href="09.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 1, 1999</div></body></html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>java.lang.Object</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/33.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="34.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="32.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">java.lang.Object</h1>
+The <code>java.lang.Object</code> class is the ultimate superclass
+of all objects If a class does not explicitly extend a class, then
+the compiler assumes it extends <code>java.lang.Object</code>.
+
+<p>There is one exception. Guesses?</p>
+
+
+
+<h2>The Methods of java.lang.Object</h2>
+
+<code>java.lang.Object</code> provides a number of methods that are
+common to all objects. <code>toString()</code> is the most common
+such method. Since the default <code>toString()</code> method only
+produces the name of the class, you should override it in all
+classes you define. 
+
+
+
+<ul>
+<li><code>public Object()</code></li>
+
+<li><code>public final Class getClass()</code></li>
+
+<li><code>public int hashCode()</code></li>
+
+<li><code>public boolean equals(Object obj)</code></li>
+
+<li><code>protected Object clone() throws
+CloneNotSupportedException</code></li>
+
+<li><code>public String toString()</code></li>
+
+<li><code>public final void notify()</code></li>
+
+<li><code>public final void notifyAll()</code></li>
+
+<li><code>public final void wait(long timeout) throws
+InterruptedException</code></li>
+
+<li><code>public final void wait(long timeout, int nanos) throws
+InterruptedException</code></li>
+
+<li><code>public final void wait() throws
+InterruptedException</code></li>
+
+<li><code>protected void finalize() throws Throwable</code></li>
+</ul>
+
+
+  
+
+
+
+<hr/><div align="center"><a href="32.html">Previous</a> 
+                 | <a href="34.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 18, 1997</div></body></html>

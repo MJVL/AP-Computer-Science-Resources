@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Overriding Methods: The Solution</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/12.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="13.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="11.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Overriding Methods: The Solution</h1>
+<p>
+The object oriented solution to this problem is to define a new
+class, call it <code>SlowCar</code>, which inherits from <code>
+Car</code> and imposes the additional constraint that a car may not
+go faster than 70 mph (112.65 kph). 
+</p>
+
+<p>To do this you'll need to adjust the two places that speed can
+be changed, the constructor and the <code>accelerate()</code>
+method. The constructor has a different name because all
+constructors are named after their classes but the <code>
+accelerate()</code> method must be <dfn>overridden</dfn>. This
+means the subclass has a method with the same signature as the
+method in the superclass.</p>
+
+
+
+<pre xml:space="preserve"><code>public class SlowCar extends Car {
+
+  private static final double speedLimit = 112.65408; // kph == 70 mph
+
+  public SlowCar(String licensePlate, double speed, double maxSpeed,
+   String make, String model, int year, int numberOfPassengers, int numDoors) {
+    
+    super(licensePlate, speed, maxSpeed, make, model, year, 
+     numberOfPassengers, numDoors);
+    if (speed &gt; speedLimit) this.speed = speedLimit;
+    
+  }
+
+  public void accelerate(double deltaV) {
+
+     double speed = this.getSpeed() + deltaV;
+     
+     if (speed &gt; speedLimit) {
+       super.accelerate(speedLimit - this.getSpeed());
+     }
+     else {
+       super.accelerate(deltaV);  
+     }  
+     
+  }
+   
+}</code></pre>
+
+<p>
+The first thing to note about this class is what it doesn't have,
+<code>getSpeed()</code>, <code>getLicensePlate()</code>, <code>
+getMaximumSpeed()</code>, <code>setLicensePlate()</code> methods or
+<code>speed</code>, <code>maxSpeed</code> and <code>numDoors</code>
+fields. All of these are provided by the superclass <code>
+Car</code>. Nothing about them has changed so they don't need to be
+repeated here. 
+</p>
+
+<p>Next look at the <code>accelerate()</code> method. This is
+different than the <code>accelerate()</code> method in <code>
+Car</code>. It imposes the additional constraint. Since the <code>
+speed</code> and <code>maxSpeed</code> fields from <code>Car</code>
+are protected, they're accessible from this subclass.</p>
+
+<p>The constructor is a little more complicated. First note that if
+you're going to use a non-default constructor, that is a
+constructor with arguments, you do need to write a constructor for
+the subclass, even if it's just going to do the exact same thing as
+the matching constructor in the superclass. You cannot simply
+inherit <code>Car</code>'s constructor because that constructor is
+named <code>Car()</code> and this one must be named <code>
+SlowCar()</code>.</p>
+
+<p>The constructor needs to set the value of name, url, and
+description. However they're not accessible from the subclass.
+Instead they are set by calling the superclass's constructor using
+the keyword <code>super</code>. When <code>super</code> is used as
+a method in the first non-blank line of a constructor, it stands
+for the constructor of this class's superclass.</p>
+
+<p>The immediate superclass's constructor <em>will</em> be called
+in the first non-blank line of the subclass's constructor. If you
+don't call it explicitly, then Java will call it for you with no
+arguments. It's a compile time error if the immediate superclass
+doesn't have a constructor with no arguments and you don't call a
+different constructor in the first line of the subclass's
+constructor.</p>
+
+<p>The use of the ternary operator in the constructor call is
+unusual. However, it's necessary to meet the compiler's requirement
+that the invocation of <code>super</code> be the first line in the
+subclass constructor. Otherwise this could be written more clearly
+using only <code>if</code>-<code>else</code>.</p>
+
+ 
+
+
+
+<hr/><div align="center"><a href="11.html">Previous</a> 
+                 | <a href="13.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-2000, 2003 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 30, 2003</div></body></html>

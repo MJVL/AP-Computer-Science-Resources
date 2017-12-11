@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Rules for toString() Methods</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/36.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="37.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="35.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Rules for toString() Methods</h1>
+<code>toString()</code> methods should return a single line of text
+that does not contain any carriage returns or linefeeds.
+
+<p>
+ <code>toString()</code> methods are
+primarily for debugging.</p>
+
+<p><code>toString()</code> should not do a lot of fancy processing.
+<code>toString()</code> methods should be quick.</p>
+
+<p>The string returned by <code>toString()</code> should contain
+the name of the class, and names and values of the fields that
+represent the state of the object, unless there are an excessive
+number of such fields, in which case only the most important should
+be returned.</p>
+
+<p>A better <code>Car</code> <code>toString()</code> method would
+be:</p>
+
+
+
+<pre xml:space="preserve"><code> public String toString() {
+    return "[Car: plate=" + this.licensePlate 
+     + " speed=" + this.speed +  + "MaxSpeed=" + this.maxSpeed +"]");
+  }</code></pre>
+
+These rules are conventions, not requirements of the language. 
+
+
+
+
+
+
+
+
+<hr/><div align="center"><a href="35.html">Previous</a> 
+                 | <a href="37.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 1998 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 16, 1997</div></body></html>

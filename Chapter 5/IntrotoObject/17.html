@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Returning Multiple Values From Methods</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/17.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="18.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="16.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Returning Multiple Values From Methods</h1>
+<p>
+It is not possible to return more than one value from a method. You
+cannot, for example, return the <code>licensePlate</code>, <code>
+speed</code> and <code>maxSpeed</code> fields from a single single
+method. You could combine them into an object of some kind and
+return the object. However this would be poor object oriented
+design. 
+</p>
+
+<p>The right way to solve this problem is to define three separate
+methods, <code>getSpeed()</code>, <code>getMaxSpeed()</code>, and
+<code>getLicensePlate()</code>, each of which returns its
+respective value. For example,</p>
+
+
+
+<pre xml:space="preserve"><code>class Car {
+
+  String licensePlate = "";    // e.g. "New York 543 A23"
+  double speed        = 0.0;   // in kilometers per hour
+  double maxSpeed     = 120.0; // in kilometers per hour
+  
+  // getter (accessor) methods
+  String getLicensePlate() {
+    return this.licensePlate;
+  }
+
+  double getMaxSpeed() {
+    return this.maxSpeed;
+  }
+
+  double getSpeed() {
+    return this.speed;
+  }
+
+  // setter method for the license plate property
+  void setLicensePlate(String licensePlate) {
+    this.licensePlate = licensePlate;
+  }
+
+  // setter method for the maxSpeed property
+  void setMaximumSpeed(double maxSpeed) {
+    if (maxSpeed &gt; 0) this.maxSpeed = maxSpeed;
+    else this.maxSpeed = 0.0;
+  }
+
+  // accelerate to maximum speed
+  // put the pedal to the metal
+  void floorIt() {
+    this.speed = this.maxSpeed;  
+  }
+  
+  void accelerate(double deltaV) {
+
+     this.speed = this.speed + deltaV;
+     if (this.speed &gt; this.maxSpeed) {
+       this.speed = this.maxSpeed; 
+     }
+     if (this.speed &lt;  0.0) {
+       this.speed = 0.0; 
+     }     
+     
+  }
+  
+}</code></pre>
+
+
+  
+
+
+
+<hr/><div align="center"><a href="16.html">Previous</a> 
+                 | <a href="18.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1998, 1999, 2003 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 13, 2003</div></body></html>

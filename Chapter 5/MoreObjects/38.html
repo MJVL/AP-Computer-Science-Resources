@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>The hashCode() method of java.lang.Object</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/38.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="39.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="37.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">The hashCode() method of java.lang.Object</h1>
+<p>
+Anytime you override <code>equals()</code> you should also override
+<code>hashCode()</code>. The <code>hashCode()</code> method should
+ideally return the same <code>int</code> for any two objects that
+compare equal and a different int for any two objects that don't
+compare equal, where equality is defined by the <code>
+equals()</code> method. This is used as an index by the <code>
+java.util.Hashtable</code> class. </p>
+
+<p>In the <code>Car</code> example equality is determined
+exclusively by comparing license plates; therefore only the <code>
+licesePlate</code> field is used to determine the hash code. Since
+<code>licensePlate</code> is a <code>String</code>, and since the
+<code>String</code> class has its own <code>hashCode()</code>
+method, we can sponge off of that.</p>
+
+<pre xml:space="preserve"><code> public int hashCode() {
+  
+    return this.licensePlate.hashCode();
+    
+  }</code></pre>
+
+<p>
+Other times you may need to use the bitwise operators to merge hash
+codes for multiple fields. There are also a variety of useful
+methods in the type wrapper classes (<code>java.lang.Double</code>,
+<code>java.lang.Float</code>, etc.) that convert primitive data
+types to integers that share the same bit string. These can be used
+to hash primitive data types. 
+
+</p>
+
+
+
+
+
+<hr/><div align="center"><a href="37.html">Previous</a> 
+                 | <a href="39.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 1998, 2001 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              November 2, 2001</div></body></html>

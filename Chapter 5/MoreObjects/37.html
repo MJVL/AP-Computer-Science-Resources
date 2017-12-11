@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>The equals() method</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/37.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="38.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="36.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">The equals() method</h1>
+<p>
+The <code>equals()</code> method of <code>java.lang.Object</code>
+acts the same as the <code>==</code> operator; that is, it tests
+for object identity rather than object equality. The implicit
+contract of the <code>equals()</code> method, however, is that it
+tests for equality rather than identity. Thus most classes will
+override <code>equals()</code> with a version that does field by
+field comparisons before deciding whether to return true or false. 
+</p>
+
+
+<p>To elaborate, an object created by a <code>clone()</code> method
+(that is a copy of the object) should pass the <code>
+equals()</code> test if neither the original nor the clone has
+changed since the clone was created. However the clone will fail to
+be <code>==</code> to the original object.</p>
+
+<p>For example, here is an <code>equals()</code> method you could
+use for the <code>Car</code> class. Two cars are equal if and only
+if their license plates are equal, and that's what this method
+tests for.</p>
+
+<pre xml:space="preserve"><code> public boolean equals(Object o) {
+  
+    if (o instanceof Car) {
+      Car c = (Car) o;
+      if (this.licensePlate.equals(c.licensePlate)) return true;
+    }
+    return false;
+    
+  }</code></pre>
+
+<p>
+This example is particularly interesting because it demonstrates
+the impossibility of writing a useful generic <code>equals()</code>
+method that tests equality for any object. It is not sufficient to
+simply test for equality of all the fields of two objects. It is
+entirely possible that some of the fields may not be relevant to
+the test for equality as in this example where changing the speed
+of a car does not change the actual car that's referred to.
+</p>
+<p>Be careful to avoid this common mistake when writing <code>
+equals()</code> methods:</p>
+
+<pre xml:space="preserve"><code> public boolean equals(Car c) {
+  
+    if (o instanceof Car) {
+      Car c = (Car) o;
+      if (this.licensePlate.equals(c.licensePlate)) return true;
+    }
+    return false;
+    
+  }</code></pre>
+
+<p>
+The <code>equals()</code> method must allow tests against any
+object of any class, not simply against other objects of the same
+class (<code>Car</code> in this example.) 
+</p>
+
+<p>You do not need to test whether <code>o</code> is <code>
+null</code>. <code>null</code> is never an instance of any class.
+<code>null instanceof Object</code> returns <code>false</code>.</p>
+
+
+ 
+
+
+
+<hr/><div align="center"><a href="36.html">Previous</a> 
+                 | <a href="38.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999, 2001 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              November 2, 2001</div></body></html>

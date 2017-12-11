@@ -1,0 +1,66 @@
+Jotto is a guessing game that uses five-letter words.  You are going to write a
+program that will play the game with a user.  Suppose you have a file with
+over 3000 5-letter words in it to use as a Jotto dictionary.  The computer will
+randomly select a word from the dictionary and will then ask the user to guess
+it.  Suppose the computer randomly selects BOOTY.
+
+To guess the word, the user must use 5-letter words as guesses.  After making a
+guess, the computer reports how many jots the guess gets.  A jot is a letter
+match.  Thus, if the user guesses OGRES, the computer calculates:
+
+                B O O T Y
+                 /
+                O G R E S
+
+OGRES gets 1 jot when compared with BOOTY.  The O can only match once.  Every
+letter in each word is allowed to match at most once.  Letters don't have to
+match in the same position.  Position is irrelevant.  If the user then guesses
+FOOLS, the computer calculates:
+
+                B O O T Y
+                  | |
+                F O O L S
+
+FOOLS gets 2 jots when compared with BOOTY.  If the user then guesses TUBBY,
+the computer calculates:
+
+                B O O T Y
+                 \   /  |
+                  \/    |
+                 / \    |
+                T U B B Y
+
+TUBBY gets 3 jots when compared with BOOTY.  The double B in TUBBY can only
+match once against the single B in BOOTY.  Each exact pair of characters that
+match constitute another jot.  Because each letter can be used once at most, it
+is not possible to get more than 5 jots.  It is, however, possible to get 5
+jots without being right.  Consider:
+
+                +-S P E A R
+                |  / / / /
+                | P E A R S-+
+                |           |
+                +-----------+
+
+Each of these words are composed of the same 5 letters, but they are not the
+same word.  Thus, SPEAR and PEARS each get 5 jots when compared with the other.
+You also get 5 jots if you compare either of these to the words RAPES, PARES,
+PARSE, or REAPS.
+
+If you want a more difficult and more interesting assignment, have the game
+work both ways.  The computer will think up a word for the user to guess and
+the user will think up a word for the computer to guess.  This is a case where
+the computer can take advantage of its brute force ability to check every
+possibility.  Using the Jotto dictionary as a starting point, the computer
+can keep track of all of the current possibilities.  Each time the computer
+should guess a word randomly selected from this list.  Then when the user tells
+the computer how many jots that word gets compared to the correct word, the
+computer can eliminate any words that don't have the same number of jots when
+compared to the guess.  The computer fairly quickly locates the correct word,
+so the user has to be a very good Jotto player to beat this strategy.  Remember
+that the user is supposed to guess a legal English word and is required to give
+correct answers as the computer makes guesses.  It would be good for the
+computer to verify that the user doesn't cheat.  This can be done only at the
+end when the computer gives up and asks the user what the answer is.
+
+

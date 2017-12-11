@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Wrapping Your Own Packages</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/47.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="48.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="46.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Wrapping Your Own Packages</h1>
+<p>
+Java does not limit you to using only the system supplied packages.
+You can write your own as well. You write packages just like you
+write any other Java program. Make sure you follow these rules:
+</p>
+
+
+
+<ol type="1" start="1">
+<li>There must be no more than one public class per file.</li>
+
+<li>All files in the package must be named classname.java where
+classname is the name of the single public class in the file.</li>
+
+<li>At the very top of each file in the package, before any import
+statements, put the statement</li>
+</ol>
+
+<pre xml:space="preserve"><code>package <i>myPackage</i>;</code></pre>
+
+<p>
+To use the package in other programs, compile the .java files as
+usual and then move the resulting .class files into the appropriate
+subdirectory of one of the directories referenced in your CLASSPATH
+environment variable. For instance if /home/elharo/classes is in
+your CLASSPATH and your package is called <code>package1</code>,
+then you would make a directory called <code>package1</code> in
+/home/elharo/classes and then put all the .class files in the
+package in /home/elharo/classes/package1.
+</p>
+
+<p>For example,</p>
+
+
+
+<pre xml:space="preserve"><code>package com.macfaq.net;
+
+import java.net.*;
+
+public class URLSplitter {
+
+  public static void main(String[] args) {
+   
+    for (int i = 0; i &lt; args.length; i++) {
+      try {
+        URL u = new URL(args[i]);
+        System.out.println("Protocol: " + u.getProtocol());
+        System.out.println("Host: " + u.getHost());
+        System.out.println("Port: " + u.getPort());
+        System.out.println("File: " + u.getFile());
+        System.out.println("Ref: " + u.getRef());
+      }
+      catch (MalformedURLException e) {
+        System.err.println(args[i] + " is not a valid URL");
+      }
+    }
+
+  } 
+
+}</code>
+</pre>
+
+<code>% javac -d /home/elharo/classes URLSplitter.java</code>
+<p>The -d flag to the compiler tells it to create the necessary
+directories such as elharo/net in the specified directory. In this
+example, URLSplitter.class is placed in
+/home/elharo/classes/com/macfaq/net. You can use the usual shell
+syntax such as . for the current directory or ~ for your home
+directory.</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="46.html">Previous</a> 
+                 | <a href="48.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 21, 1999</div></body></html>

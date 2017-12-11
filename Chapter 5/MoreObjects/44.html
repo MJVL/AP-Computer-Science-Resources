@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Interfaces</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/44.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="45.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="43.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Interfaces</h1>
+<p>
+Interfaces are the next level of abstraction. An interface is like
+a class with nothing but <code>abstract</code> methods and <code>
+final</code>, <code>static</code> fields. All methods and fields of
+an interface must be public. 
+</p>
+
+<p>However, unlike a class, an interface can be added to a class
+that is already a subclass of another class. Furthermore an
+interface can apply to members of many different classes. For
+instance you can define an <code>Import</code> interface with the
+single method <code>calculateTariff()</code>.</p>
+
+
+
+<pre xml:space="preserve"><code>public interface Import {
+
+  public double calculateTariff();
+
+}</code></pre>
+
+<p>
+You might want to use this interface on many different classes,
+cars among them but also for clothes, food, electronics and moore.
+It would be inconvenient to make all these objects derive from a
+single class. Furthermore, each different type of item is likely to
+have a different means of calculating the tariff. Therefore you
+define an <code>Import</code> interface and declare that each class
+implements <code>Import</code>. 
+</p>
+
+<p>The syntax is simple. <code>Import</code> is declared public so
+that it can be accessed from any class. It is also possible to
+declare that an interface is protected so that it can only be
+implemented by classes in a particular package. However this is
+very unusual. Almost all interfaces will be public. No interface
+may be private because the whole purpose of an Interface is to be
+inherited by other classes.</p>
+
+<p>The <code>interface</code> keyword takes the place of the <code>
+class</code> keyword. Line 3 looks like a classic method
+definition. It's public (as it must be). It's abstract, also as it
+must be. And it returns a <code>double</code>. The method's name is
+<code>calculateTariff()</code> and it takes no arguments. The
+difference between thisa and a method in a class is that there is
+no method body. That remains to be created in each class that
+implements the interface.</p>
+
+<p>You can declare many different methods in an interface. These
+methods may be overloaded. An interface can also have fields, but
+if so they must be <code>final</code> and <code>static</code> (in
+other words constants).</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="43.html">Previous</a> 
+                 | <a href="45.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 1998, 2000 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              January 27, 2000</div></body></html>

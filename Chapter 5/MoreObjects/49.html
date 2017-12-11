@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>JAR archives</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/49.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="50.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="48.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">JAR archives</h1>
+<p>
+JAR archives are ZIP archives with a different extension. They
+contain a hierarchy of files and directories. In essence a JAR file
+can take the place of a directory containing its contents. This has
+many uses including the distribution of related classes as a single
+file. 
+</p>
+
+<p>The JDK includes a <samp>jar</samp> program modeled after the Unix
+<samp>tar</samp> program that will bundle up files and directories into
+a JAR archive. For example, suppose your <i>homework</i> directory
+contains the file <i>Trivia.class</i>.</p>
+
+<p>Now suppose that Trivia is in the package <code>
+edu.poly.utopia.eharold.games</code>. Also suppose that the
+directory <i>/home/users/eharold/homework/</i> contains (in various
+sub-directories) all the files and directories necessary to run the
+program <code>edu.poly.utopia.eharold.games.Trivia</code>. You can
+pack up everyhting in the edu package into a JAR archive like
+this:</p>
+
+
+
+<pre xml:space="preserve"><samp>% cd /home/users/eharold/homework
+% jar cvf eharold.jar edu</samp></pre>
+
+<p>
+The <i>edu</i> directory and all its contents are recursively
+stored in the archive named eharold.jar. The name of the archive is
+unimportant, only its contents. 
+</p>
+
+<p>This archive may now be added to the class path like this, or in
+whatever fashion you normally add directories to the class path on
+your platform of choice:</p>
+
+<p><samp>% setenv CLASSPATH $CLASSPATH:eharold.jar</samp></p>
+
+<p>The main thing to note here is that the JAR file is now taking
+the place of an entire directory hierarchy.</p>
+
+<p>In Java 1.2 you can also place it in the <i>ext</i> directory of
+your <i>jre/lib</i> directory.</p>
+
+<p>Either way, all the classes in the archive will be added to the
+class path and will be accessible to your programs.</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="48.html">Previous</a> 
+                 | <a href="50.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1999, 2002 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 3, 2002</div></body></html>

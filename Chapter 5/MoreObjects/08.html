@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Inheritance: The Car subclass</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/08.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="09.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="07.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Inheritance: The Car subclass</h1>
+<pre xml:space="preserve"><code>public class Car extends MotorVehicle {
+
+  private int numberWheels = 4;  
+  private int numberDoors;
+  
+  
+  // constructors
+  public Car(String licensePlate, double maxSpeed,
+   String make, String model, int year, int numberOfPassengers,
+   int numberOfDoors) {
+    this(licensePlate, 0.0, maxSpeed, make, model, year, numberOfPassengers, 
+     numberOfDoors);    
+  }
+
+  public Car(String licensePlate, double speed, double maxSpeed,
+   String make, String model, int year, int numberOfPassengers) {
+    this(licensePlate, speed, maxSpeed, make, model, year, 
+     numberOfPassengers, 4);    
+  }
+
+  public Car(String licensePlate, double speed, double maxSpeed,
+   String make, String model, int year, int numberOfPassengers,
+   int numberOfDoors) {
+    super(licensePlate, speed, maxSpeed, make, model,
+     year, numberOfPassengers);
+    this.numberDoors = numberOfDoors;
+  }
+   
+  public int getNumberOfWheels() {
+    return this.numberWheels;
+  }
+ 
+  public int getNumberOfDoors() {
+    return this.numberDoors;
+  }
+    
+}</code></pre>
+
+<p>
+It may look like these classes aren't as complete as the earlier
+ones, but that's incorrect. <code>Car</code> and <code>
+Motorcycle</code> each inherit the members of their superclass,
+<code>MotorVehicle</code>. Since a <code>MotorVehicle</code> has a
+make, a model, a year, a speed, a maximum speed, a number of
+passengers, cars and motorcycles also have makes, models, years,
+speeds, maximum speeds, and numbers of passengers. They alse have
+all the public methods the superclass has. They do not have the
+same constructors, though they can invoke the superclass
+constructor through the <code>super</code> keyword, much as a
+constructor in the same class can be invoked with the <code>
+this</code> keyword.
+</p>
+
+
+
+
+<hr/><div align="center"><a href="07.html">Previous</a> 
+                 | <a href="09.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999, 2002, 2003 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 30, 2003</div></body></html>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Implied this</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/10.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="11.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="09.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Implied this</h1>
+<pre xml:space="preserve"><code>class Car {
+
+  String licensePlate = "";    // e.g. "New York 543 A23"
+  double speed        = 0.0;   // in kilometers per hour
+  double maxSpeed     = 120.0; // in kilometers per hour
+  
+  void floorIt() {
+    speed = maxSpeed;
+  }
+
+}</code></pre>
+
+Within the <code>Car</code> class, you don't absolutely need to
+prefix the field names with <code>this.</code> like <code>
+this.licensePlate</code> or <code>this.speed</code>. Just <code>
+licensePlate</code> and <code>speed</code> are sufficient. The
+<code>this.</code> may be implied. That's because the <code>
+floorIt()</code> method must be called by a specific instance of
+the <code>Car</code> class, and this instance knows what its data
+is. Or, another way of looking at it, the every object has its own
+<code>floorIt()</code> method.
+
+<p>For clarity, I will use an explicit <code>this</code> today, and
+I recommend you do so too, at least initially. As you become more
+comfortable with Java, classes, references, and OOP, you will be
+able to leave out the <code>this</code> without fear of confusion.
+Most real-world code does not use an explicit <code>
+this</code>.</p>
+
+  
+
+
+
+<hr/><div align="center"><a href="09.html">Previous</a> 
+                 | <a href="11.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 1, 1999</div></body></html>

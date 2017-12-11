@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>The final keyword</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/42.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="43.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="41.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">The final keyword</h1>
+The <code>final</code> keyword is used in several different
+contexts as a modifier meaning that what it modifies cannot be
+changed in some sense. 
+
+
+
+<h2>final classes</h2>
+
+<p>
+You will notice that a number of the classes in Java library are
+declared <code>final</code>, e.g.
+</p>
+
+
+<pre xml:space="preserve"><code>public final class String </code></pre>
+
+<p>
+This means this class will not be subclassed, and informs the
+compiler that it can perform certain optimizations it otherwise
+could not. It also provides some benefit in regard to security and
+thread safety.
+</p>
+
+<p>The compiler will not let you subclass any class that is
+declared <code>final</code>. You probably won't want or need to
+declare your own classes <code>final</code> though.</p>
+
+
+
+<h2>final methods</h2>
+
+<p>
+You can also declare that methods are <code>final</code>. A method
+that is declared <code>final</code> cannot be overridden in a
+subclass. The syntax is simple, just put the keyword <code>
+final</code> after the access specifier and before the return type
+like this:
+</p>
+
+
+
+<pre xml:space="preserve"><code>public final String convertCurrency()</code></pre>
+
+<h2>final fields</h2>
+
+<p>
+You may also declare fields to be <code>final</code>. This is not
+the same thing as declaring a method or class to be <code>
+final</code>. When a field is declared <code>final</code>, it is a
+constant which will not and cannot change. It can be set once (for
+instance when the object is constructed, but it cannot be changed
+after that.) Attempts to change it will generate either a
+compile-time error or an exception (depending on how sneaky the
+attempt is).
+</p>
+
+
+<p>Fields that are both <code>final</code>, <code>static</code>,
+and <code>public</code> are effectively named constants. For
+instance a physics program might define <code>Physics.c</code>, the
+speed of light as</p>
+
+
+
+<pre xml:space="preserve"><code>public class Physics {
+
+  public static final double c = 2.998E8;
+  
+  
+}</code></pre>
+
+<p>
+In the <code>SlowCar</code> class, the <code>speedLimit</code>
+field is likely to be both <code>final</code> and <code>
+static</code> though it's <code>private</code>. 
+</p>
+
+<pre xml:space="preserve"><code>public class SlowCar extends Car {
+
+  private final static double speedLimit = 112.65408; // kph == 70 mph
+
+  public SlowCar(String licensePlate, double speed, double maxSpeed,
+   String make, String model, int year, int numberOfPassengers, int numDoors) {
+    super(licensePlate, 
+     (speed &lt; speedLimit) ? speed : speedLimit, 
+     maxSpeed, make, model, year, numberOfPassengers, numDoors);
+  }
+
+  public void accelerate(double deltaV) {
+
+     double speed = this.speed + deltaV;
+     
+     if (speed &gt; this.maxSpeed) {
+       speed = this.maxSpeed; 
+     }
+     
+     if (speed &gt; speedLimit) {
+       speed = speedLimit;
+     }
+     
+     if (speed &lt; 0.0) {
+       speed = 0.0; 
+     } 
+     
+     this.speed = speed;    
+     
+  }
+   
+}</code></pre>
+
+<h2>final arguments</h2>
+
+<p>
+Finally, you can declare that method arguments are <code>
+final</code>. This means that the method will not directly change
+them. Since all arguments are passed by value, this isn't
+absolutely required, but it's occasionally helpful. 
+</p>
+
+<p>What can be declared <code>final</code> in the <code>Car</code>
+and <code>MotorVehicle</code> classes?</p>
+
+
+
+
+
+
+<hr/><div align="center"><a href="41.html">Previous</a> 
+                 | <a href="43.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              February 3, 1999</div></body></html>

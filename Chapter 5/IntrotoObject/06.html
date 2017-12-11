@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Using a Car object in a different class</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/06.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="07.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="05.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Using a Car object in a different class</h1>
+<pre xml:space="preserve"><code>class Car {
+
+  String licensePlate; // e.g. "New York 543 A23"
+  double speed;        // in kilometers per hour
+  double maxSpeed;     // in kilometers per hour
+
+}</code></pre>
+
+<p>
+The next program creates a new car, sets its fields, and prints the
+result:
+</p>
+
+
+
+<pre xml:space="preserve"><code>class CarTest {
+
+  public static void main(String args[]) {
+    
+    Car c = new Car();
+    
+    c.licensePlate = "New York A45 636";
+    c.speed = 70.0;
+    c.maxSpeed = 123.45;
+    
+    System.out.println(c.licensePlate + " is moving at " + c.speed + 
+      "kilometers per hour.");    
+  }
+  
+}</code></pre>
+
+<p>
+This program requires not just the <code>CarTest</code> class but
+also the <code>Car</code> class. To make them work together put the
+<code>Car</code> class in a file called Car.java. Put the <code>
+CarTest</code> class in a file called CarTest.java. Put both these
+files in the same directory. Then compile both files in the usual
+way. Finally run <code>CarTest</code>. For example, 
+</p>
+
+
+<pre xml:space="preserve"><samp>% javac Car.java
+% javac CarTest.java
+% java CarTest
+New York A45 636 is moving at 70.0 kilometers per hour.
+</samp></pre>
+
+<p>
+Note that <code>Car</code> does not have a <code>main()</code>
+method so you cannot run it. It can exist only when called by other
+programs that do have <code>main()</code> methods.
+</p>
+
+<p>Many of the applications you write from now on will use multiple
+classes. It is customary in Java to put every class in its own
+file. Next week, you'll learn how to use packages to organize your
+commonly used classes in different directories. For now keep all
+your .java source code and .class byte code files in one
+directory.</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="05.html">Previous</a> 
+                 | <a href="07.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 1, 1999</div></body></html>

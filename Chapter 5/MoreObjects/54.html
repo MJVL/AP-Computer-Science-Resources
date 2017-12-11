@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>java.util.Random</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/54.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="55.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="53.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">java.util.Random</h1>
+The <code>java.util.Random</code> class allows you to create
+objects that produce pseudo-random numbers with uniform or gaussian
+distributions according to a linear congruential formula with a
+48-bit seed.
+
+<p>The algorithm used is good enough for games. I wouldn't use it
+for cryptography.</p>
+
+<p>You can choose the seed or you can let Java pick one based on
+the current time.</p>
+
+
+
+<pre xml:space="preserve"><code>Random r = new Random(109876L);
+int i = r.nextInt();
+int j = r.nextInt();
+long l = r.nextLong();
+float f = r.nextFloat();
+double d = r.nextDouble();
+int k = r.nextGaussian();</code></pre>
+
+<p>
+The <code>nextInt()</code>, <code>nextLong()</code>, and <code>
+nextBytes()</code> methods all cover their respective ranges with
+equal likelihood. For example, to simulate a six-sided die; that is
+to generate a random integer between 1 and 6, you might write
+</p>
+
+
+
+<pre xml:space="preserve"><code>Random r = new Random();
+int die = r.nextInt();
+die = Math.abs(die);
+die = die % 6;
+die += 1;
+System.out.println(die);</code></pre>
+
+The <code>nextGaussian()</code> method returns a pseudo-random,
+Gaussian distributed, double value with mean 0.0 and standard
+deviation 1.0.
+
+<p>The <code>nextBytes()</code> method fills a byte[] array with
+random bytes. For example,</p>
+
+
+
+<pre xml:space="preserve"><code>byte[] ba = new byte[1024];
+Random r = new Random();
+r.nextBytes(ba);
+for (int i = 0; i &lt; ba.length; i++) {
+  System.out.println(ba[i]);
+}</code></pre>
+
+
+
+
+<hr/><div align="center"><a href="53.html">Previous</a> 
+                 | <a href="55.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 18, 1997</div></body></html>

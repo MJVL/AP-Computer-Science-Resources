@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Example 1: The Car Class</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/03.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="04.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="02.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Example 1: The Car Class</h1>
+<p>
+Suppose you need to write a traffic simulation program that watches
+cars going past an intersection. Each car has a speed, a maximum
+speed, and a license plate that uniquely identifies it. In
+traditional programming languages you'd have two floating point and
+one string variable for each car. With a class you combine these
+into one thing like this.
+</p>
+
+
+
+<pre xml:space="preserve"><code>class Car {
+
+  String licensePlate; // e.g. "New York 543 A23"
+  double speed;        // in kilometers per hour
+  double maxSpeed;     // in kilometers per hour
+
+}</code></pre>
+
+<p>
+These variables (<code>licensePlate</code>, <code>speed</code> and
+<code>maxSpeed</code>) are called the <dfn>member variables</dfn>,
+<dfn>instance variables</dfn>, or <dfn>fields</dfn> of the class. 
+</p>
+
+<p>Fields tell you what a class is and what its properties are.</p>
+
+<p>An <dfn>object</dfn> is a specific instance of a class with
+particular values (possibly mutable) for the fields. While a class
+is a general blueprint for objects, an instance is a particular
+object.</p>
+
+<p>Note the use of comments to specify the units. That's important.
+A unit confusion between pounds and newtons led to the <a href="http://www.wired.com/news/news/technology/story/22031.html">
+loss of NASA's $94 million Mars Climate Orbiter</a>. (Believe it or
+not that's a cheap mission by NASA standards. If you're rich enough
+that you don't have to worry about losing $94 million worth of
+work, you don't have to put comments in your source code. Everybody
+else has to use comments.)</p>
+
+<p>How would you write an <code>Angle</code> class?</p>
+
+  
+
+
+
+<hr/><div align="center"><a href="02.html">Previous</a> 
+                 | <a href="04.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 1, 1999</div></body></html>

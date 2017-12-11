@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>this in constructors</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/02.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="03.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="01.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">this in constructors</h1>
+<p>
+It is often the case that overloaded methods are essentially the
+same except that one supplies default values for some of the
+arguments. In this case, your code will be easier to read and
+maintain (though perhaps <em>marginally</em> slower) if you put all
+your logic in the method that takes the most arguments, and simply
+invoke that method from all its overloaded variants that merely
+fill in appropriate default values. 
+</p>
+
+<p>This technique should also be used when one method needs to
+convert from one type to another. For instance one variant can
+convert a <code>String</code> to an <code>int</code>, then invoke
+the variant that takes the int as an argument.</p>
+
+<p>This straight-forward for regular methods, but doesn't quite
+work for constructors because you can't simply write a method like
+this:</p>
+
+
+
+<pre xml:space="preserve"><code>  public Car(String licensePlate, double maxSpeed) {
+
+    Car(licensePlate, 0.0, maxSpeed);
+    
+  }</code></pre>
+
+<p>
+Instead, to invoke another constructor in the same class from a
+constructor you use the keyword <code>this</code> like so:
+</p>
+
+<pre xml:space="preserve"><code>  public Car(String licensePlate, double maxSpeed) {
+
+    this(licensePlate, 0.0, maxSpeed);
+    
+  }</code></pre>
+
+<p>
+Must this be the first line of the constructor?
+</p>
+
+<p>For example,</p>
+
+
+
+<pre xml:space="preserve"><code>public class Car {
+
+  private String licensePlate; // e.g. "New York A456 324"
+  private double speed;        // kilometers per hour
+  private double maxSpeed;     // kilometers per hour
+  
+  // constructors
+  public Car(String licensePlate, double maxSpeed) {
+
+    this(licensePlate, 0.0, maxSpeed);
+    
+  }
+
+  public Car(String licensePlate, double speed, double maxSpeed) {
+
+    this.licensePlate = licensePlate; 
+    if (maxSpeed &gt;= 0.0) {
+      this.maxSpeed = maxSpeed;
+    }
+    else {
+      maxSpeed = 0.0;
+    }
+    
+    if (speed &lt; 0.0) {
+      speed = 0.0;
+    }
+    
+    if (speed &lt;= maxSpeed) {
+      this.speed = speed;
+    }
+    else {
+      this.speed = maxSpeed;
+    }
+    
+  }
+
+  // other methods...
+  
+}</code></pre>
+
+This approach saves several lines of code. In also means that if
+you later need to change the constraints or other aspects of
+construction of cars, you only need to modify one method rather
+than two. This is not only easier; it gives bugs fewer
+opportunities to be introduced either through inconsistent
+modification of multiple methods or by changing one method but not
+others. 
+
+  
+
+
+
+<hr/><div align="center"><a href="01.html">Previous</a> 
+                 | <a href="03.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              February 12, 1999</div></body></html>

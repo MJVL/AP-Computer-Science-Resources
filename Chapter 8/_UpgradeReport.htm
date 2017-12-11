@@ -1,0 +1,63 @@
+﻿<html>
+  <head>
+<META HTTP-EQUIV="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" href="_UpgradeReport_Files\UpgradeReport.css"/>
+
+<script language="javascript">
+	function outliner () {
+		oMe = window.event.srcElement
+		//get child element
+		var child = document.all[event.srcElement.getAttribute("child",false)];
+		//if child element exists, expand or collapse it.
+		if (null !=child)
+			child.className = child.className == "collapsed" ? "expanded" : "collapsed";
+	}
+
+	function changepic() {
+		uMe = window.event.srcElement;
+		var check = uMe.src.toLowerCase();
+		if (check.lastIndexOf("upgradereport_plus.gif") != -1)
+		{
+			uMe.src = "_UpgradeReport_Files/UpgradeReport_Minus.gif"
+		}
+		else
+		{
+			uMe.src = "_UpgradeReport_Files/UpgradeReport_Plus.gif"
+		}
+	}
+</script>
+<title>Upgrade report for ch8.vjp</title></head>
+  <body topmargin="0" leftmargin="0" rightmargin="0" onclick="outliner();">
+    <h1>Upgrade report for ch8.vjp</h1>
+    <p>
+      <table class="note">
+        <tr>
+          <td>
+            <b>Time of upgrade: </b>
+          </td>
+          <td>2/17/2004 10:06:23 AM</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Upgraded project file: </b>
+          </td>
+          <td>ch8_NET.vjsproj</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Project type: </b>
+          </td>
+          <td>Class Library</td>
+        </tr>
+        <tr>
+          <td>
+            <b>Startup object: </b>
+          </td>
+          <td />
+        </tr>
+      </table>
+    </p>
+    <h2>Analysis of project files was bypassed by user</h2>
+    <h2>Project was upgraded with no issue </h2>
+  </body>
+</html>

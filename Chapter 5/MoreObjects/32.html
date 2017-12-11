@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>The java.lang package</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/32.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="33.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="31.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">The java.lang package</h1>
+Each package defines a number of classes, interfaces, exceptions,
+and errors. For example, in Java 1.1 the <code>java.lang</code>
+package contains these:
+
+
+
+<h2>Interfaces in java.lang</h2>
+
+<ul>
+<li><code>Cloneable</code></li>
+
+<li><code>Runnable</code></li>
+</ul>
+
+<h2>Classes in java.lang</h2>
+
+<ul>
+<li><code>Boolean</code></li>
+
+<li><code>Byte</code></li>
+
+<li><code>Character</code></li>
+
+<li><code>Class</code></li>
+
+<li><code>ClassLoader</code></li>
+
+<li><code>Compiler</code></li>
+
+<li><code>Double</code></li>
+
+<li><code>Float</code></li>
+
+<li><code>Integer</code></li>
+
+<li><code>Long</code></li>
+
+<li><code>Math</code></li>
+
+<li><code>Number</code></li>
+
+<li><code>Object</code></li>
+
+<li><code>Process</code></li>
+
+<li><code>Runtime</code></li>
+
+<li><code>SecurityManager</code></li>
+
+<li><code>Short</code></li>
+
+<li><code>String</code></li>
+
+<li><code>StringBuffer</code></li>
+
+<li><code>System</code></li>
+
+<li><code>Thread</code></li>
+
+<li><code>ThreadGroup</code></li>
+
+<li><code>Throwable</code></li>
+
+<li><code>Void</code></li>
+</ul>
+
+<h2>Exceptions in java.lang</h2>
+
+<ul>
+<li><code>ArithmeticException</code></li>
+
+<li><code>ArrayIndexOutOfBoundsException</code></li>
+
+<li><code>ArrayStoreException</code></li>
+
+<li><code>ClassCastException</code></li>
+
+<li><code>ClassNotFoundException</code></li>
+
+<li><code>CloneNotSupportedException</code></li>
+
+<li><code>Exception</code></li>
+
+<li><code>IllegalAccessException</code></li>
+
+<li><code>IllegalArgumentException</code></li>
+
+<li><code>IllegalMonitorStateException</code></li>
+
+<li><code>IllegalStateException</code></li>
+
+<li><code>IllegalThreadStateException</code></li>
+
+<li><code>IndexOutOfBoundsException</code></li>
+
+<li><code>InstantiationException</code></li>
+
+<li><code>InterruptedException</code></li>
+
+<li><code>NegativeArraySizeException</code></li>
+
+<li><code>NoSuchFieldException</code></li>
+
+<li><code>NoSuchMethodException</code></li>
+
+<li><code>NullPointerException</code></li>
+
+<li><code>NumberFormatException</code></li>
+
+<li><code>RuntimeException</code></li>
+
+<li><code>SecurityException</code></li>
+
+<li><code>StringIndexOutOfBoundsException</code></li>
+</ul>
+
+<h3>Errors in java.lang</h3>
+
+<ul>
+<li><code>AbstractMethodError</code></li>
+
+<li><code>ClassCircularityError</code></li>
+
+<li><code>ClassFormatError</code></li>
+
+<li><code>Error</code></li>
+
+<li><code>ExceptionInInitializerError</code></li>
+
+<li><code>IllegalAccessError</code></li>
+
+<li><code>IncompatibleClassChangeError</code></li>
+
+<li><code>InstantiationError</code></li>
+
+<li><code>InternalError</code></li>
+
+<li><code>LinkageError</code></li>
+
+<li><code>NoClassDefFoundError</code></li>
+
+<li><code>NoSuchFieldError</code></li>
+
+<li><code>NoSuchMethodError</code></li>
+
+<li><code>OutOfMemoryError</code></li>
+
+<li><code>StackOverflowError</code></li>
+
+<li><code>ThreadDeath</code></li>
+
+<li><code>UnknownError</code></li>
+
+<li><code>UnsatisfiedLinkError</code></li>
+
+<li><code>VerifyError</code></li>
+
+<li><code>VirtualMachineError</code></li>
+</ul>
+
+
+
+
+
+<hr/><div align="center"><a href="31.html">Previous</a> 
+                 | <a href="33.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 9, 1999</div></body></html>

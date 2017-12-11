@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Naming Packages</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/48.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="49.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="47.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Naming Packages</h1>
+<p>
+As you saw earlier name space conflicts arise if two pieces of code
+declare the same name. Java keeps track of what belongs to each
+package internally. Thus if Sun decides to put a <code>
+Website</code> class in java.lang in Java 2.0, it won't conflict
+with a <code>Website</code> class defined in an <code>http</code>
+package. Since they're in different packages Java can tell them
+apart. Just as you tell John Smith apart from John Jones by their
+last names, so too does Java tell two Website classes apart by
+their package names.
+</p>
+
+<p>However this scheme breaks down if two different classes share
+the same package name as well as class name. In a world in which
+many different packages can be downloaded from many different
+sites, all landing in the user's CLASSPATH, it's not unthinkable
+that two different people might write packages called <code>
+http</code> with a class called <code>Website</code>.</p>
+
+<p>To ensure that package names don't conflict with each other, Sun
+asks that you prefix all your packages with a reversed domain name.
+Thus if your domain name is poly.edu, your package names should
+begin with <code>edu.poly</code>. Within that domain you are
+responsible for making sure that no one else writes a package that
+conflicts with yours.</p>
+
+<p>If you don't have a personal domain name, only an account with
+an Internet service provider, then add your username to this as
+well. For instance under this scheme the package prefix for
+foo@utopia.poly.edu would be <code>edu.poly.utopia.foo</code>.</p>
+
+<p>This is primarily of interest to applet writers, not applet
+users. If you're surfing the net and you load one applet from MIT
+that has a <code>http.Website</code> class and another from
+Polytechnic that has a different <code>http.Website</code> class,
+Java can still tell them apart because before it runs any package
+it downloads off the net it prefixes everything with the site from
+which it got it. In other words it sees <code>
+edu.poly.www.http.Website</code> and <code>
+edu.mit.www.http.Website</code>. It's only when you download a
+package manually and install it in one directory in your CLASSPATH
+and install another package elsewhere in your CLASSPATH that real
+name conflicts can arise if packages aren't carefully prefixed with
+a domain or email address.</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="47.html">Previous</a> 
+                 | <a href="49.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 11, 1997</div></body></html>

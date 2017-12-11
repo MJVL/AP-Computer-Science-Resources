@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Arrays vs ArrayLists</TITLE>
+<META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+<META content="MSHTML 5.00.3315.2870" name=GENERATOR></HEAD>
+<BODY>
+<H1 align=center>Arrays vs ArrayLists</H1>
+<P align=left>&nbsp;</P>
+<CENTER>
+<TABLE align=center border=1 cellPadding=0 cellSpacing=5>
+  <TBODY>
+  <TR>
+    <TH width="50%"><U>Arrays</U></TH>
+    <TH><U>ArrayLists</U></TH></TR>
+  <TR>
+    <TD>random-access, linear data structure</TD>
+    <TD>random-access, linear data structure</TD></TR>
+  <TR>
+    <TD>fixed size once created</TD>
+    <TD>dynamic size; grows automatically</TD></TR>
+  <TR>
+    <TD>can contain objects and primitives</TD>
+    <TD>can only contain objects </TD></TR>
+  <TR>
+    <TD>must declare element type</TD>
+    <TD>element type is <CODE>Object</CODE></TD></TR>
+  <TR>
+    <TD>safe: run-time bounds checking</TD>
+    <TD>safe: run-time bounds checking</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp; </TD></TR>
+  <TR>
+    <TD>Fish[] myArray = new Fish[15];</TD>
+    <TD>ArrayList myList = new ArrayList();</TD></TR>
+  <TR>
+    <TD>myArray[index] = new Fish(loc);</TD>
+    <TD>myList.add(new Fish(loc));</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>myList.set(index, new Fish(loc));</TD></TR>
+  <TR>
+    <TD>Fish f = myArray[index];</TD>
+    <TD>Fish f = (Fish) myList.get(index);</TD></TR>
+  <TR>
+    <TD height=25>myArray[index].move();</TD>
+    <TD>((Fish) myList.get(index)).move();</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>for ( int k = 0; k &lt; myArray.length; k++ )<BR>&nbsp;&nbsp; 
+      System.out.println(myArray[index]);</TD>
+    <TD>for ( int k = 0; k &lt; myList.size(); k++ )<BR>&nbsp;&nbsp; 
+      System.out.println(myList.get(k));</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD><STRONG><U>Subset of Methods:</U></STRONG></TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; boolean add(Object obj)</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; void add(int index, Object obj)</TD></TR>
+  <TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; Object get(int index)</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; Object set(int index, Object obj)</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; Object remove(int index)</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; boolean remove(Object obj)</TD></TR>
+  <TR>
+    <TD>&nbsp;</TD>
+    <TD>&nbsp;&nbsp; int size()</TD></TR></TBODY></TABLE></CENTER>
+<P align=left>&nbsp;</P></BODY></HTML>

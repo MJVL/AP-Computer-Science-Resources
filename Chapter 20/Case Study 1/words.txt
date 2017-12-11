@@ -1,0 +1,3 @@
+This is a short word file.  There
+are only a few words in it.  The
+longest word has 7 letters.

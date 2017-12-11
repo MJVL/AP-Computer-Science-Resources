@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>java.lang.String</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/53.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="54.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="52.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">java.lang.String</h1>
+<p>
+Strings are objects. Specifically they're instances of the class
+<code>java.lang.String</code>. This class has many methods that are
+useful for working with strings.
+</p>
+
+<p>Internally Java Strings are arrays of Unicode characters. For
+example the String <code>"Hello"</code> is a five element array.
+Like arrays, Strings begin counting at 0. Thus in the String <code>
+"Hello"</code> <code>'H'</code> is character 0, <code>'e'</code> is
+character 1, and so on.</p>
+
+
+
+<table border="1">
+<tr>
+<td rowspan="1" colspan="1">0</td>
+<td rowspan="1" colspan="1">1</td>
+<td rowspan="1" colspan="1">2</td>
+<td rowspan="1" colspan="1">3</td>
+<td rowspan="1" colspan="1">4</td>
+</tr>
+
+<tr>
+<td rowspan="1" colspan="1">H</td>
+<td rowspan="1" colspan="1">e</td>
+<td rowspan="1" colspan="1">l</td>
+<td rowspan="1" colspan="1">l</td>
+<td rowspan="1" colspan="1">o</td>
+</tr>
+</table>
+
+<h2>Constructors</h2>
+
+<pre xml:space="preserve"><code>public String()
+public String(String value)
+public String(char[] text)
+public String(char[] text, int offset, int count)
+public String(byte[] data, int offset, int length, String encoding) 
+ throws UnsupportedEncodingException
+public String(byte[] data, String encoding) 
+ throws UnsupportedEncodingException
+public String(byte[] data, int offset, int length)
+public String(byte[] data)
+public String(StringBuffer buffer)</code></pre>
+
+<h2>index methods</h2>
+
+<pre xml:space="preserve"><code>public int length()
+public int indexOf(int ch)
+public int indexOf(int ch, int fromIndex)
+public int lastIndexOf(int ch)
+public int lastIndexOf(int ch, int fromIndex)
+public int indexOf(String str)
+public int indexOf(String str, int fromIndex)
+public int lastIndexOf(String str)
+public int lastIndexOf(String str, int fromIndex)</code></pre>
+
+<h2>valueOf() methods</h2>
+
+<pre xml:space="preserve"><code>public static String valueOf(char[] text)
+public static String valueOf(char[] text, int offset, int count)
+public static String valueOf(boolean b)
+public static String valueOf(char c)
+public static String valueOf(int i)
+public static String valueOf(long l)
+public static String valueOf(float f)
+public static String valueOf(double d)</code></pre>
+
+<h2>substring() methods</h2>
+
+<pre xml:space="preserve"><code>public char charAt(int index)
+public void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+public byte[] getBytes(String encoding) throws UnsupportedEncodingException
+public byte[] getBytes()
+public String substring(int beginIndex)
+public String substring(int beginIndex, int endIndex)
+public String concat(String str)
+public char[] toCharArray()</code></pre>
+
+<p>
+Beginnings are inclusive. Ends are exclusive.
+</p>
+
+
+
+<h2>comparisons</h2>
+
+<pre xml:space="preserve"><code>public boolean equals(Object anObject)
+public boolean equalsIgnoreCase(String anotherString)
+public int compareTo(String anotherString)
+public boolean regionMatches(int toffset, String other, int ooffset, int len)
+public boolean regionMatches(boolean ignoreCase, int toffset, 
+ String other, int ooffset, int len)
+public boolean startsWith(String prefix, int toffset)
+public boolean startsWith(String prefix)
+public boolean endsWith(String suffix)</code></pre>
+
+<h2>Modifying Strings</h2>
+
+<pre xml:space="preserve"><code>public String replace(char oldChar, char newChar)
+public String toLowerCase(Locale locale)
+public String toLowerCase()
+public String toUpperCase(Locale locale)
+public String toUpperCase()
+public String trim()</code></pre>
+
+
+
+
+
+
+<hr/><div align="center"><a href="52.html">Previous</a> 
+                 | <a href="54.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 2003 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              March 8, 2003</div></body></html>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>The Four Levels of Access Protection</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/26.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="27.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="25.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">The Four Levels of Access Protection</h1>
+<p>
+Any two different Java objects have one of four relations to each
+other. The four relations are:
+</p>
+
+
+
+<ul>
+<li>The objects are in the same class.</li>
+
+<li>One object is a subclass of the other object's class.</li>
+
+<li>The objects are in the same package.</li>
+
+<li>None of the above. (Both objects are members of the general
+public.)</li>
+</ul>
+
+<p>
+These relationships are not mutually exclusive. One object can be a
+subclass of another object in the same package, for example.
+</p>
+
+<p>You can define which of your class's members, that is its fields
+and its methods, are accessible to other objects in each of these
+four groups, relative to the current class.</p>
+
+<p>If you want any object at all to be able to call a method or
+change a field, declare it <code>public</code>.</p>
+
+<p>If you want only objects in the same class to be able to get or
+set the value of a field or invoke a method, declare it <code>
+private</code>.</p>
+
+<p>If you want access restricted to subclasses and members of the
+same package, declare it <code>protected</code>.</p>
+
+<p>Finally, to restrict access only to objects in the same package,
+use no access declaration at all. This is called "package" or
+"default" access, but it has no keyword. The <code>default</code>
+keyword means something else entirely.</p>
+
+<p>Can anyone remember what?</p>
+
+<p>By default, all classes you write are in the same package.
+However, they are in different packages from the Java classes like
+<code>System</code> or <code>Applet</code>.</p>
+
+<p>The public fields and methods of an object can be accessed from
+anywhere the object itself can be seen. Anyone can touch an
+object's public members. They should be kept to a minimum. Public
+fields should relate very closely to the core functionality of the
+class. They should not show intimate details of the inner workings
+of the class. Except in very simple instances fields should
+probably not be public.</p>
+
+<p>The private fields and methods of an object can only be accessed
+by the object itself and by other objects of the same class
+(siblings). An object may touch its sibling's private parts. A
+sibling is an object in the same class but which is not the same
+object.</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="25.html">Previous</a> 
+                 | <a href="27.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1998 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 25, 1998</div></body></html>

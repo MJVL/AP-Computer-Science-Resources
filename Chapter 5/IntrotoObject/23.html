@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Access Protection</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week3/23.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="24.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="22.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Access Protection</h1>
+<p>
+Global variables are a classic cause of bugs in most programming
+languages. Some unknown function can change the value of a variable
+when the programmer isn't expecting it to change. This plays all
+sorts of havoc.
+</p>
+
+<p>Most OOP languages including Java allow you to protect variables
+from external modification. This allows you to guarantee that your
+class remains consistent with what you think it is as long as the
+methods of the class themselves are bug-free. For example, in the
+<code>Car</code> class we'd like to make sure that no block of code in some
+other class is allowed to make the speed greater than the maximum
+speed. We want a way to make the following illegal:</p>
+
+
+
+<pre xml:space="preserve"><code>  Car c = new Car("New York A234 567", 100.0);
+  c.speed = 150.0;</code></pre>
+
+<p>
+This code violates the constraints we've placed on the class. We
+want to allow the compiler to enforce these constraints. 
+</p>
+
+<p>
+
+A class presents a picture of itself to the world. (This picture is
+sometimes called an <dfn>interface</dfn>, but the word <i>
+interface</i> has a more specific meaning in Java.) This picture
+says that the class has certain methods and certain fields.
+Everything else about the class including the detailed workings of
+the class's methods is hidden. As long as the picture the class
+shows to the world doesn't change, the programmer can change how
+the class implements that picture. Among other advantages this
+allows the programmer to change and improve the algorithms a class
+uses without worrying that some piece of code depends in unforeseen
+ways on the details of the algorithm used. This is called
+encapsulation.</p>
+
+<p>Another way to think about encapsulation is that a class signs a
+contract with all the other classes in the program. This contract
+says that a class has methods with unambiguous names which take
+particular types of arguments and return a particular type of
+value. The contract may also say that a class has fields with given
+names and of a given type. However the contract does not specify
+how the methods are implemented. Furthermore, it does not say that
+there aren't other private fields and methods which the class may
+use. A contract guarantees the presence of certain methods and
+fields. It does not exclude all other methods and fields. This
+contract is implemented through access protection. Every class,
+field and method in a Java program is defined as either public,
+private, protected or unspecified.</p>
+
+<p>You're closer to your immediate family (your parents and your
+children) than you are to your cousins. You're closer to your
+cousins than to the general public at large, but there are some
+things you don't tell anybody. Furthermore, your family is not my
+family.</p>
+
+
+
+  
+
+
+
+<hr/><div align="center"><a href="22.html">Previous</a> 
+                 | <a href="24.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997, 1998, 2003 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              January 28, 2003</div></body></html>

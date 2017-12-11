@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>Name Conflicts when importing packages</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/30.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="31.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="29.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">Name Conflicts when importing packages</h1>
+It is possible that you will try to import a package that contains
+classes that have the same name as a class in your own source code.
+In general you should try to avoid this, especially when the
+conflict is with a class in the java packages.
+
+<p>The two classes may or may not mean the same thing. In general
+you should probably rename the class in your own source code rather
+than in the package. However if the two classes with conflicting
+names are related functionally, it may make sense to implement your
+class as a subclass of the class in the package.</p>
+
+
+
+<p>There are a couple of name conflicts in the class library. The
+worst offenders are <code>java.util.List</code> and <code>
+java.awt.List</code>. The second worst offenders are <code>
+java.sql.Date</code> and <code>java.util.Date</code>, though this
+case is somewhat mitigated because <code>java.sql.Date</code> is a
+subclass of <code>java.util.Date</code>. If you need to use one or
+both of the conflictingly named classes as well as importing the
+other package, you simply have to use the full package qualified
+name, inconvenient as it may be to type.</p>
+
+ 
+
+
+
+<hr/><div align="center"><a href="29.html">Previous</a> 
+                 | <a href="31.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997-1999 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              September 7, 1999</div></body></html>

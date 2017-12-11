@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "../xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sld="http://namespaces.cafeconleche.org/slides/" xmlns:html="http://www.w3.org/1999/xhtml"><head><title>abstract</title><!--Only sunsites are allowed to mirror this page and then
+only with explicit, prior permission. For details,
+send email to elharo@metalab.unc.edu --><script type="text/javascript"><!--
+if (location.protocol.toLowerCase().indexOf("file") != 0 ) { 
+  if (0 > location.host.toLowerCase().indexOf("cafeaulait.org") 
+  && 0 > location.host.toLowerCase().indexOf("ibiblio.org")) {
+    location.href="http://www.cafeaulait.org/course/week4/43.html";
+  }
+}
+     // --></script><script language="JAVASCRIPT"><!--
+              var isnav
+              
+              if (parseInt(navigator.appVersion) >= 4) {
+                if (navigator.appName == "Netscape") {
+                  isNav = true
+                  document.captureEvents(Event.KEYPRESS)
+                }
+                else {
+                  isNav = false
+                }
+              }
+              document.onkeypress = flipslide
+
+              function flipslide(evt) {
+                var key = isNav ? evt.which : window.event.keyCode
+                if (key == 32 || key == 29 || key == 30 || key == 11) {
+                  
+                    location.href="44.html"
+                  
+                }
+                else if (key == 28 || key == 31 || key == 12) {
+                  
+                    location.href="42.html"
+                  
+                }
+                else if (key == 1) {
+                  location.href="index.html";
+                }
+              } // --></script></head><body>
+  <h1 align="center">abstract</h1>
+<p>
+Java allows methods and classes to be declared <code>
+abstract</code>. An abstract method is not actually implemented in
+the class. It is merely declared there. The body of the method is
+then implemented in subclasses of that class. An abstract method
+must be part of an abstract class. You create abstract classes by
+adding the keyword <code>abstract</code> after the access
+specifier, e.g.
+</p>
+
+
+
+<pre xml:space="preserve"><code>public abstract class MotorVehicle</code>
+</pre>
+
+<p>
+Abstract classes cannot be instantiated. It is a compile-time error
+to try something like
+</p>
+
+
+
+<pre xml:space="preserve"><code>MotorVehicle m = new MotorVehicle();</code></pre>
+
+<p>
+when <code>MotorVehicle</code> has been declared to be abstract.
+<code>MotorVehicle</code> is actually a pretty good example of the
+sort of class that might be abstract. You're unlikely to be
+interested in a generic motor vehicle. Rather you'll have trucks,
+motorcycles, cars, go-carts and other subclasses of <code>
+MotorVehicle</code>, but nothing that is only a <code>
+MotorVehicle</code>.
+</p>
+
+<p>An abstract method provides a declaration but no implementation.
+In other words, it has no method body. Abstract methods can only
+exist inside abstract classes and interfaces. For example, the
+<code>MotorVehicle</code> class might have an abstract <code>
+fuel()</code> method:</p>
+
+<p><code>public abstract void fuel();</code></p>
+
+<p><code>Car</code> would override/implement this method with a
+<code>fuel()</code> method that filled the gas tank with gasoline.
+<code>EighteenWheelerTruck</code> might override this method with a
+<code>fuel()</code> method that filled its gas tank with diesel.
+<code>ElectricCar</code> would override/implement this method with
+a <code>fuel()</code> method that plugged into the wall socket.</p>
+
+ 
+
+
+
+<hr/><div align="center"><a href="42.html">Previous</a> 
+                 | <a href="44.html">Next</a> 
+                 | <a href="index.html">Top</a> 
+                 | <a href="http://www.cafeaulait.org/">Cafe au Lait</a></div><hr/><div style="font-size: x-small">
+              Copyright 
+              1997 Elliotte Rusty Harold<br/><a href="mailto:elharo@metalab.unc.edu">elharo@metalab.unc.edu</a><br/>
+              Last Modified 
+              October 20, 1998</div></body></html>
