@@ -1,4 +1,4 @@
-# Michael Van Leeuwen's .gitignore for AP CS. Built to work for any directories/folders of IntellIJ projects
+# Michael Van Leeuwen's .gitignore for AP CS. Works for any directories/folders of IntelliJ projects if placed in root directory.
 # Ignores all production files (.class) and other user specific files (.xml) in order to only track files that matter (.java, .form, .txt, etc.)
 
 # User Specific Idea Files
