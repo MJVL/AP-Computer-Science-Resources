@@ -1,0 +1,12 @@
+# Michael Van Leeuwen's .gitignore for AP CS. Built to work for any directories/folders of IntellIJ projects
+# Ignores all production files (.class) and other user specific files (.xml) in order to only track files that matter (.java, .form, .txt, etc.)
+
+# User Specific Idea Files
+**/.idea/**/workspace.xml
+**/.idea/**/tasks.xml
+**/.idea/dictionaries
+**/.idea/**/dynamic.xml
+**/.idea/**/uiDesigner.xml
+
+# Production Files
+**/out
